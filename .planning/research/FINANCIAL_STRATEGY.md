@@ -293,68 +293,181 @@ Ahorro: CLP 259,000-759,000/mes + Sisteco trabaja 24/7
 
 ## 8. MODELO DE FACTURACIÓN Y COBRO
 
-### Herramienta recomendada: Stripe Billing
+### Decisión: ~~Stripe~~ → dLocal Go (con Reveniu como fallback Chile)
 
-**Razón:** Stripe opera en Chile desde 2021, acepta tarjetas chilenas (Visa, Mastercard), soporta MRR/ARR, y tiene dashboard de métricas SaaS nativo.
-
-**Configuración Stripe:**
-
-```
-Productos a crear en Stripe:
-1. "Sisteco Prospección Base"
-   - Price ID mensual: $397 USD/mes
-   - Price ID anual: $297 USD/mes (billed as $3,564/year)
-
-2. "Sisteco Crecimiento"
-   - Price ID mensual: $797 USD/mes
-   - Price ID anual: $597 USD/mes (billed as $7,164/year)
-
-3. "Sisteco Enterprise"
-   - Price: custom (quote)
-
-4. Add-on: "WhatsApp Business"
-   - Price ID: $150 USD/mes
-
-5. Add-on: "Usuarios Extra"
-   - Price ID: $49 USD/user/mes (metered)
-
-6. Add-on: "Volumen Extra Leads"
-   - Price ID: $97/10K leads (metered)
-```
-
-**Comisión Stripe Chile:**
-- Tarjetas nacionales (Visa/MC): 3.5% + USD 0.30 por transacción
-- Tarjetas internacionales: 3.9% + USD 0.30
-- Sobre $797 mensual: comisión Stripe = ~$28-31 → costo aceptable
-
-**Facturación local (SII Chile):**
-- Sisteco debe emitir boleta de honorarios o factura electrónica a través del SII
-- Stripe no emite facturas válidas para el SII chileno
-- Solución: Usar facturador electrónico (Bsale, DTE Chile, Defontana) integrado
+**Por qué NO Stripe:**
+- Stripe Chile requiere cuenta bancaria chilena vinculada a entidad legal formal (RUT empresa activo con giro)
+- KYC estricto: SPA/EIRL registrada, representante legal identificado
+- **Sisteco aún no tiene LLC/entidad formal → bloqueante**
 
 ---
 
-## 9. PASOS PARA IMPLEMENTAR STRIPE
+## 8a. PROCESADOR PRINCIPAL: dLocal Go
 
-### 9.1 Acciones del usuario (no automatizables)
+**URL:** https://dlocalgo.com | **Tipo:** Payment gateway + Subscriptions (self-service)
 
-1. **Crear cuenta Stripe:** https://stripe.com → seleccionar Chile como país
-2. **Completar KYC:** RUT empresa, datos bancarios cuenta corriente CLP
-3. **Habilitar pagos internacionales:** Dashboard → Settings → Payment methods
-4. **Crear los 3 productos** en Stripe Dashboard con sus Price IDs
-5. **Obtener API keys:** Publishable Key y Secret Key
-6. **Configurar webhook:** URL = `https://your-domain.com/api/stripe-webhook`
-7. **Obtener Webhook Signing Secret**
+### ¿Por qué dLocal Go?
+| Criterio | dLocal Go | Stripe | Reveniu |
+|---|---|---|---|
+| Sin entidad legal para sandbox | ✅ | ❌ | ✅ |
+| Suscripciones recurrentes | ✅ API + Dashboard | ✅ API | ✅ Dashboard |
+| API completa | ✅ REST + webhooks | ✅ | Solo plan Enterprise |
+| Cobertura LATAM expansion | ✅ 13+ países | Limitado | ❌ Solo Chile |
+| Cobro en USD | ✅ | ✅ | ❌ CLP/UF solo |
+| Settlement en CLP | ✅ | ✅ | ✅ |
+| Tarjeta débito chilena | ✅ | ✅ | ✅ |
+| Sin costo mensual fijo | ✅ | ✅ | ✅ (Starter) |
 
-### 9.2 Variables de entorno necesarias (en Vercel)
+### Tarifas dLocal Go — Chile (2026)
+| Método de pago | Comisión dLocal | IVA sobre comisión (19%) | Fee efectivo Sisteco |
+|---|---|---|---|
+| Tarjeta crédito | 2.99% | +0.57% | **~3.56%** |
+| Transferencia bancaria | 2.99% | +0.57% | **~3.56%** |
+| Efectivo (cash) | 2.99% | +0.57% | **~3.56%** |
+
+**Settlement:** 7 días (tarjeta crédito/débito) · 3 días (transferencia) → tu cuenta CLP
+**Sin tarifa mensual fija ni de setup**
+
+### Impacto en márgenes (recalculado con dLocal Go)
+| Plan | Precio USD | Fee dLocal (~3.56%) | Ingreso neto/mes | Margen bruto ajustado |
+|---|---|---|---|---|
+| Base mensual | $397 | ~$14.1 | ~$383 | **81%** (vs 82% con Stripe) |
+| Growth mensual | $797 | ~$28.4 | ~$769 | **78%** |
+| Enterprise | $1,800 | ~$64.1 | ~$1,736 | **73%** |
+
+*Diferencia mínima vs Stripe. El ahorro en no necesitar entidad legal justifica la elección.*
+
+### Cómo funciona la API de dLocal Go
+
+**Autenticación:** Bearer token (`API_KEY:SECRET_KEY`)
+**Sandbox:** `https://api-sbx.dlocalgo.com/v1/`
+**Live:** `https://api.dlocalgo.com/v1/`
+
+**Flujo de pago (checkout redirect):**
+```
+POST /v1/payments
+{
+  "amount": 397.00,
+  "currency": "USD",
+  "country": "CL",
+  "payment_method_id": "CARD",
+  "payment_method_flow": "REDIRECT",
+  "payer": { "name": "...", "email": "..." },
+  "order_id": "sisteco-sub-xyz",
+  "description": "Sisteco Prospección Base - Mensual",
+  "callback_url": "https://sisteco.cl/api/dlocalgo-webhook",
+  "success_url": "https://sisteco.cl/pages/success.html",
+  "failed_url": "https://sisteco.cl/pages/cancel.html"
+}
+→ Response: { "redirect_url": "https://checkout.dlocalgo.com/..." }
+```
+
+**Suscripciones:** Gestionadas desde Dashboard dLocal Go → se crea un plan → el cliente se suscribe vía checkout link o API. Los cobros recurrentes son automáticos.
+
+### Variables de entorno (reemplaza vars Stripe)
 ```env
-STRIPE_PUBLISHABLE_KEY=pk_live_...
-STRIPE_SECRET_KEY=sk_live_...
-STRIPE_WEBHOOK_SECRET=whsec_...
-STRIPE_PRICE_BASE_MONTHLY=price_...
-STRIPE_PRICE_BASE_ANNUAL=price_...
-STRIPE_PRICE_GROWTH_MONTHLY=price_...
-STRIPE_PRICE_GROWTH_ANNUAL=price_...
+DLOCALGO_API_KEY=your_api_key
+DLOCALGO_SECRET_KEY=your_secret_key
+DLOCALGO_WEBHOOK_SECRET=your_webhook_secret
+DLOCALGO_BASE_URL=https://api.dlocalgo.com/v1   # o sbx para sandbox
+SITE_URL=https://sisteco.cl
+```
+
+---
+
+## 8b. OPCIÓN QUICK-START: Reveniu (Chile only, sin código)
+
+**URL:** https://reveniu.com | **Tipo:** Plataforma de suscripciones Chile-native
+
+**Cuándo usar Reveniu:** Para arrancar inmediatamente, sin integración API, usando links de pago.
+
+### Planes Reveniu
+| Plan | Costo mensual | Comisión Reveniu | + Comisión Transbank | Total efectivo |
+|---|---|---|---|---|
+| **Starter** | Gratis | 3% | ~1.5–2% | **~4.5–5%** |
+| **Pro** | CLP 40,000/mes (~USD 43) | 1.5% | ~1.5–2% | **~3–3.5% + cuota fija** |
+| **Enterprise** | Conversemos | Custom | Custom | Custom |
+
+**Ventajas Reveniu:**
+- ✅ Funciona sin entidad legal para plan Starter
+- ✅ Cobro en CLP y UF (Unidad de Fomento)
+- ✅ Todas las tarjetas de débito y crédito chilenas
+- ✅ Sin integración técnica — links de pago listos en 5 min
+- ✅ Retry automático de cobros fallidos (reduce churn)
+- ✅ Notificaciones por email a cliente y vendedor
+- ✅ Panel de métricas MRR, churn, suscriptores activos
+
+**Desventajas Reveniu:**
+- ❌ Solo Chile (no expansión LATAM)
+- ❌ Solo CLP/UF (no USD)
+- ❌ API solo en plan Enterprise
+- ❌ Fees más altos que dLocal Go (~4.5–5% efectivo vs 3.56%)
+
+### Comparativa de fee por transacción real
+| Plan Sisteco | Precio | dLocal Go fee | Reveniu Starter fee | Diferencia/mes |
+|---|---|---|---|---|
+| Base mensual | USD 397 | ~USD 14 | ~USD 18-20 | +USD 4-6 |
+| Growth mensual | USD 797 | ~USD 28 | ~USD 36-40 | +USD 8-12 |
+
+*Para 10 clientes Growth: diferencia de ~USD 80-120/mes en fees = CLP 74K-112K/mes.*
+
+---
+
+## 8c. ACLARACIÓN CRÍTICA: IVA / CARGA TRIBUTARIA
+
+**Lo que dLocal Go y Reveniu SÍ hacen:**
+- Procesan el pago del cliente y depositan el dinero en tu cuenta
+- Pagan el IVA (19%) sobre su propia comisión (2.99%) → eso es lo que dice "fee does not include local taxes"
+- Emiten su propia boleta de servicio a Sisteco por sus comisiones
+
+**Lo que dLocal Go y Reveniu NO hacen:**
+- ❌ NO emiten facturas/boletas por los USD 397/797 que Sisteco cobra a sus clientes
+- ❌ NO declaran el IVA de Sisteco ante el SII
+- ❌ NO actúan como Merchant of Record (MoR)
+
+**La obligación de Sisteco:**
+Para cobrar legalmente en Chile como empresa, Sisteco debe:
+1. Tener RUT empresa (EIRL/SPA/SpA — se crea online en portal.sii.cl en 24h)
+2. Emitir DTE (Documento Tributario Electrónico) a cada cliente por cada cobro
+3. Declarar IVA mensualmente ante el SII (Formulario 29)
+
+**Si se quiere MoR real (externalizar toda la tributación):**
+→ **Paddle** (https://paddle.com) actúa como MoR global, maneja IVA/GST/VAT en 50+ países, emite facturas a nombre de Paddle, cobra directamente al cliente. Comisión: 5% + USD 0.50/transacción.
+→ Útil si Sisteco opera como empresa extranjera vendiendo digitalmente a Chile. Más caro pero cero carga tributaria propia.
+
+---
+
+## 9. ESTRATEGIA DE IMPLEMENTACIÓN RECOMENDADA
+
+### Ruta A: Arranque inmediato sin entidad legal (Semana 1)
+1. Crear cuenta **Reveniu Starter** en reveniu.com (gratis, sin entidad)
+2. Crear 3 planes de suscripción: Base CLP 369K, Growth CLP 741K, Enterprise cotización
+3. Compartir links de pago con primeros clientes (Plan Fundadores)
+4. Cobros automáticos desde día 1, sin código
+
+### Ruta B: Integración API completa (Mes 1-2)
+1. Crear entidad legal en Chile (EIRL/SpA): portal.sii.cl → ~24-48h, ~CLP 0-5K
+2. Abrir cuenta corriente empresarial (BCI/Banco Chile/Santander)
+3. Crear cuenta **dLocal Go** en dlocalgo.com
+4. Conectar API: reemplaza `api/create-checkout-session.js` para usar dLocal Go
+5. Crear webhook handler: `api/dlocalgo-webhook.js`
+6. Configurar suscripciones en dLocal Go Dashboard
+7. Activar facturación DTE con Bsale (CLP 29,900/mes) integrado vía webhook
+
+### Variables de entorno finales (Vercel)
+```env
+# dLocal Go
+DLOCALGO_API_KEY=...
+DLOCALGO_SECRET_KEY=...
+DLOCALGO_WEBHOOK_SECRET=...
+DLOCALGO_BASE_URL=https://api.dlocalgo.com/v1
+
+# Supabase
+SUPABASE_URL=...
+SUPABASE_SERVICE_KEY=...
+
+# App
+SITE_URL=https://sisteco.cl
 ```
 
 ---

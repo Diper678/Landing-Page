@@ -14,7 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
-    <script src="https://js.stripe.com/v3/" defer></script>
+    <!-- dLocal Go: sin SDK externo — se usa fetch API directo en js/checkout.js -->
     <style>
         /* ── Pricing-specific styles ── */
         .founders-banner {
@@ -317,8 +317,8 @@
                     </ul>
                     <button class="btn btn-outline btn-block checkout-btn"
                         data-plan="base"
-                        data-price-monthly="price_BASE_MONTHLY_ID"
-                        data-price-annual="price_BASE_ANNUAL_ID">
+                        data-plan-id-monthly="plan_BASE_MONTHLY_ID"
+                        data-plan-id-annual="plan_BASE_ANNUAL_ID">
                         Empezar prueba gratuita
                     </button>
                 </div>
@@ -355,8 +355,8 @@
                     </ul>
                     <button class="btn btn-primary btn-block checkout-btn"
                         data-plan="growth"
-                        data-price-monthly="price_GROWTH_MONTHLY_ID"
-                        data-price-annual="price_GROWTH_ANNUAL_ID">
+                        data-plan-id-monthly="plan_GROWTH_MONTHLY_ID"
+                        data-plan-id-annual="plan_GROWTH_ANNUAL_ID">
                         Empezar prueba gratuita
                     </button>
                 </div>
@@ -660,7 +660,7 @@
                         <i data-lucide="plus"></i>
                     </button>
                     <div class="faq-answer">
-                        <p>Procesamos pagos a través de Stripe, que acepta tarjetas de crédito y débito chilenas e internacionales (Visa, Mastercard, Amex). Los planes Enterprise también pueden pagar mediante transferencia bancaria con factura. Todos los precios son en USD; el cobro se realiza en la moneda de tu tarjeta.</p>
+                        <p>Procesamos pagos a través de dLocal Go, que acepta tarjetas de crédito y débito chilenas e internacionales (Visa, Mastercard, Amex). El checkout es 100% seguro con cifrado SSL. Los planes Enterprise también pueden pagar mediante transferencia bancaria con factura en CLP. Todos los precios son en USD; el cobro se realiza en la moneda de tu tarjeta.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -712,8 +712,8 @@
                 <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
                     <button class="btn btn-primary btn-lg checkout-btn"
                         data-plan="growth"
-                        data-price-monthly="price_GROWTH_MONTHLY_ID"
-                        data-price-annual="price_GROWTH_ANNUAL_ID">
+                        data-plan-id-monthly="plan_GROWTH_MONTHLY_ID"
+                        data-plan-id-annual="plan_GROWTH_ANNUAL_ID">
                         Probar Plan Crecimiento gratis
                     </button>
                     <a href="../index.html#hero" class="btn btn-outline btn-lg">Hablar con ventas</a>

@@ -1,5 +1,6 @@
 // js/checkout.js
-// Maneja el flujo de checkout con Stripe desde la página de precios
+// Maneja el flujo de checkout con dLocal Go desde la página de precios
+// Sin dependencias externas — pura fetch API
 
 (function () {
   'use strict';
@@ -16,11 +17,10 @@
       isAnnual = !isAnnual;
       toggle.classList.toggle('on', isAnnual);
 
-      // Actualizar labels activos
       monthlyLabel?.classList.toggle('active', !isAnnual);
       annualLabel?.classList.toggle('active', isAnnual);
 
-      // Mostrar precio correcto en cada card
+      // Precios mostrados
       document.querySelectorAll('.monthly-price').forEach(el => {
         el.style.display = isAnnual ? 'none' : 'inline';
       });
@@ -28,7 +28,7 @@
         el.style.display = isAnnual ? 'inline' : 'none';
       });
 
-      // Mostrar nota de precio correcta
+      // Notas de precio
       document.querySelectorAll('.monthly-note').forEach(el => {
         el.style.display = isAnnual ? 'none' : 'block';
       });
@@ -41,26 +41,26 @@
   // ── Checkout buttons ────────────────────────────────────────────────
   document.querySelectorAll('.checkout-btn').forEach(btn => {
     btn.addEventListener('click', async () => {
-      const priceMonthly = btn.dataset.priceMonthly;
-      const priceAnnual = btn.dataset.priceAnnual;
-      const priceId = isAnnual ? priceAnnual : priceMonthly;
+      const planIdMonthly = btn.dataset.planIdMonthly;
+      const planIdAnnual  = btn.dataset.planIdAnnual;
+      const planId = isAnnual ? planIdAnnual : planIdMonthly;
 
-      // Si el priceId no está configurado aún, redirigir al formulario de contacto
-      if (!priceId || priceId.includes('_ID')) {
+      // Si el plan ID no está configurado aún, redirigir al formulario de contacto
+      if (!planId || planId.includes('_ID') || planId === 'undefined') {
         window.location.href = '../index.html#hero';
         return;
       }
 
-      // Deshabilitar botón para evitar doble click
+      // Deshabilitar botón
       btn.disabled = true;
       const originalText = btn.textContent;
-      btn.textContent = 'Redirigiendo...';
+      btn.textContent = 'Procesando...';
 
       try {
         const res = await fetch('/api/create-checkout-session', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ priceId }),
+          body: JSON.stringify({ planId }),
         });
 
         const data = await res.json();
@@ -69,27 +69,31 @@
           throw new Error(data.error || 'Error al iniciar pago');
         }
 
+        // Redirigir al checkout de dLocal Go (hosted page)
         window.location.href = data.url;
+
       } catch (err) {
         console.error('Checkout error:', err);
-        alert('Hubo un error al procesar tu solicitud. Por favor intenta nuevamente o escríbenos a contacto@sisteco.cl');
+        alert(
+          'Hubo un error al procesar tu solicitud.\n' +
+          'Por favor intenta nuevamente o escríbenos a contacto@sisteco.cl'
+        );
         btn.disabled = false;
         btn.textContent = originalText;
       }
     });
   });
 
-  // ── Mostrar banner si viene de cancelación ──────────────────────────
+  // ── Banner de cancelación ───────────────────────────────────────────
   const params = new URLSearchParams(window.location.search);
   if (params.get('canceled') === 'true') {
     const banner = document.createElement('div');
-    banner.style.cssText = 'background:#fff3cd;color:#856404;padding:12px 24px;text-align:center;font-size:0.875rem;';
-    banner.textContent = 'Cancelaste el proceso de pago. No se realizó ningún cargo. ¿Necesitas ayuda? ';
-    const link = document.createElement('a');
-    link.href = '../index.html#hero';
-    link.textContent = 'Escríbenos →';
-    link.style.color = '#856404';
-    banner.appendChild(link);
+    banner.style.cssText =
+      'background:#fff3cd;color:#856404;padding:12px 24px;' +
+      'text-align:center;font-size:0.875rem;position:relative;z-index:100;';
+    banner.innerHTML =
+      'Cancelaste el proceso de pago — no se realizó ningún cargo. ' +
+      '¿Necesitas ayuda? <a href="../index.html#hero" style="color:#856404;text-decoration:underline;">Escríbenos →</a>';
     document.body.insertBefore(banner, document.body.firstChild);
   }
 })();
