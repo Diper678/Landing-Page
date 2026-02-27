@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Suscripción activada! - Sisteco</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="icon" type="image/png" href="../assets/logos/Logo 2 no background.png">
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+    <style>
+        .success-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 24px;
+        }
+        .success-card {
+            background: #fff;
+            border: 2px solid #c5ed36;
+            border-radius: 24px;
+            padding: 64px 48px;
+            max-width: 560px;
+            width: 100%;
+        }
+        .success-icon {
+            width: 72px; height: 72px;
+            background: #c5ed36;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 28px;
+        }
+        .success-icon i { width: 36px; height: 36px; color: #111; }
+        .success-title { font-size: 2rem; font-weight: 900; color: #111; margin-bottom: 12px; }
+        .success-subtitle { color: #666; font-size: 1rem; line-height: 1.6; margin-bottom: 36px; }
+        .next-steps { text-align: left; margin-bottom: 36px; }
+        .next-steps h4 { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #999; margin-bottom: 16px; }
+        .step-item { display: flex; align-items: flex-start; gap: 14px; padding: 10px 0; border-bottom: 1px solid #f0f0f0; }
+        .step-item:last-child { border-bottom: none; }
+        .step-num { width: 28px; height: 28px; background: #111; color: #fff; font-size: 0.75rem; font-weight: 800; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+        .step-text { font-size: 0.88rem; color: #444; line-height: 1.5; padding-top: 4px; }
+        .step-text strong { color: #111; }
+    </style>
+</head>
+<body>
+    <div class="animated-bg"></div>
+    <div class="grid-pattern-overlay"></div>
+
+    <div class="success-hero">
+        <div class="success-card">
+            <div class="success-icon">
+                <i data-lucide="check"></i>
+            </div>
+            <h1 class="success-title">¡Estás dentro!</h1>
+            <p class="success-subtitle">Tu prueba gratuita de 14 días está activa. En los próximos minutos recibirás un email con los detalles de tu cuenta y los próximos pasos.</p>
+
+            <div class="next-steps">
+                <h4>Qué pasa ahora</h4>
+                <div class="step-item">
+                    <div class="step-num">1</div>
+                    <div class="step-text"><strong>Revisa tu email</strong> — te enviamos las credenciales de acceso y el link para agendar tu sesión de onboarding.</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">2</div>
+                    <div class="step-text"><strong>Onboarding (60 min)</strong> — un especialista configura tus primeros workflows de prospección y scoring IA.</div>
+                </div>
+                <div class="step-item">
+                    <div class="step-num">3</div>
+                    <div class="step-text"><strong>Primeros leads en 48h</strong> — tu pipeline comienza a llenarse automáticamente con leads HOT y WARM.</div>
+                </div>
+            </div>
+
+            <div style="display:flex; gap:12px; flex-direction:column;">
+                <a href="../index.html" class="btn btn-primary btn-block">Ir al inicio</a>
+                <a href="mailto:contacto@sisteco.cl" class="btn btn-outline btn-block">Contactar soporte</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        if (window.lucide) lucide.createIcons();
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+        });
+    </script>
+</body>
+</html>
