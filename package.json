@@ -1,0 +1,27 @@
+{
+  "name": "sisteco-landing",
+  "version": "1.0.0",
+  "description": "Landing page para Sisteco - Infraestructura inteligente para ventas B2B",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "vercel-dev": "vercel dev",
+    "build": "echo 'Static site - no build required'",
+    "setup:plans": "node -r dotenv/config api/setup-dlocalgo-plans.js",
+    "deploy": "vercel --prod",
+    "deploy:preview": "vercel"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0",
+    "express-rate-limit": "^8.2.1",
+    "resend": "^6.9.2"
+  },
+  "devDependencies": {
+    "dotenv": "^17.2.4",
+    "express": "^5.2.1",
+    "vercel": "^50.25.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

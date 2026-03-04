@@ -83,6 +83,10 @@ En Dashboard → Subscriptions → Create Plan:
 **Plan 4: Crecimiento Anual**
 - Amount: USD 7,164.00 · Currency: USD · Frequency: Yearly
 
+**Plan 5: Enterprise Mensual**
+- Amount: USD 1,800.00 · Currency: USD · Frequency: Monthly
+- Plan ID: copiar para env vars
+
 ### Paso 5: Configurar Webhook
 1. Dashboard → Integrations → Webhooks → Add Endpoint
 2. URL: `https://tu-dominio.vercel.app/api/dlocalgo-webhook`
@@ -113,6 +117,7 @@ DLOCALGO_PLAN_BASE_MONTHLY=plan_xxxxx
 DLOCALGO_PLAN_BASE_ANNUAL=plan_xxxxx
 DLOCALGO_PLAN_GROWTH_MONTHLY=plan_xxxxx
 DLOCALGO_PLAN_GROWTH_ANNUAL=plan_xxxxx
+DLOCALGO_PLAN_ENTERPRISE_MONTHLY=plan_xxxxx
 ```
 
 ### Paso 7: Crear tabla en Supabase
@@ -177,9 +182,9 @@ dLocal Go webhook → api/dlocalgo-webhook.js
 - [ ] Entidad legal creada (SpA/EIRL) con RUT activo
 - [ ] Cuenta corriente empresarial abierta
 - [ ] Cuenta dLocal Go verificada (KYC aprobado)
-- [ ] 4 planes de suscripción creados en dLocal Go Dashboard
+- [ ] 5 planes de suscripción creados en dLocal Go Dashboard
 - [ ] Webhook configurado con URL de producción
-- [ ] 7 variables de entorno en Vercel
+- [ ] 8 variables de entorno en Vercel
 - [ ] Tabla `subscriptions` creada en Supabase
 - [ ] Prueba exitosa en sandbox (cobro + webhook + DB)
 - [ ] DTE/Bsale configurado para emisión automática

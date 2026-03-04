@@ -1,6 +1,7 @@
 // js/checkout.js
-// Maneja el flujo de checkout con dLocal Go desde la página de precios
-// Sin dependencias externas — pura fetch API
+// Maneja el flujo de checkout con Reveniu (links directos) o dLocal Go (API)
+// Actualmente usa Reveniu links — cuando dLocal Go esté configurado,
+// descomentar la sección de API y cambiar los data attributes en precios.html
 
 (function () {
   'use strict';
@@ -35,54 +36,14 @@
       document.querySelectorAll('.annual-note').forEach(el => {
         el.style.display = isAnnual ? 'block' : 'none';
       });
+
+      // Actualizar href de los botones de checkout según billing period
+      document.querySelectorAll('.checkout-btn').forEach(btn => {
+        const link = isAnnual ? btn.dataset.linkAnnual : btn.dataset.linkMonthly;
+        if (link) btn.href = link;
+      });
     });
   }
-
-  // ── Checkout buttons ────────────────────────────────────────────────
-  document.querySelectorAll('.checkout-btn').forEach(btn => {
-    btn.addEventListener('click', async () => {
-      const planIdMonthly = btn.dataset.planIdMonthly;
-      const planIdAnnual  = btn.dataset.planIdAnnual;
-      const planId = isAnnual ? planIdAnnual : planIdMonthly;
-
-      // Si el plan ID no está configurado aún, redirigir al formulario de contacto
-      if (!planId || planId.includes('_ID') || planId === 'undefined') {
-        window.location.href = '../index.html#hero';
-        return;
-      }
-
-      // Deshabilitar botón
-      btn.disabled = true;
-      const originalText = btn.textContent;
-      btn.textContent = 'Procesando...';
-
-      try {
-        const res = await fetch('/api/create-checkout-session', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ planId }),
-        });
-
-        const data = await res.json();
-
-        if (!res.ok || !data.url) {
-          throw new Error(data.error || 'Error al iniciar pago');
-        }
-
-        // Redirigir al checkout de dLocal Go (hosted page)
-        window.location.href = data.url;
-
-      } catch (err) {
-        console.error('Checkout error:', err);
-        alert(
-          'Hubo un error al procesar tu solicitud.\n' +
-          'Por favor intenta nuevamente o escríbenos a contacto@sisteco.cl'
-        );
-        btn.disabled = false;
-        btn.textContent = originalText;
-      }
-    });
-  });
 
   // ── Banner de cancelación ───────────────────────────────────────────
   const params = new URLSearchParams(window.location.search);

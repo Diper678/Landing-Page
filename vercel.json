@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "buildCommand": "",
+  "outputDirectory": ".",
+  "rewrites": [
+    { "source": "/soluciones", "destination": "/pages/soluciones.html" },
+    { "source": "/como-funciona", "destination": "/pages/como-funciona.html" },
+    { "source": "/integraciones", "destination": "/pages/integraciones.html" },
+    { "source": "/dashboard", "destination": "/pages/dashboard.html" },
+    { "source": "/precios", "destination": "/pages/precios.html" },
+    { "source": "/sobre-nosotros", "destination": "/pages/sobre-nosotros.html" },
+    { "source": "/blog", "destination": "/pages/blog.html" },
+    { "source": "/api-docs", "destination": "/pages/api.html" },
+    { "source": "/documentacion", "destination": "/pages/documentacion.html" },
+    { "source": "/tutoriales", "destination": "/pages/tutoriales.html" },
+    { "source": "/webinars", "destination": "/pages/webinars.html" },
+    { "source": "/soporte", "destination": "/pages/soporte.html" },
+    { "source": "/contacto", "destination": "/pages/contacto.html" },
+    { "source": "/carreras", "destination": "/pages/carreras.html" },
+    { "source": "/privacidad", "destination": "/pages/privacidad.html" },
+    { "source": "/terminos", "destination": "/pages/terminos.html" },
+    { "source": "/cookies", "destination": "/pages/cookies.html" },
+    { "source": "/gdpr", "destination": "/pages/gdpr.html" }
+  ],
+  "crons": [
+    {
+      "path": "/api/cron/send-drip",
+      "schedule": "0 14 * * *"
+    }
+  ]
+}

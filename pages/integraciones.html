@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integraciones - Sisteco</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <meta name="description" content="Integra Sisteco con las herramientas que ya usas">
+    <link rel="icon" type="image/png" href="../assets/logos/sisteco-logo.svg">
+    <meta property="og:title" content="Integraciones - Sisteco">
+    <meta property="og:description" content="Integra Sisteco con las herramientas que ya usas">
+    <meta property="og:type" content="website">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+</head>
+<body>
+    <div class="animated-bg"></div>
+    <div class="grid-pattern-overlay"></div>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo navbar-item">
+                <img src="../assets/logos/sisteco-logo.svg" alt="Sisteco Logo">
+                <span class="logo-text">Sisteco</span>
+            </a>
+            <div class="nav-links">
+                <a href="vision.html" class="btn btn-ghost navbar-item">Visión</a>
+                <a href="soluciones.html" class="btn btn-ghost navbar-item">Soluciones</a>
+                <a href="como-funciona.html" class="btn btn-ghost navbar-item">Infraestructura</a>
+                <a href="dashboard.html" class="btn btn-ghost navbar-item">Dashboard</a>
+                <a href="precios.html" class="btn btn-ghost navbar-item">Precios</a>
+            </div>
+            <a href="../index.html#hero" class="btn btn-primary navbar-item">Empezar ahora</a>
+            <button class="hamburger" aria-label="Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Inicio</a>
+                <span>/</span>
+                <span>Integraciones</span>
+            </div>
+            <h1 class="page-hero-title">Integrado con las herramientas que ya usas</h1>
+            <p class="page-hero-subtitle">Más de 20 integraciones nativas y via API para conectar Sisteco con tu stack tecnológico actual. Sin fricciones, sin desarrollo custom.</p>
+        </div>
+    </section>
+
+    <!-- Filter Pills -->
+    <section class="integrations-filter">
+        <div class="container">
+            <div class="filter-pills">
+                <button class="pill active" data-filter="all">Todas</button>
+                <button class="pill" data-filter="data-sources">Data Sources</button>
+                <button class="pill" data-filter="ai-models">AI Models</button>
+                <button class="pill" data-filter="outreach">Outreach</button>
+                <button class="pill" data-filter="crm">CRM</button>
+                <button class="pill" data-filter="analytics">Analytics</button>
+                <button class="pill" data-filter="webhooks">Webhooks</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integrations Grid -->
+    <section class="integrations-grid-section">
+        <div class="container">
+
+            <!-- Data Sources -->
+            <div class="integration-category" data-category="data-sources">
+                <h2 class="category-title"><i data-lucide="database"></i> Data Sources</h2>
+                <div class="integrations-grid">
+                    <div class="integration-card" data-category="data-sources">
+                        <div class="integration-card-header">
+                            <div class="integration-icon">
+                                <img src="../assets/icons/scrapingbee.svg" alt="ScrapingBee" width="40" height="40">
+                            </div>
+                            <span class="integration-badge integration-badge--native">Nativa</span>
+                        </div>
+                        <h3>ScrapingBee</h3>
+                        <p>Extracción web avanzada con proxy rotation, JavaScript rendering y resolución automática de captchas para acceder a cualquier sitio web.</p>
+                    </div>
+                    <div class="integration-card" data-category="data-sources">
+                        <div class="integration-card-header">
+                            <div class="integration-icon">
+                                <img src="../assets/icons/firecrawl.svg" alt="Firecrawl" width="40" height="40">
+                            </div>
+                            <span class="integration-badge integration-badge--native">Nativa</span>
+                        </div>
+                        <h3>Firecrawl</h3>
+                        <p>Crawling inteligente de sitios completos con extracción de datos estructurados y mapeo automático de la arquitectura del sitio.</p>
+                    </div>
+                    <div class="integration-card" data-category="data-sources">
+                        <div class="integration-card-header">
+                            <div class="integration-icon">
+                                <i data-lucide="linkedin"></i>
+                            </div>
+                            <span class="integration-badge integration-badge--api">Via API</span>
+                        </div>
+                        <h3>LinkedIn Sales Navigator</h3>
+                        <p>Datos de perfiles profesionales, empresas y señales de intención directamente desde la mayor red profesional del mundo.</p>
+                    </div>
+                    <div class="integration-card" data-category="data-sources">
+                        <div class="integration-card-header">
+                            <div class="integration-icon">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <span class="integration-badge integration-badge--api">Via API</span>
+                        </div>
+                        <h3>Google Maps</h3>
+                        <p>Datos de negocios locales incluyendo reviews, horarios, información de contacto y categorías para prospección geolocalizada.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Models -->
+            <div class="integration-category" data-category="ai-models">
+                <h2 class="category-title"><i data-lucide="brain"></i> AI Models</h2>
+                <div class="integrations-grid">
+                    <div class="integration-card" data-category="ai-models">
+                        <div class="integration-card-header">
+                            <div class="integration-icon">
+                                <img src="../assets/icons/claude.svg" alt="Claude" width="40" height="40">
+                            </div>
+                            <span class="integration-badge integration-badge--native">Nativa</span>
+                        </div>
+                        <h3>Claude <span class="integration-maker">Anthropic</span></h3>
+                        <p>Análisis profundo y personalización de mensajes con razonamiento avanzado. Ideal para perfilado detallado de prospectos y generación de contenido.</p>
+                    </div>
+                    <div class="integration-card" data-category="ai-models">
+                        <div class="integration-card-header">
+                            <div class="integration-icon">
+                                <img src="../assets/icons/gemini.svg" alt="Gemini" width="40" height="40">
+                            </div>
+                            <span class="integration-badge integration-badge--native">Nativa</span>
+                        </div>
+                        <h3>Gemini <span class="integration-maker">Google</span></h3>
+                        <p>Procesamiento rápido a escala masiva con capacidades multimodales. Perfecto para clasificación batch y extracción de entidades a alta velocidad.</p>
+                    </div>
+                    <div class="integration-card" data-category="ai-models">
+                        <div class="integration-card-header">
+                            <div class="integration-icon">
+                                <img src="../assets/icons/kimi.svg" alt="Kimi" width="40" height="40">
+                            </div>
+                            <span class="integration-badge integration-badge--native">Nativa</span>
+                        </div>
+                        <h3>Kimi <span class="integration-maker">Moonshot</span></h3>
+                        <p>Análisis multiidioma avanzado con soporte para más de 30 idiomas. Especializado en mercados asiáticos y contenido multilingüe.</p>
+                    </div>
+                    <div class="integration-card" data-category="ai-models">
+                        <div class="integration-card-header">
+                            <div class="integration-icon">
+                                <i data-lucide="bot"></i>
+                            </div>
+                            <span class="integration-badge integration-badge--api">Via API</span>
+                        </div>
+                        <h3>GPT-4 <span class="integration-maker">OpenAI</span></h3>
+                        <p>Modelo de lenguaje versátil para tareas generales de procesamiento de texto, resumen y generación de contenido comercial.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Outreach -->
+            <div class="integration-category" data-category="outreach">
+                <h2 class="category-title"><i data-lucide="send"></i> Outreach</h2>
+                <div class="integrations-grid">
+                    <div class="integration-card" data-category="outreach">
+                        <div class="integration-card-header">
+                            <div class="integration-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <span class="integration-badge integration-badge--native">Nativa</span>
+                        </div>
+                        <h3>Gmail</h3>
+                        <p>Envío de emails personalizados con warm-up automático, tracking de aperturas y clics, y gestión de múltiples cuentas de envío.</p>
+                    </div>
+                    <div class="integration-card" data-category="outreach">
+                        <div class="integration-card-header">
+                            <div class="integration-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <span class="integration-badge integration-badge--native">Nativa</span>
+                        </div>
+                        <h3>Outlook</h3>
+                        <p>Integración completa con Microsoft 365 para envío de emails corporativos, sincronización de calendarios y gestión de contactos.</p>
+                    </div>
+                    <div class="integration-card" data-category="outreach">
+                        <div class="integration-card-header">
+                            <div class="integration-icon">
+                                <i data-lucide="linkedin"></i>
+                            </div>
+                            <span class="integration-badge integration-badge--api">Via API</span>
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <p>Mensajes y conexiones automatizadas con límites seguros. Envía solicitudes de conexión, InMails y follow-ups de forma natural.</p>
+                    </div>
+                    <div class="integration-card" data-category="outreach">
+                        <div class="integration-card-header">
+                            <div class="integration-icon">
+                                <i data-lucide="message-circle"></i>
+                            </div>
+                            <span class="integration-badge integration-badge--soon">Próximamente</span>
+                        </div>
+                        <h3>WhatsApp Business</h3>
+                        <p>Mensajería directa a prospectos cualificados con templates aprobados, respuestas automáticas y soporte multimedia.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CRM -->
+            <div class="integration-category" data-category="crm">
+                <h2 class="category-title"><i data-lucide="users"></i> CRM</h2>
+                <div class="integrations-grid">
+                    <div class="integration-card" data-category="crm">
+                        <div class="integration-card-header">
+                            <div class="integration-icon">
+                                <i data-lucide="database"></i>
+                            </div>
+                            <span class="integration-badge integration-badge--native">Nativa</span>
+                        </div>
+                        <h3>HubSpot</h3>
+                        <p>Sincronización bidireccional de contactos, empresas y deals. Cada interacción y puntuación de lead se refleja automáticamente en HubSpot.</p>
+                    </div>
+                    <div class="integration-card" data-category="crm">
+                        <div class="integration-card-header">
+                            <div class="integration-icon">
+                                <i data-lucide="cloud"></i>
+                            </div>
+                            <span class="integration-badge integration-badge--api">Via API</span>
+                        </div>
+                        <h3>Salesforce</h3>
+                        <p>Integración enterprise completa con sincronización de leads, oportunidades, cuentas y actividades. Compatible con custom objects.</p>
+                    </div>
+                    <div class="integration-card" data-category="crm">
+                        <div class="integration-card-header">
+                            <div class="integration-icon">
+                                <i data-lucide="kanban"></i>
+                            </div>
+                            <span class="integration-badge integration-badge--api">Via API</span>
+                        </div>
+                        <h3>Pipedrive</h3>
+                        <p>Gestión de pipeline de ventas con sincronización de deals, contactos y actividades. Visualiza tu funnel completo en Pipedrive.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analytics -->
+            <div class="integration-category" data-category="analytics">
+                <h2 class="category-title"><i data-lucide="bar-chart-2"></i> Analytics</h2>
+                <div class="integrations-grid">
+                    <div class="integration-card" data-category="analytics">
+                        <div class="integration-card-header">
+                            <div class="integration-icon">
+                                <i data-lucide="bar-chart-2"></i>
+                            </div>
+                            <span class="integration-badge integration-badge--api">Via API</span>
+                        </div>
+                        <h3>Google Analytics</h3>
+                        <p>Tracking de conversiones web con atribución completa. Conecta tus campañas de outreach con las conversiones en tu sitio web.</p>
+                    </div>
+                    <div class="integration-card" data-category="analytics">
+                        <div class="integration-card-header">
+                            <div class="integration-icon">
+                                <i data-lucide="activity"></i>
+                            </div>
+                            <span class="integration-badge integration-badge--soon">Próximamente</span>
+                        </div>
+                        <h3>Mixpanel</h3>
+                        <p>Análisis de comportamiento de usuarios con eventos personalizados, funnels de conversión y segmentación avanzada de audiencias.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Webhooks & API -->
+            <div class="integration-category" data-category="webhooks">
+                <h2 class="category-title"><i data-lucide="webhook"></i> Webhooks & API</h2>
+                <div class="integrations-grid">
+                    <div class="integration-card" data-category="webhooks">
+                        <div class="integration-card-header">
+                            <div class="integration-icon">
+                                <i data-lucide="zap"></i>
+                            </div>
+                            <span class="integration-badge integration-badge--api">Via API</span>
+                        </div>
+                        <h3>Zapier</h3>
+                        <p>Conecta Sisteco con más de 5000 aplicaciones sin código. Automatiza flujos de trabajo entre Sisteco y cualquier herramienta de tu stack.</p>
+                    </div>
+                    <div class="integration-card" data-category="webhooks">
+                        <div class="integration-card-header">
+                            <div class="integration-icon">
+                                <i data-lucide="blocks"></i>
+                            </div>
+                            <span class="integration-badge integration-badge--api">Via API</span>
+                        </div>
+                        <h3>Make (Integromat)</h3>
+                        <p>Automatizaciones visuales avanzadas con escenarios complejos, lógica condicional y procesamiento de datos entre múltiples servicios.</p>
+                    </div>
+                    <div class="integration-card" data-category="webhooks">
+                        <div class="integration-card-header">
+                            <div class="integration-icon">
+                                <i data-lucide="code"></i>
+                            </div>
+                            <span class="integration-badge integration-badge--native">Nativa</span>
+                        </div>
+                        <h3>API REST</h3>
+                        <p>Acceso directo a todos los endpoints de Sisteco. Documentación completa con OpenAPI, SDKs para Python, Node.js y Go, y límites generosos.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Integration Stats -->
+    <section class="integration-stats-section">
+        <div class="container">
+            <div class="integration-stats-grid">
+                <div class="integration-stat">
+                    <span class="integration-stat-value">20+</span>
+                    <span class="integration-stat-label">Integraciones disponibles</span>
+                </div>
+                <div class="integration-stat">
+                    <span class="integration-stat-value">5 min</span>
+                    <span class="integration-stat-label">Tiempo medio de configuración</span>
+                </div>
+                <div class="integration-stat">
+                    <span class="integration-stat-value">99.9%</span>
+                    <span class="integration-stat-label">Uptime de sincronización</span>
+                </div>
+                <div class="integration-stat">
+                    <span class="integration-stat-value">Tiempo real</span>
+                    <span class="integration-stat-label">Sincronización de datos</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Page CTA -->
+    <section class="page-cta">
+        <div class="container">
+            <div class="cta-card">
+                <h2>Conecta tu stack tecnológico con Sisteco</h2>
+                <p>Integra todas tus herramientas en minutos. Sin desarrollo custom, sin consultores, sin esperas.</p>
+                <div class="cta-buttons">
+                    <a href="../index.html#hero" class="btn btn-primary btn-lg">Empezar gratis</a>
+                    <a href="api.html" class="btn btn-ghost btn-lg">Ver documentación API</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../assets/logos/sisteco-logo.svg" alt="Sisteco" class="footer-logo">
+                    <p>Infraestructura inteligente para automatizar tu prospección B2B y escalar tus ventas.</p>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <i data-lucide="mail"></i>
+                            <span>hola@sisteco.io</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i data-lucide="phone"></i>
+                            <span>+34 900 123 456</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i data-lucide="map-pin"></i>
+                            <span>Madrid, España</span>
+                        </div>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Producto</h4>
+                        <a href="soluciones.html">Soluciones</a>
+                        <a href="integraciones.html">Integraciones</a>
+                        <a href="api.html">API</a>
+                        <a href="dashboard.html">Dashboard</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Empresa</h4>
+                        <a href="sobre-nosotros.html">Sobre nosotros</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="carreras.html">Carreras</a>
+                        <a href="contacto.html">Contacto</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Recursos</h4>
+                        <a href="documentacion.html">Documentación</a>
+                        <a href="tutoriales.html">Tutoriales</a>
+                        <a href="webinars.html">Webinars</a>
+                        <a href="soporte.html">Soporte</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <a href="privacidad.html">Privacidad</a>
+                        <a href="terminos.html">Términos</a>
+                        <a href="cookies.html">Cookies</a>
+                        <a href="gdpr.html">GDPR</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sisteco. Todos los derechos reservados.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacidad.html">Privacidad</a>
+                    <a href="terminos.html">Términos</a>
+                    <a href="cookies.html">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/pages.js"></script>
+</body>
+</html>

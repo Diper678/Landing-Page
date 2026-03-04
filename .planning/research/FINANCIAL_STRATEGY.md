@@ -14,7 +14,7 @@
 | **ScrapingBee** (web scraping) | $49 | $99 | $249 |
 | **Instantly.ai** (email sequences) | $37 | $97 | $358 |
 | **Lemlist** (email outreach) | $55/user | $99/user | custom |
-| **n8n Cloud** (automatización) | $20 | $50 | $800 |
+| **n8n Self-Hosted** (automatización) | ~$5-10 VPS | ~$5-10 VPS | ~$5-10 VPS |
 | **HubSpot CRM** (básico) | $20/user | $100/user | $150/user |
 
 ### Stack DIY mínimo viable (empresa 2 SDRs en Chile)
@@ -46,8 +46,8 @@ COSTO REAL DEL DIY:                ~$1,253/mes (incluyendo tiempo)
 | Vercel Pro (hosting) | $20 |
 | Supabase Pro (base de datos) | $25 |
 | Dominio + correo corporativo | $10 |
-| n8n Business (automatizaciones, hasta 40 clientes) | $800 |
-| **Total costos fijos** | **$855/mes** |
+| n8n Self-Hosted (VPS dedicado, sin límites) | $10 |
+| **Total costos fijos** | **$65/mes** |
 
 *Break-even de infraestructura con 3 clientes de cualquier plan.*
 

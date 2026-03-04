@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Sisteco</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <meta name="description" content="Dashboard Sisteco: todos tus canales, leads y métricas en un solo lugar. Operativo 24/7.">
+    <link rel="icon" type="image/png" href="../assets/logos/sisteco-logo.svg">
+    <meta property="og:title" content="Dashboard - Sisteco">
+    <meta property="og:description" content="Gestiona leads, canales y analytics en un solo lugar. Disponible 24/7.">
+    <meta property="og:type" content="website">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+</head>
+<body>
+    <div class="animated-bg"></div>
+    <div class="grid-pattern-overlay"></div>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo navbar-item">
+                <img src="../assets/logos/sisteco-logo.svg" alt="Sisteco Logo">
+                <span class="logo-text">Sisteco</span>
+            </a>
+            <div class="nav-links">
+                <a href="vision.html" class="btn btn-ghost navbar-item">Visión</a>
+                <a href="soluciones.html" class="btn btn-ghost navbar-item">Soluciones</a>
+                <a href="como-funciona.html" class="btn btn-ghost navbar-item">Infraestructura</a>
+                <a href="dashboard.html" class="btn btn-ghost navbar-item">Dashboard</a>
+                <a href="precios.html" class="btn btn-ghost navbar-item">Precios</a>
+            </div>
+            <a href="../index.html#hero" class="btn btn-primary navbar-item">Empezar ahora</a>
+            <button class="hamburger" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="../index.html">Inicio</a>
+                <span>/</span>
+                <span>Dashboard</span>
+            </nav>
+            <h1 class="page-hero-title">Todos tus canales, un solo <span class="text-lime">centro de control</span></h1>
+            <p class="page-hero-subtitle">Visualiza leads, campañas y conversaciones de WhatsApp, Email, LinkedIn, Slack e Instagram en un solo dashboard. Operativo 24/7, nada se pierde.</p>
+        </div>
+    </section>
+
+    <!-- Dashboard Showcase — Consistent with Hero Dashboard -->
+    <section class="page-section">
+        <div class="container">
+            <div class="dashboard-showcase">
+                <div class="dashboard-mockup">
+                    <div class="dashboard-header">
+                        <div class="dashboard-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="dashboard-title-bar">sisteco · live dashboard</div>
+                    </div>
+                    <div class="dashboard-body">
+                        <!-- Metrics Row — same as hero -->
+                        <div class="dashboard-metrics-row">
+                            <div class="dashboard-metric-card">
+                                <div class="metric-label">Leads hoy</div>
+                                <div class="metric-value">247</div>
+                                <div class="metric-change positive"><i data-lucide="trending-up"></i> +12%</div>
+                            </div>
+                            <div class="dashboard-metric-card">
+                                <div class="metric-label">Tasa apertura</div>
+                                <div class="metric-value">68%</div>
+                                <div class="metric-change positive"><i data-lucide="trending-up"></i> +8%</div>
+                            </div>
+                            <div class="dashboard-metric-card">
+                                <div class="metric-label">Reuniones</div>
+                                <div class="metric-value">18</div>
+                                <div class="metric-change positive"><i data-lucide="trending-up"></i> +5</div>
+                            </div>
+                            <div class="dashboard-metric-card">
+                                <div class="metric-label">Canales activos</div>
+                                <div class="metric-value">6</div>
+                                <div class="metric-change positive"><i data-lucide="check-circle"></i> 24/7</div>
+                            </div>
+                        </div>
+                        <!-- Bar Chart — same style as hero -->
+                        <div class="dashboard-chart">
+                            <div class="chart-title">Leads cualificados · últimos 7 días</div>
+                            <div class="chart-bars">
+                                <div class="chart-bar-group">
+                                    <div class="chart-bar" style="height: 45%"></div>
+                                    <span class="chart-label">Lun</span>
+                                </div>
+                                <div class="chart-bar-group">
+                                    <div class="chart-bar" style="height: 65%"></div>
+                                    <span class="chart-label">Mar</span>
+                                </div>
+                                <div class="chart-bar-group">
+                                    <div class="chart-bar" style="height: 55%"></div>
+                                    <span class="chart-label">Mie</span>
+                                </div>
+                                <div class="chart-bar-group">
+                                    <div class="chart-bar" style="height: 80%"></div>
+                                    <span class="chart-label">Jue</span>
+                                </div>
+                                <div class="chart-bar-group">
+                                    <div class="chart-bar" style="height: 70%"></div>
+                                    <span class="chart-label">Vie</span>
+                                </div>
+                                <div class="chart-bar-group">
+                                    <div class="chart-bar" style="height: 40%"></div>
+                                    <span class="chart-label">Sab</span>
+                                </div>
+                                <div class="chart-bar-group">
+                                    <div class="chart-bar" style="height: 90%"></div>
+                                    <span class="chart-label">Dom</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Live Leads List — same style as hero -->
+                        <div class="dashboard-leads">
+                            <div class="leads-title">
+                                Leads recientes
+                                <span class="db-badge-live"><span class="live-dot"></span> En vivo</span>
+                            </div>
+                            <div class="lead-item">
+                                <div class="lead-avatar" style="background:#c5ed36;color:#111">MC</div>
+                                <div class="lead-info">
+                                    <div class="lead-name">María Castillo</div>
+                                    <div class="lead-company">TechVentures · <i data-lucide="message-circle" style="width:12px;height:12px;color:#25D366"></i> WhatsApp</div>
+                                </div>
+                                <div class="lead-score high">Score: 92</div>
+                            </div>
+                            <div class="lead-item">
+                                <div class="lead-avatar" style="background:#111;color:#fff">JR</div>
+                                <div class="lead-info">
+                                    <div class="lead-name">Jorge Ramirez</div>
+                                    <div class="lead-company">DataFlow Corp · <i data-lucide="linkedin" style="width:12px;height:12px;color:#0A66C2"></i> LinkedIn</div>
+                                </div>
+                                <div class="lead-score medium">Score: 78</div>
+                            </div>
+                            <div class="lead-item">
+                                <div class="lead-avatar" style="background:#f0f0f0;color:#666">LP</div>
+                                <div class="lead-info">
+                                    <div class="lead-name">Laura Pérez</div>
+                                    <div class="lead-company">InnovateMX · <i data-lucide="mail" style="width:12px;height:12px"></i> Email</div>
+                                </div>
+                                <div class="lead-score high">Score: 85</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="page-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Todo integrado, <span class="text-lime">nada se pierde</span></h2>
+                <p class="section-subtitle">Seis módulos que cubren el ciclo completo: desde la captura del lead hasta el cierre, con todos los canales conectados y operando 24/7.</p>
+            </div>
+            <div class="dashboard-feature-grid">
+                <div class="dashboard-feature">
+                    <div class="feature-icon"><i data-lucide="layout-dashboard"></i></div>
+                    <h3>Vista unificada</h3>
+                    <p>Métricas de todos tus canales en tiempo real. Cada conversación de WhatsApp, email o LinkedIn alimenta el mismo dashboard.</p>
+                </div>
+                <div class="dashboard-feature">
+                    <div class="feature-icon"><i data-lucide="target"></i></div>
+                    <h3>Lead Scoring IA</h3>
+                    <p>Scoring predictivo que mejora con cada cierre. Ve de un vistazo quién está listo para comprar y quién necesita más nurturing.</p>
+                </div>
+                <div class="dashboard-feature">
+                    <div class="feature-icon"><i data-lucide="message-circle"></i></div>
+                    <h3>Hub omnicanal</h3>
+                    <p>WhatsApp, Email, LinkedIn, Slack, Instagram: todas las conversaciones en un solo lugar. El contexto nunca se pierde entre canales.</p>
+                </div>
+                <div class="dashboard-feature">
+                    <div class="feature-icon"><i data-lucide="bar-chart-2"></i></div>
+                    <h3>Analytics por canal</h3>
+                    <p>Qué canal convierte más, qué secuencia funciona mejor, dónde invertir más. Decisiones basadas en datos, no intuición.</p>
+                </div>
+                <div class="dashboard-feature">
+                    <div class="feature-icon"><i data-lucide="clock"></i></div>
+                    <h3>Monitoreo 24/7</h3>
+                    <p>Mientras duermes, los agentes IA atienden prospectos y el dashboard registra cada interacción. Nada se escapa.</p>
+                </div>
+                <div class="dashboard-feature">
+                    <div class="feature-icon"><i data-lucide="shield-check"></i></div>
+                    <h3>Seguridad integrada</h3>
+                    <p>Cumplimiento Ley 21.719 y GDPR visible en el dashboard. Consentimientos, portabilidad y auditoría en un clic.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why It Matters -->
+    <section class="page-section page-section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">¿Por qué importa tener <span class="text-lime">todo conectado</span>?</h2>
+                <p class="section-subtitle">La información que se pierde entre canales son ventas perdidas. Los datos lo demuestran.</p>
+            </div>
+            <div class="stack-comparison">
+                <div class="stack-side old">
+                    <h3>Sin integración</h3>
+                    <ul class="stack-list">
+                        <li><span class="stack-tool">Leads perdidos fuera de horario</span><span class="stack-price">-50% oportunidades</span></li>
+                        <li><span class="stack-tool">Conversaciones fragmentadas</span><span class="stack-price">33% retención</span></li>
+                        <li><span class="stack-tool">Respuesta promedio: 42 horas</span><span class="stack-price">-400% conversión</span></li>
+                        <li><span class="stack-tool">Datos en 5+ herramientas</span><span class="stack-price">0 visibilidad</span></li>
+                    </ul>
+                    <div class="stack-total">Resultado: <strong>Ventas perdidas</strong></div>
+                </div>
+                <div class="stack-vs">VS</div>
+                <div class="stack-side new">
+                    <h3>Con Sisteco</h3>
+                    <div class="stack-unified">
+                        <div class="stack-unified-label">Todo integrado, 24/7</div>
+                        <div class="stack-unified-price">Resultado: <strong>más cierres</strong></div>
+                    </div>
+                    <ul class="stack-features">
+                        <li><i data-lucide="check"></i> Respuesta IA en &lt;11 segundos</li>
+                        <li><i data-lucide="check"></i> 89% retención omnicanal</li>
+                        <li><i data-lucide="check"></i> 21x más conversiones (respuesta &lt;5min)</li>
+                        <li><i data-lucide="check"></i> Un dashboard, todos los canales</li>
+                        <li><i data-lucide="check"></i> Ley 21.719 + GDPR compliant</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bottom CTA -->
+    <section class="page-section page-cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Las empresas que no duermen, <span class="text-lime">ganan</span></h2>
+                <p>14 días de acceso completo. Sin tarjeta de crédito. Sin compromisos. Tu negocio operando 24/7 desde el día uno.</p>
+                <a href="../index.html#hero" class="btn btn-primary btn-lg">Empezar gratis</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../assets/logos/sisteco-logo.svg" alt="Sisteco" class="footer-logo">
+                    <p>Infraestructura inteligente que trabaja 24/7 para escalar tus ventas B2B con la máxima seguridad.</p>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item"><i data-lucide="mail"></i><span>contacto@sisteco.cl</span></div>
+                        <div class="footer-contact-item"><i data-lucide="phone"></i><span>+56 9 40065566</span></div>
+                        <div class="footer-contact-item"><i data-lucide="map-pin"></i><span>Av. Alonso de Córdova 5870 Of. 413, Las Condes Santiago de Chile</span></div>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/sisteco/" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col"><h4>Producto</h4><a href="soluciones.html">Soluciones</a><a href="integraciones.html">Integraciones</a><a href="api.html">API</a><a href="dashboard.html">Dashboard</a></div>
+                    <div class="footer-col"><h4>Empresa</h4><a href="vision.html">Visión</a><a href="sobre-nosotros.html">Sobre nosotros</a><a href="blog.html">Blog</a><a href="carreras.html">Carreras</a><a href="contacto.html">Contacto</a></div>
+                    <div class="footer-col"><h4>Recursos</h4><a href="documentacion.html">Documentación</a><a href="tutoriales.html">Tutoriales</a><a href="webinars.html">Webinars</a><a href="soporte.html">Soporte</a></div>
+                    <div class="footer-col"><h4>Legal</h4><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a><a href="cookies.html">Cookies</a><a href="gdpr.html">Ley 21.719</a></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sisteco. Todos los derechos reservados.</p>
+                <div class="footer-bottom-links"><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a><a href="cookies.html">Cookies</a></div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/pages.js"></script>
+</body>
+</html>

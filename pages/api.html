@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Reference - Sisteco</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <meta name="description" content="Documentación de la API REST de Sisteco para integrar generación de leads en tu aplicación">
+    <link rel="icon" type="image/png" href="../assets/logos/sisteco-logo.svg">
+    <meta property="og:title" content="API Reference - Sisteco">
+    <meta property="og:description" content="Documentación de la API REST de Sisteco para integrar generación de leads en tu aplicación">
+    <meta property="og:type" content="website">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+</head>
+<body>
+    <div class="animated-bg"></div>
+    <div class="grid-pattern-overlay"></div>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo navbar-item">
+                <img src="../assets/logos/sisteco-logo.svg" alt="Sisteco Logo">
+                <span class="logo-text">Sisteco</span>
+            </a>
+            <div class="nav-links">
+                <a href="vision.html" class="btn btn-ghost navbar-item">Visión</a>
+                <a href="soluciones.html" class="btn btn-ghost navbar-item">Soluciones</a>
+                <a href="como-funciona.html" class="btn btn-ghost navbar-item">Infraestructura</a>
+                <a href="dashboard.html" class="btn btn-ghost navbar-item">Dashboard</a>
+                <a href="precios.html" class="btn btn-ghost navbar-item">Precios</a>
+            </div>
+            <a href="../index.html#hero" class="btn btn-primary navbar-item">Empezar ahora</a>
+            <button class="hamburger" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="../index.html">Inicio</a>
+                <span>/</span>
+                <span>API</span>
+            </nav>
+            <h1>API de Sisteco</h1>
+            <p class="page-hero-subtitle">Integra la potencia de Sisteco directamente en tu aplicación con nuestra API REST</p>
+        </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="section">
+        <div class="container">
+            <div class="grid-3">
+                <div class="content-card">
+                    <div class="content-card-icon"><i data-lucide="globe"></i></div>
+                    <h3>RESTful API</h3>
+                    <p>Endpoints intuitivos siguiendo estándares REST</p>
+                </div>
+                <div class="content-card">
+                    <div class="content-card-icon"><i data-lucide="key"></i></div>
+                    <h3>Autenticación</h3>
+                    <p>API Keys con permisos granulares y rate limiting</p>
+                </div>
+                <div class="content-card">
+                    <div class="content-card-icon"><i data-lucide="webhook"></i></div>
+                    <h3>Webhooks</h3>
+                    <p>Notificaciones en tiempo real para eventos importantes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Endpoints -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Endpoints Principales</h2>
+            </div>
+
+            <div class="code-block">
+                <div class="code-header"><span class="code-lang">GET</span><span>/api/v1/leads</span></div>
+                <div class="code-body"><pre><span class="code-comment">// Obtener leads con filtros</span>
+<span class="code-keyword">curl</span> -X GET <span class="code-string">"https://api.sisteco.io/v1/leads?score_min=80&limit=50"</span> \
+  -H <span class="code-string">"Authorization: Bearer sk_live_..."</span></pre></div>
+            </div>
+
+            <div class="code-block">
+                <div class="code-header"><span class="code-lang">POST</span><span>/api/v1/campaigns</span></div>
+                <div class="code-body"><pre><span class="code-comment">// Crear una nueva campaña</span>
+<span class="code-keyword">curl</span> -X POST <span class="code-string">"https://api.sisteco.io/v1/campaigns"</span> \
+  -H <span class="code-string">"Authorization: Bearer sk_live_..."</span> \
+  -H <span class="code-string">"Content-Type: application/json"</span> \
+  -d <span class="code-string">'{"name": "Q1 Outreach", "channels": ["email", "linkedin"]}'</span></pre></div>
+            </div>
+
+            <div class="code-block">
+                <div class="code-header"><span class="code-lang">JavaScript</span><span>SDK Example</span></div>
+                <div class="code-body"><pre><span class="code-keyword">import</span> { Sisteco } <span class="code-keyword">from</span> <span class="code-string">'@sisteco/sdk'</span>;
+
+<span class="code-keyword">const</span> client = <span class="code-keyword">new</span> <span class="code-function">Sisteco</span>(<span class="code-string">'sk_live_...'</span>);
+
+<span class="code-keyword">const</span> analytics = <span class="code-keyword">await</span> client.analytics.<span class="code-function">get</span>({
+  period: <span class="code-string">'last_30_days'</span>,
+  metrics: [<span class="code-string">'leads'</span>, <span class="code-string">'open_rate'</span>, <span class="code-string">'meetings'</span>]
+});</pre></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rate Limits -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Rate Limits</h2>
+            </div>
+            <div class="grid-3">
+                <div class="content-card">
+                    <h3>Free</h3>
+                    <p class="rate-limit-value">100 req/min</p>
+                    <p>Ideal para desarrollo y pruebas</p>
+                </div>
+                <div class="content-card">
+                    <h3>Growth</h3>
+                    <p class="rate-limit-value">1,000 req/min</p>
+                    <p>Para equipos en crecimiento</p>
+                </div>
+                <div class="content-card">
+                    <h3>Enterprise</h3>
+                    <p class="rate-limit-value">Custom</p>
+                    <p>Límites personalizados según necesidad</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta-section">
+        <div class="container" style="text-align: center;">
+            <h2>Empieza a construir hoy</h2>
+            <p>Obtén tu API Key y comienza a integrar Sisteco en tu aplicación</p>
+            <a href="../index.html#hero" class="btn btn-primary">Obtener API Key</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../assets/logos/sisteco-logo.svg" alt="Sisteco" class="footer-logo">
+                    <p>Infraestructura inteligente para automatizar tu prospección B2B y escalar tus ventas.</p>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item"><i data-lucide="mail"></i><span>hola@sisteco.io</span></div>
+                        <div class="footer-contact-item"><i data-lucide="phone"></i><span>+34 900 123 456</span></div>
+                        <div class="footer-contact-item"><i data-lucide="map-pin"></i><span>Madrid, España</span></div>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col"><h4>Producto</h4><a href="soluciones.html">Soluciones</a><a href="integraciones.html">Integraciones</a><a href="api.html">API</a><a href="dashboard.html">Dashboard</a></div>
+                    <div class="footer-col"><h4>Empresa</h4><a href="sobre-nosotros.html">Sobre nosotros</a><a href="blog.html">Blog</a><a href="carreras.html">Carreras</a><a href="contacto.html">Contacto</a></div>
+                    <div class="footer-col"><h4>Recursos</h4><a href="documentacion.html">Documentación</a><a href="tutoriales.html">Tutoriales</a><a href="webinars.html">Webinars</a><a href="soporte.html">Soporte</a></div>
+                    <div class="footer-col"><h4>Legal</h4><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a><a href="cookies.html">Cookies</a><a href="gdpr.html">GDPR</a></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sisteco. Todos los derechos reservados.</p>
+                <div class="footer-bottom-links"><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a><a href="cookies.html">Cookies</a></div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/pages.js"></script>
+</body>
+</html>

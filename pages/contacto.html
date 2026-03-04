@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Sisteco</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <meta name="description" content="Ponte en contacto con el equipo de Sisteco">
+    <link rel="icon" type="image/png" href="../assets/logos/sisteco-logo.svg">
+    <meta property="og:title" content="Contacto - Sisteco">
+    <meta property="og:description" content="Ponte en contacto con el equipo de Sisteco">
+    <meta property="og:type" content="website">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+</head>
+<body>
+    <div class="animated-bg"></div>
+    <div class="grid-pattern-overlay"></div>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo navbar-item">
+                <img src="../assets/logos/sisteco-logo.svg" alt="Sisteco Logo">
+                <span class="logo-text">Sisteco</span>
+            </a>
+            <div class="nav-links">
+                <a href="vision.html" class="btn btn-ghost navbar-item">Visión</a>
+                <a href="soluciones.html" class="btn btn-ghost navbar-item">Soluciones</a>
+                <a href="como-funciona.html" class="btn btn-ghost navbar-item">Infraestructura</a>
+                <a href="dashboard.html" class="btn btn-ghost navbar-item">Dashboard</a>
+                <a href="precios.html" class="btn btn-ghost navbar-item">Precios</a>
+            </div>
+            <a href="../index.html#hero" class="btn btn-primary navbar-item">Empezar ahora</a>
+            <button class="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Inicio</a>
+                <span>/</span>
+                <span class="current">Contacto</span>
+            </div>
+            <h1 class="page-hero-title">Hablemos</h1>
+            <p>Tienes preguntas sobre Sisteco? Nuestro equipo esta listo para ayudarte.</p>
+        </div>
+    </section>
+
+    <!-- Contact Grid -->
+    <section class="page-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="contact-name">Nombre completo *</label>
+                            <input type="text" id="contact-name" required placeholder="Tu nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-email">Email corporativo *</label>
+                            <input type="email" id="contact-email" required placeholder="tu@empresa.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-company">Empresa</label>
+                            <input type="text" id="contact-company" placeholder="Tu empresa">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-message">Mensaje *</label>
+                            <textarea id="contact-message" rows="5" required placeholder="En que podemos ayudarte?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Enviar mensaje</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <div class="contact-info-item">
+                        <div class="ci-icon"><i data-lucide="mail"></i></div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>hola@sisteco.io</p>
+                            <p style="font-size:13px;color:#999;">Respondemos en menos de 24 horas</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="ci-icon"><i data-lucide="phone"></i></div>
+                        <div>
+                            <h4>Telefono</h4>
+                            <p>+34 900 123 456</p>
+                            <p style="font-size:13px;color:#999;">Lunes a viernes, 9:00-18:00 CET</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="ci-icon"><i data-lucide="map-pin"></i></div>
+                        <div>
+                            <h4>Oficina</h4>
+                            <p>Calle Gran Via 28, 28013 Madrid, Espana</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="ci-icon"><i data-lucide="briefcase"></i></div>
+                        <div>
+                            <h4>Ventas</h4>
+                            <p>ventas@sisteco.io</p>
+                            <p style="font-size:13px;color:#999;">Para demos y preguntas comerciales</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Placeholder -->
+    <section class="page-section">
+        <div class="container">
+            <div class="map-placeholder">
+                <i data-lucide="map" style="width:48px;height:48px"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Links -->
+    <section class="page-section" style="text-align:center;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Siguenos en redes</h2>
+                <p>Mantente al dia con las novedades de Sisteco.</p>
+            </div>
+            <div style="display:flex;justify-content:center;gap:24px;">
+                <a href="#" class="content-card" style="display:flex;align-items:center;gap:12px;padding:16px 28px;text-decoration:none;">
+                    <i data-lucide="twitter"></i>
+                    <span style="font-weight:600;">Twitter</span>
+                </a>
+                <a href="#" class="content-card" style="display:flex;align-items:center;gap:12px;padding:16px 28px;text-decoration:none;">
+                    <i data-lucide="linkedin"></i>
+                    <span style="font-weight:600;">LinkedIn</span>
+                </a>
+                <a href="#" class="content-card" style="display:flex;align-items:center;gap:12px;padding:16px 28px;text-decoration:none;">
+                    <i data-lucide="github"></i>
+                    <span style="font-weight:600;">GitHub</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../assets/logos/sisteco-logo.svg" alt="Sisteco" class="footer-logo">
+                    <p>Infraestructura inteligente para automatizar tu prospeccion B2B y escalar tus ventas.</p>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item"><i data-lucide="mail"></i><span>hola@sisteco.io</span></div>
+                        <div class="footer-contact-item"><i data-lucide="phone"></i><span>+34 900 123 456</span></div>
+                        <div class="footer-contact-item"><i data-lucide="map-pin"></i><span>Madrid, Espana</span></div>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col"><h4>Producto</h4><a href="soluciones.html">Soluciones</a><a href="integraciones.html">Integraciones</a><a href="api.html">API</a><a href="dashboard.html">Dashboard</a></div>
+                    <div class="footer-col"><h4>Empresa</h4><a href="sobre-nosotros.html">Sobre nosotros</a><a href="blog.html">Blog</a><a href="carreras.html">Carreras</a><a href="contacto.html">Contacto</a></div>
+                    <div class="footer-col"><h4>Recursos</h4><a href="documentacion.html">Documentacion</a><a href="tutoriales.html">Tutoriales</a><a href="webinars.html">Webinars</a><a href="soporte.html">Soporte</a></div>
+                    <div class="footer-col"><h4>Legal</h4><a href="privacidad.html">Privacidad</a><a href="terminos.html">Terminos</a><a href="cookies.html">Cookies</a><a href="gdpr.html">GDPR</a></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sisteco. Todos los derechos reservados.</p>
+                <div class="footer-bottom-links"><a href="privacidad.html">Privacidad</a><a href="terminos.html">Terminos</a><a href="cookies.html">Cookies</a></div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/pages.js"></script>
+</body>
+</html>

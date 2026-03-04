@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte - Sisteco</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <meta name="description" content="Centro de ayuda y soporte técnico de Sisteco">
+    <link rel="icon" type="image/png" href="../assets/logos/sisteco-logo.svg">
+    <meta property="og:title" content="Soporte - Sisteco">
+    <meta property="og:description" content="Centro de ayuda y soporte técnico de Sisteco">
+    <meta property="og:type" content="website">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+</head>
+<body>
+    <div class="animated-bg"></div>
+    <div class="grid-pattern-overlay"></div>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo navbar-item">
+                <img src="../assets/logos/sisteco-logo.svg" alt="Sisteco Logo">
+                <span class="logo-text">Sisteco</span>
+            </a>
+            <div class="nav-links">
+                <a href="vision.html" class="btn btn-ghost navbar-item">Visión</a>
+                <a href="soluciones.html" class="btn btn-ghost navbar-item">Soluciones</a>
+                <a href="como-funciona.html" class="btn btn-ghost navbar-item">Infraestructura</a>
+                <a href="dashboard.html" class="btn btn-ghost navbar-item">Dashboard</a>
+                <a href="precios.html" class="btn btn-ghost navbar-item">Precios</a>
+            </div>
+            <a href="../index.html#hero" class="btn btn-primary navbar-item">Empezar ahora</a>
+            <button class="hamburger" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="../index.html">Inicio</a>
+                <span>/</span>
+                <span>Soporte</span>
+            </nav>
+            <h1>¿Cómo podemos ayudarte?</h1>
+        </div>
+    </section>
+
+    <!-- Quick Links -->
+    <section class="section">
+        <div class="container">
+            <div class="grid-3">
+                <a href="documentacion.html" class="content-card">
+                    <div class="content-card-icon"><i data-lucide="book-open"></i></div>
+                    <h3>Documentación</h3>
+                    <p>Guías completas y referencia técnica</p>
+                </a>
+                <a href="tutoriales.html" class="content-card">
+                    <div class="content-card-icon"><i data-lucide="play-circle"></i></div>
+                    <h3>Tutoriales</h3>
+                    <p>Guías paso a paso con vídeo</p>
+                </a>
+                <div class="content-card">
+                    <div class="content-card-icon"><i data-lucide="activity"></i></div>
+                    <h3>Estado del Sistema</h3>
+                    <p>Monitorización en tiempo real</p>
+                    <span class="status-badge status-operational">Operativo</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Preguntas Frecuentes</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Cómo empiezo con Sisteco?</span>
+                        <i data-lucide="plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Regístrate gratuitamente, configura tu primera fuente de datos y lanza tu primera secuencia en menos de 5 minutos. Nuestro wizard de onboarding te guiará paso a paso.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Qué integraciones soportan?</span>
+                        <i data-lucide="plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sisteco se integra nativamente con ScrapingBee, Firecrawl, Claude, Gemini, Kimi, Gmail, Outlook, HubSpot y más. Consulta nuestra página de integraciones para la lista completa.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Es seguro usar Sisteco para mi empresa?</span>
+                        <i data-lucide="plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutamente. Sisteco es GDPR compliant, usa encriptación end-to-end y cumple con los más altos estándares de seguridad. Tus datos están protegidos.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Puedo importar mis leads existentes?</span>
+                        <i data-lucide="plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, puedes importar leads desde archivos CSV, tu CRM actual o mediante nuestra API. El proceso es rápido y mantenemos el historial.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Cómo funciona el lead scoring?</span>
+                        <i data-lucide="plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nuestro sistema de scoring usa IA para analizar múltiples señales: perfil del lead, comportamiento, engagement con tus emails y señales de intención de compra.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Qué soporte ofrecen?</span>
+                        <i data-lucide="plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Todos los planes incluyen soporte por email. Los planes Growth tienen soporte prioritario por chat y los Enterprise cuentan con un manager dedicado 24/7.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Ticket Form -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Enviar un ticket</h2>
+            </div>
+            <div class="support-form-wrapper">
+                <form class="support-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="asunto">Asunto</label>
+                        <select id="asunto" name="asunto" required>
+                            <option value="" disabled selected>Selecciona un asunto</option>
+                            <option value="bug">Bug report</option>
+                            <option value="feature">Feature request</option>
+                            <option value="general">Pregunta general</option>
+                            <option value="billing">Facturación</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Describe tu consulta en detalle..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Enviar ticket</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="section">
+        <div class="container" style="text-align: center;">
+            <p class="support-contact-info">
+                <span>soporte@sisteco.io</span> · <span>+34 900 123 456</span> · <span>Lun-Vie 9:00-18:00 CET</span>
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="../assets/logos/sisteco-logo.svg" alt="Sisteco" class="footer-logo">
+                    <p>Infraestructura inteligente para automatizar tu prospección B2B y escalar tus ventas.</p>
+                    <div class="footer-contact">
+                        <div class="footer-contact-item"><i data-lucide="mail"></i><span>hola@sisteco.io</span></div>
+                        <div class="footer-contact-item"><i data-lucide="phone"></i><span>+34 900 123 456</span></div>
+                        <div class="footer-contact-item"><i data-lucide="map-pin"></i><span>Madrid, España</span></div>
+                    </div>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i data-lucide="github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col"><h4>Producto</h4><a href="soluciones.html">Soluciones</a><a href="integraciones.html">Integraciones</a><a href="api.html">API</a><a href="dashboard.html">Dashboard</a></div>
+                    <div class="footer-col"><h4>Empresa</h4><a href="sobre-nosotros.html">Sobre nosotros</a><a href="blog.html">Blog</a><a href="carreras.html">Carreras</a><a href="contacto.html">Contacto</a></div>
+                    <div class="footer-col"><h4>Recursos</h4><a href="documentacion.html">Documentación</a><a href="tutoriales.html">Tutoriales</a><a href="webinars.html">Webinars</a><a href="soporte.html">Soporte</a></div>
+                    <div class="footer-col"><h4>Legal</h4><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a><a href="cookies.html">Cookies</a><a href="gdpr.html">GDPR</a></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sisteco. Todos los derechos reservados.</p>
+                <div class="footer-bottom-links"><a href="privacidad.html">Privacidad</a><a href="terminos.html">Términos</a><a href="cookies.html">Cookies</a></div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/pages.js"></script>
+</body>
+</html>

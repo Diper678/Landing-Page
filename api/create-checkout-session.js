@@ -11,15 +11,18 @@ const ALLOWED_PLANS = new Set([
   process.env.DLOCALGO_PLAN_BASE_ANNUAL,
   process.env.DLOCALGO_PLAN_GROWTH_MONTHLY,
   process.env.DLOCALGO_PLAN_GROWTH_ANNUAL,
+  process.env.DLOCALGO_PLAN_ENTERPRISE_MONTHLY,
 ]);
 
 // Precios de los planes (para cobro único inicial o cuando la API
 // de suscripciones usa amount directo en vez de plan_id)
+// Precios con IVA incluido (19%) — neto × 1.19
 const PLAN_AMOUNTS = {
-  [process.env.DLOCALGO_PLAN_BASE_MONTHLY]:  { amount: 397.00,  currency: 'USD', label: 'Sisteco Prospección Base - Mensual' },
-  [process.env.DLOCALGO_PLAN_BASE_ANNUAL]:   { amount: 3564.00, currency: 'USD', label: 'Sisteco Prospección Base - Anual' },
-  [process.env.DLOCALGO_PLAN_GROWTH_MONTHLY]:{ amount: 797.00,  currency: 'USD', label: 'Sisteco Crecimiento - Mensual' },
-  [process.env.DLOCALGO_PLAN_GROWTH_ANNUAL]: { amount: 7164.00, currency: 'USD', label: 'Sisteco Crecimiento - Anual' },
+  [process.env.DLOCALGO_PLAN_BASE_MONTHLY]:  { amount: 472.43,  currency: 'USD', label: 'Sisteco Prospección Base - Mensual (IVA incl.)' },
+  [process.env.DLOCALGO_PLAN_BASE_ANNUAL]:   { amount: 4240.68, currency: 'USD', label: 'Sisteco Prospección Base - Anual (IVA incl.)' },
+  [process.env.DLOCALGO_PLAN_GROWTH_MONTHLY]:{ amount: 948.43,  currency: 'USD', label: 'Sisteco Crecimiento - Mensual (IVA incl.)' },
+  [process.env.DLOCALGO_PLAN_GROWTH_ANNUAL]: { amount: 8525.16, currency: 'USD', label: 'Sisteco Crecimiento - Anual (IVA incl.)' },
+  [process.env.DLOCALGO_PLAN_ENTERPRISE_MONTHLY]: { amount: 2142.00, currency: 'USD', label: 'Sisteco Enterprise Omnicanal - Mensual (IVA incl.)' },
 };
 
 module.exports = async (req, res) => {

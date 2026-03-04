@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sisteco - Infraestructura inteligente para tus ventas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <meta name="description" content="Automatiza tu prospección B2B con infraestructura inteligente.">
+    <link rel="icon" type="image/png" href="assets/logos/sisteco-logo.svg">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sisteco - Infraestructura inteligente para tus ventas">
+    <meta property="og:description"
+        content="Automatiza tu prospección B2B con workflows avanzados que integran extracción de datos, IA y secuencias multicanal.">
+    <meta property="og:type" content="website">
+
+    <!-- JetBrains Mono for technical labels -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- GSAP for animations -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+</head>
+
+<body>
+    <!-- Subtle animated background -->
+    <div class="animated-bg"></div>
+    <!-- Grid pattern overlay -->
+    <div class="grid-pattern-overlay"></div>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo navbar-item">
+                <img src="assets/logos/sisteco-logo.svg" alt="Sisteco Logo">
+                <span class="logo-text">Sisteco</span>
+            </a>
+            <div class="nav-links">
+                <a href="pages/vision.html" class="btn btn-ghost navbar-item">Visión</a>
+                <a href="pages/soluciones.html" class="btn btn-ghost navbar-item">Soluciones</a>
+                <a href="pages/como-funciona.html" class="btn btn-ghost navbar-item">Infraestructura</a>
+                <a href="pages/dashboard.html" class="btn btn-ghost navbar-item">Dashboard</a>
+                <a href="pages/precios.html" class="btn btn-ghost navbar-item">Precios</a>
+            </div>
+            <a href="#hero" class="btn btn-primary navbar-item" data-cta-id="cta-navbar">Empezar ahora</a>
+            <button class="hamburger" aria-label="Menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero" id="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <!-- Left column: Text + Form -->
+                <div class="hero-text">
+                    <a href="#soluciones" class="new-badge hero-badge">
+                        <i data-lucide="sparkles" style="width:14px;height:14px"></i>
+                        Workflows con IA para ventas B2B
+                    </a>
+                    <h1>
+                        <span class="hero-title-line">Infraestructura</span>
+                        <span class="hero-title-line"><span class="gradient-text">inteligente</span></span>
+                        <span class="hero-title-line">para tus ventas</span>
+                    </h1>
+                    <p class="hero-desc">Prospecta menos, cierra más. Inteligencia artificial que trabaja 24/7 para
+                        entregar leads de alta calidad a través de todos tus canales, con la seguridad que tu negocio
+                        necesita.</p>
+                    <form class="hero-form" id="lead-form">
+                        <input type="email" placeholder="Tu correo de empresa" required autocomplete="email"
+                            name="email">
+                        <button type="submit" class="btn btn-primary" data-cta-id="cta-hero-submit">Prueba
+                            gratis</button>
+                    </form>
+                    <div class="hero-trust">
+                        <div class="trust-item">
+                            <i data-lucide="check-circle-2" style="width:14px;height:14px"></i>
+                            <span>Sin tarjeta de crédito</span>
+                        </div>
+                        <span class="trust-divider">·</span>
+                        <div class="trust-item">
+                            <i data-lucide="clock" style="width:14px;height:14px"></i>
+                            <span>Operativo 24/7</span>
+                        </div>
+                        <span class="trust-divider">·</span>
+                        <div class="trust-item">
+                            <i data-lucide="shield-check" style="width:14px;height:14px"></i>
+                            <span>Ley 21.719 + GDPR</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right column: Dashboard Visual -->
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="hero-dashboard">
+                        <div class="dashboard-header">
+                            <div class="db-dots">
+                                <span class="db-dot"></span>
+                                <span class="db-dot"></span>
+                                <span class="db-dot"></span>
+                            </div>
+                            <span class="db-title">sisteco · live dashboard</span>
+                        </div>
+                        <div class="dashboard-body">
+                            <div class="db-metric-row">
+                                <div class="db-metric">
+                                    <span class="db-label">Leads hoy</span>
+                                    <span class="db-value">247</span>
+                                    <span class="db-delta positive">↑ 12%</span>
+                                </div>
+                                <div class="db-metric">
+                                    <span class="db-label">Tasa apertura</span>
+                                    <span class="db-value">68%</span>
+                                    <span class="db-delta positive">↑ 8%</span>
+                                </div>
+                                <div class="db-metric">
+                                    <span class="db-label">Reuniones</span>
+                                    <span class="db-value">18</span>
+                                    <span class="db-delta positive">↑ 5</span>
+                                </div>
+                            </div>
+                            <div class="db-chart">
+                                <div class="db-chart-label">Leads cualificados · últimos 7 días</div>
+                                <div class="bar-chart">
+                                    <div class="bar-item">
+                                        <div class="bar-fill" style="--h: 45%"></div><span class="bar-day">L</span>
+                                    </div>
+                                    <div class="bar-item">
+                                        <div class="bar-fill" style="--h: 62%"></div><span class="bar-day">M</span>
+                                    </div>
+                                    <div class="bar-item">
+                                        <div class="bar-fill" style="--h: 55%"></div><span class="bar-day">X</span>
+                                    </div>
+                                    <div class="bar-item">
+                                        <div class="bar-fill" style="--h: 78%"></div><span class="bar-day">J</span>
+                                    </div>
+                                    <div class="bar-item">
+                                        <div class="bar-fill" style="--h: 68%"></div><span class="bar-day">V</span>
+                                    </div>
+                                    <div class="bar-item">
+                                        <div class="bar-fill" style="--h: 88%"></div><span class="bar-day">S</span>
+                                    </div>
+                                    <div class="bar-item active">
+                                        <div class="bar-fill" style="--h: 95%"></div><span class="bar-day">D</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="db-leads">
+                                <div class="db-leads-header">
+                                    <span>Leads recientes</span>
+                                    <span class="db-badge-live">
+                                        <span class="live-dot"></span>
+                                        En vivo
+                                    </span>
+                                </div>
+                                <div class="db-lead-item" style="--delay: 0.3s">
+                                    <div class="db-avatar" style="--bg: #c5ed36; --c: #111">MR</div>
+                                    <div class="db-lead-info">
+                                        <span class="db-lead-name">María Rodríguez</span>
+                                        <span class="db-lead-meta">TechCorp SL · CMO</span>
+                                    </div>
+                                    <span class="db-score score-high">94</span>
+                                </div>
+                                <div class="db-lead-item" style="--delay: 0.8s">
+                                    <div class="db-avatar" style="--bg: #111; --c: #fff">JM</div>
+                                    <div class="db-lead-info">
+                                        <span class="db-lead-name">Juan Martínez</span>
+                                        <span class="db-lead-meta">Innova Tech · VP Sales</span>
+                                    </div>
+                                    <span class="db-score score-high">87</span>
+                                </div>
+                                <div class="db-lead-item" style="--delay: 1.3s">
+                                    <div class="db-avatar" style="--bg: #f0f0f0; --c: #666">AL</div>
+                                    <div class="db-lead-info">
+                                        <span class="db-lead-name">Ana López</span>
+                                        <span class="db-lead-meta">StartX · CEO</span>
+                                    </div>
+                                    <span class="db-score score-mid">76</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-float-1">
+                        <i data-lucide="trending-up" style="width:14px;height:14px;color:var(--color-accent)"></i>
+                        <span>+40% conversiones</span>
+                    </div>
+                    <div class="hero-float-2">
+                        <i data-lucide="clock" style="width:14px;height:14px;color:var(--color-accent)"></i>
+                        <span>6h ahorradas/día</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Logos / Integrations Bar -->
+    <div class="logos-bar">
+        <div class="container">
+            <a href="pages/integraciones.html" style="text-decoration:none">
+                <p class="logos-label">Tus canales y datos, conectados en un solo lugar</p>
+            </a>
+            <div class="logos-track">
+                <div class="logo-item">
+                    <i data-lucide="mail" style="width:18px;height:18px"></i>
+                    <span>Email</span>
+                </div>
+                <div class="logo-item">
+                    <i data-lucide="linkedin" style="width:18px;height:18px;color:#0A66C2"></i>
+                    <span>LinkedIn</span>
+                </div>
+                <div class="logo-item">
+                    <i data-lucide="message-circle" style="width:18px;height:18px;color:#25D366"></i>
+                    <span>WhatsApp</span>
+                </div>
+                <div class="logo-item">
+                    <i data-lucide="slack" style="width:18px;height:18px"></i>
+                    <span>Slack</span>
+                </div>
+                <div class="logo-item">
+                    <i data-lucide="instagram" style="width:18px;height:18px;color:#E4405F"></i>
+                    <span>Instagram</span>
+                </div>
+                <div class="logo-sep"></div>
+                <div class="logo-item">
+                    <i data-lucide="database" style="width:18px;height:18px"></i>
+                    <span>CRM Sync</span>
+                </div>
+                <div class="logo-item">
+                    <i data-lucide="brain" style="width:18px;height:18px;color:var(--color-accent)"></i>
+                    <span>IA Avanzada</span>
+                </div>
+                <div class="logo-item">
+                    <i data-lucide="shield-check" style="width:18px;height:18px"></i>
+                    <span>Ley 21.719</span>
+                </div>
+                <div class="logo-item">
+                    <i data-lucide="clock" style="width:18px;height:18px"></i>
+                    <span>24/7</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cómo Funciona Section (Infrastructure Visualization) -->
+    <section class="infra-section" id="como-funciona">
+        <div class="container">
+            <span class="section-label">Infraestructura</span>
+            <h2 class="section-title center">Arquitectura de <span class="gradient-text">Ventas Automatizadas</span></h2>
+            <p class="section-desc">
+                Cinco capas que trabajan en sincronía: desde la captura de datos hasta el cierre.
+                Cada componente se conecta con el siguiente para crear un pipeline de ventas que opera 24/7.
+            </p>
+
+            <div class="infra-visual">
+                <!-- Capa 1: Adquisición -->
+                <div class="infra-layer" style="--layer-delay: 0s">
+                    <div class="layer-content">
+                        <div class="layer-header">
+                            <span class="layer-number">01</span>
+                            <span class="layer-title">Captura de Datos</span>
+                        </div>
+                        <p class="layer-description">Extracción de perfiles LinkedIn y análisis de websites de empresas target con web scraping empresarial.</p>
+                    </div>
+                    <div class="layer-tools">
+                        <div class="tool-pill">
+                            <i data-lucide="linkedin"></i>
+                            <span>Phantombuster</span>
+                        </div>
+                        <div class="tool-pill">
+                            <img src="assets/icons/scrapingbee.svg" alt="ScrapingBee" class="tool-icon-sm">
+                            <span>ScrapingBee</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="infra-connector">
+                    <i data-lucide="arrow-down"></i>
+                </div>
+
+                <!-- Capa 2: Inteligencia AI -->
+                <div class="infra-layer" style="--layer-delay: 0.1s">
+                    <div class="layer-content">
+                        <div class="layer-header">
+                            <span class="layer-number">02</span>
+                            <span class="layer-title">Lead Scoring con IA</span>
+                        </div>
+                        <p class="layer-description">Motor de puntuación 0-100 con análisis dual (perfil + website). Clasifica leads en HOT, WARM, NURTURE o SKIP automáticamente.</p>
+                    </div>
+                    <div class="layer-tools">
+                        <div class="tool-pill">
+                            <i data-lucide="brain"></i>
+                            <span>Gemini IA</span>
+                        </div>
+                        <div class="tool-pill">
+                            <i data-lucide="target"></i>
+                            <span>Scoring 0-100</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="infra-connector">
+                    <i data-lucide="arrow-down"></i>
+                </div>
+
+                <!-- Capa 3: Orquestación (Sisteco) -->
+                <div class="infra-layer layer-core" style="--layer-delay: 0.2s">
+                    <div class="layer-glow"></div>
+                    <div class="layer-content">
+                        <div class="layer-header">
+                            <span class="layer-number">CORE</span>
+                            <span class="layer-title">Orquestación Sisteco</span>
+                        </div>
+                        <p class="layer-description">Motor de decisión y routing automático sobre n8n self-hosted (sin límites). Leads HOT van a Slack al instante, WARM entran a secuencias personalizadas.</p>
+                    </div>
+                    <div class="layer-tools">
+                        <div class="tool-pill core-pill">
+                            <i data-lucide="workflow"></i>
+                            <span>n8n Self-Hosted</span>
+                        </div>
+                        <div class="tool-pill core-pill">
+                            <i data-lucide="database"></i>
+                            <span>Google Sheets</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="infra-connector">
+                    <i data-lucide="arrow-down"></i>
+                </div>
+
+                <!-- Capa 4: Activación -->
+                <div class="infra-layer" style="--layer-delay: 0.3s">
+                    <div class="layer-content">
+                        <div class="layer-header">
+                            <span class="layer-number">04</span>
+                            <span class="layer-title">Secuencias Multicanal</span>
+                        </div>
+                        <p class="layer-description">5 emails personalizados en 5 semanas, enviados a las 9AM con detección automática de respuestas e interés.</p>
+                    </div>
+                    <div class="layer-tools">
+                        <div class="tool-pill">
+                            <i data-lucide="mail"></i>
+                            <span>Gmail</span>
+                        </div>
+                        <div class="tool-pill">
+                            <i data-lucide="linkedin"></i>
+                            <span>LinkedIn</span>
+                        </div>
+                        <div class="tool-pill">
+                            <i data-lucide="hash"></i>
+                            <span>Slack Alerts</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="infra-connector">
+                    <i data-lucide="arrow-down"></i>
+                </div>
+
+                <!-- Capa 5: Retención -->
+                <div class="infra-layer" style="--layer-delay: 0.4s">
+                    <div class="layer-content">
+                        <div class="layer-header">
+                            <span class="layer-number">05</span>
+                            <span class="layer-title">Seguimiento y Cierre</span>
+                        </div>
+                        <p class="layer-description">Notificaciones en tiempo real cuando un prospecto responde. Gestión de contratos y facturación automatizada vía Notion.</p>
+                    </div>
+                    <div class="layer-tools">
+                        <div class="tool-pill">
+                            <i data-lucide="bell"></i>
+                            <span>Alertas</span>
+                        </div>
+                        <div class="tool-pill">
+                            <i data-lucide="file-text"></i>
+                            <span>Notion</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Soluciones Section -->
+    <section class="features" id="soluciones">
+        <div class="container">
+            <span class="section-label features-title">Nuestras Soluciones</span>
+            <h2 class="features-title">Todo lo que necesitas para <span class="gradient-text">escalar tus ventas</span>
+                B2B</h2>
+            <p class="section-desc features-title">Pensamiento en sistemas + IA de última generación. Diseñamos cada workflow
+                con ingeniería de extremo a extremo para conseguir leads a una velocidad que ninguna herramienta sola alcanza.</p>
+            <div class="features-grid">
+                <a href="pages/soluciones.html#extraccion" class="feature-card-link">
+                    <div class="feature-card" data-color="lime">
+                        <div class="micro-diagram lime">
+                            <div class="md-node"><i data-lucide="globe"></i></div>
+                            <div class="md-arrow">→</div>
+                            <div class="md-node highlight"><i data-lucide="database"></i></div>
+                        </div>
+                        <h3>Extracción Inteligente</h3>
+                        <p>Obtén datos de prospectos desde cualquier fuente web con precisión y velocidad. Nuestra
+                            tecnología avanzada captura información relevante en tiempo real.</p>
+                        <div class="feature-stats">
+                            <div class="stat">
+                                <span class="stat-value">99.9%</span>
+                                <span class="stat-label">Precisión</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">&lt;1s</span>
+                                <span class="stat-label">Por consulta</span>
+                            </div>
+                        </div>
+                        <div class="hover-arrow">
+                            <i data-lucide="arrow-up-right"></i>
+                        </div>
+                        <span class="link-hint">Ver más <i data-lucide="arrow-right"
+                                style="width:14px;height:14px"></i></span>
+                    </div>
+                </a>
+                <a href="pages/soluciones.html#analisis" class="feature-card-link">
+                    <div class="feature-card" data-color="purple">
+                        <div class="micro-diagram purple">
+                            <div class="md-node"><i data-lucide="database"></i></div>
+                            <div class="md-arrow">→</div>
+                            <div class="md-node highlight"><i data-lucide="brain"></i></div>
+                            <div class="md-arrow">→</div>
+                            <div class="md-node"><i data-lucide="user-check"></i></div>
+                        </div>
+                        <h3>IA que se mejora sola</h3>
+                        <p>Nuestros sistemas de inteligencia artificial se auto-optimizan con cada interacción. Menos
+                            leads, mayor calidad. Solo hablas con prospectos que quieren comprar.</p>
+                        <div class="feature-stats">
+                            <div class="stat">
+                                <span class="stat-value">95%</span>
+                                <span class="stat-label">Precisión scoring</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">10x</span>
+                                <span class="stat-label">Enriquecimiento</span>
+                            </div>
+                        </div>
+                        <div class="hover-arrow">
+                            <i data-lucide="arrow-up-right"></i>
+                        </div>
+                        <span class="link-hint">Ver más <i data-lucide="arrow-right"
+                                style="width:14px;height:14px"></i></span>
+                    </div>
+                </a>
+                <a href="pages/soluciones.html#secuencias" class="feature-card-link">
+                    <div class="feature-card" data-color="blue">
+                        <div class="micro-diagram blue">
+                            <div class="md-node"><i data-lucide="message-square"></i></div>
+                            <div class="md-arrow">→</div>
+                            <div class="md-group">
+                                <i data-lucide="mail"></i>
+                                <i data-lucide="linkedin"></i>
+                                <i data-lucide="message-circle"></i>
+                            </div>
+                        </div>
+                        <h3>Secuencias Multicanal</h3>
+                        <p>Ejecuta campañas automatizadas por email, LinkedIn y más canales. Crea journeys
+                            personalizados
+                            que adaptan el mensaje según el comportamiento del prospecto.</p>
+                        <div class="feature-stats">
+                            <div class="stat">
+                                <span class="stat-value">5+</span>
+                                <span class="stat-label">Canales</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">40%</span>
+                                <span class="stat-label">Más respuestas</span>
+                            </div>
+                        </div>
+                        <div class="hover-arrow">
+                            <i data-lucide="arrow-up-right"></i>
+                        </div>
+                        <span class="link-hint">Ver más <i data-lucide="arrow-right"
+                                style="width:14px;height:14px"></i></span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Additional Features Row -->
+            <div class="additional-features">
+                <div class="additional-feature">
+                    <div class="af-icon">
+                        <i data-lucide="clock"></i>
+                    </div>
+                    <div>
+                        <h4>Disponible 24/7</h4>
+                        <p>Tu negocio nunca duerme</p>
+                    </div>
+                </div>
+                <div class="additional-feature">
+                    <div class="af-icon">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <div>
+                        <h4>Ley 21.719 Compliant</h4>
+                        <p>Protección de datos de nivel empresarial</p>
+                    </div>
+                </div>
+                <div class="additional-feature">
+                    <div class="af-icon">
+                        <i data-lucide="target"></i>
+                    </div>
+                    <div>
+                        <h4>Menos leads, más cierres</h4>
+                        <p>Bajo volumen, alta conversión</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-glow"></div>
+            <span class="cta-badge cta-anim">
+                <i data-lucide="sparkles" style="width:14px;height:14px"></i>
+                Comienza hoy mismo
+            </span>
+            <h2 class="cta-anim">Empieza a automatizar tu <span class="gradient-text-light">prospección</span> hoy
+            </h2>
+            <p class="cta-anim">Configura tu primer workflow de ventas automatizado.
+                Prospección, scoring con IA y secuencias multicanal — todo operativo en días, no en meses.</p>
+            <a href="#hero" class="btn btn-primary btn-large btn-shine cta-anim" data-cta-id="cta-bottom">
+                Solicitar una demo
+                <i data-lucide="arrow-right" style="width:18px;height:18px;margin-left:8px"></i>
+            </a>
+            <div class="cta-stats">
+                <div class="cta-stat cta-anim">
+                    <div class="cta-stat-icon">
+                        <i data-lucide="clock"></i>
+                    </div>
+                    <span class="stat-value">24/7</span>
+                    <span class="stat-label">Operativo siempre</span>
+                </div>
+                <div class="cta-stat cta-anim">
+                    <div class="cta-stat-icon">
+                        <i data-lucide="zap"></i>
+                    </div>
+                    <span class="stat-value">&lt;5min</span>
+                    <span class="stat-label">Tiempo de respuesta</span>
+                </div>
+                <div class="cta-stat cta-anim">
+                    <div class="cta-stat-icon">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <span class="stat-value">Ley 21.719</span>
+                    <span class="stat-label">Compliance total</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="assets/logos/sisteco-logo.svg" alt="Sisteco" class="footer-logo">
+                    <p>Infraestructura inteligente que trabaja 24/7 para escalar tus ventas B2B con la máxima seguridad.
+                    </p>
+
+                    <!-- Contact Info -->
+                    <div class="footer-contact">
+                        <div class="footer-contact-item">
+                            <i data-lucide="mail"></i>
+                            <a href="mailto:contacto@sisteco.cl">contacto@sisteco.cl</a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i data-lucide="phone"></i>
+                            <a href="tel:+56940065566">+56 9 40065566</a>
+                        </div>
+                        <div class="footer-contact-item">
+                            <i data-lucide="map-pin"></i>
+                            <span>Av. Alonso de Córdova 5870 Of. 413, Las Condes, Santiago de Chile</span>
+                        </div>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/company/sisteco/" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <i data-lucide="linkedin"></i>
+                        </a>
+                        <a href="mailto:contacto@sisteco.cl" aria-label="Email">
+                            <i data-lucide="mail"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Producto</h4>
+                        <a href="pages/soluciones.html">Soluciones</a>
+                        <a href="pages/como-funciona.html">Infraestructura</a>
+                        <a href="pages/dashboard.html">Dashboard</a>
+                        <a href="pages/precios.html">Precios</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Empresa</h4>
+                        <a href="pages/vision.html">Visión</a>
+                        <a href="pages/sobre-nosotros.html">Sobre nosotros</a>
+                        <a href="pages/contacto.html">Contacto</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <a href="pages/privacidad.html">Privacidad</a>
+                        <a href="pages/terminos.html">Términos</a>
+                        <a href="pages/cookies.html">Cookies</a>
+                        <a href="pages/gdpr.html">Ley 21.719</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sisteco. Todos los derechos reservados.</p>
+                <div class="footer-bottom-links">
+                    <a href="pages/privacidad.html">Privacidad</a>
+                    <a href="pages/terminos.html">Términos</a>
+                    <a href="pages/cookies.html">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -137,8 +137,12 @@ function resolvePlan(planId) {
     process.env.DLOCALGO_PLAN_GROWTH_MONTHLY,
     process.env.DLOCALGO_PLAN_GROWTH_ANNUAL,
   ];
+  const enterprisePlans = [
+    process.env.DLOCALGO_PLAN_ENTERPRISE_MONTHLY,
+  ];
   if (basePlans.includes(planId)) return 'base';
   if (growthPlans.includes(planId)) return 'growth';
+  if (enterprisePlans.includes(planId)) return 'enterprise';
   return 'enterprise';
 }
 
