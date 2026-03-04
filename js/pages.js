@@ -8,6 +8,14 @@
 // =============================================
 
 function initPages() {
+    // Floating pill navbar on scroll
+    const navbar = document.querySelector('.navbar');
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 80);
+        }, { passive: true });
+    }
+
     initIcons();
     initMobileNav();
     initScrollToTop();
