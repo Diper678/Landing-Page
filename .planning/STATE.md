@@ -1,8 +1,12 @@
 # STATE
 
 milestone_version: v1.0
-current_phase: 3
+current_phase: 2
+current_plan: 2
+total_plans_in_phase: 3
 paused_at: null
+last_session: 2026-03-04T23:07:06Z
+stopped_at: Completed 02-01-PLAN.md
 
 ## decisions
 - decision: Cobrar en USD (no CLP) para posicionamiento premium y facilitar expansión LATAM
@@ -13,6 +17,15 @@ paused_at: null
 - decision: Descuento anual del 25% — más atractivo que el 20% del mockup original
 - decision: Plan Fundadores: 40% off para primeros 10 clientes a cambio de caso de estudio
 - decision: Add-ons como módulos separados para maximizar ARPU
+- decision: Phase 2 pivotada a Landing Page Improvements (navbar, animaciones, comparativa, ROI calculator, visión agentes)
+- decision: Phases 3-5 (pagos backend) pausadas hasta resolver blockers
+- decision: Navbar floating aplica a TODAS las 20 páginas
+- decision: Animaciones FULL: gradient orbs + GSAP scroll + card glow + cursor glow
+- decision: Tabla comparativa 4 columnas (Sisteco vs DIY vs SDR vs Nada) en index.html, mantener DIY en precios.html
+- decision: ROI calculator interactiva en index.html
+- decision: Visión agentes autónomos: teaser index.html + versión completa vision.html
+- decision: Animate .container not .navbar for pill effect to preserve position:sticky context
+- decision: 50px border-radius + 900px max-width for pill shape; mobile override at 768px removes pill
 
 ## blockers
 - blocker: Confirmar con dLocal Go soporte si API de suscripciones es accesible en plan self-service (vs solo dashboard)
@@ -29,3 +42,5 @@ paused_at: null
 - Margen bruto promedio: 79% (superior al benchmark SaaS de 60-80%)
 - Break-even operacional: ~4 clientes activos en cualquier plan
 - Proyección MRR Q4 Año 1: USD 15,000-25,000 (escenario conservador)
+- Análisis competitivo landing page en .planning/LANDING_PAGE_IMPROVEMENTS.md
+- precios.html ya tiene precios reales, toggle, add-ons, founders banner, checkout links (Phase 2 original completada)
