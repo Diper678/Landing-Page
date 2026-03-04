@@ -2,11 +2,11 @@
 
 milestone_version: v1.0
 current_phase: 2
-current_plan: 2
+current_plan: 3
 total_plans_in_phase: 3
 paused_at: null
-last_session: 2026-03-04T23:07:06Z
-stopped_at: Completed 02-01-PLAN.md
+last_session: 2026-03-04T23:12:59Z
+stopped_at: Completed 02-02-PLAN.md
 
 ## decisions
 - decision: Cobrar en USD (no CLP) para posicionamiento premium y facilitar expansión LATAM
@@ -26,6 +26,9 @@ stopped_at: Completed 02-01-PLAN.md
 - decision: Visión agentes autónomos: teaser index.html + versión completa vision.html
 - decision: Animate .container not .navbar for pill effect to preserve position:sticky context
 - decision: 50px border-radius + 900px max-width for pill shape; mobile override at 768px removes pill
+- decision: Bento hero card mini flow diagram with animated dot connectors (flowPulse keyframe)
+- decision: Cursor glow at z-index:1 coexists with custom cursor ring at z-index:10000
+- decision: All bento/orb animations guard prefers-reduced-motion with opacity:1 fallback
 
 ## blockers
 - blocker: Confirmar con dLocal Go soporte si API de suscripciones es accesible en plan self-service (vs solo dashboard)
