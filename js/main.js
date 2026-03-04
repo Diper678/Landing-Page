@@ -533,6 +533,121 @@ function initCustomCursor() {
   }
 }
 
+// =============================================
+// SCROLL REVEAL ANIMATIONS
+// =============================================
+
+function initScrollReveal() {
+  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  // Animate section labels (below-fold only)
+  gsap.utils.toArray('.bento-section .section-label, .features .section-label, .cta-section .cta-badge').forEach(el => {
+    gsap.fromTo(el,
+      { y: 20, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out',
+        scrollTrigger: { trigger: el, start: 'top 85%', once: true }
+      }
+    );
+  });
+
+  // Animate section titles (below-fold only)
+  gsap.utils.toArray('.bento-section .section-title, .cta-section h2').forEach(el => {
+    gsap.fromTo(el,
+      { y: 30, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.7, ease: 'power3.out', delay: 0.1,
+        scrollTrigger: { trigger: el, start: 'top 85%', once: true }
+      }
+    );
+  });
+
+  // Animate section descriptions
+  gsap.utils.toArray('.bento-section .section-desc, .cta-section > .container > p').forEach(el => {
+    gsap.fromTo(el,
+      { y: 20, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out', delay: 0.2,
+        scrollTrigger: { trigger: el, start: 'top 85%', once: true }
+      }
+    );
+  });
+
+  // Logos bar fade
+  const logosBar = document.querySelector('.logos-bar');
+  if (logosBar) {
+    gsap.fromTo(logosBar,
+      { y: 20, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.7, ease: 'power3.out',
+        scrollTrigger: { trigger: logosBar, start: 'top 90%', once: true }
+      }
+    );
+  }
+}
+
+// =============================================
+// BENTO CARD STAGGER ANIMATIONS
+// =============================================
+
+function initBentoAnimations() {
+  if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const bentoGrid = document.querySelector('.bento-grid');
+  if (!bentoGrid) return;
+
+  // Hero card (enters first)
+  const heroCard = bentoGrid.querySelector('.bento-card--hero');
+  if (heroCard) {
+    gsap.fromTo(heroCard,
+      { y: 60, opacity: 0, scale: 0.96 },
+      { y: 0, opacity: 1, scale: 1, duration: 0.8, ease: 'power3.out',
+        scrollTrigger: { trigger: bentoGrid, start: 'top 80%', once: true }
+      }
+    );
+  }
+
+  // Smaller cards (stagger after hero)
+  const smallCards = bentoGrid.querySelectorAll('.bento-card:not(.bento-card--hero)');
+  if (smallCards.length > 0) {
+    gsap.fromTo(smallCards,
+      { y: 50, opacity: 0, scale: 0.95 },
+      { y: 0, opacity: 1, scale: 1, duration: 0.6, stagger: 0.12, ease: 'power3.out', delay: 0.3,
+        scrollTrigger: { trigger: bentoGrid, start: 'top 80%', once: true }
+      }
+    );
+  }
+}
+
+// =============================================
+// CURSOR GLOW (Desktop only)
+// =============================================
+
+function initCursorGlow() {
+  // Skip on touch devices
+  if ('ontouchstart' in window) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const glow = document.createElement('div');
+  glow.className = 'cursor-glow';
+  document.body.appendChild(glow);
+
+  let mouseX = 0;
+  let mouseY = 0;
+  let rafId = null;
+
+  function updateGlow() {
+    glow.style.transform = 'translate(' + (mouseX - 200) + 'px, ' + (mouseY - 200) + 'px)';
+    rafId = null;
+  }
+
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    if (!rafId) {
+      rafId = requestAnimationFrame(updateGlow);
+    }
+  });
+}
+
 function init() {
   // Floating pill navbar on scroll
   const navbar = document.querySelector('.navbar');
@@ -621,6 +736,23 @@ function init() {
 
   // Initialize GSAP animations
   initAnimations();
+
+  // Initialize new animation layers
+  initScrollReveal();
+  initBentoAnimations();
+  initCursorGlow();
+
+  // Refresh ScrollTrigger on full page load
+  window.addEventListener('load', () => {
+    if (typeof ScrollTrigger !== 'undefined') {
+      ScrollTrigger.refresh();
+    }
+  });
+
+  // Ensure lucide icons render for dynamically added content
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+  }
 
   console.log('Sisteco Landing initialized');
 }
