@@ -2,11 +2,11 @@
 
 milestone_version: v1.0
 current_phase: 2
-current_plan: 3
-total_plans_in_phase: 3
+current_plan: 4
+total_plans_in_phase: 4
 paused_at: null
-last_session: 2026-03-04T23:12:59Z
-stopped_at: Completed 02-02-PLAN.md
+last_session: 2026-03-04T23:17:21Z
+stopped_at: Completed 02-03-PLAN.md
 
 ## decisions
 - decision: Cobrar en USD (no CLP) para posicionamiento premium y facilitar expansión LATAM
@@ -29,6 +29,9 @@ stopped_at: Completed 02-02-PLAN.md
 - decision: Bento hero card mini flow diagram with animated dot connectors (flowPulse keyframe)
 - decision: Cursor glow at z-index:1 coexists with custom cursor ring at z-index:10000
 - decision: All bento/orb animations guard prefers-reduced-motion with opacity:1 fallback
+- decision: CSS grid-based comparison table (not HTML table) for responsive control
+- decision: ROI calculator uses conservative 3% conversion rate and USD/CLP rate of 900
+- decision: CLP formatting via toLocaleString es-CL for Chilean market
 
 ## blockers
 - blocker: Confirmar con dLocal Go soporte si API de suscripciones es accesible en plan self-service (vs solo dashboard)
