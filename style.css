@@ -3253,6 +3253,95 @@ body {
 }
 
 /* =============================================
+   VISION TEASER
+   ============================================= */
+
+.vision-teaser-section {
+    background: #F8F7F5;
+    padding: 100px 0;
+}
+
+.vision-timeline {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-top: 48px;
+    flex-wrap: wrap;
+}
+
+.timeline-step {
+    text-align: center;
+    padding: 24px 20px;
+    flex: 1;
+    min-width: 180px;
+    max-width: 220px;
+}
+
+.timeline-year {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #c5ed36;
+    background: rgba(197, 237, 54, 0.1);
+    padding: 4px 16px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.timeline-step h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111;
+    margin: 0 0 6px;
+}
+
+.timeline-step p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.timeline-step--featured {
+    background: rgba(197, 237, 54, 0.06);
+    border-radius: 16px;
+    border: 1px solid rgba(197, 237, 54, 0.2);
+}
+
+.timeline-step--featured .timeline-year {
+    background: #c5ed36;
+    color: #111;
+}
+
+.timeline-connector {
+    width: 32px;
+    height: 2px;
+    background: linear-gradient(90deg, #e0e0e0, rgba(197, 237, 54, 0.4));
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .vision-teaser-section {
+        padding: 60px 0;
+    }
+
+    .vision-timeline {
+        flex-direction: column;
+    }
+
+    .timeline-connector {
+        width: 2px;
+        height: 24px;
+    }
+
+    .timeline-step {
+        max-width: 100%;
+    }
+}
+
+/* =============================================
    ROI CALCULATOR
    ============================================= */
 
