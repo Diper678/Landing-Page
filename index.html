@@ -661,6 +661,49 @@
         </div>
     </section>
 
+    <!-- ROI Calculator Section -->
+    <section class="roi-section" id="calculadora-roi">
+        <div class="container">
+            <span class="section-label">Calculadora ROI</span>
+            <h2 class="section-title center">Calcula tu retorno con Sisteco</h2>
+            <p class="section-desc">Ingresa los datos de tu equipo y descubre cuanto puedes ganar</p>
+
+            <div class="roi-calculator">
+                <div class="roi-inputs">
+                    <div class="roi-input-group">
+                        <label for="roi-vendedores">Numero de vendedores</label>
+                        <input type="number" id="roi-vendedores" value="2" min="1" max="50" />
+                    </div>
+                    <div class="roi-input-group">
+                        <label for="roi-ticket">Ticket promedio (CLP)</label>
+                        <input type="number" id="roi-ticket" value="1500000" min="100000" step="100000" />
+                    </div>
+                </div>
+
+                <div class="roi-outputs">
+                    <div class="roi-output-card">
+                        <span class="roi-output-value" id="roi-leads">400</span>
+                        <span class="roi-output-label">Leads adicionales/mes</span>
+                    </div>
+                    <div class="roi-output-card">
+                        <span class="roi-output-value" id="roi-conversiones">12</span>
+                        <span class="roi-output-label">Conversiones estimadas</span>
+                    </div>
+                    <div class="roi-output-card">
+                        <span class="roi-output-value" id="roi-ingreso">$0</span>
+                        <span class="roi-output-label">Ingreso adicional estimado</span>
+                    </div>
+                    <div class="roi-output-card roi-output-card--highlight">
+                        <span class="roi-output-value" id="roi-porcentaje">0%</span>
+                        <span class="roi-output-label">ROI estimado</span>
+                    </div>
+                </div>
+
+                <p class="roi-disclaimer">Estimacion referencial basada en datos de mercado. Resultados reales pueden variar.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Soluciones Section -->
     <section class="features" id="soluciones">
         <div class="container">

@@ -466,6 +466,40 @@ function initIcons() {
 }
 
 // =============================================
+// ROI CALCULATOR
+// =============================================
+
+function initROICalculator() {
+  const vendedoresInput = document.getElementById('roi-vendedores');
+  const ticketInput = document.getElementById('roi-ticket');
+  if (!vendedoresInput || !ticketInput) return;
+
+  function formatCLP(amount) {
+    return amount.toLocaleString('es-CL', { style: 'currency', currency: 'CLP', maximumFractionDigits: 0 });
+  }
+
+  function calcROI() {
+    const vendedores = parseInt(vendedoresInput.value) || 2;
+    const ticket = parseInt(ticketInput.value) || 1500000;
+    const planCostCLP = 472 * 900; // USD to CLP approximate
+
+    const leadsAdicionales = vendedores * 200;
+    const conversionesAdicionales = Math.round(leadsAdicionales * 0.03); // conservative 3%
+    const ingresoAdicional = conversionesAdicionales * ticket;
+    const roiPorcentaje = Math.round(((ingresoAdicional - planCostCLP) / planCostCLP) * 100);
+
+    document.getElementById('roi-leads').textContent = leadsAdicionales.toLocaleString('es-CL');
+    document.getElementById('roi-conversiones').textContent = conversionesAdicionales;
+    document.getElementById('roi-ingreso').textContent = formatCLP(ingresoAdicional);
+    document.getElementById('roi-porcentaje').textContent = Math.max(0, roiPorcentaje) + '%';
+  }
+
+  vendedoresInput.addEventListener('input', calcROI);
+  ticketInput.addEventListener('input', calcROI);
+  calcROI(); // Initial calculation
+}
+
+// =============================================
 // INITIALIZATION
 // =============================================
 
@@ -733,6 +767,9 @@ function init() {
       }
     }
   });
+
+  // Initialize ROI calculator
+  initROICalculator();
 
   // Initialize GSAP animations
   initAnimations();
