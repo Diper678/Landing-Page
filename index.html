@@ -59,6 +59,12 @@
     </nav>
 
     <header class="hero" id="hero">
+        <!-- Gradient orbs background -->
+        <div class="hero-orbs" aria-hidden="true">
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+            <div class="hero-orb hero-orb-3"></div>
+        </div>
         <div class="container">
             <div class="hero-grid">
                 <!-- Left column: Text + Form -->
@@ -248,190 +254,222 @@
         </div>
     </div>
 
-    <!-- Cómo Funciona Section -->
-    <section id="como-funciona">
+    <!-- Como Funciona - Bento Grid -->
+    <section id="como-funciona" class="bento-section">
         <div class="container">
-            <span class="section-label">Cómo Funciona</span>
-            <h2 class="section-title center">Resultados reales con <span class="gradient-text">automatización inteligente</span></h2>
-            <p class="section-desc">
-                Cinco capacidades que trabajan en sincronía para transformar tu prospección B2B.
-                Cada una diseñada para entregar resultados medibles desde el primer mes.
-            </p>
-        </div>
+            <span class="section-label">Como Funciona</span>
+            <h2 class="section-title center">Resultados reales con <span class="gradient-text">automatizacion inteligente</span></h2>
+            <p class="section-desc">Cinco capacidades que trabajan en sincronia para transformar tu prospeccion B2B. Cada una disenada para entregar resultados medibles desde el primer mes.</p>
 
-        <!-- 1. Prospección IA (light) -->
-        <div class="solution-detail" id="prospeccion-ia">
-            <div class="container">
-                <div class="solution-detail-grid">
-                    <div class="solution-visual">
-                        <div class="solution-icon-large">
-                            <i data-lucide="search" style="width:48px;height:48px;color:var(--color-accent)"></i>
+            <div class="bento-grid">
+                <!-- Hero Card: Prospeccion IA (2x2) -->
+                <a href="pages/soluciones.html#data-quality" class="bento-card bento-card--hero" aria-label="Prospeccion con IA - Ver detalles">
+                    <div class="bento-card-header">
+                        <div class="bento-card-icon">
+                            <i data-lucide="search" style="width:24px;height:24px"></i>
                         </div>
-                        <div class="solution-tools">
-                            <div class="tool-pill"><i data-lucide="linkedin"></i><span>LinkedIn</span></div>
-                            <div class="tool-pill"><i data-lucide="globe"></i><span>Web Scraping</span></div>
-                            <div class="tool-pill"><i data-lucide="brain"></i><span>IA Scoring</span></div>
-                        </div>
+                        <span class="bento-card-label">01 - Prospeccion</span>
                     </div>
-                    <div class="solution-content">
-                        <span class="solution-label">01 · Prospección</span>
-                        <h3>Prospección con IA que filtra por ti</h3>
-                        <p>Motor de scoring de 100 puntos que analiza perfil + website de cada prospecto. Clasifica automáticamente en HOT, WARM, NURTURE o SKIP. Solo hablas con quienes quieren comprar.</p>
-                        <ul class="feature-list">
-                            <li><i data-lucide="check"></i>Extracción automática de perfiles LinkedIn y websites</li>
-                            <li><i data-lucide="check"></i>Scoring dual: perfil profesional + empresa</li>
-                            <li><i data-lucide="check"></i>Clasificación automática HOT / WARM / NURTURE / SKIP</li>
-                            <li><i data-lucide="check"></i>Enriquecimiento de datos en tiempo real</li>
-                        </ul>
-                        <div class="solution-stats">
-                            <div class="solution-stat"><span class="stat-value">5-7x</span><span class="stat-label">Más conversiones</span></div>
-                            <div class="solution-stat"><span class="stat-value">-70%</span><span class="stat-label">Costo por lead</span></div>
-                            <div class="solution-stat"><span class="stat-value">0</span><span class="stat-label">Leads irrelevantes</span></div>
-                            <div class="solution-stat"><span class="stat-value">100pts</span><span class="stat-label">Scoring IA</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                    <h3>Prospeccion con IA que filtra por ti</h3>
+                    <p>Motor de scoring de 100 puntos. Clasifica automaticamente cada prospecto en HOT, WARM, NURTURE o SKIP.</p>
 
-        <!-- 2. Ventas Automatizadas (dark, reversed) -->
-        <div class="solution-detail solution-detail--dark" id="ventas-auto">
-            <div class="container">
-                <div class="solution-detail-grid solution-detail-grid--reversed">
-                    <div class="solution-visual">
-                        <div class="solution-icon-large">
-                            <i data-lucide="mail" style="width:48px;height:48px;color:var(--color-accent)"></i>
+                    <!-- Mini flow diagram -->
+                    <div class="bento-flow-diagram">
+                        <div class="bento-flow-node bento-flow-node--linkedin">
+                            <div class="bento-flow-node-icon">
+                                <i data-lucide="linkedin" style="width:20px;height:20px"></i>
+                            </div>
+                            <span>LinkedIn</span>
                         </div>
-                        <div class="solution-tools">
-                            <div class="tool-pill"><i data-lucide="mail"></i><span>Gmail</span></div>
-                            <div class="tool-pill"><i data-lucide="clock"></i><span>9AM Envío</span></div>
-                            <div class="tool-pill"><i data-lucide="bell"></i><span>Detección</span></div>
+                        <div class="bento-flow-connector">
+                            <div class="bento-flow-dot"></div>
                         </div>
-                    </div>
-                    <div class="solution-content">
-                        <span class="solution-label">02 · Secuencias</span>
-                        <h3>Ventas automatizadas que cierran deals</h3>
-                        <p>5 emails personalizados en 35 días, enviados siempre a las 9AM. Detección automática de respuestas e interés. El 78% de los clientes compra al primer vendor que responde — tú serás ese vendor.</p>
-                        <ul class="feature-list">
-                            <li><i data-lucide="check"></i>5 emails personalizados por prospecto</li>
-                            <li><i data-lucide="check"></i>Envío programado a las 9AM (horario óptimo)</li>
-                            <li><i data-lucide="check"></i>Detección automática de respuestas e interés</li>
-                            <li><i data-lucide="check"></i>Notificaciones Slack en tiempo real</li>
-                        </ul>
-                        <div class="solution-stats">
-                            <div class="solution-stat"><span class="stat-value">5</span><span class="stat-label">Emails por secuencia</span></div>
-                            <div class="solution-stat"><span class="stat-value">35</span><span class="stat-label">Días de campaña</span></div>
-                            <div class="solution-stat"><span class="stat-value">9AM</span><span class="stat-label">Horario de envío</span></div>
-                            <div class="solution-stat"><span class="stat-value">78%</span><span class="stat-label">Compra al 1° en responder</span></div>
+                        <div class="bento-flow-node bento-flow-node--ai">
+                            <div class="bento-flow-node-icon">
+                                <i data-lucide="brain" style="width:20px;height:20px"></i>
+                            </div>
+                            <span>IA</span>
+                        </div>
+                        <div class="bento-flow-connector">
+                            <div class="bento-flow-dot"></div>
+                        </div>
+                        <div class="bento-flow-labels">
+                            <span class="bento-flow-pill bento-flow-pill--hot">HOT</span>
+                            <span class="bento-flow-pill bento-flow-pill--warm">WARM</span>
+                            <span class="bento-flow-pill bento-flow-pill--skip">SKIP</span>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- 3. Omnicanal (light) -->
-        <div class="solution-detail" id="omnicanal">
-            <div class="container">
-                <div class="solution-detail-grid">
-                    <div class="solution-visual">
-                        <div class="solution-icon-large">
-                            <i data-lucide="share-2" style="width:48px;height:48px;color:var(--color-accent)"></i>
+                    <div class="bento-features">
+                        <div class="bento-feature">
+                            <i data-lucide="check" style="width:16px;height:16px"></i>
+                            <span>Scoring dual: perfil + empresa</span>
                         </div>
-                        <div class="solution-tools">
-                            <div class="tool-pill"><i data-lucide="linkedin"></i><span>LinkedIn</span></div>
-                            <div class="tool-pill"><i data-lucide="mail"></i><span>Email</span></div>
-                            <div class="tool-pill"><i data-lucide="slack"></i><span>Slack</span></div>
-                            <div class="tool-pill"><i data-lucide="file-text"></i><span>Notion</span></div>
+                        <div class="bento-feature">
+                            <i data-lucide="check" style="width:16px;height:16px"></i>
+                            <span>Enriquecimiento en tiempo real</span>
                         </div>
-                    </div>
-                    <div class="solution-content">
-                        <span class="solution-label">03 · Omnicanal</span>
-                        <h3>Todos tus canales, un solo pipeline</h3>
-                        <p>Pipeline unificado LinkedIn → Email → Slack → Notion. Cada prospecto recibe el mensaje correcto en el canal correcto. Las empresas con estrategia omnicanal retienen un 89% de clientes vs 33% sin ella.</p>
-                        <ul class="feature-list">
-                            <li><i data-lucide="check"></i>Pipeline LinkedIn → Email → Slack → Notion</li>
-                            <li><i data-lucide="check"></i>WhatsApp, Instagram y más canales integrados</li>
-                            <li><i data-lucide="check"></i>Routing inteligente según comportamiento</li>
-                            <li><i data-lucide="check"></i>Vista unificada de todas las interacciones</li>
-                        </ul>
-                        <div class="solution-stats">
-                            <div class="solution-stat"><span class="stat-value">10+</span><span class="stat-label">Canales integrados</span></div>
-                            <div class="solution-stat"><span class="stat-value">+40%</span><span class="stat-label">Más respuestas</span></div>
-                            <div class="solution-stat"><span class="stat-value">89%</span><span class="stat-label">Retención clientes</span></div>
-                            <div class="solution-stat"><span class="stat-value">+30%</span><span class="stat-label">Valor por cliente</span></div>
+                        <div class="bento-feature">
+                            <i data-lucide="check" style="width:16px;height:16px"></i>
+                            <span>Extraccion automatica LinkedIn + web</span>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- 4. Análisis de Datos (dark, reversed) -->
-        <div class="solution-detail solution-detail--dark" id="analisis-datos">
-            <div class="container">
-                <div class="solution-detail-grid solution-detail-grid--reversed">
-                    <div class="solution-visual">
-                        <div class="solution-icon-large">
-                            <i data-lucide="bar-chart-3" style="width:48px;height:48px;color:var(--color-accent)"></i>
+                    <div class="bento-stats">
+                        <div class="bento-stat">
+                            <span class="stat-value">5-7x</span>
+                            <span class="stat-label">Mas conversiones</span>
                         </div>
-                        <div class="solution-tools">
-                            <div class="tool-pill"><i data-lucide="layout-dashboard"></i><span>Dashboards</span></div>
-                            <div class="tool-pill"><i data-lucide="bell"></i><span>Alertas</span></div>
-                            <div class="tool-pill"><i data-lucide="file-bar-chart"></i><span>Reportes</span></div>
+                        <div class="bento-stat">
+                            <span class="stat-value">-70%</span>
+                            <span class="stat-label">Costo por lead</span>
                         </div>
                     </div>
-                    <div class="solution-content">
-                        <span class="solution-label">04 · Análisis</span>
-                        <h3>Datos que impulsan decisiones</h3>
-                        <p>Dashboards en tiempo real, reportes automáticos y alertas inteligentes. Visibilidad 360° de tu pipeline de ventas para tomar decisiones basadas en datos, no en intuición.</p>
-                        <ul class="feature-list">
-                            <li><i data-lucide="check"></i>Dashboards de pipeline en tiempo real</li>
-                            <li><i data-lucide="check"></i>Reportes automáticos semanales y mensuales</li>
-                            <li><i data-lucide="check"></i>Alertas inteligentes por anomalías</li>
-                            <li><i data-lucide="check"></i>Métricas de conversión por canal y campaña</li>
-                        </ul>
-                        <div class="solution-stats">
-                            <div class="solution-stat"><span class="stat-value">+40h</span><span class="stat-label">Ahorradas al mes</span></div>
-                            <div class="solution-stat"><span class="stat-value">360°</span><span class="stat-label">Visibilidad pipeline</span></div>
-                            <div class="solution-stat"><span class="stat-value">Real-time</span><span class="stat-label">Datos actualizados</span></div>
-                            <div class="solution-stat"><span class="stat-value">5x</span><span class="stat-label">Mejores decisiones</span></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!-- 5. Seguridad (light) -->
-        <div class="solution-detail" id="seguridad">
-            <div class="container">
-                <div class="solution-detail-grid">
-                    <div class="solution-visual">
-                        <div class="solution-icon-large">
-                            <i data-lucide="shield-check" style="width:48px;height:48px;color:var(--color-accent)"></i>
+                    <div class="bento-arrow">
+                        <i data-lucide="arrow-right" style="width:20px;height:20px"></i>
+                    </div>
+                </a>
+
+                <!-- Card 2: Secuencias (1x1) -->
+                <a href="pages/soluciones.html#ai-247" class="bento-card" aria-label="Secuencias automatizadas - Ver detalles">
+                    <div class="bento-card-header">
+                        <div class="bento-card-icon">
+                            <i data-lucide="mail" style="width:24px;height:24px"></i>
                         </div>
-                        <div class="solution-tools">
-                            <div class="tool-pill"><i data-lucide="lock"></i><span>E2E Encryption</span></div>
-                            <div class="tool-pill"><i data-lucide="shield"></i><span>Ley 21.719</span></div>
-                            <div class="tool-pill"><i data-lucide="eye-off"></i><span>Privacy</span></div>
+                        <span class="bento-card-label">02 - Secuencias</span>
+                    </div>
+                    <h4>Ventas automatizadas que cierran deals</h4>
+                    <p>5 emails personalizados en 35 dias. Envio a las 9AM con deteccion de respuestas.</p>
+                    <div class="bento-features">
+                        <div class="bento-feature">
+                            <i data-lucide="check" style="width:16px;height:16px"></i>
+                            <span>5 emails, 35 dias, 9AM</span>
+                        </div>
+                        <div class="bento-feature">
+                            <i data-lucide="check" style="width:16px;height:16px"></i>
+                            <span>Deteccion automatica de interes</span>
                         </div>
                     </div>
-                    <div class="solution-content">
-                        <span class="solution-label">05 · Seguridad</span>
-                        <h3>Compliance total, sin compromisos</h3>
-                        <p>Encriptación end-to-end, privacy by design y cumplimiento total con la Ley 21.719 de Protección de Datos Personales de Chile (deadline diciembre 2026). Tus datos y los de tus prospectos, siempre protegidos.</p>
-                        <ul class="feature-list">
-                            <li><i data-lucide="check"></i>100% compatible con Ley 21.719 y GDPR</li>
-                            <li><i data-lucide="check"></i>Encriptación end-to-end en todos los flujos</li>
-                            <li><i data-lucide="check"></i>Privacy by design en cada workflow</li>
-                            <li><i data-lucide="check"></i>Auditoría y trazabilidad completa</li>
-                        </ul>
-                        <div class="solution-stats">
-                            <div class="solution-stat"><span class="stat-value">100%</span><span class="stat-label">Ley 21.719</span></div>
-                            <div class="solution-stat"><span class="stat-value">E2E</span><span class="stat-label">Encriptación</span></div>
-                            <div class="solution-stat"><span class="stat-value">0</span><span class="stat-label">Brechas de datos</span></div>
-                            <div class="solution-stat"><span class="stat-value">Dic '26</span><span class="stat-label">Deadline cubierto</span></div>
+                    <div class="bento-stats">
+                        <div class="bento-stat">
+                            <span class="stat-value">5</span>
+                            <span class="stat-label">Emails</span>
+                        </div>
+                        <div class="bento-stat">
+                            <span class="stat-value">78%</span>
+                            <span class="stat-label">Compra al 1ro</span>
                         </div>
                     </div>
-                </div>
+                    <div class="bento-arrow">
+                        <i data-lucide="arrow-right" style="width:20px;height:20px"></i>
+                    </div>
+                </a>
+
+                <!-- Card 3: Omnicanal (1x1) -->
+                <a href="pages/soluciones.html#omnichannel" class="bento-card" aria-label="Omnicanal - Ver detalles">
+                    <div class="bento-card-header">
+                        <div class="bento-card-icon">
+                            <i data-lucide="share-2" style="width:24px;height:24px"></i>
+                        </div>
+                        <span class="bento-card-label">03 - Omnicanal</span>
+                    </div>
+                    <h4>Todos tus canales, un solo pipeline</h4>
+                    <p>Pipeline unificado LinkedIn, Email, Slack y Notion con routing inteligente.</p>
+                    <div class="bento-features">
+                        <div class="bento-feature">
+                            <i data-lucide="check" style="width:16px;height:16px"></i>
+                            <span>LinkedIn, Email, Slack, Notion</span>
+                        </div>
+                        <div class="bento-feature">
+                            <i data-lucide="check" style="width:16px;height:16px"></i>
+                            <span>Routing por comportamiento</span>
+                        </div>
+                    </div>
+                    <div class="bento-stats">
+                        <div class="bento-stat">
+                            <span class="stat-value">89%</span>
+                            <span class="stat-label">Retencion</span>
+                        </div>
+                        <div class="bento-stat">
+                            <span class="stat-value">+40%</span>
+                            <span class="stat-label">Respuestas</span>
+                        </div>
+                    </div>
+                    <div class="bento-arrow">
+                        <i data-lucide="arrow-right" style="width:20px;height:20px"></i>
+                    </div>
+                </a>
+
+                <!-- Card 4: Analisis (1x1) -->
+                <a href="pages/soluciones.html#analytics" class="bento-card" aria-label="Analisis e Inteligencia - Ver detalles">
+                    <div class="bento-card-header">
+                        <div class="bento-card-icon">
+                            <i data-lucide="bar-chart-3" style="width:24px;height:24px"></i>
+                        </div>
+                        <span class="bento-card-label">04 - Analisis</span>
+                    </div>
+                    <h4>Datos que impulsan decisiones</h4>
+                    <p>Dashboards en tiempo real, reportes automaticos y alertas inteligentes.</p>
+                    <div class="bento-features">
+                        <div class="bento-feature">
+                            <i data-lucide="check" style="width:16px;height:16px"></i>
+                            <span>Pipeline en tiempo real</span>
+                        </div>
+                        <div class="bento-feature">
+                            <i data-lucide="check" style="width:16px;height:16px"></i>
+                            <span>Alertas por anomalias</span>
+                        </div>
+                    </div>
+                    <div class="bento-stats">
+                        <div class="bento-stat">
+                            <span class="stat-value">360</span>
+                            <span class="stat-label">Pipeline</span>
+                        </div>
+                        <div class="bento-stat">
+                            <span class="stat-value">Real-time</span>
+                            <span class="stat-label">Datos</span>
+                        </div>
+                    </div>
+                    <div class="bento-arrow">
+                        <i data-lucide="arrow-right" style="width:20px;height:20px"></i>
+                    </div>
+                </a>
+
+                <!-- Card 5: Seguridad (1x1) -->
+                <a href="pages/soluciones.html#security" class="bento-card" aria-label="Seguridad y Compliance - Ver detalles">
+                    <div class="bento-card-header">
+                        <div class="bento-card-icon">
+                            <i data-lucide="shield-check" style="width:24px;height:24px"></i>
+                        </div>
+                        <span class="bento-card-label">05 - Seguridad</span>
+                    </div>
+                    <h4>Compliance total, sin compromisos</h4>
+                    <p>Ley 21.719, encriptacion E2E y privacy by design en cada workflow.</p>
+                    <div class="bento-features">
+                        <div class="bento-feature">
+                            <i data-lucide="check" style="width:16px;height:16px"></i>
+                            <span>Ley 21.719 + GDPR</span>
+                        </div>
+                        <div class="bento-feature">
+                            <i data-lucide="check" style="width:16px;height:16px"></i>
+                            <span>Encriptacion end-to-end</span>
+                        </div>
+                    </div>
+                    <div class="bento-stats">
+                        <div class="bento-stat">
+                            <span class="stat-value">Ley 21.719</span>
+                            <span class="stat-label">Compliance</span>
+                        </div>
+                        <div class="bento-stat">
+                            <span class="stat-value">E2E</span>
+                            <span class="stat-label">Encriptacion</span>
+                        </div>
+                    </div>
+                    <div class="bento-arrow">
+                        <i data-lucide="arrow-right" style="width:20px;height:20px"></i>
+                    </div>
+                </a>
             </div>
         </div>
     </section>
