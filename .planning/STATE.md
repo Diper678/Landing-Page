@@ -2,11 +2,11 @@
 
 milestone_version: v1.0
 current_phase: 2
-current_plan: 4
+current_plan: 4 (COMPLETE)
 total_plans_in_phase: 4
 paused_at: null
-last_session: 2026-03-04T23:17:21Z
-stopped_at: Completed 02-03-PLAN.md
+last_session: 2026-03-04T23:21:04Z
+stopped_at: Completed 02-04-PLAN.md (Phase 02 complete)
 
 ## decisions
 - decision: Cobrar en USD (no CLP) para posicionamiento premium y facilitar expansión LATAM
@@ -32,6 +32,8 @@ stopped_at: Completed 02-03-PLAN.md
 - decision: CSS grid-based comparison table (not HTML table) for responsive control
 - decision: ROI calculator uses conservative 3% conversion rate and USD/CLP rate of 900
 - decision: CLP formatting via toLocaleString es-CL for Chilean market
+- decision: Vision teaser between ROI section and CTA section; horizontal timeline desktop, vertical mobile
+- decision: 2030 featured step with accent background; expanded vision.html uses left-border timeline with dot markers
 
 ## blockers
 - blocker: Confirmar con dLocal Go soporte si API de suscripciones es accesible en plan self-service (vs solo dashboard)
