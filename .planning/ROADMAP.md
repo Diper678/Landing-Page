@@ -23,21 +23,13 @@ Publicar precios reales basados en análisis financiero de mercado, integrar pro
 ### Phase 2 — Landing Page Improvements
 **Goal:** Mejorar UX/UI del landing page con bento grid para "Cómo Funciona", navbar flotante, animaciones, comparativa comercial, calculadora ROI, y sección visión de agentes autónomos. Basado en análisis competitivo de Apollo, AmpleMarket, Firecrawl, Base10, HumbleOps.
 **Status:** planned
-**Plans:** 5 plans
-
-**6 mejoras a implementar:**
-1. Navbar floating/shrink (AmpleMarket style) — todas las páginas
-2. Bento Grid redesign "Cómo Funciona" — dark asymmetric grid, hero card 2x2 + 4 cards 1x1
-3. Animaciones de fondo (Firecrawl style) — gradient orbs + scroll reveals + card glow + cursor glow
-4. Comparativa comercial — tabla 4-columnas + calculadora ROI interactiva
-5. Visión agentes autónomos — teaser index.html + versión completa vision.html
+**Requirements:** [NAV-01, NAV-02, NAV-03, ANIM-01, ANIM-02, ANIM-03, ANIM-04, COMP-01, COMP-02, ROI-01, ROI-02, VIS-01, VIS-02]
+**Plans:** 3 plans
 
 Plans:
 - [ ] 02-01-PLAN.md — Floating navbar pill (all 20 pages)
-- [ ] 02-02-PLAN.md — Bento grid redesign "Cómo Funciona" (PRIMARY)
-- [ ] 02-03-PLAN.md — Background animations (orbs, scroll reveals, cursor glow)
-- [ ] 02-04-PLAN.md — Comparison table + ROI calculator
-- [ ] 02-05-PLAN.md — Vision teaser + expanded vision.html + final checkpoint
+- [ ] 02-02-PLAN.md — Bento grid + animations (orbs, scroll reveals, card glow, cursor glow)
+- [ ] 02-03-PLAN.md — Comparison table + ROI calculator + vision teaser + vision.html
 
 ---
 
