@@ -202,7 +202,7 @@ a {
    NAVBAR
    ============================================= */
 .navbar {
-    padding: 14px 0;
+    padding: 8px 0;
     position: sticky;
     top: 0;
     background: rgba(248, 247, 245, 0.85);
@@ -217,12 +217,14 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: justify-content 0s, gap 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 8px;
+    transition: gap 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .logo img {
@@ -241,12 +243,20 @@ a {
     font-weight: 400;
     color: var(--color-text-main);
     letter-spacing: 0.02em;
+    display: inline-block;
+    max-width: 120px;
+    overflow: hidden;
+    opacity: 1;
+    transition: max-width 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.3s ease,
+                margin 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-links {
     display: flex;
     align-items: center;
     gap: 4px;
+    transition: gap 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mobile-cta {
@@ -297,7 +307,7 @@ a {
     justify-content: center;
     padding: 10px 22px;
     border-radius: 100px;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 14px;
     transition: all 0.3s var(--ease-out-expo);
     cursor: pointer;
@@ -380,7 +390,10 @@ a {
    HERO
    ============================================= */
 .hero {
-    padding: 80px 0 100px;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
     overflow: hidden;
     position: relative;
     z-index: 1;
@@ -2568,20 +2581,49 @@ body {
 }
 
 .navbar.scrolled {
-    padding: 6px 0;
+    padding: 3px 0;
     background: transparent;
     border-bottom: none;
 }
 
 .navbar.scrolled .container {
-    max-width: 900px;
-    background: rgba(248, 247, 245, 0.97);
+    max-width: 680px;
+    margin: 0 auto;
+    background: rgba(248, 247, 245, 0.65);
     border-radius: 50px;
-    border: 1px solid rgba(229, 229, 229, 0.6);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10);
-    padding: 8px 24px;
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(229, 229, 229, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    padding: 3px 16px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    justify-content: center;
+    gap: 6px;
+}
+
+.navbar.scrolled .logo-text {
+    max-width: 0;
+    opacity: 0;
+    margin: 0;
+}
+
+.navbar.scrolled .logo {
+    gap: 0;
+    margin-right: 0;
+}
+
+.navbar.scrolled .nav-links {
+    gap: 0;
+}
+
+.navbar.scrolled .btn-ghost {
+    padding: 7px 12px;
+    font-size: 13px;
+}
+
+.navbar.scrolled .btn-primary {
+    padding: 7px 16px;
+    font-size: 13px;
+    margin-left: 0;
 }
 
 @media (max-width: 768px) {
@@ -3165,7 +3207,7 @@ body {
 
 .comparison-table {
     display: grid;
-    grid-template-columns: 180px repeat(4, 1fr);
+    grid-template-columns: 180px repeat(3, 1fr);
     gap: 0;
     min-width: 700px;
 }
@@ -3341,119 +3383,245 @@ body {
     }
 }
 
-/* =============================================
-   ROI CALCULATOR
-   ============================================= */
 
-.roi-section {
-    background: #F8F7F5;
-    padding: 100px 0;
+
+/* =============================================================
+   DARK HERO — Inspiración Novena · full-bleed dark, serif H1
+   ============================================================= */
+
+/* Hero display serif: Fraunces (placeholder until Hebrew Regular URL is provided) */
+/* TODO: replace with @import url(Hebrew Regular) when URL received */
+
+/* Dark hero variant */
+.hero--dark {
+    background: #0c0c0c;
+    min-height: 100vh;
+    padding: 0;
+    display: flex;
+    align-items: center;
 }
 
-.roi-calculator {
-    max-width: 800px;
-    margin: 48px auto 0;
+.hero--dark .hero-grid {
+    align-items: center;
+    gap: 40px;
+    padding: 120px 0 80px;
 }
 
-.roi-inputs {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
-    margin-bottom: 40px;
-}
-
-.roi-input-group label {
-    display: block;
-    font-size: 14px;
+/* Serif display heading — Adobe Hebrew Regular */
+.hero-h1-serif {
+    font-family: 'Sharp Grotesk', sans-serif;
+    font-size: clamp(38px, 4.5vw, 64px);
     font-weight: 500;
-    color: #666;
-    margin-bottom: 8px;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--color-text-main);
+    margin-bottom: 24px;
 }
 
-.roi-input-group input {
-    width: 100%;
-    padding: 14px 18px;
-    border: 1px solid #e0e0e0;
-    border-radius: 12px;
-    font-size: 18px;
-    font-family: inherit;
-    transition: border-color 0.2s;
-    background: #fff;
-    color: #111;
-    box-sizing: border-box;
+.hero-h1-serif em {
+    font-style: italic;
+    background: linear-gradient(135deg, #111 0%, #c5ed36 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.roi-input-group input:focus {
-    border-color: #c5ed36;
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(197, 237, 54, 0.15);
+/* Hero CTA row — form + secondary button aligned */
+.hero-cta-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 8px;
+    margin-bottom: 16px;
 }
 
-.roi-outputs {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+/* Dark hero text colours */
+.hero--dark .hero-desc {
+    color: rgba(248, 247, 245, 0.62);
+    max-width: 480px;
 }
 
-.roi-output-card {
-    background: #fff;
-    border-radius: 16px;
-    padding: 24px;
-    text-align: center;
-    border: 1px solid #e8e8e8;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+.hero--dark .trust-item {
+    color: rgba(248, 247, 245, 0.50);
 }
 
-.roi-output-card--highlight {
-    background: #111;
-    color: #fff;
-    border-color: #111;
-}
-
-.roi-output-card--highlight .roi-output-value {
+.hero--dark .trust-item svg {
     color: #c5ed36;
 }
 
-.roi-output-card--highlight .roi-output-label {
-    color: rgba(255, 255, 255, 0.6);
+.hero--dark .trust-divider {
+    color: rgba(255, 255, 255, 0.2);
 }
 
-.roi-output-value {
-    font-size: 32px;
-    font-weight: 700;
-    color: #111;
+/* Badge pill on dark bg */
+.hero--dark .new-badge {
+    background: rgba(197, 237, 54, 0.10);
+    border: 1px solid rgba(197, 237, 54, 0.22);
+    color: #c5ed36;
+}
+
+.hero--dark .new-badge:hover {
+    background: rgba(197, 237, 54, 0.18);
+}
+
+/* Hero form on dark bg */
+.hero--dark .hero-form input {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.14);
+    color: #f8f7f5;
+}
+
+.hero--dark .hero-form input::placeholder {
+    color: rgba(248, 247, 245, 0.40);
+}
+
+.hero--dark .hero-form input:focus {
+    border-color: rgba(197, 237, 54, 0.55);
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 0 3px rgba(197, 237, 54, 0.12);
+}
+
+/* Secondary CTA — outline style */
+.btn-outline-light {
+    background: transparent;
+    color: var(--color-text-main);
+    border: 1.5px solid #222;
+    gap: 6px;
+}
+
+.btn-outline-light:hover {
+    border-color: var(--color-accent);
+    color: var(--color-text-main);
+    background: rgba(197, 237, 54, 0.08);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(197, 237, 54, 0.15);
+}
+
+/* Two-button row below form */
+.hero-cta-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+/* Orbs visibility on dark bg */
+.hero--dark .hero-orbs {
+    opacity: 0.5;
+}
+
+/* =============================================================
+   INTERACTIVE GLOBE — hero right column
+   ============================================================= */
+
+.hero-globe-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+/* Subtle radial glow behind globe */
+.hero-globe-wrap::before {
+    content: '';
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(ellipse at center, rgba(197, 237, 54, 0.06) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+#sisteco-globe {
+    width: 540px;
+    height: 540px;
+    max-width: 100%;
+    max-height: 70vw;
     display: block;
-    margin-bottom: 4px;
 }
 
-.roi-output-label {
-    font-size: 13px;
-    color: #666;
+/* =============================================================
+   NAVBAR — Dark hero variant (navbar--dark-hero)
+   ============================================================= */
+
+/* At top of page: fully transparent, white text */
+.navbar--dark-hero {
+    background: transparent;
+    border-bottom: none;
 }
 
-.roi-disclaimer {
-    font-size: 12px;
-    color: #999;
-    text-align: center;
-    margin-top: 24px;
-    font-style: italic;
+.navbar--dark-hero .logo-text {
+    color: rgba(248, 247, 245, 0.92);
 }
 
-/* ROI Calculator Responsive */
-@media (max-width: 768px) {
-    .roi-section {
-        padding: 60px 0;
-    }
+.navbar--dark-hero .btn-ghost {
+    color: rgba(248, 247, 245, 0.68);
+}
 
-    .roi-inputs {
+.navbar--dark-hero .btn-ghost:hover {
+    color: #f8f7f5;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.navbar--dark-hero .btn-ghost::after {
+    background: rgba(197, 237, 54, 0.7);
+}
+
+.navbar--dark-hero .hamburger span {
+    background: rgba(248, 247, 245, 0.9);
+}
+
+/* Scrolled: dark glass pill */
+.navbar--dark-hero.scrolled {
+    background: transparent;
+    border-bottom: none;
+}
+
+.navbar--dark-hero.scrolled .container {
+    background: rgba(10, 10, 10, 0.80);
+    border-color: rgba(197, 237, 54, 0.18);
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.55),
+        0 0 0 0.5px rgba(197, 237, 54, 0.12),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.navbar--dark-hero.scrolled .btn-ghost {
+    color: rgba(248, 247, 245, 0.78);
+}
+
+.navbar--dark-hero.scrolled .btn-ghost:hover {
+    color: #f8f7f5;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+/* =============================================================
+   RESPONSIVE — Globe + dark hero
+   ============================================================= */
+
+@media (max-width: 900px) {
+    .hero--dark .hero-grid {
         grid-template-columns: 1fr;
+        padding: 100px 0 60px;
     }
 
-    .roi-outputs {
-        grid-template-columns: repeat(2, 1fr);
+    .hero-globe-wrap {
+        order: -1;
     }
 
-    .roi-output-value {
-        font-size: 24px;
+    #sisteco-globe {
+        width: 360px;
+        height: 360px;
+    }
+}
+
+@media (max-width: 480px) {
+    #sisteco-globe {
+        width: 300px;
+        height: 300px;
+    }
+
+    .hero-h1-serif {
+        font-size: clamp(36px, 10vw, 52px);
     }
 }
