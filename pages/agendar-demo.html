@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda tu Demo Personalizada — Sisteco | Automatización Ventas B2B</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <meta name="description" content="Agenda una demo personalizada de 30 minutos con Sisteco. Descubre cómo automatizar tu prospección B2B con workflows inteligentes, lead scoring y compliance Ley 21.719.">
+    <link rel="icon" type="image/png" href="../assets/logos/sisteco-icon.png">
+    <meta property="og:title" content="Agenda tu Demo Personalizada — Sisteco | Automatización Ventas B2B">
+    <meta property="og:description" content="Agenda una demo personalizada de 30 minutos con Sisteco. Descubre cómo automatizar tu prospección B2B con workflows inteligentes, lead scoring y compliance Ley 21.719.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://landing-page-felipe-s-projects-cf2ac967.vercel.app/agendar-demo">
+    <meta property="og:url" content="https://landing-page-felipe-s-projects-cf2ac967.vercel.app/agendar-demo">
+    <meta property="og:image" content="https://landing-page-felipe-s-projects-cf2ac967.vercel.app/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Agenda tu Demo Personalizada — Sisteco | Automatización Ventas B2B">
+    <meta name="twitter:description" content="Agenda una demo personalizada de 30 minutos con Sisteco. Descubre cómo automatizar tu prospección B2B con workflows inteligentes, lead scoring y compliance Ley 21.719.">
+    <meta name="twitter:image" content="https://landing-page-felipe-s-projects-cf2ac967.vercel.app/assets/og-image.png">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+
+    <!-- Cal.com Embed -->
+    <script src="https://app.cal.com/embed/embed.js" async></script>
+
+    <style>
+        /* Discovery Form Styles */
+        .discovery-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: start;
+        }
+
+        .discovery-form {
+            background: #fff;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            padding: 40px;
+        }
+
+        .discovery-form h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .discovery-form .form-subtitle {
+            font-size: 14px;
+            color: var(--color-text-sub);
+            margin-bottom: 28px;
+            line-height: 1.6;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .discovery-form .form-group {
+            margin-bottom: 20px;
+        }
+
+        .discovery-form .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 6px;
+            color: var(--color-text-main);
+        }
+
+        .discovery-form .form-group input,
+        .discovery-form .form-group select,
+        .discovery-form .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-sm);
+            font-size: 16px;
+            font-family: inherit;
+            background: var(--color-bg);
+            color: var(--color-text-main);
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .discovery-form .form-group input:focus,
+        .discovery-form .form-group select:focus,
+        .discovery-form .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-accent-hover);
+            box-shadow: 0 0 0 3px rgba(197, 237, 54, 0.15);
+        }
+
+        .discovery-form .form-group select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            padding-right: 36px;
+            cursor: pointer;
+        }
+
+        .discovery-form .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .discovery-form .form-group .email-hint {
+            font-size: 12px;
+            color: #999;
+            margin-top: 4px;
+        }
+
+        .discovery-form .form-group .email-hint.error {
+            color: #ef4444;
+        }
+
+        .discovery-benefits {
+            position: sticky;
+            top: 120px;
+        }
+
+        .discovery-benefits h3 {
+            font-size: 20px;
+            margin-bottom: 24px;
+        }
+
+        .benefit-item {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 24px;
+            align-items: flex-start;
+        }
+
+        .benefit-icon {
+            width: 44px;
+            height: 44px;
+            min-width: 44px;
+            border-radius: 12px;
+            background: rgba(197, 237, 54, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .benefit-icon svg {
+            width: 20px;
+            height: 20px;
+            color: #8cb320;
+        }
+
+        .benefit-item h4 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .benefit-item p {
+            font-size: 14px;
+            color: var(--color-text-sub);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .benefit-trust {
+            margin-top: 32px;
+            padding-top: 24px;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .benefit-trust p {
+            font-size: 13px;
+            color: var(--color-text-sub);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .benefit-trust p svg {
+            width: 16px;
+            height: 16px;
+            color: #8cb320;
+        }
+
+        /* Success State */
+        .discovery-success {
+            display: none;
+            text-align: center;
+            padding: 48px 24px;
+        }
+
+        .discovery-success.visible {
+            display: block;
+        }
+
+        .discovery-success .success-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: rgba(197, 237, 54, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+        }
+
+        .discovery-success .success-icon svg {
+            width: 32px;
+            height: 32px;
+            color: #8cb320;
+        }
+
+        .discovery-success h3 {
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .discovery-success p {
+            font-size: 15px;
+            color: var(--color-text-sub);
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        /* Cal.com Embed Section */
+        .calcom-section {
+            display: none;
+            padding: 80px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .calcom-section.visible {
+            display: block;
+        }
+
+        .calcom-section .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .calcom-section .section-header h2 {
+            font-size: clamp(28px, 3.5vw, 36px);
+            margin-bottom: 12px;
+        }
+
+        .calcom-section .section-header p {
+            font-size: 16px;
+            color: var(--color-text-sub);
+            max-width: 560px;
+            margin: 0 auto;
+        }
+
+        .calcom-wrapper {
+            max-width: 720px;
+            margin: 0 auto;
+            min-height: 500px;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .calcom-fallback {
+            text-align: center;
+            padding: 60px 24px;
+        }
+
+        .calcom-fallback p {
+            font-size: 15px;
+            color: var(--color-text-sub);
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .discovery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .discovery-form {
+                padding: 24px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .discovery-benefits {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-bg"></div>
+    <div class="grid-pattern-overlay"></div>
+    <nav class="navbar">
+        <div class="container">
+            <a href="../index.html" class="logo navbar-item">
+                <img src="../assets/logos/sisteco-icon.png" alt="Sisteco Logo" width="28" height="28">
+                <span class="logo-text">Sisteco</span>
+            </a>
+            <div class="nav-links">
+                <a href="vision.html" class="btn btn-ghost navbar-item">Visión</a>
+                <a href="soluciones.html" class="btn btn-ghost navbar-item">Soluciones</a>
+                <a href="como-funciona.html" class="btn btn-ghost navbar-item">Infraestructura</a>
+                <a href="dashboard.html" class="btn btn-ghost navbar-item">Dashboard</a>
+                <a href="precios.html" class="btn btn-ghost navbar-item">Precios</a>
+            </div>
+            <a href="../index.html#hero" class="btn btn-primary navbar-item">Empezar ahora</a>
+            <button class="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../index.html">Inicio</a>
+                <span>/</span>
+                <span class="current">Agendar Demo</span>
+            </div>
+            <h1>Agenda tu Demo Personalizada</h1>
+            <p>Completa este formulario y agenda una sesión de 30 minutos para ver cómo Sisteco puede automatizar tu prospección B2B</p>
+        </div>
+    </section>
+
+    <!-- Discovery Form Section -->
+    <section class="page-section">
+        <div class="container">
+            <div class="discovery-grid">
+                <!-- Form -->
+                <div>
+                    <form class="discovery-form" id="discovery-form">
+                        <h3>Cuéntanos sobre tu empresa</h3>
+                        <p class="form-subtitle">Con esta información preparamos una demo enfocada en tus necesidades específicas.</p>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="disc-name">Nombre completo *</label>
+                                <input type="text" id="disc-name" required placeholder="Tu nombre completo">
+                            </div>
+                            <div class="form-group">
+                                <label for="disc-email">Email corporativo *</label>
+                                <input type="email" id="disc-email" required placeholder="tu@empresa.com">
+                                <span class="email-hint" id="email-hint">Usamos email corporativo para preparar tu demo</span>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="disc-company">Empresa *</label>
+                                <input type="text" id="disc-company" required placeholder="Nombre de tu empresa">
+                            </div>
+                            <div class="form-group">
+                                <label for="disc-role">Cargo *</label>
+                                <input type="text" id="disc-role" required placeholder="Ej: Gerente Comercial">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="disc-team-size">Número de vendedores</label>
+                                <select id="disc-team-size">
+                                    <option value="">Selecciona...</option>
+                                    <option value="1-5">1 - 5</option>
+                                    <option value="6-15">6 - 15</option>
+                                    <option value="16-50">16 - 50</option>
+                                    <option value="50+">50+</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="disc-crm">¿Usan CRM actualmente?</label>
+                                <select id="disc-crm">
+                                    <option value="">Selecciona...</option>
+                                    <option value="No">No</option>
+                                    <option value="HubSpot">HubSpot</option>
+                                    <option value="Pipedrive">Pipedrive</option>
+                                    <option value="Salesforce">Salesforce</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="disc-pain">Mayor dolor en ventas</label>
+                            <textarea id="disc-pain" rows="4" placeholder="Ej: Nuestros vendedores pierden mucho tiempo prospectando manualmente..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="disc-source">¿Cómo nos conociste?</label>
+                            <select id="disc-source">
+                                <option value="">Selecciona...</option>
+                                <option value="LinkedIn">LinkedIn</option>
+                                <option value="Google">Google</option>
+                                <option value="Referido">Referido</option>
+                                <option value="Otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full" id="disc-submit">
+                            <i data-lucide="calendar" style="width:18px;height:18px;margin-right:8px"></i>
+                            Enviar y agendar demo
+                        </button>
+                    </form>
+
+                    <!-- Success Message (replaces form) -->
+                    <div class="discovery-form discovery-success" id="discovery-success">
+                        <div class="success-icon">
+                            <i data-lucide="check-circle-2"></i>
+                        </div>
+                        <h3>¡Listo! Recibimos tu información</h3>
+                        <p>Ahora agenda tu demo de 30 minutos en el calendario de abajo. Prepararemos una sesión personalizada basada en lo que nos contaste.</p>
+                    </div>
+                </div>
+
+                <!-- Benefits Sidebar -->
+                <div class="discovery-benefits">
+                    <h3>¿Qué verás en la demo?</h3>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><i data-lucide="search"></i></div>
+                        <div>
+                            <h4>Prospección automatizada</h4>
+                            <p>Cómo encontramos y califícamos tus leads ideales con IA y datos del SII.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><i data-lucide="brain"></i></div>
+                        <div>
+                            <h4>Lead scoring inteligente</h4>
+                            <p>Sistema de puntuación de 100 puntos que prioriza los prospectos con mayor probabilidad de compra.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><i data-lucide="mail"></i></div>
+                        <div>
+                            <h4>Secuencias multicanal</h4>
+                            <p>Email, LinkedIn y más canales trabajando en sincronía para generar reuniones.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-item">
+                        <div class="benefit-icon"><i data-lucide="bar-chart-3"></i></div>
+                        <div>
+                            <h4>Dashboard en tiempo real</h4>
+                            <p>Métricas claras de pipeline, conversión y ROI de tu inversión.</p>
+                        </div>
+                    </div>
+
+                    <div class="benefit-trust">
+                        <p><i data-lucide="clock"></i> 30 minutos, sin compromiso</p>
+                        <p><i data-lucide="shield-check"></i> Compliance Ley 21.719</p>
+                        <p><i data-lucide="zap"></i> Resultados desde el primer mes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cal.com Scheduling Section (revealed after form submit) -->
+    <section class="calcom-section" id="calcom-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Elige tu horario</h2>
+                <p>Selecciona el día y hora que más te acomode para tu demo personalizada de 30 minutos.</p>
+            </div>
+            <div class="calcom-wrapper" id="calcom-wrapper">
+                <!-- Cal.com inline embed will render here -->
+                <div class="calcom-fallback" id="calcom-fallback">
+                    <p>Cargando calendario...</p>
+                    <a href="https://cal.com/felipe-sisteco/demo" target="_blank" rel="noopener" class="btn btn-primary">
+                        <i data-lucide="external-link" style="width:16px;height:16px;margin-right:8px"></i>
+                        Abrir calendario en nueva pestaña
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand-inline">
+                    <img src="../assets/logos/sisteco-icon.png" alt="Sisteco" class="footer-logo" width="28" height="28">
+                    <span class="footer-tagline">Infraestructura inteligente para ventas B2B</span>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/sisteco/" target="_blank" rel="noopener" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="mailto:contacto@sisteco.cl" aria-label="Email"><i data-lucide="mail"></i></a>
+                </div>
+            </div>
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h4>Producto</h4>
+                    <a href="soluciones.html">Soluciones</a>
+                    <a href="como-funciona.html">Infraestructura</a>
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="precios.html">Precios</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <a href="vision.html">Visión</a>
+                    <a href="sobre-nosotros.html">Sobre nosotros</a>
+                    <a href="contacto.html">Contacto</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="privacidad.html">Privacidad</a>
+                    <a href="terminos.html">Términos</a>
+                    <a href="cookies.html">Cookies</a>
+                    <a href="gdpr.html">Ley 21.719</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <a href="mailto:contacto@sisteco.cl">contacto@sisteco.cl</a>
+                    <a href="tel:+56940065566">+56 9 40065566</a>
+                    <span class="footer-address">Av. Alonso de Córdova 5870 Of. 413, Las Condes, Santiago</span>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sisteco. Todos los derechos reservados.</p>
+                <div class="footer-bottom-links">
+                    <a href="privacidad.html">Privacidad</a>
+                    <a href="terminos.html">Términos</a>
+                    <a href="cookies.html">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/pages.js" defer></script>
+    <script>
+    // =============================================
+    // DISCOVERY FORM HANDLER
+    // =============================================
+    (function() {
+        'use strict';
+
+        const API_BASE = window.location.hostname === 'localhost'
+            ? 'http://localhost:3000/api'
+            : '/api';
+
+        const personalDomains = [
+            'gmail.com', 'hotmail.com', 'outlook.com', 'yahoo.com',
+            'live.com', 'icloud.com', 'me.com', 'mail.com', 'protonmail.com'
+        ];
+
+        function isBusinessEmail(email) {
+            const domain = email.split('@')[1]?.toLowerCase();
+            return domain && !personalDomains.includes(domain);
+        }
+
+        function initDiscoveryForm() {
+            const form = document.getElementById('discovery-form');
+            if (!form) return;
+
+            const emailInput = document.getElementById('disc-email');
+            const emailHint = document.getElementById('email-hint');
+
+            // Real-time email validation hint
+            if (emailInput && emailHint) {
+                emailInput.addEventListener('blur', () => {
+                    const email = emailInput.value.trim();
+                    if (email && !isBusinessEmail(email)) {
+                        emailHint.textContent = 'Por favor usa tu email corporativo (no Gmail, Hotmail, etc.)';
+                        emailHint.classList.add('error');
+                    } else {
+                        emailHint.textContent = 'Usamos email corporativo para preparar tu demo';
+                        emailHint.classList.remove('error');
+                    }
+                });
+            }
+
+            form.addEventListener('submit', async (event) => {
+                event.preventDefault();
+
+                const submitBtn = document.getElementById('disc-submit');
+                const name = document.getElementById('disc-name')?.value.trim();
+                const email = document.getElementById('disc-email')?.value.trim();
+                const company = document.getElementById('disc-company')?.value.trim();
+                const role = document.getElementById('disc-role')?.value.trim();
+                const teamSize = document.getElementById('disc-team-size')?.value;
+                const crm = document.getElementById('disc-crm')?.value;
+                const pain = document.getElementById('disc-pain')?.value.trim();
+                const source = document.getElementById('disc-source')?.value;
+
+                // Validate required fields
+                if (!name) {
+                    document.getElementById('disc-name')?.focus();
+                    showPageToast('Por favor ingresa tu nombre', 'error');
+                    return;
+                }
+
+                if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                    document.getElementById('disc-email')?.focus();
+                    showPageToast('Por favor ingresa un email válido', 'error');
+                    return;
+                }
+
+                if (!isBusinessEmail(email)) {
+                    document.getElementById('disc-email')?.focus();
+                    showPageToast('Por favor usa tu email corporativo (no Gmail, Hotmail, etc.)', 'error');
+                    return;
+                }
+
+                if (!company) {
+                    document.getElementById('disc-company')?.focus();
+                    showPageToast('Por favor ingresa el nombre de tu empresa', 'error');
+                    return;
+                }
+
+                if (!role) {
+                    document.getElementById('disc-role')?.focus();
+                    showPageToast('Por favor ingresa tu cargo', 'error');
+                    return;
+                }
+
+                submitBtn.disabled = true;
+                const originalHTML = submitBtn.innerHTML;
+                submitBtn.textContent = 'Enviando...';
+
+                try {
+                    const response = await fetch(`${API_BASE}/discovery-form`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            name,
+                            email,
+                            company,
+                            role,
+                            teamSize: teamSize || null,
+                            crm: crm || null,
+                            pain: pain || null,
+                            source: source || null,
+                        })
+                    });
+
+                    const data = await response.json();
+
+                    if (!response.ok) {
+                        throw new Error(data.error || 'Error al enviar');
+                    }
+
+                    // Hide form, show success
+                    form.style.display = 'none';
+                    const successEl = document.getElementById('discovery-success');
+                    successEl.classList.add('visible');
+
+                    // Re-init icons for success state
+                    if (typeof lucide !== 'undefined') {
+                        lucide.createIcons();
+                    }
+
+                    // Show Cal.com section
+                    const calSection = document.getElementById('calcom-section');
+                    calSection.classList.add('visible');
+
+                    // Try to load Cal.com inline embed
+                    loadCalEmbed(name, email, company);
+
+                    // Scroll to Cal.com section
+                    setTimeout(() => {
+                        calSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 400);
+
+                    showPageToast('Información recibida. Ahora agenda tu demo.', 'success');
+
+                } catch (error) {
+                    showPageToast(error.message || 'Error al enviar el formulario', 'error');
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalHTML;
+                    if (typeof lucide !== 'undefined') {
+                        lucide.createIcons();
+                    }
+                }
+            });
+        }
+
+        function loadCalEmbed(name, email, company) {
+            const wrapper = document.getElementById('calcom-wrapper');
+            const fallback = document.getElementById('calcom-fallback');
+
+            try {
+                if (typeof Cal !== 'undefined') {
+                    // Clear fallback
+                    fallback.style.display = 'none';
+
+                    // Create Cal.com inline embed
+                    Cal('inline', {
+                        calLink: 'felipe-sisteco/demo',
+                        elementOrSelector: '#calcom-wrapper',
+                        config: {
+                            name: name || '',
+                            email: email || '',
+                            notes: company ? `Empresa: ${company}` : '',
+                            layout: 'month_view',
+                        },
+                    });
+
+                    Cal('ui', {
+                        styles: { branding: { brandColor: '#c5ed36' } },
+                        hideEventTypeDetails: false,
+                        layout: 'month_view',
+                    });
+                } else {
+                    // Cal.com script not loaded - show fallback link
+                    fallback.innerHTML = `
+                        <p>Haz clic en el botón para agendar tu demo de 30 minutos.</p>
+                        <a href="https://cal.com/felipe-sisteco/demo?name=${encodeURIComponent(name || '')}&email=${encodeURIComponent(email || '')}" target="_blank" rel="noopener" class="btn btn-primary">
+                            Agendar demo en Cal.com
+                        </a>
+                    `;
+                    if (typeof lucide !== 'undefined') {
+                        lucide.createIcons();
+                    }
+                }
+            } catch (err) {
+                console.error('Cal.com embed error:', err);
+                fallback.innerHTML = `
+                    <p>Haz clic en el botón para agendar tu demo de 30 minutos.</p>
+                    <a href="https://cal.com/felipe-sisteco/demo?name=${encodeURIComponent(name || '')}&email=${encodeURIComponent(email || '')}" target="_blank" rel="noopener" class="btn btn-primary">
+                        Agendar demo en Cal.com
+                    </a>
+                `;
+            }
+        }
+
+        // showPageToast is defined in pages.js, but add a fallback
+        if (typeof window.showPageToast === 'undefined') {
+            window.showPageToast = function(message, type) {
+                const existing = document.querySelector('.toast');
+                if (existing) existing.remove();
+
+                const toast = document.createElement('div');
+                toast.className = 'toast toast-' + type;
+
+                const icon = document.createElement('span');
+                icon.className = 'toast-icon';
+                icon.textContent = type === 'success' ? '\u2713' : '\u2715';
+
+                const msg = document.createElement('span');
+                msg.className = 'toast-message';
+                msg.textContent = message;
+
+                toast.appendChild(icon);
+                toast.appendChild(msg);
+                document.body.appendChild(toast);
+
+                requestAnimationFrame(function() { toast.classList.add('show'); });
+                setTimeout(function() {
+                    toast.classList.remove('show');
+                    setTimeout(function() { toast.remove(); }, 300);
+                }, 4000);
+            };
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initDiscoveryForm);
+        } else {
+            initDiscoveryForm();
+        }
+    })();
+    </script>
+</body>
+</html>

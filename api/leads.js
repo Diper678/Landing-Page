@@ -1,6 +1,7 @@
-import { createClient } from '@supabase/supabase-js';
-import { resend, FROM_EMAIL } from './lib/resend.js';
-import { welcomeEmail } from './lib/email-templates.js';
+import { convex } from './_lib/convex.js';
+import { api } from '../convex/_generated/api.js';
+import { resend, FROM_EMAIL } from './_lib/resend.js';
+import { welcomeEmail } from './_lib/email-templates.js';
 import { z } from 'zod';
 import { Ratelimit } from "@upstash/ratelimit";
 import { Redis } from "@upstash/redis";
@@ -16,17 +17,6 @@ const ratelimit = redis ? new Ratelimit({
 }) : null;
 
 const allowedOrigins = ['https://sisteco.com', 'https://sisteco-landing.vercel.app', 'http://localhost:3000'];
-// Inicializar Supabase con service key (segura en serverless)
-const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_KEY
-);
-
-// Validación de email
-const isValidEmail = (email) => {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-};
 
 // Detectar si es email corporativo (no gmail, hotmail, etc.)
 const isBusinessEmail = (email) => {
@@ -90,56 +80,38 @@ export default async function handler(req, res) {
       req.headers['x-real-ip'] ||
       req.socket?.remoteAddress || null;
 
-    // Insertar en Supabase
-    const { data, error } = await supabase
-      .from('leads')
-      .upsert({
-        email: email.toLowerCase().trim(),
-        source,
-        utm_source,
-        utm_medium,
-        utm_campaign,
-        referrer,
-        user_agent: userAgent,
-        ip_address: ip
-      }, {
-        onConflict: 'email',
-        ignoreDuplicates: false
-      })
-      .select()
-      .single();
+    // Insertar/actualizar en Convex
+    const result = await convex.mutation(api.leads.upsertLead, {
+      email: email.toLowerCase().trim(),
+      source,
+      utmSource: utm_source || undefined,
+      utmMedium: utm_medium || undefined,
+      utmCampaign: utm_campaign || undefined,
+      referrer: referrer || undefined,
+      userAgent: userAgent || undefined,
+      ipAddress: ip || undefined,
+    });
 
-    if (error) {
-      console.error('Supabase error:', error);
-
-      // Si el email ya existe, no es un error para el usuario
-      if (error.code === '23505') {
-        return res.status(200).json({
-          success: true,
-          message: 'Ya estás registrado. Te contactaremos pronto.',
-          isExisting: true
-        });
-      }
-
-      return res.status(500).json({
-        error: 'Error al procesar la solicitud',
-        code: 'DATABASE_ERROR'
+    if (result.isExisting) {
+      return res.status(200).json({
+        success: true,
+        message: 'Ya estás registrado. Te contactaremos pronto.',
+        isExisting: true
       });
     }
 
     // Enviar welcome email y programar secuencia drip (fire-and-forget)
     const normalizedEmail = email.toLowerCase().trim();
-    sendWelcomeAndScheduleDrip(normalizedEmail, data.id).catch(err =>
+    sendWelcomeAndScheduleDrip(normalizedEmail, result._id).catch(err =>
       console.error('Email/drip error (non-blocking):', err)
     );
 
     return res.status(201).json({
       success: true,
       message: isBusinessEmail(email)
-        ? 'Excelente! Te contactaremos en las próximas 24 horas.'
-        : 'Gracias por tu interés. Te enviaremos información pronto.',
-      isBusinessEmail: isBusinessEmail(email),
-      leadId: data.id
+        ? 'Excelente! Te contactaremos en las proximas 24 horas.'
+        : 'Gracias por tu interes. Te enviaremos informacion pronto.',
+      leadId: result._id
     });
 
   } catch (error) {
@@ -167,31 +139,17 @@ async function sendWelcomeAndScheduleDrip(email, leadId) {
     console.log('Welcome email sent:', emailResult?.id);
   }
 
-  // 2. Programar secuencia drip en Supabase
-  const now = new Date();
-  const day3 = new Date(now.getTime() + 3 * 24 * 60 * 60 * 1000);
-  const day7 = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000);
+  // 2. Programar secuencia drip en Convex
+  const now = Date.now();
+  const day3 = now + 3 * 24 * 60 * 60 * 1000;
+  const day7 = now + 7 * 24 * 60 * 60 * 1000;
 
-  const { error: seqError } = await supabase
-    .from('email_sequence')
-    .insert([
-      {
-        lead_id: leadId,
-        email,
-        template_key: 'case_study',
-        scheduled_at: day3.toISOString(),
-        status: 'pending'
-      },
-      {
-        lead_id: leadId,
-        email,
-        template_key: 'quick_win',
-        scheduled_at: day7.toISOString(),
-        status: 'pending'
-      }
-    ]);
-
-  if (seqError) {
-    console.error('Drip sequence insert error:', seqError);
-  }
+  await convex.mutation(api.emailSequence.scheduleDrip, {
+    leadId,
+    email,
+    items: [
+      { templateKey: 'case_study', scheduledAt: day3 },
+      { templateKey: 'quick_win', scheduledAt: day7 },
+    ],
+  });
 }

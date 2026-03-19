@@ -29,3 +29,9 @@ Thumbs.db
 npm-debug.log*
 
 .vercel
+
+# Claude Code internals
+.claude/
+.agent/
+.agents/
+.superpowers/

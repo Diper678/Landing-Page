@@ -38,10 +38,17 @@ function showToast(message, type = 'success') {
 
   const toast = document.createElement('div');
   toast.className = `toast toast-${type}`;
-  toast.innerHTML = `
-    <span class="toast-icon">${type === 'success' ? '\u2713' : type === 'error' ? '\u2715' : '\u2139'}</span>
-    <span class="toast-message">${message}</span>
-  `;
+
+  const icon = document.createElement('span');
+  icon.className = 'toast-icon';
+  icon.textContent = type === 'success' ? '\u2713' : type === 'error' ? '\u2715' : '\u2139';
+
+  const msg = document.createElement('span');
+  msg.className = 'toast-message';
+  msg.textContent = message;
+
+  toast.appendChild(icon);
+  toast.appendChild(msg);
   document.body.appendChild(toast);
 
   requestAnimationFrame(() => toast.classList.add('show'));
@@ -55,10 +62,14 @@ function showToast(message, type = 'success') {
 function setButtonLoading(button, loading) {
   if (loading) {
     button.dataset.originalText = button.textContent;
-    button.innerHTML = '<span class="spinner"></span> Enviando...';
+    button.textContent = '';
+    const spinner = document.createElement('span');
+    spinner.className = 'spinner';
+    button.appendChild(spinner);
+    button.appendChild(document.createTextNode(' Enviando...'));
     button.disabled = true;
   } else {
-    button.innerHTML = button.dataset.originalText || 'Enviar';
+    button.textContent = button.dataset.originalText || 'Enviar';
     button.disabled = false;
   }
 }
@@ -512,7 +523,7 @@ function initCustomCursor() {
   });
 
   // Scale up on interactive elements
-  const interactiveSelector = 'a, button, .feature-card, .tool-pill, .testimonial-card, .infra-layer, input, textarea, select';
+  const interactiveSelector = 'a, button, .feature-card, input, textarea, select';
   document.addEventListener('mouseover', (e) => {
     if (e.target.closest(interactiveSelector)) {
       cursor.style.width = '40px';

@@ -1,11 +1,7 @@
-import { createClient } from '@supabase/supabase-js';
-import { resend, FROM_EMAIL } from '../lib/resend.js';
-import { TEMPLATES } from '../lib/email-templates.js';
-
-const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_KEY
-);
+import { convex } from '../_lib/convex.js';
+import { api } from '../../convex/_generated/api.js';
+import { resend, FROM_EMAIL } from '../_lib/resend.js';
+import { TEMPLATES } from '../_lib/email-templates.js';
 
 export default async function handler(req, res) {
   // Verificar que es una petición autorizada (Vercel Cron o manual)
@@ -15,19 +11,11 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Buscar emails pendientes con fecha <= ahora
-    const { data: pendingEmails, error: fetchError } = await supabase
-      .from('email_sequence')
-      .select('*')
-      .eq('status', 'pending')
-      .lte('scheduled_at', new Date().toISOString())
-      .order('scheduled_at', { ascending: true })
-      .limit(50);
-
-    if (fetchError) {
-      console.error('Error fetching pending emails:', fetchError);
-      return res.status(500).json({ error: 'Database error', details: fetchError.message });
-    }
+    // Buscar emails pendientes con scheduledAt <= ahora
+    const pendingEmails = await convex.query(api.emailSequence.getPending, {
+      now: Date.now(),
+      limit: 50,
+    });
 
     if (!pendingEmails || pendingEmails.length === 0) {
       return res.status(200).json({ message: 'No pending emails', sent: 0 });
@@ -37,10 +25,10 @@ export default async function handler(req, res) {
     let failed = 0;
 
     for (const item of pendingEmails) {
-      const templateFn = TEMPLATES[item.template_key];
+      const templateFn = TEMPLATES[item.templateKey];
       if (!templateFn) {
-        console.error(`Unknown template: ${item.template_key}`);
-        await markFailed(item.id, `Unknown template: ${item.template_key}`);
+        console.error(`Unknown template: ${item.templateKey}`);
+        await convex.mutation(api.emailSequence.markFailed, { id: item._id });
         failed++;
         continue;
       }
@@ -55,21 +43,16 @@ export default async function handler(req, res) {
       });
 
       if (emailError) {
-        console.error(`Failed to send ${item.template_key} to ${item.email}:`, emailError);
-        await markFailed(item.id, emailError.message);
+        console.error(`Failed to send ${item.templateKey} to ${item.email}:`, emailError);
+        await convex.mutation(api.emailSequence.markFailed, { id: item._id });
         failed++;
       } else {
-        await supabase
-          .from('email_sequence')
-          .update({
-            status: 'sent',
-            sent_at: new Date().toISOString(),
-            resend_id: emailResult?.id || null
-          })
-          .eq('id', item.id);
-
+        await convex.mutation(api.emailSequence.markSent, {
+          id: item._id,
+          resendId: emailResult?.id || undefined,
+        });
         sent++;
-        console.log(`Sent ${item.template_key} to ${item.email} (${emailResult?.id})`);
+        console.log(`Sent ${item.templateKey} to ${item.email} (${emailResult?.id})`);
       }
     }
 
@@ -84,11 +67,4 @@ export default async function handler(req, res) {
     console.error('Cron error:', error);
     return res.status(500).json({ error: 'Internal server error' });
   }
-}
-
-async function markFailed(id, reason) {
-  await supabase
-    .from('email_sequence')
-    .update({ status: 'failed' })
-    .eq('id', id);
 }

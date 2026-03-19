@@ -3,14 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Precios - Sisteco</title>
+    <title>Precios Automatización Ventas B2B — Desde $472/mes | Sisteco</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../css/pages.css">
-    <meta name="description" content="Automatización B2B real desde USD 472/mes IVA incluido. Menos que un SDR, más productivo que tres. Prospección IA, secuencias multicanal y análisis de datos para empresas chilenas.">
+    <meta name="description" content="Planes de automatización B2B desde USD 472/mes IVA incluido. Más potente que 3 SDRs, disponible 24/7. Lead scoring, prospección IA, compliance Ley 21.719.">
     <link rel="icon" type="image/png" href="../assets/logos/sisteco-icon.png">
-    <meta property="og:title" content="Precios - Sisteco">
-    <meta property="og:description" content="Planes de automatización B2B desde USD 472/mes IVA incluido. 14 días de prueba, sin tarjeta.">
+    <meta property="og:title" content="Precios Automatización Ventas B2B — Desde $472/mes | Sisteco">
+    <meta property="og:description" content="Planes de automatización B2B desde USD 472/mes IVA incluido. Más potente que 3 SDRs, disponible 24/7. Lead scoring, prospección IA, compliance Ley 21.719.">
     <meta property="og:type" content="website">
+    <link rel="canonical" href="https://landing-page-felipe-s-projects-cf2ac967.vercel.app/precios">
+    <meta property="og:url" content="https://landing-page-felipe-s-projects-cf2ac967.vercel.app/precios">
+    <meta property="og:image" content="https://landing-page-felipe-s-projects-cf2ac967.vercel.app/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Precios Automatización Ventas B2B — Desde $472/mes | Sisteco">
+    <meta name="twitter:description" content="Planes de automatización B2B desde USD 472/mes IVA incluido. Más potente que 3 SDRs, disponible 24/7. Lead scoring, prospección IA, compliance Ley 21.719.">
+    <meta name="twitter:image" content="https://landing-page-felipe-s-projects-cf2ac967.vercel.app/assets/og-image.png">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
@@ -35,7 +43,7 @@
             gap: 14px;
             margin-bottom: 48px;
         }
-        .pricing-toggle span { font-size: 0.95rem; color: #666; font-weight: 500; }
+        .pricing-toggle span { font-size: 0.95rem; color: #64748b; font-weight: 500; }
         .pricing-toggle span.active { color: #111; font-weight: 700; }
         .toggle-switch {
             width: 52px; height: 28px;
@@ -106,8 +114,8 @@
             margin-bottom: 16px;
             width: fit-content;
         }
-        .plan-name { font-size: 1.4rem; font-weight: 800; color: #111; margin: 0 0 8px; }
-        .plan-description { color: #666; font-size: 0.9rem; line-height: 1.5; margin-bottom: 28px; }
+        .plan-name { font-size: 1.2rem; font-weight: 400; color: #111; margin: 0 0 8px; letter-spacing: -0.01em; }
+        .plan-description { color: #64748b; font-size: 0.9rem; line-height: 1.5; margin-bottom: 28px; }
 
         .plan-price {
             display: flex;
@@ -115,10 +123,10 @@
             gap: 4px;
             margin-bottom: 8px;
         }
-        .price-currency { font-size: 1.1rem; color: #111; font-weight: 700; align-self: flex-start; margin-top: 6px; }
-        .price { font-size: 3rem; font-weight: 900; color: #111; line-height: 1; }
-        .price-period { font-size: 0.9rem; color: #888; }
-        .price-note { font-size: 0.78rem; color: #999; margin-bottom: 28px; min-height: 18px; }
+        .price-currency { font-size: 0.9rem; color: #64748b; font-weight: 400; align-self: flex-start; margin-top: 8px; font-family: var(--font-mono, 'JetBrains Mono', monospace); }
+        .price { font-size: 2.6rem; font-weight: 400; color: #111; line-height: 1; font-family: var(--font-mono, 'JetBrains Mono', monospace); }
+        .price-period { font-size: 0.9rem; color: #8891a5; }
+        .price-note { font-size: 0.78rem; color: #94a3b8; margin-bottom: 28px; min-height: 18px; }
 
         .plan-features {
             list-style: none;
@@ -150,7 +158,7 @@
         .checkout-buttons { display: flex; flex-direction: column; gap: 8px; }
         .checkout-buttons .btn { display: flex; align-items: center; justify-content: center; gap: 8px; }
         .checkout-buttons .btn i { width: 16px; height: 16px; }
-        .checkout-alt { font-size: 0.85rem; padding: 10px; color: #888; border: 1px solid #e0e0e0; }
+        .checkout-alt { font-size: 0.85rem; padding: 10px; color: #8891a5; border: 1px solid #e0e0e0; }
         .checkout-alt:hover { color: #111; border-color: #c5ed36; }
 
         /* Add-ons section */
@@ -183,36 +191,9 @@
         .addon-icon i { color: #7aad12; width: 18px; height: 18px; }
         .addon-name { font-size: 0.9rem; font-weight: 700; color: #111; margin-bottom: 4px; }
         .addon-desc { font-size: 0.8rem; color: #777; line-height: 1.4; }
-        .addon-price { font-size: 0.9rem; font-weight: 800; color: #111; margin-top: 6px; }
+        .addon-price { font-size: 0.9rem; font-weight: 700; color: #111; margin-top: 6px; }
 
-        /* Comparison table */
-        .comparison-table-wrapper { overflow-x: auto; }
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.88rem;
-        }
-        .comparison-table th, .comparison-table td {
-            padding: 14px 16px;
-            text-align: center;
-            border-bottom: 1px solid rgba(255,255,255,0.08);
-        }
-        .comparison-table th:first-child,
-        .comparison-table td:first-child { text-align: left; color: rgba(255,255,255,0.9); font-weight: 500; }
-        .comparison-table th { color: rgba(255,255,255,0.6); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; padding-bottom: 20px; }
-        .comparison-table .featured-col { color: #c5ed36; }
-        .comparison-table i[data-lucide="check"] { color: #c5ed36; }
-        .comparison-table i[data-lucide="minus"] { color: rgba(255,255,255,0.2); }
-        .comparison-table td { color: rgba(255,255,255,0.7); }
-        .comparison-table .section-row td {
-            background: rgba(197,237,54,0.07);
-            color: rgba(255,255,255,0.4);
-            font-size: 0.72rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            padding: 8px 16px;
-        }
+        /* Comparison table removed */
 
         /* ROI banner */
         /* DIY Comparison section */
@@ -242,7 +223,7 @@
         }
         .diy-card h3 {
             font-size: 1.2rem;
-            font-weight: 800;
+            font-weight: 700;
             margin: 0 0 24px;
             display: flex;
             align-items: center;
@@ -265,7 +246,7 @@
             padding: 16px;
             border-radius: 10px;
             font-size: 1rem;
-            font-weight: 800;
+            font-weight: 700;
             text-align: center;
         }
         .diy-total--red { background: #fff0f0; color: #c0392b; }
@@ -310,8 +291,8 @@
             text-align: center;
             flex-shrink: 0;
         }
-        .diy-sdr-stat .big { display: block; font-size: 1.8rem; font-weight: 900; color: #c5ed36; }
-        .diy-sdr-stat .label { display: block; font-size: 0.75rem; color: #888; }
+        .diy-sdr-stat .big { display: block; font-size: 1.8rem; font-weight: 500; color: #c5ed36; font-family: var(--font-mono, 'JetBrains Mono', monospace); }
+        .diy-sdr-stat .label { display: block; font-size: 0.75rem; color: #94a3b8; }
 
         .roi-strip {
             background: #111;
@@ -319,8 +300,8 @@
             padding: 48px 0;
             text-align: center;
         }
-        .roi-strip h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 8px; }
-        .roi-strip p { color: #888; max-width: 520px; margin: 0 auto 24px; font-size: 0.95rem; }
+        .roi-strip h3 { font-size: 1.5rem; font-weight: 500; margin-bottom: 8px; color: #fff; }
+        .roi-strip p { color: #94a3b8; max-width: 520px; margin: 0 auto 24px; font-size: 0.95rem; }
         .roi-numbers {
             display: flex;
             justify-content: center;
@@ -329,9 +310,75 @@
         }
         .roi-num { text-align: center; }
         .roi-num span { display: block; }
-        .roi-num .big { font-size: 2.5rem; font-weight: 900; color: #c5ed36; }
-        .roi-num .label { font-size: 0.8rem; color: #666; }
+        .roi-num .big { font-size: 2.5rem; font-weight: 500; color: #c5ed36; font-family: var(--font-mono, 'JetBrains Mono', monospace); }
+        .roi-num .label { font-size: 0.8rem; color: #94a3b8; }
     </style>
+
+    <!-- JSON-LD: FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué incluye el Plan Fundadores y cómo accedo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Los primeros 10 clientes acceden a un 40% de descuento permanente en el plan que elijan (Base: USD 283/mes · Crecimiento: USD 569/mes, ambos IVA incluido). A cambio, pedimos un caso de estudio firmado y feedback mensual para mejorar la plataforma. Escríbenos a contacto@sisteco.cl con el asunto \"Plan Fundadores\"."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cómo funciona la prueba gratuita de 14 días?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tienes acceso completo al plan elegido durante 14 días sin cargo. No necesitas tarjeta de crédito para comenzar. Al finalizar, puedes suscribirte mensualmente o anualmente, o cancelar sin ningún costo. Si cancelas, tus datos se eliminan de forma segura en 30 días."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué métodos de pago aceptan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ofrecemos dos opciones de pago seguro: dLocal Go (tarjetas de crédito y débito internacionales y chilenas, Visa, Mastercard, Amex) y Reveniu (plataforma de suscripciones certificada en Chile, ideal para tarjetas de débito chilenas y Redcompra). Ambos tienen checkout 100% seguro con cifrado SSL y cobros recurrentes automáticos. Los planes Enterprise también pueden pagar mediante transferencia bancaria. Todos los precios incluyen IVA (19%)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo cambiar de plan o cancelar en cualquier momento?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Puedes hacer upgrade o downgrade en cualquier momento desde tu panel de cliente. Los cambios se aplican inmediatamente con cobro prorrateado. Para cancelar, solo haz clic en \"Cancelar suscripción\" en tu portal — no hay multas ni períodos mínimos en planes mensuales. En planes anuales, el acceso continúa hasta el final del período pagado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Emiten facturas válidas para el SII chileno?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Para clientes en Chile, emitimos facturas electrónicas válidas ante el SII (DTE) al inicio de cada ciclo de facturación. Para planes Enterprise, también enviamos facturas en CLP si se requiere. Contáctanos para coordinar los datos de facturación de tu empresa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué pasa si supero el límite de leads de mi plan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Te notificamos cuando estés al 80% del límite mensual. Puedes activar el add-on de volumen extra (USD 97 por cada 10,000 leads adicionales) sin cambiar de plan, o hacer upgrade al plan siguiente. Nunca detenemos tus campañas activas de forma abrupta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Tienen garantía de resultados?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí. Ofrecemos garantía de devolución de 30 días: si en los primeros 30 días de suscripción activa (después del período de prueba) no estás satisfecho con los resultados, te devolvemos el primer mes completo. Solo te pedimos que hayas completado el onboarding y activado al menos una secuencia."
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
     <div class="animated-bg"></div>
@@ -346,7 +393,7 @@
     <nav class="navbar">
         <div class="container">
             <a href="../index.html" class="logo navbar-item">
-                <img src="../assets/logos/sisteco-icon.png" alt="Sisteco Logo">
+                <img src="../assets/logos/sisteco-icon.png" alt="Sisteco Logo" width="28" height="28">
                 <span class="logo-text">Sisteco</span>
             </a>
             <div class="nav-links">
@@ -369,7 +416,7 @@
                 <span>/</span>
                 <span>Precios</span>
             </nav>
-            <h1 class="page-hero-title">Menos que un SDR.<br><span class="text-lime">Más potente que tres.</span></h1>
+            <h1 class="page-hero-title">Menos que un SDR.<br><span class="gradient-text">Más potente que tres.</span></h1>
             <p class="page-hero-subtitle">Un SDR junior en Chile cuesta CLP 1.2M/mes — y trabaja 8 horas. Sisteco trabaja 24/7, no renuncia, y entrega 5–7× más conversiones desde el primer mes.</p>
         </div>
     </section>
@@ -526,14 +573,14 @@
                             Pagar con Reveniu (Chile)
                         </a>
                     </div>
-                    <a href="../index.html#hero" class="btn-text" style="display:block;text-align:center;margin-top:12px;font-size:0.85rem;color:#888;">O hablar con ventas para plan anual personalizado →</a>
+                    <a href="https://cal.com/felipe-sisteco/ventas" target="_blank" rel="noopener" class="btn-text" style="display:block;text-align:center;margin-top:12px;font-size:0.85rem;color:#888;">O hablar 1:1 con Felipe para plan personalizado →</a>
                 </div>
             </div>
 
             <!-- Add-ons -->
             <div style="margin-top: 80px;">
                 <div class="section-header">
-                    <h2 class="section-title">Módulos <span class="text-lime">adicionales</span></h2>
+                    <h2 class="section-title">Módulos <span class="gradient-text">adicionales</span></h2>
                     <p class="section-subtitle">Extiende cualquier plan con capacidades extra. Se suman a tu suscripción mensual.</p>
                 </div>
                 <div class="addons-grid">
@@ -594,7 +641,7 @@
     <section class="diy-comparison">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">El costo real de <span class="text-lime">hacerlo tú mismo</span></h2>
+                <h2 class="section-title">El costo real de <span class="gradient-text">hacerlo tú mismo</span></h2>
                 <p class="section-subtitle">Armar un stack de prospección B2B requiere 6+ herramientas, un SDR dedicado y meses de configuración. O puedes empezar hoy.</p>
             </div>
             <div class="diy-grid">
@@ -619,7 +666,7 @@
                         <li><i data-lucide="check"></i> Todo integrado desde día 1</li>
                         <li><i data-lucide="check"></i> Configuración incluida ($0 setup)</li>
                         <li><i data-lucide="check"></i> Soporte dedicado incluido</li>
-                        <li><i data-lucide="check"></i> IA que se mejora sola (self-annealing)</li>
+                        <li><i data-lucide="check"></i> IA self-annealing (se mejora con cada ciclo)</li>
                         <li><i data-lucide="check"></i> Actualizaciones y nuevos canales sin costo extra</li>
                         <li><i data-lucide="check"></i> 14 días de prueba gratuita</li>
                     </ul>
@@ -664,166 +711,13 @@
         </div>
     </div>
 
-    <!-- Comparison Table -->
-    <section class="page-section page-section-dark">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Comparación <span class="text-lime">detallada</span></h2>
-                <p class="section-subtitle">Todo lo que incluye cada plan, lado a lado.</p>
-            </div>
-            <div class="comparison-table-wrapper">
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th>Funcionalidad</th>
-                            <th>Prospección Base</th>
-                            <th class="featured-col">Crecimiento</th>
-                            <th>Enterprise</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="section-row"><td colspan="4">Prospección y Scoring</td></tr>
-                        <tr>
-                            <td>Lead scraping web (ScrapingBee)</td>
-                            <td>50,000 URLs/mes</td>
-                            <td class="featured-col">50,000+ URLs/mes</td>
-                            <td>Ilimitado</td>
-                        </tr>
-                        <tr>
-                            <td>LinkedIn Scraping (PhantomBuster)</td>
-                            <td><i data-lucide="minus"></i></td>
-                            <td class="featured-col">1,000 perfiles/mes</td>
-                            <td>5,000+ perfiles/mes</td>
-                        </tr>
-                        <tr>
-                            <td>Motor AI Scoring 100 puntos</td>
-                            <td><i data-lucide="check"></i></td>
-                            <td class="featured-col"><i data-lucide="check"></i> Mejorado</td>
-                            <td><i data-lucide="check"></i> Avanzado</td>
-                        </tr>
-                        <tr>
-                            <td>Clasificación HOT/WARM/NURTURE/SKIP</td>
-                            <td><i data-lucide="check"></i></td>
-                            <td class="featured-col"><i data-lucide="check"></i></td>
-                            <td><i data-lucide="check"></i></td>
-                        </tr>
-                        <tr class="section-row"><td colspan="4">Activación y Secuencias</td></tr>
-                        <tr>
-                            <td>Secuencias de email automatizadas</td>
-                            <td><i data-lucide="check"></i></td>
-                            <td class="featured-col"><i data-lucide="check"></i></td>
-                            <td><i data-lucide="check"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Secuencias LinkedIn automatizadas</td>
-                            <td><i data-lucide="minus"></i></td>
-                            <td class="featured-col"><i data-lucide="check"></i></td>
-                            <td><i data-lucide="check"></i></td>
-                        </tr>
-                        <tr>
-                            <td>WhatsApp Business outbound</td>
-                            <td>Add-on +$150</td>
-                            <td class="featured-col">Add-on +$150</td>
-                            <td><i data-lucide="check"></i> Incluido</td>
-                        </tr>
-                        <tr>
-                            <td>Detección de respuesta → pausa auto</td>
-                            <td><i data-lucide="check"></i></td>
-                            <td class="featured-col"><i data-lucide="check"></i></td>
-                            <td><i data-lucide="check"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Alertas Slack tiempo real (HOT leads)</td>
-                            <td><i data-lucide="check"></i></td>
-                            <td class="featured-col"><i data-lucide="check"></i></td>
-                            <td><i data-lucide="check"></i></td>
-                        </tr>
-                        <tr>
-                            <td>A/B Testing de mensajes</td>
-                            <td><i data-lucide="minus"></i></td>
-                            <td class="featured-col"><i data-lucide="check"></i></td>
-                            <td><i data-lucide="check"></i></td>
-                        </tr>
-                        <tr class="section-row"><td colspan="4">Analytics e Inteligencia</td></tr>
-                        <tr>
-                            <td>Dashboard de métricas</td>
-                            <td>Básico</td>
-                            <td class="featured-col">Avanzado</td>
-                            <td>Personalizado</td>
-                        </tr>
-                        <tr>
-                            <td>Reportes ejecutivos PDF automáticos</td>
-                            <td><i data-lucide="minus"></i></td>
-                            <td class="featured-col">Add-on +$79</td>
-                            <td><i data-lucide="check"></i> Incluido</td>
-                        </tr>
-                        <tr>
-                            <td>Integración CRM (HubSpot/Pipedrive)</td>
-                            <td><i data-lucide="minus"></i></td>
-                            <td class="featured-col"><i data-lucide="check"></i></td>
-                            <td><i data-lucide="check"></i> + custom</td>
-                        </tr>
-                        <tr class="section-row"><td colspan="4">Plataforma y Soporte</td></tr>
-                        <tr>
-                            <td>Usuarios incluidos</td>
-                            <td>2</td>
-                            <td class="featured-col">5</td>
-                            <td>Ilimitados</td>
-                        </tr>
-                        <tr>
-                            <td>Onboarding incluido</td>
-                            <td>1 sesión</td>
-                            <td class="featured-col">3 sesiones</td>
-                            <td>5+ sesiones</td>
-                        </tr>
-                        <tr>
-                            <td>Soporte</td>
-                            <td>Email (&lt;24h)</td>
-                            <td class="featured-col">Chat prioritario (&lt;4h)</td>
-                            <td>Dedicado (&lt;1h SLA)</td>
-                        </tr>
-                        <tr>
-                            <td>Manager de cuenta</td>
-                            <td><i data-lucide="minus"></i></td>
-                            <td class="featured-col"><i data-lucide="minus"></i></td>
-                            <td><i data-lucide="check"></i></td>
-                        </tr>
-                        <tr>
-                            <td>SLA garantizado</td>
-                            <td><i data-lucide="minus"></i></td>
-                            <td class="featured-col"><i data-lucide="minus"></i></td>
-                            <td><i data-lucide="check"></i> 99.5% uptime</td>
-                        </tr>
-                        <tr>
-                            <td>Cumplimiento Ley 21.719</td>
-                            <td><i data-lucide="check"></i></td>
-                            <td class="featured-col"><i data-lucide="check"></i></td>
-                            <td><i data-lucide="check"></i> Certificado</td>
-                        </tr>
-                        <tr class="section-row"><td colspan="4">Precio (IVA incluido)</td></tr>
-                        <tr>
-                            <td>Mensual</td>
-                            <td>USD 472/mes</td>
-                            <td class="featured-col">USD 948/mes</td>
-                            <td>desde USD 2,142/mes</td>
-                        </tr>
-                        <tr>
-                            <td>Anual (ahorra 25%)</td>
-                            <td>USD 353/mes</td>
-                            <td class="featured-col">USD 711/mes</td>
-                            <td>Cotización</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
+    <!-- Comparison table removed — feature details already covered in plan cards above -->
 
     <!-- FAQ -->
     <section class="page-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Preguntas <span class="text-lime">frecuentes</span></h2>
+                <h2 class="section-title">Preguntas <span class="gradient-text">frecuentes</span></h2>
                 <p class="section-subtitle">Todo lo que necesitas saber antes de suscribirte.</p>
             </div>
             <div class="faq-list">
@@ -898,7 +792,7 @@
     <section class="page-section page-cta">
         <div class="container">
             <div class="cta-content">
-                <h2>Empieza <span class="text-lime">gratis</span> hoy</h2>
+                <h2>Empieza <span class="gradient-text-light">gratis</span> hoy</h2>
                 <p>14 días de prueba completa. Sin tarjeta de crédito. Sin compromisos.</p>
                 <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
                     <a class="btn btn-primary btn-lg checkout-btn"
@@ -908,7 +802,7 @@
                         data-link-annual="https://checkout-sbx.dlocalgo.com/validate/subscription/hlZFXUmMZnDIM2KBTbRjCSJefDzXsOGK">
                         Probar Plan Crecimiento gratis
                     </a>
-                    <a href="../index.html#hero" class="btn btn-outline btn-lg">Hablar con ventas</a>
+                    <a href="agendar-demo.html" class="btn btn-outline btn-lg">Agendar demo</a>
                 </div>
             </div>
         </div>
@@ -918,7 +812,7 @@
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand-inline">
-                    <img src="../assets/logos/sisteco-icon.png" alt="Sisteco" class="footer-logo">
+                    <img src="../assets/logos/sisteco-icon.png" alt="Sisteco" class="footer-logo" width="28" height="28">
                     <span class="footer-tagline">Infraestructura inteligente para ventas B2B</span>
                 </div>
                 <div class="footer-social">
@@ -965,7 +859,8 @@
         </div>
     </footer>
 
-    <script src="../js/pages.js"></script>
-    <script src="../js/checkout.js"></script>
+    <script src="../js/pages.js" defer></script>
+    <script src="../js/checkout.js" defer></script>
+    <script src="../js/exit-intent.js" defer></script>
 </body>
 </html>

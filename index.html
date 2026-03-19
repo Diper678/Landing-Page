@@ -4,22 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sisteco - Infraestructura inteligente para tus ventas</title>
+    <title>Sisteco — Automatización de Ventas y Prospección B2B en Chile</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/pages.css">
-    <meta name="description" content="Automatiza tu prospección B2B con infraestructura inteligente.">
+    <meta name="description" content="Automatiza tu prospección B2B con workflows inteligentes, lead scoring con datos SII y compliance Ley 21.719. Ventas agénticas con resultados desde el primer mes.">
     <link rel="icon" type="image/png" href="assets/logos/sisteco-icon.png">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Sisteco - Infraestructura inteligente para tus ventas">
+    <meta property="og:title" content="Sisteco — Automatización de Ventas y Prospección B2B en Chile">
     <meta property="og:description"
-        content="Automatiza tu prospección B2B con workflows avanzados que integran extracción de datos, IA y secuencias multicanal.">
+        content="Automatiza tu prospección B2B con workflows inteligentes, lead scoring con datos SII y compliance Ley 21.719. Ventas agénticas con resultados desde el primer mes.">
     <meta property="og:type" content="website">
+    <link rel="canonical" href="https://landing-page-felipe-s-projects-cf2ac967.vercel.app/">
+    <meta property="og:url" content="https://landing-page-felipe-s-projects-cf2ac967.vercel.app/">
+    <meta property="og:image" content="https://landing-page-felipe-s-projects-cf2ac967.vercel.app/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sisteco — Automatización de Ventas y Prospección B2B en Chile">
+    <meta name="twitter:description" content="Automatiza tu prospección B2B con workflows inteligentes, lead scoring con datos SII y compliance Ley 21.719. Ventas agénticas con resultados desde el primer mes.">
+    <meta name="twitter:image" content="https://landing-page-felipe-s-projects-cf2ac967.vercel.app/assets/og-image.png">
 
-    <!-- JetBrains Mono for technical labels -->
+    <!-- JetBrains Mono for technical labels + DM Serif Display for accent -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
         rel="stylesheet">
 
     <!-- GSAP for animations -->
@@ -28,6 +35,50 @@
 
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+
+    <!-- JSON-LD: Organization -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Sisteco",
+      "url": "https://landing-page-felipe-s-projects-cf2ac967.vercel.app",
+      "logo": "https://landing-page-felipe-s-projects-cf2ac967.vercel.app/assets/logos/sisteco-icon.png",
+      "description": "Automatización de ventas y prospección B2B en Chile. Workflows agénticos, lead scoring con datos SII y compliance Ley 21.719.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Alonso de Córdova 5870 Of. 413",
+        "addressLocality": "Las Condes",
+        "addressRegion": "Santiago",
+        "addressCountry": "CL"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+56-9-40065566",
+        "contactType": "sales",
+        "email": "contacto@sisteco.cl",
+        "availableLanguage": "Spanish"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/sisteco/"
+      ]
+    }
+    </script>
+
+    <!-- JSON-LD: WebSite -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Sisteco",
+      "url": "https://landing-page-felipe-s-projects-cf2ac967.vercel.app",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://landing-page-felipe-s-projects-cf2ac967.vercel.app/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
 </head>
 
 <body>
@@ -39,7 +90,7 @@
     <nav class="navbar">
         <div class="container">
             <a href="#" class="logo navbar-item">
-                <img src="assets/logos/sisteco-icon.png" alt="Sisteco Logo">
+                <img src="assets/logos/sisteco-icon.png" alt="Sisteco Logo" width="28" height="28">
                 <span class="logo-text">Sisteco</span>
             </a>
             <div class="nav-links">
@@ -58,62 +109,94 @@
         </div>
     </nav>
 
-    <header class="hero" id="hero">
+    <header class="hero hero--immersive" id="hero">
         <!-- Gradient orbs background -->
         <div class="hero-orbs" aria-hidden="true">
             <div class="hero-orb hero-orb-1"></div>
             <div class="hero-orb hero-orb-2"></div>
             <div class="hero-orb hero-orb-3"></div>
         </div>
-        <div class="container">
-            <div class="hero-grid">
-                <!-- Left column: Text + Form -->
-                <div class="hero-text">
-                    <a href="pages/vision.html" class="new-badge hero-badge">
-                        <i data-lucide="sparkles" style="width:14px;height:14px"></i>
-                        La empresa agéntica de ventas B2B
-                    </a>
-                    <h1 class="hero-h1-serif">
-                        <span class="hero-title-line">Somos Sisteco,</span>
-                        <span class="hero-title-line">la empresa <em>agéntica</em></span>
-                        <span class="hero-title-line">de ventas</span>
-                    </h1>
-                    <p class="hero-desc">No solo automatizamos tu prospección B2B — construimos la infraestructura para que agentes de IA gestionen tu proceso de ventas completo, 24/7, con la precisión y consistencia que ningún equipo humano puede sostener.</p>
-                    <form class="hero-form" id="lead-form">
-                        <input type="email" placeholder="Tu correo de empresa" required autocomplete="email"
-                            name="email">
-                        <button type="submit" class="btn btn-primary btn-shine" data-cta-id="cta-hero-submit">
-                            Prueba gratis
-                            <i data-lucide="plus" style="width:13px;height:13px;margin-left:5px"></i>
-                        </button>
-                    </form>
-                    <div class="hero-cta-row">
-                        <a href="pages/contacto.html" class="btn btn-outline-light">
-                            <i data-lucide="calendar" style="width:14px;height:14px"></i>
-                            Agendar demo
-                        </a>
-                    </div>
-                    <div class="hero-trust">
-                        <div class="trust-item">
-                            <i data-lucide="check-circle-2" style="width:14px;height:14px"></i>
-                            <span>Sin tarjeta de crédito</span>
-                        </div>
-                        <span class="trust-divider">·</span>
-                        <div class="trust-item">
-                            <i data-lucide="clock" style="width:14px;height:14px"></i>
-                            <span>Operativo 24/7</span>
-                        </div>
-                        <span class="trust-divider">·</span>
-                        <div class="trust-item">
-                            <i data-lucide="shield-check" style="width:14px;height:14px"></i>
-                            <span>Ley 21.719 + GDPR</span>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Right column: Interactive Globe -->
-                <div class="hero-globe-wrap">
-                    <canvas id="sisteco-globe" aria-label="Globo interactivo mostrando conexiones de ventas en LATAM"></canvas>
+        <!-- Globe as centered background -->
+        <div class="hero-globe-bg" aria-hidden="true">
+            <canvas id="sisteco-globe" aria-label="Globo interactivo mostrando conexiones de ventas en LATAM"></canvas>
+        </div>
+
+        <!-- Orbital rings — decorative concentric circles on both sides -->
+        <div class="hero-orbital hero-orbital--left" aria-hidden="true">
+            <div class="orbital-ring orbital-ring--1"></div>
+            <div class="orbital-ring orbital-ring--2"></div>
+            <div class="orbital-ring orbital-ring--3"></div>
+        </div>
+        <!-- Floating KPI cards around globe -->
+        <div class="hero-kpis" aria-hidden="true">
+            <div class="hero-kpi hero-kpi--1">
+                <span class="hero-kpi__label">Leads hoy</span>
+                <span class="hero-kpi__value">247</span>
+                <span class="hero-kpi__delta positive">↑ 12%</span>
+            </div>
+            <div class="hero-kpi hero-kpi--2">
+                <span class="hero-kpi__label">Tasa apertura</span>
+                <span class="hero-kpi__value">68%</span>
+                <span class="hero-kpi__delta positive">↑ 8%</span>
+            </div>
+            <div class="hero-kpi hero-kpi--3">
+                <span class="hero-kpi__label">Reuniones</span>
+                <span class="hero-kpi__value">18</span>
+                <span class="hero-kpi__delta positive">↑ 5</span>
+            </div>
+            <div class="hero-kpi hero-kpi--4">
+                <span class="hero-kpi__label">Score promedio</span>
+                <span class="hero-kpi__value">87</span>
+                <span class="hero-kpi__delta positive">↑ 3pts</span>
+            </div>
+            <div class="hero-kpi hero-kpi--5">
+                <span class="hero-kpi__badge-live">
+                    <span class="live-dot"></span>
+                    En vivo
+                </span>
+                <span class="hero-kpi__label">Respuesta</span>
+                <span class="hero-kpi__value">&lt;5min</span>
+            </div>
+        </div>
+
+        <!-- Text content overlaid on globe -->
+        <div class="hero-overlay-content">
+            <a href="pages/vision.html" class="new-badge hero-badge">
+                <i data-lucide="sparkles" style="width:14px;height:14px"></i>
+                La empresa agéntica de ventas
+            </a>
+            <h1 class="hero-h1-serif">
+                <span class="hero-title-line">Somos <span class="hero-brand">Sisteco</span>,</span>
+                <span class="hero-title-line">la empresa <em>AGÉNTICA</em></span>
+                <span class="hero-title-line">de ventas</span>
+            </h1>
+            <p class="hero-desc">Automatizamos tu prospección hoy con workflows inteligentes, datos del SII y compliance Ley 21.719. Mañana, nuestros flujos agénticos gestionarán el ciclo completo de ventas — de la prospección al cierre.</p>
+
+            <!-- CTA section at bottom -->
+            <div class="hero-cta-bottom">
+                <form class="hero-form" id="lead-form">
+                    <input type="email" placeholder="Tu correo de empresa" required autocomplete="email"
+                        name="email">
+                    <button type="submit" class="btn btn-primary btn-shine" data-cta-id="cta-hero-submit">
+                        Empezar ahora
+                    </button>
+                </form>
+                <div class="hero-trust">
+                    <div class="trust-item">
+                        <i data-lucide="check-circle-2" style="width:14px;height:14px"></i>
+                        <span>Sin tarjeta de crédito</span>
+                    </div>
+                    <span class="trust-divider">·</span>
+                    <div class="trust-item">
+                        <i data-lucide="clock" style="width:14px;height:14px"></i>
+                        <span>Operativo 24/7</span>
+                    </div>
+                    <span class="trust-divider">·</span>
+                    <div class="trust-item">
+                        <i data-lucide="shield-check" style="width:14px;height:14px"></i>
+                        <span>Ley 21.719 + GDPR</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -173,103 +256,67 @@
             <p class="section-desc">Cinco capacidades que trabajan en sincronia para transformar tu prospeccion B2B. Cada una disenada para entregar resultados medibles desde el primer mes.</p>
 
             <div class="bento-grid">
-                <!-- Hero Card: Prospeccion IA (2x2) -->
+                <!-- Hero Card: Prospeccion IA — horizontal, full width -->
                 <a href="pages/soluciones.html#data-quality" class="bento-card bento-card--hero" aria-label="Prospeccion con IA - Ver detalles">
-                    <div class="bento-card-header">
-                        <div class="bento-card-icon">
-                            <i data-lucide="search" style="width:24px;height:24px"></i>
-                        </div>
-                        <span class="bento-card-label">01 - Prospeccion</span>
-                    </div>
-                    <h3>Prospeccion con IA que filtra por ti</h3>
-                    <p>Motor de scoring de 100 puntos. Clasifica automaticamente cada prospecto en HOT, WARM, NURTURE o SKIP.</p>
-
-                    <!-- Mini flow diagram -->
-                    <div class="bento-flow-diagram">
-                        <div class="bento-flow-node bento-flow-node--linkedin">
-                            <div class="bento-flow-node-icon">
-                                <i data-lucide="linkedin" style="width:20px;height:20px"></i>
+                    <div class="bento-hero-left">
+                        <div class="bento-card-header">
+                            <div class="bento-card-icon">
+                                <i data-lucide="search" style="width:24px;height:24px"></i>
                             </div>
-                            <span>LinkedIn</span>
+                            <span class="bento-card-label">01 - Prospeccion</span>
                         </div>
-                        <div class="bento-flow-connector">
-                            <div class="bento-flow-dot"></div>
-                        </div>
-                        <div class="bento-flow-node bento-flow-node--ai">
-                            <div class="bento-flow-node-icon">
-                                <i data-lucide="brain" style="width:20px;height:20px"></i>
+                        <h3>Prospeccion con IA que filtra por ti</h3>
+                        <p>Motor de scoring de 100 puntos. Clasifica automaticamente cada prospecto en HOT, WARM, NURTURE o SKIP.</p>
+                        <div class="bento-features">
+                            <div class="bento-feature">
+                                <i data-lucide="check" style="width:16px;height:16px"></i>
+                                <span>Scoring dual: perfil + empresa</span>
                             </div>
-                            <span>IA</span>
+                            <div class="bento-feature">
+                                <i data-lucide="check" style="width:16px;height:16px"></i>
+                                <span>Enriquecimiento en tiempo real</span>
+                            </div>
+                            <div class="bento-feature">
+                                <i data-lucide="check" style="width:16px;height:16px"></i>
+                                <span>Extraccion automatica LinkedIn + web</span>
+                            </div>
                         </div>
-                        <div class="bento-flow-connector">
-                            <div class="bento-flow-dot"></div>
-                        </div>
-                        <div class="bento-flow-labels">
-                            <span class="bento-flow-pill bento-flow-pill--hot">HOT</span>
-                            <span class="bento-flow-pill bento-flow-pill--warm">WARM</span>
-                            <span class="bento-flow-pill bento-flow-pill--skip">SKIP</span>
-                        </div>
-                    </div>
-
-                    <div class="bento-features">
-                        <div class="bento-feature">
-                            <i data-lucide="check" style="width:16px;height:16px"></i>
-                            <span>Scoring dual: perfil + empresa</span>
-                        </div>
-                        <div class="bento-feature">
-                            <i data-lucide="check" style="width:16px;height:16px"></i>
-                            <span>Enriquecimiento en tiempo real</span>
-                        </div>
-                        <div class="bento-feature">
-                            <i data-lucide="check" style="width:16px;height:16px"></i>
-                            <span>Extraccion automatica LinkedIn + web</span>
+                        <div class="bento-stats">
+                            <div class="bento-stat">
+                                <span class="stat-value">5-7x</span>
+                                <span class="stat-label">Mas conversiones</span>
+                            </div>
+                            <div class="bento-stat">
+                                <span class="stat-value">-70%</span>
+                                <span class="stat-label">Costo por lead</span>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="bento-stats">
-                        <div class="bento-stat">
-                            <span class="stat-value">5-7x</span>
-                            <span class="stat-label">Mas conversiones</span>
-                        </div>
-                        <div class="bento-stat">
-                            <span class="stat-value">-70%</span>
-                            <span class="stat-label">Costo por lead</span>
-                        </div>
-                    </div>
-
-                    <div class="bento-arrow">
-                        <i data-lucide="arrow-right" style="width:20px;height:20px"></i>
-                    </div>
-                </a>
-
-                <!-- Card 2: Secuencias (1x1) -->
-                <a href="pages/soluciones.html#ai-247" class="bento-card" aria-label="Secuencias automatizadas - Ver detalles">
-                    <div class="bento-card-header">
-                        <div class="bento-card-icon">
-                            <i data-lucide="mail" style="width:24px;height:24px"></i>
-                        </div>
-                        <span class="bento-card-label">02 - Secuencias</span>
-                    </div>
-                    <h4>Ventas automatizadas que cierran deals</h4>
-                    <p>5 emails personalizados en 35 dias. Envio a las 9AM con deteccion de respuestas.</p>
-                    <div class="bento-features">
-                        <div class="bento-feature">
-                            <i data-lucide="check" style="width:16px;height:16px"></i>
-                            <span>5 emails, 35 dias, 9AM</span>
-                        </div>
-                        <div class="bento-feature">
-                            <i data-lucide="check" style="width:16px;height:16px"></i>
-                            <span>Deteccion automatica de interes</span>
-                        </div>
-                    </div>
-                    <div class="bento-stats">
-                        <div class="bento-stat">
-                            <span class="stat-value">5</span>
-                            <span class="stat-label">Emails</span>
-                        </div>
-                        <div class="bento-stat">
-                            <span class="stat-value">78%</span>
-                            <span class="stat-label">Compra al 1ro</span>
+                    <div class="bento-hero-right">
+                        <div class="bento-flow-diagram">
+                            <div class="bento-flow-node bento-flow-node--linkedin">
+                                <div class="bento-flow-node-icon">
+                                    <i data-lucide="linkedin" style="width:20px;height:20px"></i>
+                                </div>
+                                <span>LinkedIn</span>
+                            </div>
+                            <div class="bento-flow-connector">
+                                <div class="bento-flow-dot"></div>
+                            </div>
+                            <div class="bento-flow-node bento-flow-node--ai">
+                                <div class="bento-flow-node-icon">
+                                    <i data-lucide="brain" style="width:20px;height:20px"></i>
+                                </div>
+                                <span>IA</span>
+                            </div>
+                            <div class="bento-flow-connector">
+                                <div class="bento-flow-dot"></div>
+                            </div>
+                            <div class="bento-flow-labels">
+                                <span class="bento-flow-pill bento-flow-pill--hot">HOT</span>
+                                <span class="bento-flow-pill bento-flow-pill--warm">WARM</span>
+                                <span class="bento-flow-pill bento-flow-pill--skip">SKIP</span>
+                            </div>
                         </div>
                     </div>
                     <div class="bento-arrow">
@@ -277,110 +324,148 @@
                     </div>
                 </a>
 
-                <!-- Card 3: Omnicanal (1x1) -->
-                <a href="pages/soluciones.html#omnichannel" class="bento-card" aria-label="Omnicanal - Ver detalles">
-                    <div class="bento-card-header">
-                        <div class="bento-card-icon">
-                            <i data-lucide="share-2" style="width:24px;height:24px"></i>
+                <!-- Row of 4 cards -->
+                <div class="bento-grid-row">
+                    <!-- Card 2: Secuencias -->
+                    <a href="pages/soluciones.html#ai-247" class="bento-card" aria-label="Secuencias automatizadas - Ver detalles">
+                        <div class="bento-card-header">
+                            <div class="bento-card-icon">
+                                <i data-lucide="mail" style="width:24px;height:24px"></i>
+                            </div>
+                            <span class="bento-card-label">02 - Secuencias</span>
                         </div>
-                        <span class="bento-card-label">03 - Omnicanal</span>
-                    </div>
-                    <h4>Todos tus canales, un solo pipeline</h4>
-                    <p>Pipeline unificado LinkedIn, Email, Slack y Notion con routing inteligente.</p>
-                    <div class="bento-features">
-                        <div class="bento-feature">
-                            <i data-lucide="check" style="width:16px;height:16px"></i>
-                            <span>LinkedIn, Email, Slack, Notion</span>
+                        <h4>Ventas automatizadas que cierran deals</h4>
+                        <p>5 emails personalizados en 35 dias. Envio a las 9AM con deteccion de respuestas.</p>
+                        <div class="bento-features">
+                            <div class="bento-feature">
+                                <i data-lucide="check" style="width:16px;height:16px"></i>
+                                <span>5 emails, 35 dias, 9AM</span>
+                            </div>
+                            <div class="bento-feature">
+                                <i data-lucide="check" style="width:16px;height:16px"></i>
+                                <span>Deteccion automatica de interes</span>
+                            </div>
                         </div>
-                        <div class="bento-feature">
-                            <i data-lucide="check" style="width:16px;height:16px"></i>
-                            <span>Routing por comportamiento</span>
+                        <div class="bento-stats">
+                            <div class="bento-stat">
+                                <span class="stat-value">5</span>
+                                <span class="stat-label">Emails</span>
+                            </div>
+                            <div class="bento-stat">
+                                <span class="stat-value">78%</span>
+                                <span class="stat-label">Compra al 1ro</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="bento-stats">
-                        <div class="bento-stat">
-                            <span class="stat-value">89%</span>
-                            <span class="stat-label">Retencion</span>
+                        <div class="bento-arrow">
+                            <i data-lucide="arrow-right" style="width:20px;height:20px"></i>
                         </div>
-                        <div class="bento-stat">
-                            <span class="stat-value">+40%</span>
-                            <span class="stat-label">Respuestas</span>
-                        </div>
-                    </div>
-                    <div class="bento-arrow">
-                        <i data-lucide="arrow-right" style="width:20px;height:20px"></i>
-                    </div>
-                </a>
+                    </a>
 
-                <!-- Card 4: Analisis (1x1) -->
-                <a href="pages/soluciones.html#analytics" class="bento-card" aria-label="Analisis e Inteligencia - Ver detalles">
-                    <div class="bento-card-header">
-                        <div class="bento-card-icon">
-                            <i data-lucide="bar-chart-3" style="width:24px;height:24px"></i>
+                    <!-- Card 3: Omnicanal -->
+                    <a href="pages/soluciones.html#omnichannel" class="bento-card" aria-label="Omnicanal - Ver detalles">
+                        <div class="bento-card-header">
+                            <div class="bento-card-icon">
+                                <i data-lucide="share-2" style="width:24px;height:24px"></i>
+                            </div>
+                            <span class="bento-card-label">03 - Omnicanal</span>
                         </div>
-                        <span class="bento-card-label">04 - Analisis</span>
-                    </div>
-                    <h4>Datos que impulsan decisiones</h4>
-                    <p>Dashboards en tiempo real, reportes automaticos y alertas inteligentes.</p>
-                    <div class="bento-features">
-                        <div class="bento-feature">
-                            <i data-lucide="check" style="width:16px;height:16px"></i>
-                            <span>Pipeline en tiempo real</span>
+                        <h4>Todos tus canales, un solo pipeline</h4>
+                        <p>Pipeline unificado LinkedIn, Email, Slack y Notion con routing inteligente.</p>
+                        <div class="bento-features">
+                            <div class="bento-feature">
+                                <i data-lucide="check" style="width:16px;height:16px"></i>
+                                <span>LinkedIn, Email, Slack, Notion</span>
+                            </div>
+                            <div class="bento-feature">
+                                <i data-lucide="check" style="width:16px;height:16px"></i>
+                                <span>Routing por comportamiento</span>
+                            </div>
                         </div>
-                        <div class="bento-feature">
-                            <i data-lucide="check" style="width:16px;height:16px"></i>
-                            <span>Alertas por anomalias</span>
+                        <div class="bento-stats">
+                            <div class="bento-stat">
+                                <span class="stat-value">89%</span>
+                                <span class="stat-label">Retencion</span>
+                            </div>
+                            <div class="bento-stat">
+                                <span class="stat-value">+40%</span>
+                                <span class="stat-label">Respuestas</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="bento-stats">
-                        <div class="bento-stat">
-                            <span class="stat-value">360</span>
-                            <span class="stat-label">Pipeline</span>
+                        <div class="bento-arrow">
+                            <i data-lucide="arrow-right" style="width:20px;height:20px"></i>
                         </div>
-                        <div class="bento-stat">
-                            <span class="stat-value">Real-time</span>
-                            <span class="stat-label">Datos</span>
-                        </div>
-                    </div>
-                    <div class="bento-arrow">
-                        <i data-lucide="arrow-right" style="width:20px;height:20px"></i>
-                    </div>
-                </a>
+                    </a>
 
-                <!-- Card 5: Seguridad (1x1) -->
-                <a href="pages/soluciones.html#security" class="bento-card" aria-label="Seguridad y Compliance - Ver detalles">
-                    <div class="bento-card-header">
-                        <div class="bento-card-icon">
-                            <i data-lucide="shield-check" style="width:24px;height:24px"></i>
+                    <!-- Card 4: Analisis -->
+                    <a href="pages/soluciones.html#analytics" class="bento-card" aria-label="Analisis e Inteligencia - Ver detalles">
+                        <div class="bento-card-header">
+                            <div class="bento-card-icon">
+                                <i data-lucide="bar-chart-3" style="width:24px;height:24px"></i>
+                            </div>
+                            <span class="bento-card-label">04 - Analisis</span>
                         </div>
-                        <span class="bento-card-label">05 - Seguridad</span>
-                    </div>
-                    <h4>Compliance total, sin compromisos</h4>
-                    <p>Ley 21.719, encriptacion E2E y privacy by design en cada workflow.</p>
-                    <div class="bento-features">
-                        <div class="bento-feature">
-                            <i data-lucide="check" style="width:16px;height:16px"></i>
-                            <span>Ley 21.719 + GDPR</span>
+                        <h4>Datos que impulsan decisiones</h4>
+                        <p>Dashboards en tiempo real, reportes automaticos y alertas inteligentes.</p>
+                        <div class="bento-features">
+                            <div class="bento-feature">
+                                <i data-lucide="check" style="width:16px;height:16px"></i>
+                                <span>Pipeline en tiempo real</span>
+                            </div>
+                            <div class="bento-feature">
+                                <i data-lucide="check" style="width:16px;height:16px"></i>
+                                <span>Alertas por anomalias</span>
+                            </div>
                         </div>
-                        <div class="bento-feature">
-                            <i data-lucide="check" style="width:16px;height:16px"></i>
-                            <span>Encriptacion end-to-end</span>
+                        <div class="bento-stats">
+                            <div class="bento-stat">
+                                <span class="stat-value">360°</span>
+                                <span class="stat-label">Pipeline</span>
+                            </div>
+                            <div class="bento-stat">
+                                <span class="stat-value">Real-time</span>
+                                <span class="stat-label">Datos</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="bento-stats">
-                        <div class="bento-stat">
-                            <span class="stat-value">Ley 21.719</span>
-                            <span class="stat-label">Compliance</span>
+                        <div class="bento-arrow">
+                            <i data-lucide="arrow-right" style="width:20px;height:20px"></i>
                         </div>
-                        <div class="bento-stat">
-                            <span class="stat-value">E2E</span>
-                            <span class="stat-label">Encriptacion</span>
+                    </a>
+
+                    <!-- Card 5: Seguridad -->
+                    <a href="pages/soluciones.html#security" class="bento-card" aria-label="Seguridad y Compliance - Ver detalles">
+                        <div class="bento-card-header">
+                            <div class="bento-card-icon">
+                                <i data-lucide="shield-check" style="width:24px;height:24px"></i>
+                            </div>
+                            <span class="bento-card-label">05 - Seguridad</span>
                         </div>
-                    </div>
-                    <div class="bento-arrow">
-                        <i data-lucide="arrow-right" style="width:20px;height:20px"></i>
-                    </div>
-                </a>
+                        <h4>Compliance total, sin compromisos</h4>
+                        <p>Ley 21.719, encriptacion E2E y privacy by design en cada workflow.</p>
+                        <div class="bento-features">
+                            <div class="bento-feature">
+                                <i data-lucide="check" style="width:16px;height:16px"></i>
+                                <span>Ley 21.719 + GDPR</span>
+                            </div>
+                            <div class="bento-feature">
+                                <i data-lucide="check" style="width:16px;height:16px"></i>
+                                <span>Encriptacion end-to-end</span>
+                            </div>
+                        </div>
+                        <div class="bento-stats">
+                            <div class="bento-stat">
+                                <span class="stat-value">Ley 21.719</span>
+                                <span class="stat-label">Compliance</span>
+                            </div>
+                            <div class="bento-stat">
+                                <span class="stat-value">E2E</span>
+                                <span class="stat-label">Encriptacion</span>
+                            </div>
+                        </div>
+                        <div class="bento-arrow">
+                            <i data-lucide="arrow-right" style="width:20px;height:20px"></i>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -673,32 +758,32 @@
     <section class="vision-teaser-section" id="vision-teaser">
         <div class="container">
             <span class="section-label">Nuestra Vision</span>
-            <h2 class="section-title center">Construimos infraestructura para el mundo que viene</h2>
-            <p class="section-desc">Hoy automatizamos tu prospeccion. Manana, los agentes autonomos gestionaran departamentos completos.</p>
+            <h2 class="section-title center">Construimos la infraestructura agéntica de ventas para Chile y LATAM</h2>
+            <p class="section-desc">Hoy automatizamos tu prospección. Mañana, agentes autónomos gestionando el ciclo completo de ventas en la región.</p>
 
             <div class="vision-timeline">
                 <div class="timeline-step">
                     <span class="timeline-year">2026</span>
-                    <h4>Ventas B2B automatizadas</h4>
-                    <p>Prospeccion, secuencias, scoring — sin SDRs</p>
+                    <h4>Automatización inteligente</h4>
+                    <p>Workflows agénticos, lead scoring con datos del SII y compliance nativa Ley 21.719</p>
                 </div>
                 <div class="timeline-connector"></div>
                 <div class="timeline-step">
                     <span class="timeline-year">2027</span>
-                    <h4>Pipelines autonomos</h4>
-                    <p>Agentes que gestionan el ciclo completo de ventas</p>
+                    <h4>Pipeline agéntico completo</h4>
+                    <p>Integración CRM, automatización full-pipeline y optimización autónoma del ciclo de ventas</p>
                 </div>
                 <div class="timeline-connector"></div>
                 <div class="timeline-step">
                     <span class="timeline-year">2028</span>
-                    <h4>Agent-to-agent commerce</h4>
-                    <p>Plataformas donde agentes compran, venden y negocian</p>
+                    <h4>Data intelligence Chile</h4>
+                    <p>Primera consultoría de ventas basada en data acumulada de todas las fuentes. Pilotos agent-to-agent (A2A)</p>
                 </div>
                 <div class="timeline-connector"></div>
                 <div class="timeline-step timeline-step--featured">
                     <span class="timeline-year">2030</span>
-                    <h4>Departamentos autonomos</h4>
-                    <p>IA gestionando equipos completos 24/7</p>
+                    <h4>Expansión LATAM</h4>
+                    <p>Infraestructura agéntica de ventas para la región. 1-2 países más con inteligencia de negocios local</p>
                 </div>
             </div>
 
@@ -720,7 +805,7 @@
             </h2>
             <p class="cta-anim">Configura tu primer workflow de ventas automatizado.
                 Prospección, scoring con IA y secuencias multicanal — todo operativo en días, no en meses.</p>
-            <a href="#hero" class="btn btn-primary btn-large btn-shine cta-anim" data-cta-id="cta-bottom">
+            <a href="pages/agendar-demo.html" class="btn btn-primary btn-large btn-shine cta-anim" data-cta-id="cta-bottom">
                 Solicitar una demo
                 <i data-lucide="arrow-right" style="width:18px;height:18px;margin-left:8px"></i>
             </a>
@@ -755,7 +840,7 @@
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand-inline">
-                    <img src="assets/logos/sisteco-icon.png" alt="Sisteco" class="footer-logo">
+                    <img src="assets/logos/sisteco-icon.png" alt="Sisteco" class="footer-logo" width="28" height="28">
                     <span class="footer-tagline">Infraestructura inteligente para ventas B2B</span>
                 </div>
                 <div class="footer-social">
@@ -804,7 +889,7 @@
 
     <!-- Main JavaScript -->
     <script src="js/globe.js" defer></script>
-    <script src="js/main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>

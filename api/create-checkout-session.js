@@ -5,6 +5,22 @@
 
 const DLOCALGO_BASE_URL = process.env.DLOCALGO_BASE_URL || 'https://api.dlocalgo.com/v1';
 
+// ── Plan key → env var mapping ──────────────────────────────────────
+// Frontend sends planKey (e.g. "base_monthly"), we resolve to the actual
+// dLocal Go plan ID stored in environment variables.
+const PLAN_KEY_TO_ENV = {
+  base_monthly:       'DLOCALGO_PLAN_BASE_MONTHLY',
+  base_annual:        'DLOCALGO_PLAN_BASE_ANNUAL',
+  growth_monthly:     'DLOCALGO_PLAN_GROWTH_MONTHLY',
+  growth_annual:      'DLOCALGO_PLAN_GROWTH_ANNUAL',
+  enterprise_monthly: 'DLOCALGO_PLAN_ENTERPRISE_MONTHLY',
+};
+
+function resolvePlanId(planKey) {
+  const envKey = PLAN_KEY_TO_ENV[planKey];
+  return envKey ? process.env[envKey] : null;
+}
+
 // Plan IDs válidos (del Dashboard dLocal Go → Subscriptions)
 const ALLOWED_PLANS = new Set([
   process.env.DLOCALGO_PLAN_BASE_MONTHLY,
@@ -18,31 +34,63 @@ const ALLOWED_PLANS = new Set([
 // de suscripciones usa amount directo en vez de plan_id)
 // Precios con IVA incluido (19%) — neto × 1.19
 const PLAN_AMOUNTS = {
-  [process.env.DLOCALGO_PLAN_BASE_MONTHLY]:  { amount: 472.43,  currency: 'USD', label: 'Sisteco Prospección Base - Mensual (IVA incl.)' },
-  [process.env.DLOCALGO_PLAN_BASE_ANNUAL]:   { amount: 4240.68, currency: 'USD', label: 'Sisteco Prospección Base - Anual (IVA incl.)' },
-  [process.env.DLOCALGO_PLAN_GROWTH_MONTHLY]:{ amount: 948.43,  currency: 'USD', label: 'Sisteco Crecimiento - Mensual (IVA incl.)' },
-  [process.env.DLOCALGO_PLAN_GROWTH_ANNUAL]: { amount: 8525.16, currency: 'USD', label: 'Sisteco Crecimiento - Anual (IVA incl.)' },
-  [process.env.DLOCALGO_PLAN_ENTERPRISE_MONTHLY]: { amount: 2142.00, currency: 'USD', label: 'Sisteco Enterprise Omnicanal - Mensual (IVA incl.)' },
+  base_monthly:       { amount: 472.43,  currency: 'USD', label: 'Sisteco Prospección Base - Mensual (IVA incl.)' },
+  base_annual:        { amount: 4240.68, currency: 'USD', label: 'Sisteco Prospección Base - Anual (IVA incl.)' },
+  growth_monthly:     { amount: 948.43,  currency: 'USD', label: 'Sisteco Crecimiento - Mensual (IVA incl.)' },
+  growth_annual:      { amount: 8525.16, currency: 'USD', label: 'Sisteco Crecimiento - Anual (IVA incl.)' },
+  enterprise_monthly: { amount: 2142.00, currency: 'USD', label: 'Sisteco Enterprise Omnicanal - Mensual (IVA incl.)' },
 };
 
-module.exports = async (req, res) => {
+const CHECKOUT_ALLOWED_ORIGINS = ['https://sisteco.com', 'https://sisteco-landing.vercel.app', 'https://landing-page-felipe-s-projects-cf2ac967.vercel.app', 'http://localhost:3000'];
+
+export default async function handler(req, res) {
   // CORS
-  res.setHeader('Access-Control-Allow-Origin', process.env.SITE_URL || '*');
+  const origin = req.headers.origin;
+  if (CHECKOUT_ALLOWED_ORIGINS.includes(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  }
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   if (req.method === 'OPTIONS') return res.status(200).end();
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Método no permitido' });
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Metodo no permitido' });
 
-  const { planId, email, companyName } = req.body || {};
+  const body = req.body || {};
+  const email = typeof body.email === 'string' ? body.email.slice(0, 255).toLowerCase().trim() : '';
+  const companyName = typeof body.companyName === 'string' ? body.companyName.slice(0, 100) : '';
 
-  // Validar plan
-  if (!planId || !ALLOWED_PLANS.has(planId)) {
-    return res.status(400).json({ error: 'Plan no válido' });
+  // Accept planKey (from frontend, e.g. "base_monthly") or legacy planId (dLocal Go ID)
+  const planKey = typeof body.planKey === 'string' ? body.planKey.slice(0, 50) : '';
+  const rawPlanId = typeof body.planId === 'string' ? body.planId.slice(0, 100) : '';
+
+  let planId;
+  let plan;
+
+  if (planKey && PLAN_AMOUNTS[planKey]) {
+    // New flow: frontend sends planKey → resolve to dLocal Go plan ID from env
+    planId = resolvePlanId(planKey);
+    plan = PLAN_AMOUNTS[planKey];
+    if (!planId) {
+      console.error('create-checkout-session: env var not set for planKey:', planKey);
+      return res.status(500).json({ error: 'Configuración de plan incompleta en el servidor. Contacta soporte.' });
+    }
+  } else if (rawPlanId && ALLOWED_PLANS.has(rawPlanId)) {
+    // Legacy flow: direct planId (dLocal Go ID)
+    planId = rawPlanId;
+    // Find matching plan by checking env vars
+    const legacyKey = Object.entries(PLAN_KEY_TO_ENV).find(
+      ([, envKey]) => process.env[envKey] === rawPlanId
+    );
+    plan = legacyKey ? PLAN_AMOUNTS[legacyKey[0]] : null;
   }
 
-  const plan = PLAN_AMOUNTS[planId];
-  if (!plan) {
-    return res.status(400).json({ error: 'Configuración de plan incompleta' });
+  // Validar plan
+  if (!planId || !plan) {
+    return res.status(400).json({ error: 'Plan no valido' });
+  }
+
+  // Validar email si se proporciona
+  if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return res.status(400).json({ error: 'Email invalido' });
   }
 
   // Cabecera de autenticación dLocal Go: "Bearer API_KEY:SECRET_KEY"
@@ -68,6 +116,7 @@ module.exports = async (req, res) => {
       failed_url: `${process.env.SITE_URL}/pages/precios.html?canceled=true`,
       metadata: {
         plan_id: planId,
+        plan_key: planKey || '',
         company_name: companyName || '',
         sisteco_env: 'production',
       },
@@ -103,4 +152,4 @@ module.exports = async (req, res) => {
     console.error('create-checkout-session error:', err.message);
     return res.status(500).json({ error: 'Error interno. Intenta nuevamente.' });
   }
-};
+}

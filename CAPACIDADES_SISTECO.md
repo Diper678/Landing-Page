@@ -118,30 +118,51 @@ No usamos n8n Cloud. **Self-hosteamos n8n** para exprimir sus capacidades al má
 
 ## Resultados Esperables para el Cliente
 
-### Eficiencia Operativa
-- **Reducción de tiempo de prospección:** Lo que antes tomaba una semana (investigar empresas, personalizar mensajes, enviar) ahora ocurre automáticamente cada mañana
-- **6+ horas ahorradas por día** en tareas manuales de prospección
+### Operativo en Menos de 24 Horas
+- **Setup completo en menos de un día:** Armar el mismo stack por tu cuenta toma entre 2 y 4 semanas de integración técnica. Con Sisteco, el sistema está configurado, probado y generando prospectos desde el día siguiente a la contratación
+- **Sin curva de aprendizaje:** No hay herramientas que aprender ni workflows que construir — eso ya está hecho
+- **Sin costo oculto de implementación:** Otras soluciones cobran entre $3,000 y $8,000 USD de setup por separado. Aquí está incluido
+
+### El Costo Real de No Automatizar
+- **Stack DIY completo (Apollo + PhantomBuster + ScrapingBee + Instantly + n8n) cuesta ~$1,253/mes en la práctica** — sumando herramientas, tiempo del SDR integrándolas (~20h/mes) y soporte (~10h/mes)
+- **Sisteco desde $472/mes:** Todo integrado, configurado y operando desde el primer día
+- **El agente de Sisteco rinde como 3 SDRs y cuesta como uno solo:** Reduce el Costo de Adquisición de Clientes eliminando el trabajo manual en prospectos que nunca comprarán
+
+### Tu Equipo de Ventas Solo Cierra
+- **El vendedor entra a la conversación cuando el prospecto ya respondió:** No prospecta, no hace seguimiento, no envía emails — solo gestiona las conversaciones calientes que el sistema le entrega
+- **Alertas en tiempo real vía Slack** cuando un prospecto responde, para actuar en el momento exacto en que están interesados
+- **6+ horas ahorradas por día** en tareas manuales de prospección que ahora ocurren automáticamente cada mañana
+
+### Calidad de Leads con Inteligencia de Scoring
+- **Solo recibes prospectos con señales reales de intención:** Nuestro motor de scoring 0-100 clasifica cada lead en HOT / WARM / NURTURE / SKIP antes de que tu equipo lo vea
+- **5 a 7 veces más conversiones** al contactar exclusivamente leads cualificados en vez de prospectar masivamente
+- **Sabes por qué un lead es HOT:** El sistema reporta qué criterios activaron la clasificación — actividad LinkedIn, señales de contratación, cambios de cargo, pain points detectados en el website. Es inteligencia de mercado que antes no tenías
+
+### Velocidad de Respuesta que Cierra Negocios
+- **Tiempo de respuesta < 5 minutos** para leads entrantes, hasta de noche y fines de semana
+- **21 veces más conversiones** cuando se responde en menos de 5 minutos (Harvard Business Review)
+- **El 78% de los clientes compra a quien responde primero** — con Sisteco siempre eres tú
+
+### Personalización a Escala con Tasas de Respuesta Reales
+- **15-25% de tasa de respuesta** en secuencias personalizadas por IA, vs 2-5% con mensajes genéricos
+- Cada prospecto recibe comunicación única basada en su perfil LinkedIn, empresa y contexto extraído automáticamente — no son templates
+- **~200+ prospectos procesados por semana** de forma automatizada, vs ~50 en prospección manual
+- Secuencias de 5 emails durante 5 semanas que se adaptan al comportamiento del prospecto: si responde al email 2, el sistema lo redirige al flujo correspondiente
+
+### Nadie Cae por las Grietas
+- **Cada prospecto recorre la secuencia completa** de 5 touchpoints automáticamente — el sistema nunca olvida hacer seguimiento
+- En prospección manual, el seguimiento es inconsistente por naturaleza: los vendedores priorizan, olvidan, tienen días malos. El sistema es siempre constante en calidad, timing y mensajes
 - **Operativo 24/7:** El sistema nunca para, nunca se enferma, nunca se va de vacaciones
 
-### Calidad de Leads
-- **Eliminación de leads irrelevantes:** Solo recibes prospectos con señales reales de intención
-- **5-7x más conversiones** al contactar solo leads cualificados (vs. prospección masiva)
-- **Reducción de CAC** al eliminar esfuerzo en prospectos que nunca comprarán
-
-### Velocidad de Respuesta
-- **Tiempo de respuesta < 5 minutos** para leads entrantes
-- **Dato clave:** 21x más conversiones cuando se responde en menos de 5 minutos (Harvard Business Review)
-- **Dato clave:** El 78% de los clientes compra al primer vendor que responde
-
-### Personalización a Escala
-- Cada prospecto recibe comunicación única basada en su perfil, empresa y contexto
-- No son templates genéricos: la IA genera mensajes específicos con datos reales
-- Secuencias que se adaptan al comportamiento del prospecto
+### Escalabilidad Sin Contratar
+- Si quieres duplicar el pipeline de prospectos, no necesitas contratar otro SDR — el sistema escala sin costo marginal significativo
+- Canales activos: Email, LinkedIn, WhatsApp, Slack, Instagram — **5 puntos de contacto vs 1-2 del competidor** que no automatiza
+- **89% de retención de clientes con estrategia omnicanal vs 33% sin ella** — más canales activos significa más conversaciones abiertas
 
 ### Cumplimiento Legal
 - **Ley 21.719 (Chile):** Cumplimiento total con la nueva ley de datos personales (vigente diciembre 2026)
 - **GDPR compatible:** Privacy by design en todo el pipeline
-- Protección de datos de nivel empresarial
+- Protección de datos de nivel empresarial — el cliente no asume riesgo regulatorio
 
 ---
 

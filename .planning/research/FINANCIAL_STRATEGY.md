@@ -68,7 +68,7 @@ COSTO REAL DEL DIY:                ~$1,253/mes (incluyendo tiempo)
 |---|---|
 | PhantomBuster Start ($69, por cuenta LinkedIn cliente) | $69 |
 | ScrapingBee Business (prorrateado $249 ÷ 8 clientes) | $31 |
-| n8n executions (prorrateado) | $20 |
+| n8n executions (prorrateado) | $5 |
 | AI API calls (LinkedIn + website scoring) | $30 |
 | Email + LinkedIn sequences (~5,000 emails) | $6 |
 | Tiempo soporte: 1h × $25/h | $25 |

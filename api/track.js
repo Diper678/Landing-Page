@@ -1,10 +1,6 @@
-import { createClient } from '@supabase/supabase-js';
+import { convex } from './_lib/convex.js';
+import { api } from '../convex/_generated/api.js';
 import { z } from 'zod';
-
-const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_KEY
-);
 
 const allowedOrigins = ['https://sisteco.com', 'https://sisteco-landing.vercel.app', 'http://localhost:3000'];
 
@@ -30,7 +26,7 @@ export default async function handler(req, res) {
       buttonId: z.string().min(1).max(100),
       buttonText: z.string().max(100).optional().nullable(),
       pageUrl: z.string().max(500).optional().nullable(),
-      leadId: z.string().uuid().optional().nullable()
+      leadId: z.string().optional().nullable()
     });
 
     const parsed = trackSchema.safeParse(req.body);
@@ -40,19 +36,13 @@ export default async function handler(req, res) {
 
     const { buttonId, buttonText, pageUrl, leadId } = parsed.data;
 
-    const { error } = await supabase
-      .from('cta_clicks')
-      .insert({
-        button_id: buttonId,
-        button_text: buttonText,
-        page_url: pageUrl,
-        lead_id: leadId || null
-      });
-
-    if (error) {
-      console.error('Track error:', error);
-      // No fallamos silenciosamente para no afectar UX
-    }
+    await convex.mutation(api.ctaClicks.track, {
+      buttonId,
+      buttonText: buttonText || undefined,
+      pageUrl: pageUrl || undefined,
+      // leadId from Convex is a typed ID, so we only pass it if valid
+      // For now, skip leadId from frontend (it was a UUID before, now it's a Convex ID)
+    });
 
     return res.status(200).json({ success: true });
 

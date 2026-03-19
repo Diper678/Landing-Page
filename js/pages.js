@@ -7,6 +7,11 @@
 // INITIALIZATION
 // =============================================
 
+// API Configuration
+const API_BASE = window.location.hostname === 'localhost'
+  ? 'http://localhost:3000/api'
+  : '/api';
+
 function initPages() {
     // Floating pill navbar on scroll
     const navbar = document.querySelector('.navbar');
@@ -21,6 +26,7 @@ function initPages() {
     initScrollToTop();
     initFaqAccordion();
     initPricingToggle();
+    initContactForm();
     initPageAnimations();
     initNavActiveState();
     initScrollProgress();
@@ -151,6 +157,100 @@ function initPricingToggle() {
 }
 
 // =============================================
+// CONTACT FORM
+// =============================================
+
+function initContactForm() {
+    const form = document.querySelector('.contact-form');
+    if (!form) return;
+
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const submitBtn = form.querySelector('button[type="submit"]');
+        const nameInput = form.querySelector('#contact-name');
+        const emailInput = form.querySelector('#contact-email');
+        const companyInput = form.querySelector('#contact-company');
+        const messageInput = form.querySelector('#contact-message');
+
+        const name = nameInput?.value.trim();
+        const email = emailInput?.value.trim();
+        const company = companyInput?.value.trim();
+        const message = messageInput?.value.trim();
+
+        if (!name) {
+            nameInput?.focus();
+            showPageToast('Por favor ingresa tu nombre', 'error');
+            return;
+        }
+
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            emailInput?.focus();
+            showPageToast('Por favor ingresa un email valido', 'error');
+            return;
+        }
+
+        if (!message) {
+            messageInput?.focus();
+            showPageToast('Por favor escribe un mensaje', 'error');
+            return;
+        }
+
+        submitBtn.disabled = true;
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Enviando...';
+
+        try {
+            const response = await fetch(`${API_BASE}/contact`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, email, company: company || null, message })
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.error || 'Error al enviar');
+            }
+
+            showPageToast(data.message || 'Mensaje enviado correctamente', 'success');
+            form.reset();
+        } catch (error) {
+            showPageToast(error.message || 'Error al enviar el mensaje', 'error');
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalText;
+        }
+    });
+}
+
+function showPageToast(message, type) {
+    const existing = document.querySelector('.toast');
+    if (existing) existing.remove();
+
+    const toast = document.createElement('div');
+    toast.className = `toast toast-${type}`;
+
+    const icon = document.createElement('span');
+    icon.className = 'toast-icon';
+    icon.textContent = type === 'success' ? '\u2713' : '\u2715';
+
+    const msg = document.createElement('span');
+    msg.className = 'toast-message';
+    msg.textContent = message;
+
+    toast.appendChild(icon);
+    toast.appendChild(msg);
+    document.body.appendChild(toast);
+
+    requestAnimationFrame(() => toast.classList.add('show'));
+    setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => toast.remove(), 300);
+    }, 4000);
+}
+
+// =============================================
 // GSAP PAGE ANIMATIONS
 // =============================================
 
@@ -190,7 +290,7 @@ function initPageAnimations() {
 
     // Content cards stagger with ScrollTrigger
     if (typeof ScrollTrigger !== 'undefined') {
-        document.querySelectorAll('.content-card, .integration-card, .blog-card, .event-card, .dashboard-feature, .pricing-card, .team-card, .app-mockup, .lead-scoring-block, .core-feature, .stack-column, .cta-card').forEach((card, i) => {
+        document.querySelectorAll('.content-card, .dashboard-feature, .pricing-card, .team-card, .app-mockup, .lead-scoring-block, .core-feature, .stack-column, .cta-card, .bento-card').forEach((card, i) => {
             gsap.fromTo(card,
                 { y: 40, opacity: 0 },
                 {
@@ -283,7 +383,7 @@ function initCustomCursor() {
         cursor.style.top = e.clientY + 'px';
     });
 
-    const interactiveSelector = 'a, button, .content-card, .integration-card, .blog-card, .event-card, .pricing-card, .team-card, .job-card, .dashboard-feature, .faq-question, input, textarea, select';
+    const interactiveSelector = 'a, button, .content-card, .pricing-card, .team-card, .dashboard-feature, .faq-question, input, textarea, select';
     document.addEventListener('mouseover', (e) => {
         if (e.target.closest(interactiveSelector)) {
             cursor.style.width = '40px';
