@@ -186,7 +186,7 @@ function initContactForm() {
 
         if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
             emailInput?.focus();
-            showPageToast('Por favor ingresa un email valido', 'error');
+            showPageToast('Por favor ingresa un email válido', 'error');
             return;
         }
 
