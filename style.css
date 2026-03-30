@@ -322,7 +322,7 @@ b {
 
 .btn-ghost {
     background: transparent;
-    color: var(--color-text-sub);
+    color: var(--color-text-main);
     position: relative;
 }
 

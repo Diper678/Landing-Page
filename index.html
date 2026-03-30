@@ -4,30 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sisteco — Automatización de Ventas y Prospección B2B en Chile</title>
+    <title>Sisteco — Ventas IA y Automatización de Ventas B2B Chile</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/pages.css">
-    <meta name="description" content="Automatiza tu prospección B2B con workflows inteligentes, lead scoring con datos SII y compliance Ley 21.719. Ventas agénticas con resultados desde el primer mes.">
+    <meta name="description" content="Plataforma IA de ventas B2B en Chile. Prospección automatizada, automatización de ventas con IA, lead scoring con datos SII y compliance Ley 21.719. Software de ventas IA con resultados desde el primer mes.">
     <link rel="icon" type="image/png" href="assets/logos/sisteco-icon.png">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Sisteco — Automatización de Ventas y Prospección B2B en Chile">
+    <meta property="og:title" content="Sisteco — Ventas IA y Automatización de Ventas B2B Chile">
     <meta property="og:description"
-        content="Automatiza tu prospección B2B con workflows inteligentes, lead scoring con datos SII y compliance Ley 21.719. Ventas agénticas con resultados desde el primer mes.">
+        content="Plataforma IA de ventas B2B en Chile. Prospección automatizada, automatización de ventas con IA, lead scoring con datos SII y compliance Ley 21.719.">
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://landing-page-felipe-s-projects-cf2ac967.vercel.app/">
     <meta property="og:url" content="https://landing-page-felipe-s-projects-cf2ac967.vercel.app/">
     <meta property="og:image" content="https://landing-page-felipe-s-projects-cf2ac967.vercel.app/assets/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Sisteco — Automatización de Ventas y Prospección B2B en Chile">
-    <meta name="twitter:description" content="Automatiza tu prospección B2B con workflows inteligentes, lead scoring con datos SII y compliance Ley 21.719. Ventas agénticas con resultados desde el primer mes.">
+    <meta name="twitter:title" content="Sisteco — Ventas IA y Automatización de Ventas B2B Chile">
+    <meta name="twitter:description" content="Plataforma IA de ventas B2B en Chile. Prospección automatizada, automatización de ventas con IA, lead scoring con datos SII y compliance Ley 21.719.">
     <meta name="twitter:image" content="https://landing-page-felipe-s-projects-cf2ac967.vercel.app/assets/og-image.png">
 
-    <!-- JetBrains Mono for technical labels + DM Serif Display for accent -->
+    <!-- Preload critical resources -->
+    <link rel="preload" href="style.css" as="style">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
         rel="stylesheet">
+
+    <!-- PostHog Analytics (EU Frankfurt — Ley 21.719 compliant) -->
+    <script>
+      !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.crossOrigin="anonymous",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing reset isFeatureEnabled getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group identify setPersonProperties setPersonPropertiesForFlags setGroupPropertiesForFlags".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+      posthog.init('phc_ugKr4vo7XUGtWCE3xSGVZA7GtHOb98jblPTUq3YxRBv', {
+        api_host: 'https://eu.i.posthog.com',
+        person_profiles: 'identified_only',
+        capture_pageview: true,
+        capture_pageleave: true,
+        ip: false,
+        opt_out_capturing_by_default: true,
+        session_recording: { maskAllInputs: true, maskTextSelector: '.ph-mask' }
+      });
+    </script>
 
     <!-- GSAP for animations -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
@@ -44,7 +59,7 @@
       "name": "Sisteco",
       "url": "https://landing-page-felipe-s-projects-cf2ac967.vercel.app",
       "logo": "https://landing-page-felipe-s-projects-cf2ac967.vercel.app/assets/logos/sisteco-icon.png",
-      "description": "Automatización de ventas y prospección B2B en Chile. Workflows agénticos, lead scoring con datos SII y compliance Ley 21.719.",
+      "description": "Plataforma IA de ventas B2B en Chile. Software de ventas IA con prospección automatizada, automatización de ventas, lead scoring con datos SII y compliance Ley 21.719.",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Av. Alonso de Córdova 5870 Of. 413",
@@ -97,7 +112,7 @@
                 <a href="pages/vision.html" class="btn btn-ghost navbar-item">Visión</a>
                 <a href="pages/soluciones.html" class="btn btn-ghost navbar-item">Soluciones</a>
                 <a href="pages/como-funciona.html" class="btn btn-ghost navbar-item">Infraestructura</a>
-                <a href="pages/dashboard.html" class="btn btn-ghost navbar-item">Dashboard</a>
+                <a href="pages/dashboard.html" class="btn btn-ghost navbar-item">Plataforma</a>
                 <a href="pages/precios.html" class="btn btn-ghost navbar-item">Precios</a>
             </div>
             <a href="#hero" class="btn btn-primary navbar-item" data-cta-id="cta-navbar">Empezar ahora</a>
@@ -171,7 +186,7 @@
                 <span class="hero-title-line">la empresa <em>AGÉNTICA</em></span>
                 <span class="hero-title-line">de ventas</span>
             </h1>
-            <p class="hero-desc">Automatizamos tu prospección hoy con workflows inteligentes, datos del SII y compliance Ley 21.719. Mañana, nuestros flujos agénticos gestionarán el ciclo completo de ventas — de la prospección al cierre.</p>
+            <p class="hero-desc">Plataforma IA de prospección automatizada y automatización de ventas B2B. Datos del SII, compliance Ley 21.719 y software de ventas IA que trabaja 24/7 — de la prospección al cierre.</p>
 
             <!-- CTA section at bottom -->
             <div class="hero-cta-bottom">
@@ -230,8 +245,17 @@
                 <div class="logo-sep"></div>
                 <div class="logo-item">
                     <i data-lucide="database" style="width:18px;height:18px"></i>
-                    <span>CRM Sync</span>
+                    <span>HubSpot</span>
                 </div>
+                <div class="logo-item">
+                    <i data-lucide="database" style="width:18px;height:18px"></i>
+                    <span>Salesforce</span>
+                </div>
+                <div class="logo-item">
+                    <i data-lucide="hard-drive" style="width:18px;height:18px"></i>
+                    <span>Base de datos</span>
+                </div>
+                <div class="logo-sep"></div>
                 <div class="logo-item">
                     <i data-lucide="brain" style="width:18px;height:18px;color:var(--color-accent)"></i>
                     <span>IA Avanzada</span>
@@ -251,9 +275,9 @@
     <!-- Cómo Funciona - Bento Grid -->
     <section id="como-funciona" class="bento-section">
         <div class="container">
-            <span class="section-label">Cómo Funciona</span>
-            <h2 class="section-title center">Resultados reales con <span class="gradient-text">automatización inteligente</span></h2>
-            <p class="section-desc">Cinco capacidades que trabajan en sincronía para transformar tu prospección B2B. Cada una diseñada para entregar resultados medibles desde el primer mes.</p>
+            <span class="section-label">Automatización de Ventas IA</span>
+            <h2 class="section-title center">Prospección automatizada con <span class="gradient-text">ventas IA</span></h2>
+            <p class="section-desc">Cinco capacidades de IA de ventas que trabajan en sincronía para transformar tu prospección B2B. Cada una diseñada para entregar resultados medibles desde el primer mes.</p>
 
             <div class="bento-grid">
                 <!-- Hero Card: Prospección IA — horizontal, full width -->
@@ -482,8 +506,8 @@
                     <!-- Header row -->
                     <div class="comparison-row comparison-header">
                         <div class="comparison-cell label"></div>
-                        <div class="comparison-cell">DIY Stack</div>
-                        <div class="comparison-cell">Contratar SDR</div>
+                        <div class="comparison-cell">Armarlo por tu cuenta</div>
+                        <div class="comparison-cell">Contratar vendedor</div>
                         <div class="comparison-cell featured">
                             <span class="featured-badge">Recomendado</span>
                             Sisteco
@@ -494,10 +518,10 @@
                     <div class="comparison-row">
                         <div class="comparison-cell label">Costo mensual</div>
                         <div class="comparison-cell">~$1,253 USD</div>
-                        <div class="comparison-cell">CLP 1.2M</div>
+                        <div class="comparison-cell">CLP 1.7M</div>
                         <div class="comparison-cell featured">
                             <i data-lucide="check" class="icon-positive" style="width:16px;height:16px"></i>
-                            <span>Desde $472 USD</span>
+                            <span>Desde $614 USD</span>
                         </div>
                     </div>
 
@@ -625,10 +649,10 @@
     <!-- Soluciones Section -->
     <section class="features" id="soluciones">
         <div class="container">
-            <span class="section-label features-title">Nuestras Soluciones</span>
-            <h2 class="features-title">Todo lo que necesitas para <span class="gradient-text">escalar tus ventas</span>
+            <span class="section-label features-title">Software de Ventas IA</span>
+            <h2 class="features-title">Plataforma IA para <span class="gradient-text">automatización de ventas</span>
                 B2B</h2>
-            <p class="section-desc features-title">Pensamiento en sistemas + IA de última generación. Diseñamos cada workflow
+            <p class="section-desc features-title">Prospección IA + automatización inteligente. Diseñamos cada workflow
                 con ingeniería de extremo a extremo para conseguir leads a una velocidad que ninguna herramienta sola alcanza.</p>
             <div class="features-grid">
                 <a href="pages/soluciones.html#extraccion" class="feature-card-link">
@@ -853,7 +877,7 @@
                     <h4>Producto</h4>
                     <a href="pages/soluciones.html">Soluciones</a>
                     <a href="pages/como-funciona.html">Infraestructura</a>
-                    <a href="pages/dashboard.html">Dashboard</a>
+                    <a href="pages/dashboard.html">Plataforma</a>
                     <a href="pages/precios.html">Precios</a>
                 </div>
                 <div class="footer-col">
@@ -890,6 +914,41 @@
     <!-- Main JavaScript -->
     <script src="js/globe.js" defer></script>
     <script src="js/main.js" defer></script>
+
+    <!-- PostHog: Consent Banner + Auto-tracking (Ley 21.719) -->
+    <script>
+      // Minimal consent banner — Ley 21.719 compliance
+      (function() {
+        if (localStorage.getItem('sisteco_consent') !== null) {
+          if (localStorage.getItem('sisteco_consent') === 'accepted') {
+            window.posthog && posthog.opt_in_capturing();
+          }
+          return;
+        }
+        var banner = document.createElement('div');
+        banner.id = 'ph-consent';
+        banner.setAttribute('role', 'dialog');
+        banner.setAttribute('aria-label', 'Consentimiento de cookies');
+        banner.innerHTML = '<div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">'
+          + '<p style="margin:0;flex:1;min-width:200px;font-size:14px;color:#111">Usamos cookies para mejorar tu experiencia. <a href="/privacidad" style="color:#111;text-decoration:underline">Politica de privacidad</a></p>'
+          + '<div style="display:flex;gap:8px">'
+          + '<button id="ph-accept" style="background:#c5ed36;color:#111;border:none;padding:8px 20px;border-radius:6px;font-weight:600;cursor:pointer;font-size:14px">Aceptar</button>'
+          + '<button id="ph-decline" style="background:transparent;color:#666;border:1px solid #e5e5e5;padding:8px 20px;border-radius:6px;cursor:pointer;font-size:14px">Rechazar</button>'
+          + '</div></div>';
+        banner.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:#F8F7F5;border-top:1px solid #e5e5e5;padding:16px 24px;z-index:9999;box-shadow:0 -2px 10px rgba(0,0,0,0.05)';
+        document.body.appendChild(banner);
+        document.getElementById('ph-accept').onclick = function() {
+          localStorage.setItem('sisteco_consent', 'accepted');
+          window.posthog && posthog.opt_in_capturing();
+          banner.remove();
+        };
+        document.getElementById('ph-decline').onclick = function() {
+          localStorage.setItem('sisteco_consent', 'declined');
+          window.posthog && posthog.opt_out_capturing();
+          banner.remove();
+        };
+      })();
+    </script>
 </body>
 
 </html>

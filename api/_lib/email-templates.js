@@ -81,7 +81,7 @@ export function welcomeEmail(email) {
     <p>Ejecutamos campañas automatizadas por email, LinkedIn y más canales. Mensajes personalizados con IA que generan respuestas reales.</p>
   </div>
 
-  <a href="https://sisteco.cl/#soluciones" class="cta-btn">Ver cómo funciona →</a>
+  <a href="https://cal.com/felipe-sisteco/demo" class="cta-btn">Agendar una demo →</a>
 
   <p>En los próximos días te compartiremos casos de éxito y una oferta especial para que empieces sin riesgo.</p>
 
@@ -125,7 +125,7 @@ export function caseStudyEmail(email) {
     <p>ROI en el primer trimestre</p>
   </div>
 
-  <a href="https://sisteco.cl/#soluciones" class="cta-btn">Quiero resultados así →</a>
+  <a href="https://cal.com/felipe-sisteco/demo" class="cta-btn">Agendar demo gratuita →</a>
 
   <p>Mañana te compartiremos algo especial para que puedas probarlo con tu equipo.</p>
 
@@ -158,7 +158,7 @@ export function quickWinEmail(email) {
 
   <p>Sin presión, sin compromiso. Si no ves valor, no pierdes nada.</p>
 
-  <a href="https://sisteco.cl/#soluciones" class="cta-btn">Agendar mi consultoría gratuita →</a>
+  <a href="https://cal.com/felipe-sisteco/demo" class="cta-btn">Agendar mi consultoría gratuita →</a>
 
   <p style="font-size: 14px; color: #666;">Esta oferta es válida por los próximos 7 días. Después de eso, las consultorías tienen un costo de $150 USD.</p>
 
