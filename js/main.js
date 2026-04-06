@@ -556,43 +556,35 @@ function initScrollReveal() {
 
   // Animate section labels (below-fold only)
   gsap.utils.toArray('.bento-section .section-label, .features .section-label, .cta-section .cta-badge').forEach(el => {
-    gsap.fromTo(el,
-      { y: 20, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out',
-        scrollTrigger: { trigger: el, start: 'top 85%', once: true }
-      }
-    );
+    ScrollTrigger.create({
+      trigger: el, start: 'top 85%', once: true,
+      onEnter: () => gsap.fromTo(el, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out' })
+    });
   });
 
   // Animate section titles (below-fold only)
   gsap.utils.toArray('.bento-section .section-title, .cta-section h2').forEach(el => {
-    gsap.fromTo(el,
-      { y: 30, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.7, ease: 'power3.out', delay: 0.1,
-        scrollTrigger: { trigger: el, start: 'top 85%', once: true }
-      }
-    );
+    ScrollTrigger.create({
+      trigger: el, start: 'top 85%', once: true,
+      onEnter: () => gsap.fromTo(el, { y: 30, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: 'power3.out', delay: 0.1 })
+    });
   });
 
   // Animate section descriptions
   gsap.utils.toArray('.bento-section .section-desc, .cta-section > .container > p').forEach(el => {
-    gsap.fromTo(el,
-      { y: 20, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out', delay: 0.2,
-        scrollTrigger: { trigger: el, start: 'top 85%', once: true }
-      }
-    );
+    ScrollTrigger.create({
+      trigger: el, start: 'top 85%', once: true,
+      onEnter: () => gsap.fromTo(el, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out', delay: 0.2 })
+    });
   });
 
   // Logos bar fade
   const logosBar = document.querySelector('.logos-bar');
   if (logosBar) {
-    gsap.fromTo(logosBar,
-      { y: 20, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.7, ease: 'power3.out',
-        scrollTrigger: { trigger: logosBar, start: 'top 90%', once: true }
-      }
-    );
+    ScrollTrigger.create({
+      trigger: logosBar, start: 'top 90%', once: true,
+      onEnter: () => gsap.fromTo(logosBar, { y: 20, opacity: 0 }, { y: 0, opacity: 1, duration: 0.7, ease: 'power3.out' })
+    });
   }
 }
 
@@ -607,27 +599,26 @@ function initBentoAnimations() {
   const bentoGrid = document.querySelector('.bento-grid');
   if (!bentoGrid) return;
 
-  // Hero card (enters first)
   const heroCard = bentoGrid.querySelector('.bento-card--hero');
-  if (heroCard) {
-    gsap.fromTo(heroCard,
-      { y: 60, opacity: 0, scale: 0.96 },
-      { y: 0, opacity: 1, scale: 1, duration: 0.8, ease: 'power3.out',
-        scrollTrigger: { trigger: bentoGrid, start: 'top 80%', once: true }
-      }
-    );
-  }
-
-  // Smaller cards (stagger after hero)
   const smallCards = bentoGrid.querySelectorAll('.bento-card:not(.bento-card--hero)');
-  if (smallCards.length > 0) {
-    gsap.fromTo(smallCards,
-      { y: 50, opacity: 0, scale: 0.95 },
-      { y: 0, opacity: 1, scale: 1, duration: 0.6, stagger: 0.12, ease: 'power3.out', delay: 0.3,
-        scrollTrigger: { trigger: bentoGrid, start: 'top 80%', once: true }
+
+  ScrollTrigger.create({
+    trigger: bentoGrid, start: 'top 80%', once: true,
+    onEnter: () => {
+      if (heroCard) {
+        gsap.fromTo(heroCard,
+          { y: 60, opacity: 0, scale: 0.96 },
+          { y: 0, opacity: 1, scale: 1, duration: 0.8, ease: 'power3.out' }
+        );
       }
-    );
-  }
+      if (smallCards.length > 0) {
+        gsap.fromTo(smallCards,
+          { y: 50, opacity: 0, scale: 0.95 },
+          { y: 0, opacity: 1, scale: 1, duration: 0.6, stagger: 0.12, ease: 'power3.out', delay: 0.3 }
+        );
+      }
+    }
+  });
 }
 
 // =============================================

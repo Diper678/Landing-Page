@@ -41,7 +41,7 @@ const PLAN_AMOUNTS = {
   enterprise_monthly: { amount: 2142.00, currency: 'USD', label: 'Sisteco Enterprise Omnicanal - Mensual (IVA incl.)' },
 };
 
-const CHECKOUT_ALLOWED_ORIGINS = ['https://sisteco.com', 'https://sisteco-landing.vercel.app', 'https://landing-page-felipe-s-projects-cf2ac967.vercel.app', 'http://localhost:3000'];
+const CHECKOUT_ALLOWED_ORIGINS = ['https://sisteco.com', 'https://sisteco-landing.vercel.app', 'https://www.sisteco.cl', 'http://localhost:3000'];
 
 export default async function handler(req, res) {
   // CORS

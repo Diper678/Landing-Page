@@ -35,7 +35,7 @@
 
     --color-bg: #F8F7F5;
     --color-text-main: #111111;
-    --color-text-sub: #64748b;
+    --color-text-sub: #4a5568;
     --color-primary: #111111;
     --color-primary-hover: #333333;
     --color-accent: #c5ed36;
@@ -2290,7 +2290,6 @@ body {
     transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     cursor: pointer;
-    opacity: 0;
 }
 
 .bento-card--hero {
