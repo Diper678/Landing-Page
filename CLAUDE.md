@@ -50,8 +50,8 @@ Texto:        #111111
 Acento:       #c5ed36 (lime)
 Hover:        #b3d82f
 Borde:        #e5e5e5
-Font heading: Sharp Grotesk
-Font body:    Source Sans 3
+Font heading: Space Grotesk (SIL OFL, variable 300-700, self-host assets/fonts/SpaceGrotesk-Variable.woff2)
+Font body:    Hanken Grotesk (SIL OFL, variable 100-900, self-host assets/fonts/HankenGrotesk-Variable.woff2)
 Font logo:    Nasalization (SOLO wordmark "Sisteco")
 Iconos:       Lucide 0.468.0
 ```

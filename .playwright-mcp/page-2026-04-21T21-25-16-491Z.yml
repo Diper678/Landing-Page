@@ -1,0 +1,1323 @@
+- generic [ref=e2]:
+  - region "Notifications alt+T"
+  - generic [ref=e3]:
+    - banner [ref=e4]:
+      - navigation [ref=e5]:
+        - link "NEXOS SFA — Inicio" [ref=e6] [cursor=pointer]:
+          - /url: "#"
+          - img "NEXOS SFA by Prodigio.tech" [ref=e7]
+        - generic [ref=e8]:
+          - button "Módulos" [ref=e9] [cursor=pointer]
+          - button "Arquitectura" [ref=e10] [cursor=pointer]
+          - button "Segmentos" [ref=e11] [cursor=pointer]
+          - button "Timeline" [ref=e12] [cursor=pointer]
+          - button "Implementación" [ref=e13] [cursor=pointer]
+        - generic [ref=e14]:
+          - button "Documentación" [ref=e15] [cursor=pointer]
+          - button "Solicitar Demo →" [ref=e16] [cursor=pointer]
+    - generic [ref=e19]:
+      - generic [ref=e20]:
+        - generic [ref=e21]: NCG 514 · Ley Fintec 21.521
+        - generic [ref=e22]: ● En implementación activa
+        - generic [ref=e23]: SRMT · Spin-Off Ready
+      - heading "La única plataforma SFA diseñada para la complejidad estructural del mercado chileno" [level=1] [ref=e24]
+      - paragraph [ref=e25]:
+        - text: Plataforma modular que implementa la Ley Fintec 21.521 y la NCG 514, diseñada nativamente con arquitectura SRMT para soportar Spin-Offs corporativos, segregación de filiales y roles duales (IPI/IPC). Assessment, implementación y certificación ante la CMF en
+        - strong [ref=e26]: 12 a 15 semanas
+        - text: .
+      - generic [ref=e27]:
+        - button "Solicitar Demo Técnica" [ref=e28] [cursor=pointer]:
+          - img [ref=e29]
+          - text: Solicitar Demo Técnica
+        - button "Solicitar Assessment Gratuito" [ref=e31] [cursor=pointer]:
+          - img [ref=e32]
+          - text: Solicitar Assessment Gratuito
+      - generic [ref=e36]:
+        - generic [ref=e37]:
+          - generic [ref=e38]: FAPI 2.0
+          - generic [ref=e39]: Seguridad certificada
+          - generic [ref=e40]: Completo desde el Día 1
+        - generic [ref=e41]:
+          - generic [ref=e42]: SLA E2E
+          - generic [ref=e43]: Garantía End-to-End
+          - generic [ref=e44]: Caché inteligente ≤500ms
+        - generic [ref=e45]:
+          - generic [ref=e46]: SRMT
+          - generic [ref=e47]: Arquitectura Spin-Off Ready
+          - generic [ref=e48]: Segregación de filiales nativa
+        - generic [ref=e49]:
+          - generic [ref=e50]: ">99,5%"
+          - generic [ref=e51]: Uptime SLA
+          - generic [ref=e52]: Multi-AZ · RTO ≤25 min
+      - link "Prodigy Pay app Add-on de NEXOS SFA · Prodigio Tech Prodigy Pay PSIP NCG 514 Habilita tu institución como PSIP en el SFA de Chile. Billetera de pagos Open Finance compliant con NCG 514 y Ley Fintec. En semanas, no meses. 9–10 semanas al mercado 2026 Sandbox CMF Conocer Prodigy Pay" [ref=e53] [cursor=pointer]:
+        - /url: https://prodigypay.prodigio.tech/
+        - generic [ref=e55]:
+          - generic [ref=e56]:
+            - img "Prodigy Pay app" [ref=e59]
+            - generic [ref=e60]:
+              - generic [ref=e62]: Add-on de NEXOS SFA · Prodigio Tech
+              - generic [ref=e63]:
+                - generic [ref=e64]: Prodigy Pay
+                - generic [ref=e65]: PSIP
+                - generic [ref=e66]: NCG 514
+              - paragraph [ref=e67]:
+                - text: Habilita tu institución como
+                - strong [ref=e68]: PSIP en el SFA de Chile
+                - text: . Billetera de pagos Open Finance compliant con NCG 514 y Ley Fintec. En semanas, no meses.
+          - generic [ref=e69]:
+            - generic [ref=e70]:
+              - generic [ref=e71]:
+                - generic [ref=e72]: 9–10
+                - generic [ref=e73]: semanas al mercado
+              - generic [ref=e74]:
+                - generic [ref=e75]: "2026"
+                - generic [ref=e76]: Sandbox CMF
+            - generic [ref=e78]:
+              - text: Conocer Prodigy Pay
+              - img [ref=e79]
+    - generic [ref=e82]:
+      - generic [ref=e83]:
+        - generic [ref=e84]:
+          - generic [ref=e87]: Tecnología chilena · Cumplimiento nativo
+          - 'heading "Nexos SFA: La respuesta definitiva al Sistema de Finanzas Abiertas en Chile" [level=2] [ref=e88]'
+          - paragraph [ref=e89]: Nuestra plataforma ha sido diseñada íntegramente bajo los preceptos de la Ley N°21.521 (Ley Fintec) y la NCG N°514 de la CMF. No somos una adaptación de software extranjero; somos tecnología chilena que entiende los matices de la NCG 514 y su Anexo Técnico N°3.
+          - paragraph [ref=e90]: Incorporamos Privacy by Design nativo, asegurando cumplimiento pleno con la Ley N°19.628 y la nueva Ley N°21.719 de protección de datos personales.
+          - paragraph [ref=e91]: "Diferenciador local: Única solución con trazabilidad diferenciada para consentimientos REDEC (Ley N°21.680), reconociendo las particularidades únicas del mercado crediticio chileno."
+          - generic [ref=e92]:
+            - button "Solicitar Assessment Gratuito →" [ref=e93] [cursor=pointer]
+            - button "Ver documentación técnica" [ref=e94] [cursor=pointer]
+        - generic [ref=e95]:
+          - generic [ref=e97]:
+            - img [ref=e99]
+            - generic [ref=e102]:
+              - generic [ref=e103]:
+                - heading "Ley N°21.521 — Ley Fintec" [level=4] [ref=e104]
+                - generic [ref=e105]: Implementado
+              - paragraph [ref=e106]: NCG N°514 completa, incluyendo Anexo Técnico N°3. Cobertura de todos los artículos aplicables a IPI, IPC y PSBI/PSIP.
+          - generic [ref=e108]:
+            - img [ref=e110]
+            - generic [ref=e113]:
+              - generic [ref=e114]:
+                - heading "Protección de Datos Personales" [level=4] [ref=e115]
+                - generic [ref=e116]: Privacy by Design
+              - paragraph [ref=e117]: "Ley N°19.628 vigente y Ley N°21.719 (nueva Ley de Protección de Datos). Arquitectura Privacy by Design: minimización de datos, consentimiento granular y derecho al olvido integrados desde el diseño."
+          - generic [ref=e119]:
+            - img [ref=e121]
+            - generic [ref=e124]:
+              - generic [ref=e125]:
+                - heading "Tecnología 100% chilena" [level=4] [ref=e126]
+                - generic [ref=e127]: No es adaptación
+              - paragraph [ref=e128]: Diseñada desde cero para el mercado chileno. Entiende los matices del Anexo Técnico N°3, los plazos de la CMF y las particularidades del sistema financiero local que el software extranjero ignora.
+      - generic [ref=e129]:
+        - generic [ref=e130]:
+          - paragraph [ref=e131]: Cómo opera el ecosistema
+          - heading "Flujo de datos entre los actores del Sistema de Finanzas Abiertas" [level=3] [ref=e132]
+        - generic [ref=e133]:
+          - generic [ref=e134]:
+            - generic [ref=e135]:
+              - generic [ref=e137]: NCG 514 · LEY 21.521
+              - heading "Ecosistema SFA — Flujo de operación entre actores regulados" [level=3] [ref=e138]
+            - button "⏸ Pausar" [ref=e139]:
+              - generic [ref=e140]: ⏸
+              - text: Pausar
+          - img [ref=e142]:
+            - generic [ref=e145]: ACTORES EXTERNOS
+            - generic [ref=e147]: NEXOS SFA — CAPA DE CUMPLIMIENTO
+            - generic [ref=e149]: SISTEMAS INTERNOS
+            - generic [ref=e163]:
+              - generic [ref=e172]: NEXOS
+              - generic [ref=e173]: SFA
+              - generic [ref=e174]: FAPI 2.0 · NCG 514
+              - generic [ref=e175]: Consent · Monitor · Trust
+            - generic [ref=e176]:
+              - generic [ref=e178]: 🏛
+              - generic [ref=e179]: CMF
+              - generic [ref=e180]: Directorio de
+              - generic [ref=e181]: Participantes
+            - generic [ref=e182]:
+              - generic [ref=e184]: 👤
+              - generic [ref=e185]: Cliente
+              - generic [ref=e186]: Persona o
+              - generic [ref=e187]: Empresa (PSU)
+            - generic [ref=e188]:
+              - generic [ref=e190]: 📊
+              - generic [ref=e191]: PSBI
+              - generic [ref=e192]: Proveedor Servicios
+              - generic [ref=e193]: de Información
+            - generic [ref=e194]:
+              - generic [ref=e196]: 💳
+              - generic [ref=e197]: PISP
+              - generic [ref=e198]: Proveedor Iniciación
+              - generic [ref=e199]: de Pagos
+            - generic [ref=e200]:
+              - generic [ref=e202]: 🏦
+              - generic [ref=e203]: IPI
+              - generic [ref=e204]: Institución Proveedora
+              - generic [ref=e205]: de Información
+            - generic [ref=e206]:
+              - generic [ref=e208]: 💰
+              - generic [ref=e209]: IPC
+              - generic [ref=e210]: Institución de
+              - generic [ref=e211]: Pago de Cuenta
+            - generic [ref=e1735]: Consulta APIs de información
+          - generic [ref=e218]:
+            - generic [ref=e219]:
+              - generic [ref=e220]: Flujo de Datos
+              - generic [ref=e221]: Consulta APIs de información
+            - paragraph [ref=e222]: El PSBI llama a las APIs de productos y transacciones (cuentas, tarjetas, créditos, inversiones) que NEXOS SFA expone según el estándar Open Finance Chile v1.0.0.
+          - generic [ref=e223]:
+            - button "Autoriza acceso a datos" [ref=e224]
+            - button "Consulta APIs de información" [ref=e225]
+            - button "Responde datos financieros" [ref=e226]
+            - button "Autoriza pago" [ref=e227]
+            - button "Inicia orden de pago" [ref=e228]
+            - button "Confirma estado del pago" [ref=e229]
+            - button "Valida participantes" [ref=e230]
+            - button "Reportes RIO y trazabilidad" [ref=e231]
+            - button "Consulta core bancario" [ref=e232]
+            - button "Ejecuta instrucción de pago" [ref=e233]
+          - generic [ref=e234]:
+            - generic [ref=e237]: Flujo de Datos
+            - generic [ref=e240]: Flujo de Pago
+            - generic [ref=e243]: Consentimiento
+            - generic [ref=e246]: Regulación / Certificación
+    - generic [ref=e248]:
+      - generic [ref=e249]:
+        - generic [ref=e250]: Cumplimiento Normativo Nativo
+        - heading "Diseñada desde cero para la regulación chilena" [level=2] [ref=e251]
+        - paragraph [ref=e252]: No somos una adaptación de software extranjero. Cada módulo de NEXOS SFA fue construido entendiendo los matices del mercado financiero chileno, sus leyes y sus particularidades regulatorias.
+      - generic [ref=e253]:
+        - generic [ref=e254]:
+          - generic [ref=e255]:
+            - img [ref=e257]
+            - generic [ref=e262]: Ley Fintec
+          - heading "Cumplimiento Ley Fintec" [level=3] [ref=e263]
+          - paragraph [ref=e264]: Ley N°21.521 · NCG N°514 · Anexo Técnico N°3
+          - paragraph [ref=e265]: "La única plataforma chilena diseñada íntegramente bajo los preceptos de la Ley N°21.521 y la NCG N°514 de la CMF. No es una adaptación de software extranjero: es tecnología que entiende los matices del Anexo Técnico N°3 y los plazos específicos del mercado financiero chileno."
+          - generic [ref=e266]:
+            - generic [ref=e267]:
+              - generic [ref=e269]: Ley N°21.521
+              - generic [ref=e270]: Ley Fintec — cobertura completa
+            - generic [ref=e271]:
+              - generic [ref=e273]: NCG N°514 CMF
+              - generic [ref=e274]: Norma de carácter general íntegra
+            - generic [ref=e275]:
+              - generic [ref=e277]: Anexo Técnico N°3
+              - generic [ref=e278]: Estándares de APIs y seguridad
+            - generic [ref=e279]:
+              - generic [ref=e281]: Directorio CMF
+              - generic [ref=e282]: Inscripción y certificación de participantes
+        - generic [ref=e283]:
+          - generic [ref=e284]:
+            - img [ref=e286]
+            - generic [ref=e289]: Privacy by Design
+          - heading "Protección de Datos Personales" [level=3] [ref=e290]
+          - paragraph [ref=e291]: Ley N°19.628 · Ley N°21.719 · Privacy by Design
+          - paragraph [ref=e292]: Incorporamos Privacy by Design nativo, asegurando cumplimiento pleno con la Ley N°19.628 vigente y la nueva Ley N°21.719 de protección de datos personales. La arquitectura garantiza minimización de datos, consentimiento granular y derecho al olvido integrados desde el diseño, no como capa posterior.
+          - generic [ref=e293]:
+            - generic [ref=e294]:
+              - generic [ref=e296]: Ley N°19.628
+              - generic [ref=e297]: Protección de la vida privada — vigente
+            - generic [ref=e298]:
+              - generic [ref=e300]: Ley N°21.719
+              - generic [ref=e301]: Nueva Ley de Protección de Datos
+            - generic [ref=e302]:
+              - generic [ref=e304]: Privacy by Design
+              - generic [ref=e305]: Minimización y consentimiento granular
+            - generic [ref=e306]:
+              - generic [ref=e308]: Derecho al olvido
+              - generic [ref=e309]: Eliminación y portabilidad de datos
+      - generic [ref=e311]:
+        - generic [ref=e312]:
+          - img [ref=e314]
+          - generic [ref=e318]:
+            - generic [ref=e319]:
+              - generic [ref=e320]: Soporte REDEC
+              - generic [ref=e321]: Diferenciador exclusivo
+            - heading "Única solución con trazabilidad diferenciada para consentimientos REDEC (Ley N°21.680)" [level=3] [ref=e322]
+            - paragraph [ref=e323]: NEXOS SFA reconoce las particularidades únicas del mercado crediticio chileno. La Ley N°21.680 (REDEC) establece un régimen especial para el tratamiento de datos de deudores en el sistema financiero. Somos la única plataforma SFA que implementa trazabilidad diferenciada para estos consentimientos, garantizando que tu institución cumpla ambos marcos normativos sin conflictos ni ambigüedades.
+          - button "Ver documentación REDEC →" [ref=e325] [cursor=pointer]
+        - generic [ref=e326]:
+          - generic [ref=e327]:
+            - generic [ref=e328]: Ley N°21.680
+            - generic [ref=e329]: REDEC — Registro de Deuda Crediticia
+          - generic [ref=e330]:
+            - generic [ref=e331]: Ley N°21.521
+            - generic [ref=e332]: Ley Fintec — SFA
+          - generic [ref=e333]:
+            - generic [ref=e334]: NCG N°514
+            - generic [ref=e335]: Norma CMF — Open Finance
+          - generic [ref=e336]:
+            - generic [ref=e337]: Ley N°21.719
+            - generic [ref=e338]: Protección de Datos
+          - generic [ref=e339]:
+            - generic [ref=e340]: Ley N°19.628
+            - generic [ref=e341]: Vida privada vigente
+    - generic [ref=e344]:
+      - generic [ref=e345]:
+        - generic [ref=e346]: Arquitectura modular · 4 módulos · Cobertura total SFA
+        - heading "Una plataforma compuesta por cuatro módulos especializados" [level=2] [ref=e347]
+        - paragraph [ref=e348]: Cada módulo puede activarse de forma independiente o como suite completa, adaptándose a tu grupo regulatorio, etapa de cumplimiento y arquitectura existente.
+      - generic [ref=e349]:
+        - button "01 NEXOS CONNECT Conectividad financiera certificada" [ref=e350] [cursor=pointer]:
+          - generic [ref=e352]: "01"
+          - img [ref=e354]
+          - generic [ref=e357]: NEXOS CONNECT
+          - paragraph [ref=e358]: Conectividad financiera certificada
+        - button "02 NEXOS TRUST Autorización y seguridad FAPI 2.0" [ref=e360] [cursor=pointer]:
+          - generic [ref=e362]: "02"
+          - img [ref=e364]
+          - generic [ref=e367]: NEXOS TRUST
+          - paragraph [ref=e368]: Autorización y seguridad FAPI 2.0
+        - button "03 NEXOS CONSENT Gestión de consentimientos NCG 514" [ref=e369] [cursor=pointer]:
+          - generic [ref=e371]: "03"
+          - img [ref=e373]
+          - generic [ref=e377]: NEXOS CONSENT
+          - paragraph [ref=e378]: Gestión de consentimientos NCG 514
+        - button "04 NEXOS MONITOR Observabilidad regulatoria integrada" [ref=e379] [cursor=pointer]:
+          - generic [ref=e381]: "04"
+          - img [ref=e383]
+          - generic [ref=e387]: NEXOS MONITOR
+          - paragraph [ref=e388]: Observabilidad regulatoria integrada
+      - generic [ref=e391]:
+        - generic [ref=e392]:
+          - generic [ref=e393]:
+            - img [ref=e395]
+            - generic [ref=e398]:
+              - generic [ref=e399]: NEXOS CONNECT · Módulo 01
+              - heading "Conectividad financiera certificada" [level=3] [ref=e400]
+          - paragraph [ref=e401]: La puerta de entrada al ecosistema SFA
+          - paragraph [ref=e402]: "Expone los datos financieros de tu institución al ecosistema SFA mediante adaptadores inteligentes que se integran con tu core bancario sin modificarlo. Cubre todos los productos exigidos por la NCG 514 y activa las capacidades de Iniciación de Pagos (IPC) de forma condicional: el despliegue está listo, pero la activación ocurre solo cuando la entidad se inscribe formalmente en el Directorio de la CMF."
+          - generic [ref=e403]:
+            - generic [ref=e404]:
+              - generic [ref=e405]: ⚡
+              - generic [ref=e406]: Adaptadores ACL por core bancario — integración sin impacto en sistemas legacy
+            - generic [ref=e407]:
+              - generic [ref=e408]: 🔌
+              - generic [ref=e409]: Activación condicional IPC — listo para producción, activo al inscribirse en CMF
+            - generic [ref=e410]:
+              - generic [ref=e411]: 📋
+              - generic [ref=e412]: Cobertura completa de productos regulados NCG 514 (cuentas, créditos, inversiones)
+            - generic [ref=e413]:
+              - generic [ref=e414]: 🏛️
+              - generic [ref=e415]: Certificación sandbox CMF desde octubre 2026
+            - generic [ref=e416]:
+              - generic [ref=e417]: 📅
+              - generic [ref=e418]: Historial de datos de 24 meses por regulación
+        - generic [ref=e419]:
+          - generic [ref=e420]:
+            - generic [ref=e421]:
+              - generic [ref=e422]: 100%
+              - generic [ref=e423]: cobertura de productos NCG 514
+            - generic [ref=e424]:
+              - paragraph [ref=e425]: Posición en la plataforma
+              - generic [ref=e426]:
+                - generic [ref=e428]: 🌐
+                - generic [ref=e431]: 🛡️
+                - generic [ref=e434]: ✅
+                - generic [ref=e437]: 📊
+              - generic [ref=e439]: NEXOS CONNECT activo
+            - generic [ref=e440]:
+              - generic [ref=e441]: NCG 514
+              - generic [ref=e442]: ACL Anti-Corruption Layer
+              - generic [ref=e443]: IPI + IPC
+          - generic [ref=e444]:
+            - button "Ver demo de CONNECT →" [ref=e445] [cursor=pointer]
+            - button "Acceder a documentación técnica" [ref=e446] [cursor=pointer]
+      - generic [ref=e447]:
+        - generic [ref=e448]:
+          - generic [ref=e449]: 🧩
+          - generic [ref=e450]:
+            - paragraph [ref=e451]: Activación modular y gradual
+            - paragraph [ref=e452]: Comienza con el módulo que necesitas hoy y activa los demás a medida que avanza tu cumplimiento normativo.
+        - generic [ref=e453]:
+          - generic [ref=e454]: Solo IPI
+          - generic [ref=e455]: IPI + Trust
+          - generic [ref=e456]: Suite completa
+          - generic [ref=e457]: Add-on IPC
+    - generic [ref=e459]:
+      - generic [ref=e460]:
+        - generic [ref=e461]: Segmentos regulatorios
+        - heading "¿Cuál es tu rol en el ecosistema SFA?" [level=2] [ref=e462]
+        - paragraph [ref=e463]: Cada segmento tiene requisitos, plazos y obligaciones distintas bajo la NCG 514. NEXOS SFA se adapta a tu realidad regulatoria.
+      - generic [ref=e464]:
+        - button "Grupo 1 Bancos y Emisores de Tarjetas" [ref=e465] [cursor=pointer]:
+          - generic [ref=e466]: Grupo 1
+          - text: Bancos y Emisores de Tarjetas
+        - button "Grupo 2 Cooperativas, AGF y Cajas de Compensación" [ref=e467] [cursor=pointer]:
+          - generic [ref=e468]: Grupo 2
+          - text: Cooperativas, AGF y Cajas de Compensación
+        - button "CCAF / Emisores No Bancarios Cajas de Compensación y Emisores" [ref=e469] [cursor=pointer]:
+          - generic [ref=e470]: CCAF / Emisores No Bancarios
+          - text: Cajas de Compensación y Emisores
+        - button "PSBI / PSIP Proveedores de Servicios" [ref=e471] [cursor=pointer]:
+          - generic [ref=e472]: PSBI / PSIP
+          - text: Proveedores de Servicios
+      - generic [ref=e473]:
+        - generic [ref=e474]:
+          - generic [ref=e475]:
+            - generic [ref=e476]: Grupo 1
+            - generic [ref=e477]: Bancos y Emisores de Tarjetas
+          - generic [ref=e478]: IPI/IPC — Obligaciones más estrictas y plazos más cortos
+        - generic [ref=e479]:
+          - generic [ref=e480]:
+            - paragraph [ref=e481]: Bancos, emisores de tarjetas de crédito y emisores de tarjetas de pago con provisión de fondos. Son las entidades con mayor volumen transaccional y están sujetas a los plazos más exigentes de la NCG 514, debiendo implementar las primeras APIs dentro de los 6 meses desde la entrada en vigencia.
+            - generic [ref=e482]:
+              - paragraph [ref=e483]: Valor NEXOS SFA
+              - paragraph [ref=e484]: NEXOS SFA cubre el 100% de los requisitos Grupo 1 con módulos Connect + Trust + Consent + Monitor listos para certificación CMF.
+            - button "Hablar con un experto →" [ref=e485] [cursor=pointer]
+          - generic [ref=e486]:
+            - paragraph [ref=e487]: Requisitos NCG 514
+            - generic [ref=e488]:
+              - generic [ref=e489]:
+                - img [ref=e491]
+                - generic [ref=e493]: APIs de cuentas corrientes y vistas
+              - generic [ref=e494]:
+                - img [ref=e496]
+                - generic [ref=e498]: APIs de tarjetas de crédito y débito
+              - generic [ref=e499]:
+                - img [ref=e501]
+                - generic [ref=e503]: APIs de créditos e hipotecas
+              - generic [ref=e504]:
+                - img [ref=e506]
+                - generic [ref=e508]: APIs de inversiones y fondos
+              - generic [ref=e509]:
+                - img [ref=e511]
+                - generic [ref=e513]: Historial de 24 meses
+              - generic [ref=e514]:
+                - img [ref=e516]
+                - generic [ref=e518]: Gestión de consentimientos NCG 514
+              - generic [ref=e519]:
+                - img [ref=e521]
+                - generic [ref=e523]: Iniciación de pagos (Fase 3)
+                - generic [ref=e524]: Próximo
+              - generic [ref=e525]:
+                - img [ref=e527]
+                - generic [ref=e529]: Personas jurídicas (Fase 3)
+                - generic [ref=e530]: Próximo
+          - generic [ref=e531]:
+            - paragraph [ref=e532]: Plazos regulatorios
+            - generic [ref=e533]:
+              - generic [ref=e534]:
+                - generic [ref=e535]: Oct 2026
+                - generic [ref=e536]: Sandbox CMF disponible para pruebas
+              - generic [ref=e537]:
+                - generic [ref=e538]: Jul 2027
+                - generic [ref=e539]: Entrada en vigencia NCG 514 — Fase 1
+              - generic [ref=e540]:
+                - generic [ref=e541]: Dic 2027
+                - generic [ref=e542]: "APIs Fase 2: Personas naturales completo"
+              - generic [ref=e543]:
+                - generic [ref=e544]: Ene 2028
+                - generic [ref=e545]: "Fase 3: PJ + Iniciación de Pagos"
+    - generic [ref=e547]:
+      - generic [ref=e548]:
+        - generic [ref=e549]: Arquitectura SRMT de 5 capas
+        - heading "El blindaje para tu Core Legacy" [level=2] [ref=e550]
+        - paragraph [ref=e551]: "NEXOS SFA no reemplaza tu core bancario: lo protege. La arquitectura SRMT (Single-Root Multi-Tenant) actúa como un blindaje inteligente que absorbe la complejidad regulatoria, garantiza tiempos de respuesta menores a 500ms y permite segregar filiales sin impacto operativo."
+      - generic [ref=e552]:
+        - button "Cumplimiento nativo" [ref=e553] [cursor=pointer]:
+          - img [ref=e555]
+          - paragraph [ref=e558]: Cumplimiento nativo
+        - button "Modular y composable" [ref=e559] [cursor=pointer]:
+          - img [ref=e561]
+          - paragraph [ref=e567]: Modular y composable
+        - button "ACL Anti-Corruption Layer" [ref=e568] [cursor=pointer]:
+          - img [ref=e570]
+          - paragraph [ref=e575]: ACL Anti-Corruption Layer
+        - button "Siempre al día con la normativa" [ref=e576] [cursor=pointer]:
+          - img [ref=e578]
+          - paragraph [ref=e582]: Siempre al día con la normativa
+      - generic [ref=e584]:
+        - generic [ref=e585]:
+          - generic [ref=e587]: Cumplimiento nativo
+          - heading "Cumples la NCG 514 desde el primer día" [level=3] [ref=e588]
+          - paragraph [ref=e589]: "NEXOS SFA fue diseñado desde cero para cumplir la normativa chilena. Cada módulo implementa exactamente lo que la CMF exige: consentimiento del titular, exposición de datos financieros, trazabilidad de accesos y gestión de identidad. No hay que adaptar un producto genérico — el cumplimiento está incorporado en el producto."
+        - generic [ref=e590]:
+          - generic [ref=e591]:
+            - img [ref=e593]
+            - paragraph [ref=e595]: Cada requisito de la NCG 514 tiene un módulo específico
+          - generic [ref=e596]:
+            - img [ref=e598]
+            - paragraph [ref=e600]: Flujos de consentimiento alineados a la Ley 21.521
+          - generic [ref=e601]:
+            - img [ref=e603]
+            - paragraph [ref=e605]: Trazabilidad y auditoría lista para inspección CMF
+          - generic [ref=e606]:
+            - img [ref=e608]
+            - paragraph [ref=e610]: Certificación técnica acelerada con sandbox oficial
+      - generic [ref=e611]:
+        - generic [ref=e612]:
+          - generic [ref=e613]: Proceso de implementación
+          - heading "De la evaluación a la producción, sin sorpresas" [level=3] [ref=e614]
+        - generic [ref=e617]:
+          - generic [ref=e618]:
+            - generic [ref=e619]: "01"
+            - heading "Assessment regulatorio" [level=4] [ref=e620]
+            - paragraph [ref=e621]: Identificamos tu grupo regulatorio, obligaciones específicas y GAPs actuales respecto a la NCG 514.
+          - generic [ref=e622]:
+            - generic [ref=e623]: "02"
+            - heading "Diseño de integración" [level=4] [ref=e624]
+            - paragraph [ref=e625]: Mapeamos NEXOS SFA a tu infraestructura existente y definimos el plan de trabajo por fases.
+          - generic [ref=e626]:
+            - generic [ref=e627]: "03"
+            - heading "Implementación progresiva" [level=4] [ref=e628]
+            - paragraph [ref=e629]: Activamos los módulos necesarios en orden de prioridad regulatoria, sin interrumpir operaciones.
+          - generic [ref=e630]:
+            - generic [ref=e631]: "04"
+            - heading "Certificación CMF" [level=4] [ref=e632]
+            - paragraph [ref=e633]: Acompañamos el proceso de certificación con la CMF y el paso a producción con soporte dedicado.
+          - generic [ref=e634]:
+            - generic [ref=e635]: "05"
+            - heading "Evolución continua" [level=4] [ref=e636]
+            - paragraph [ref=e637]: El producto se actualiza con cada nueva exigencia regulatoria. Tu equipo no necesita hacer nada extra.
+      - generic [ref=e639]:
+        - img [ref=e641]
+        - generic [ref=e646]:
+          - generic [ref=e647]:
+            - heading "Spin-Off Ready (SRMT)" [level=4] [ref=e648]
+            - generic [ref=e649]: Single-Root Multi-Tenant
+          - paragraph [ref=e650]: "La arquitectura SRMT permite segregar lógicamente los datos y APIs de filiales dentro de la misma plataforma. Si una filial (como una tarjeta de prepago o una aseguradora) se vende o escinde, la plataforma se divide sin impacto operativo: cada entidad mantiene sus datos, consentimientos y accesos completamente aislados. Ideal para Cajas de Compensación con múltiples unidades de negocio."
+      - generic [ref=e651]:
+        - img [ref=e653]
+        - generic [ref=e657]:
+          - heading "La regulación no se detiene. Nosotros tampoco." [level=4] [ref=e658]
+          - paragraph [ref=e659]: "La CMF continuará emitiendo instrucciones y ajustando plazos hasta 2029 y más allá. El modelo de servicio de NEXOS SFA incluye la evolución del producto: cada nueva exigencia regulatoria se convierte en una actualización que llega a tu plataforma sin proyectos adicionales, sin costos extra y sin interrupciones operacionales."
+        - generic [ref=e660]: Incluido en el servicio
+    - generic [ref=e662]:
+      - generic [ref=e663]:
+        - generic [ref=e664]: Certificación y Seguridad Continua
+        - heading "Seguridad que no se negocia, cumplimiento que no se improvisa" [level=2] [ref=e665]
+        - paragraph [ref=e666]: "La ciberseguridad y el cumplimiento normativo no son capas adicionales en NEXOS SFA: están incorporados en el modelo de servicio desde el primer día, con procesos continuos y costos incluidos."
+      - generic [ref=e667]:
+        - generic [ref=e668]:
+          - generic [ref=e669]:
+            - img [ref=e671]
+            - heading "Integración temprana con Sandbox CMF" [level=3] [ref=e674]
+          - paragraph [ref=e675]: NEXOS SFA garantiza la integración con el Sandbox oficial de la CMF desde su apertura en octubre 2026, actuando como Mecanismo Alternativo de Contingencia certificado. Tus equipos pueden probar y validar el cumplimiento antes de la entrada en vigencia.
+          - generic [ref=e676]:
+            - generic [ref=e677]: Sandbox CMF
+            - generic [ref=e678]: Oct 2026
+            - generic [ref=e679]: Certificación anticipada
+        - generic [ref=e680]:
+          - generic [ref=e681]:
+            - img [ref=e683]
+            - heading "Pipeline CI/CD con SAST y DAST integrados" [level=3] [ref=e687]
+          - paragraph [ref=e688]: El proceso de desarrollo y despliegue de NEXOS SFA incluye análisis de seguridad estático (SAST) y dinámico (DAST) en cada ciclo de entrega. Esto garantiza que cada actualización regulatoria que llega a tu plataforma ha pasado por controles de seguridad rigurosos antes del despliegue.
+          - generic [ref=e689]:
+            - generic [ref=e690]: SAST
+            - generic [ref=e691]: DAST
+            - generic [ref=e692]: CI/CD seguro
+        - generic [ref=e693]:
+          - generic [ref=e694]:
+            - img [ref=e696]
+            - heading "Pentest y certificación de conformidad incluidos" [level=3] [ref=e699]
+          - paragraph [ref=e700]: El modelo de servicio incluye alianzas con empresas independientes para la realización de Pentest y certificación de conformidad, con costos incluidos en el modelo de servicio. Tu institución no necesita contratar ni coordinar estos servicios por separado.
+          - generic [ref=e701]:
+            - generic [ref=e702]: Pentest incluido
+            - generic [ref=e703]: Certificación conformidad
+            - generic [ref=e704]: Costos incluidos
+        - generic [ref=e705]:
+          - generic [ref=e706]:
+            - img [ref=e708]
+            - heading "Cumplimiento Ley 21.719 y REDEC" [level=3] [ref=e711]
+          - paragraph [ref=e712]: NEXOS SFA implementa de forma nativa el cumplimiento de la Ley N°21.719 de Protección de Datos Personales y la Ley N°21.680 (REDEC) de Resiliencia de Infraestructura Crítica. El tratamiento de datos financieros cumple los más altos estándares de privacidad y seguridad exigidos por la regulación chilena.
+          - generic [ref=e713]:
+            - generic [ref=e714]: Ley 21.719
+            - generic [ref=e715]: REDEC 21.680
+            - generic [ref=e716]: Protección de datos
+      - generic [ref=e717]:
+        - generic [ref=e718]:
+          - img [ref=e720]
+          - generic [ref=e723]:
+            - paragraph [ref=e724]: Sello de cumplimiento
+            - paragraph [ref=e725]: Ley 20.393 — Prevención de Delitos
+        - paragraph [ref=e727]: Prodigio Tech opera bajo un modelo de cumplimiento de la Ley N°20.393 sobre Responsabilidad Penal de las Personas Jurídicas, que incluye prevención de lavado de activos, financiamiento del terrorismo y cohecho. El modelo de servicio de NEXOS SFA está diseñado para instituciones que exigen los más altos estándares de integridad corporativa.
+        - button "Solicitar documentación de seguridad" [ref=e728] [cursor=pointer]
+    - generic [ref=e730]:
+      - generic [ref=e731]:
+        - generic [ref=e733]:
+          - img [ref=e734]
+          - text: Arquitectura Certificada
+        - heading "Infraestructura de Alta Resiliencia" [level=2] [ref=e736]
+        - paragraph [ref=e737]:
+          - text: Una plataforma diseñada para operar sin interrupciones en el ecosistema financiero chileno, con arquitectura
+          - strong [ref=e738]: independiente del proveedor
+          - text: y escalable según la demanda de cada institución.
+      - generic [ref=e739]:
+        - generic [ref=e740] [cursor=pointer]:
+          - generic [ref=e741]:
+            - generic [ref=e742]:
+              - img [ref=e743]
+              - text: SaaS Cloud-Native
+            - img [ref=e746]
+          - heading "Despliegue Local de Baja Latencia" [level=3] [ref=e749]
+          - paragraph [ref=e750]: Región Metropolitana de Santiago
+          - paragraph [ref=e751]: Operamos bajo un modelo SaaS Cloud-Native alojado estratégicamente en la Región Metropolitana de Santiago. Esto garantiza el cumplimiento de los estándares de soberanía de datos y ofrece latencias mínimas para el ecosistema financiero local.
+          - generic [ref=e752]:
+            - generic [ref=e753]:
+              - generic [ref=e754]: < 50ms
+              - generic [ref=e755]: Latencia promedio
+            - generic [ref=e756]:
+              - generic [ref=e757]: Chile
+              - generic [ref=e758]: Soberanía de datos
+            - generic [ref=e759]:
+              - generic [ref=e760]: Agnóstico
+              - generic [ref=e761]: Proveedor
+          - list [ref=e762]:
+            - listitem [ref=e763]:
+              - img [ref=e764]
+              - text: Datos alojados en territorio nacional
+            - listitem [ref=e767]:
+              - img [ref=e768]
+              - text: Cumplimiento REDEC y Ley 19.628
+            - listitem [ref=e771]:
+              - img [ref=e772]
+              - text: Independiente del proveedor cloud
+          - button "Ver detalles" [ref=e775]:
+            - text: Ver detalles
+            - img [ref=e776]
+        - generic [ref=e778] [cursor=pointer]:
+          - generic [ref=e779]:
+            - generic [ref=e780]:
+              - img [ref=e781]
+              - text: Alta Disponibilidad
+            - img [ref=e787]
+          - heading "Resiliencia y Disponibilidad Garantizada" [level=3] [ref=e792]
+          - paragraph [ref=e793]: Multi-AZ · Contingencia Normativa
+          - paragraph [ref=e794]: Nuestra arquitectura está diseñada para la continuidad absoluta mediante un esquema de Alta Disponibilidad en múltiples zonas (Multi-AZ). Este diseño actúa como el mecanismo alternativo de contingencia requerido por la normativa, asegurando que el servicio permanezca operativo incluso ante incidentes críticos de infraestructura.
+          - generic [ref=e795]:
+            - generic [ref=e796]:
+              - generic [ref=e797]: ">99,5%"
+              - generic [ref=e798]: Uptime garantizado
+            - generic [ref=e799]:
+              - generic [ref=e800]: ≤ 25 min
+              - generic [ref=e801]: RTO máximo
+            - generic [ref=e802]:
+              - generic [ref=e803]: Multi-AZ
+              - generic [ref=e804]: Zonas activas
+          - list [ref=e805]:
+            - listitem [ref=e806]:
+              - img [ref=e807]
+              - text: Mecanismo de contingencia NCG 514
+            - listitem [ref=e810]:
+              - img [ref=e811]
+              - text: Failover automático sin intervención
+            - listitem [ref=e814]:
+              - img [ref=e815]
+              - text: Backups cifrados en tiempo real
+          - button "Ver detalles" [ref=e818]:
+            - text: Ver detalles
+            - img [ref=e819]
+        - generic [ref=e821] [cursor=pointer]:
+          - generic [ref=e822]:
+            - generic [ref=e823]:
+              - img [ref=e824]
+              - text: Spin-Off Ready
+            - img [ref=e828]
+          - heading "Arquitectura SRMT" [level=3] [ref=e831]
+          - paragraph [ref=e832]: Segregación Lógica Avanzada
+          - paragraph [ref=e833]: Nexos SFA utiliza un modelo de Multitenencia de Recursos Compartidos (SRMT) que garantiza una segregación lógica absoluta de datos, identidades y procesos. Esta capacidad es fundamental para instituciones con filiales, permitiendo una portabilidad total y segura de la información en caso de reestructuraciones corporativas o ventas de unidades de negocio.
+          - generic [ref=e834]:
+            - generic [ref=e835]:
+              - generic [ref=e836]: 100%
+              - generic [ref=e837]: Aislamiento
+            - generic [ref=e838]:
+              - generic [ref=e839]: N ilimitado
+              - generic [ref=e840]: Filiales soportadas
+            - generic [ref=e841]:
+              - generic [ref=e842]: Total
+              - generic [ref=e843]: Portabilidad
+          - list [ref=e844]:
+            - listitem [ref=e845]:
+              - img [ref=e846]
+              - text: Segregación de datos por entidad legal
+            - listitem [ref=e849]:
+              - img [ref=e850]
+              - text: Identidades y procesos aislados
+            - listitem [ref=e853]:
+              - img [ref=e854]
+              - text: Portabilidad ante spin-offs corporativos
+          - button "Ver detalles" [ref=e857]:
+            - text: Ver detalles
+            - img [ref=e858]
+        - generic [ref=e860] [cursor=pointer]:
+          - generic [ref=e861]:
+            - generic [ref=e862]:
+              - img [ref=e863]
+              - text: Capa Anti-Corrupción
+            - img [ref=e866]
+          - heading "Capa de Adaptación Inteligente (ACL)" [level=3] [ref=e870]
+          - paragraph [ref=e871]: Orquestador de Alto Rendimiento
+          - paragraph [ref=e872]: Implementamos una Capa Anti-Corrupción (ACL) que funciona como un orquestador de alto rendimiento entre las APIs del SFA y los sistemas Core de la institución. Este componente protege la integridad de los sistemas legados y permite garantizar tiempos de respuesta consistentes, absorbiendo la complejidad de las integraciones internas.
+          - generic [ref=e873]:
+            - generic [ref=e874]:
+              - generic [ref=e875]: < 500ms
+              - generic [ref=e876]: Tiempo de respuesta
+            - generic [ref=e877]:
+              - generic [ref=e878]: Cero
+              - generic [ref=e879]: Impacto en core
+            - generic [ref=e880]:
+              - generic [ref=e881]: Universal
+              - generic [ref=e882]: Compatibilidad
+          - list [ref=e883]:
+            - listitem [ref=e884]:
+              - img [ref=e885]
+              - text: Sin modificaciones al core bancario
+            - listitem [ref=e888]:
+              - img [ref=e889]
+              - text: Adaptadores para CBS, ERP, CRM, IdP
+            - listitem [ref=e892]:
+              - img [ref=e893]
+              - text: Activación gradual por módulo
+          - button "Ver detalles" [ref=e896]:
+            - text: Ver detalles
+            - img [ref=e897]
+      - generic [ref=e899]:
+        - generic [ref=e900]:
+          - img [ref=e902]
+          - generic [ref=e904]:
+            - heading "Arquitectura independiente del proveedor y escalable" [level=4] [ref=e905]
+            - paragraph [ref=e906]: Nexos SFA puede desplegarse sobre cualquier proveedor cloud certificado o en infraestructura on-premise del cliente. La arquitectura es completamente agnóstica del proveedor y la capacidad escala automáticamente según la demanda transaccional, sin intervención manual ni ventanas de mantenimiento.
+        - generic [ref=e907]:
+          - generic [ref=e908]:
+            - img [ref=e909]
+            - text: Multi-Cloud · On-Premise
+          - generic [ref=e912]:
+            - img [ref=e913]
+            - text: On-Premise disponible
+    - generic [ref=e917]:
+      - generic [ref=e918]:
+        - generic [ref=e919]: Security by Design
+        - heading "Seguridad y Confianza integradas en el núcleo" [level=2] [ref=e920]
+        - paragraph [ref=e921]: La seguridad no es una capa adicional en NEXOS SFA — es el principio fundacional. Cada componente fue diseñado desde cero para satisfacer los estándares más exigentes de la CMF y el ecosistema financiero chileno.
+      - generic [ref=e922]:
+        - generic [ref=e923]:
+          - generic [ref=e924]:
+            - img [ref=e926]
+            - generic [ref=e929]: FAPI 2.0 · Perfil Completo
+          - heading "Perfil de Seguridad FAPI 2.0" [level=3] [ref=e930]
+          - paragraph [ref=e931]: Completo
+          - paragraph [ref=e932]: "Implementamos el perfil de seguridad más exigente que la CMF exige para las APIs de Provisión de Información (IPI) e Iniciación de Pagos (IPC). No es una aproximación parcial: es el estándar completo, operativo desde el primer día."
+          - generic [ref=e933]:
+            - generic [ref=e934]:
+              - img [ref=e936]
+              - generic [ref=e938]: Pushed Authorization Requests (PAR)
+            - generic [ref=e939]:
+              - img [ref=e941]
+              - generic [ref=e943]: Rich Authorization Requests (RAR)
+            - generic [ref=e944]:
+              - img [ref=e946]
+              - generic [ref=e948]: Mutual TLS (mTLS) en todos los endpoints
+            - generic [ref=e949]:
+              - img [ref=e951]
+              - generic [ref=e953]: Signed JWT Responses (JWS)
+            - generic [ref=e954]:
+              - img [ref=e956]
+              - generic [ref=e958]: PKCE obligatorio en todos los flujos
+            - generic [ref=e959]:
+              - img [ref=e961]
+              - generic [ref=e963]: Token Binding y DPoP
+          - generic [ref=e966]: Certificable ante CMF
+        - generic [ref=e967]:
+          - generic [ref=e968]:
+            - img [ref=e970]
+            - generic [ref=e974]: OAuth 2.0 · OIDC · SSO
+          - heading "Motor de Identidad" [level=3] [ref=e975]
+          - paragraph [ref=e976]: Hardened
+          - paragraph [ref=e977]: Al ser una solución diseñada para entornos donde no existe un IdP compatible, Nexos SFA integra un motor de autenticación y autorización de alto rendimiento. Este componente asegura flujos de autenticación redirigida alineados con OAuth 2.0 y OpenID Connect (OIDC), permitiendo una integración transparente con los sistemas de Single Sign-On (SSO) institucionales.
+          - generic [ref=e978]:
+            - generic [ref=e979]:
+              - img [ref=e981]
+              - generic [ref=e983]: Motor Keycloak de nivel enterprise
+            - generic [ref=e984]:
+              - img [ref=e986]
+              - generic [ref=e988]: Federación con SSO corporativo existente
+            - generic [ref=e989]:
+              - img [ref=e991]
+              - generic [ref=e993]: Gestión de sesiones y tokens seguros
+            - generic [ref=e994]:
+              - img [ref=e996]
+              - generic [ref=e998]: Roles y scopes granulares por API
+            - generic [ref=e999]:
+              - img [ref=e1001]
+              - generic [ref=e1003]: Soporte multi-tenant nativo (SRMT)
+            - generic [ref=e1004]:
+              - img [ref=e1006]
+              - generic [ref=e1008]: Auditoría de accesos en tiempo real
+          - generic [ref=e1011]: Integración sin fricción
+        - generic [ref=e1012]:
+          - generic [ref=e1013]:
+            - img [ref=e1015]
+            - generic [ref=e1019]: mTLS · Rotación Automática
+          - heading "Gestión de Ciclo de Vida" [level=3] [ref=e1020]
+          - paragraph [ref=e1021]: Criptográfico
+          - paragraph [ref=e1022]: Eliminamos el riesgo operativo mediante la automatización total del ciclo de vida de los certificados mTLS. El sistema gestiona de forma autónoma la generación, rotación y validación de certificados ante el Directorio de Participantes de la CMF, garantizando que la autenticación mutua en todos los endpoints sea ininterrumpida y segura.
+          - generic [ref=e1023]:
+            - generic [ref=e1024]:
+              - img [ref=e1026]
+              - generic [ref=e1028]: Generación automática de certificados mTLS
+            - generic [ref=e1029]:
+              - img [ref=e1031]
+              - generic [ref=e1033]: Rotación programada sin downtime
+            - generic [ref=e1034]:
+              - img [ref=e1036]
+              - generic [ref=e1038]: Validación ante Directorio CMF
+            - generic [ref=e1039]:
+              - img [ref=e1041]
+              - generic [ref=e1043]: Alertas proactivas de vencimiento
+            - generic [ref=e1044]:
+              - img [ref=e1046]
+              - generic [ref=e1048]: Almacenamiento seguro en HSM/Vault
+            - generic [ref=e1049]:
+              - img [ref=e1051]
+              - generic [ref=e1053]: Trazabilidad completa de cambios
+          - generic [ref=e1056]: Cero riesgo operativo
+      - generic [ref=e1057]:
+        - generic [ref=e1058]:
+          - img [ref=e1060]
+          - generic [ref=e1063]:
+            - text: Validación
+            - text: Independiente
+        - generic [ref=e1064]:
+          - generic [ref=e1065]: Auditoría Inmutable · Trazabilidad · Pentest
+          - heading "Auditoría Inmutable y Validación Externa" [level=3] [ref=e1066]
+          - paragraph [ref=e1067]:
+            - text: Para garantizar la máxima transparencia, nuestra propuesta incluye la ejecución de pruebas de seguridad
+            - strong [ref=e1068]: SAST, DAST y Pentest
+            - text: realizadas por una entidad tercera e independiente especializada en ciberseguridad. Este proceso asegura una certificación funcional y técnica objetiva antes de la puesta en marcha.
+          - generic [ref=e1069]:
+            - generic [ref=e1070]:
+              - img [ref=e1072]
+              - generic [ref=e1074]: Logging inmutable de todas las llamadas a APIs bajo principios de integridad y disponibilidad
+            - generic [ref=e1075]:
+              - img [ref=e1077]
+              - generic [ref=e1079]: Retención de registros por 5 años para auditorías regulatorias CMF
+            - generic [ref=e1080]:
+              - img [ref=e1082]
+              - generic [ref=e1084]: Trazabilidad completa de consentimientos, accesos y transacciones
+            - generic [ref=e1085]:
+              - img [ref=e1087]
+              - generic [ref=e1089]: SAST, DAST y Pentest por entidad tercera e independiente especializada en ciberseguridad
+            - generic [ref=e1090]:
+              - img [ref=e1092]
+              - generic [ref=e1094]: Certificación funcional y técnica objetiva antes de la puesta en marcha
+      - generic [ref=e1095]:
+        - generic [ref=e1096]: "Principios fundacionales:"
+        - generic [ref=e1097]: Security by Design
+        - generic [ref=e1098]: Privacy by Design
+        - generic [ref=e1099]: Zero Trust Architecture
+        - generic [ref=e1100]: Defense in Depth
+        - generic [ref=e1101]: Least Privilege
+    - generic [ref=e1103]:
+      - generic [ref=e1104]:
+        - generic [ref=e1105]: Calendario regulatorio
+        - heading "Hitos críticos del SFA chileno" [level=2] [ref=e1106]
+        - paragraph [ref=e1107]: La NCG 514 establece un calendario regulatorio preciso. Cada institución tiene plazos que no pueden postergarse. NEXOS SFA te prepara con anticipación.
+      - generic [ref=e1111]:
+        - generic [ref=e1115]:
+          - generic [ref=e1116]:
+            - generic [ref=e1117]:
+              - generic [ref=e1118]: OCT 2026
+              - heading "Sandbox CMF disponible" [level=3] [ref=e1119]
+            - generic [ref=e1120]:
+              - generic [ref=e1121]: Próximo
+              - generic [ref=e1122]: G1
+              - generic [ref=e1123]: PSBI
+              - generic [ref=e1124]: PSIP
+          - paragraph [ref=e1125]: La CMF habilita el sandbox oficial para que las instituciones del Grupo 1 y PSBI/PSIP realicen pruebas de integración y certificación técnica.
+          - generic [ref=e1126]:
+            - img [ref=e1127]
+            - generic [ref=e1129]: NEXOS SFA cuenta con integración temprana al sandbox CMF desde esta fecha.
+        - generic [ref=e1133]:
+          - generic [ref=e1134]:
+            - generic [ref=e1135]:
+              - generic [ref=e1136]: JUL 2027
+              - heading "Entrada en vigencia NCG 514" [level=3] [ref=e1137]
+            - generic [ref=e1138]:
+              - generic [ref=e1139]: Deadline crítico
+              - generic [ref=e1140]: G1 obligatorio
+              - generic [ref=e1141]: Fase 1
+          - paragraph [ref=e1142]: "Obligación legal para instituciones Grupo 1 de exponer APIs financieras. Fase 1: personas naturales, productos básicos."
+          - generic [ref=e1143]:
+            - img [ref=e1144]
+            - generic [ref=e1146]: Deadline crítico. Instituciones sin plataforma SFA incurren en sanciones CMF.
+        - generic [ref=e1150]:
+          - generic [ref=e1151]:
+            - generic [ref=e1152]:
+              - generic [ref=e1153]: DIC 2027
+              - 'heading "G1 Fase 2: APIs personas naturales" [level=3] [ref=e1154]'
+            - generic [ref=e1155]:
+              - generic [ref=e1156]: Planificado
+              - generic [ref=e1157]: G1
+              - generic [ref=e1158]: Fase 2
+              - generic [ref=e1159]: Personas naturales
+          - paragraph [ref=e1160]: Expansión de cobertura de APIs para personas naturales. Incluye productos de inversión, seguros y créditos hipotecarios.
+          - generic [ref=e1161]:
+            - img [ref=e1162]
+            - generic [ref=e1164]: NEXOS Connect cubre el 100% de las APIs requeridas en esta fase.
+        - generic [ref=e1168]:
+          - generic [ref=e1169]:
+            - generic [ref=e1170]:
+              - generic [ref=e1171]: ENE 2028
+              - 'heading "G1 Fase 3: PJ + Iniciación de Pagos" [level=3] [ref=e1172]'
+            - generic [ref=e1173]:
+              - generic [ref=e1174]: Planificado
+              - generic [ref=e1175]: G1
+              - generic [ref=e1176]: Fase 3
+              - generic [ref=e1177]: Pagos
+              - generic [ref=e1178]: PJ
+          - paragraph [ref=e1179]: Extensión a personas jurídicas y habilitación de iniciación de pagos (PSIP). El escenario regulatorio más complejo del SFA chileno.
+          - generic [ref=e1180]:
+            - img [ref=e1181]
+            - generic [ref=e1183]: NEXOS SFA ya tiene arquitectura de pagos diseñada para esta fase.
+        - generic [ref=e1187]:
+          - generic [ref=e1188]:
+            - generic [ref=e1189]:
+              - generic [ref=e1190]: JUL 2028
+              - 'heading "G2 Fase 1: Términos, Condiciones y Canales" [level=3] [ref=e1191]'
+            - generic [ref=e1192]:
+              - generic [ref=e1193]: Planificado
+              - generic [ref=e1194]: G2
+              - generic [ref=e1195]: Cooperativas
+              - generic [ref=e1196]: AGF
+              - generic [ref=e1197]: CCAF
+              - generic [ref=e1198]: Fase 1
+          - paragraph [ref=e1199]: Grupo 2 inicia obligaciones regulatorias. Las instituciones deben exponer términos y condiciones digitales y canales de atención al cliente bajo NCG 514.
+          - generic [ref=e1200]:
+            - img [ref=e1201]
+            - generic [ref=e1203]: Entidades Grupo 2 pueden prepararse hoy con NEXOS SFA y reutilizar el mismo stack técnico del Grupo 1.
+        - generic [ref=e1207]:
+          - generic [ref=e1208]:
+            - generic [ref=e1209]:
+              - generic [ref=e1210]: JUL 2029
+              - 'heading "G2 Fase 2: Implementación total de APIs" [level=3] [ref=e1211]'
+            - generic [ref=e1212]:
+              - generic [ref=e1213]: Planificado
+              - generic [ref=e1214]: G2
+              - generic [ref=e1215]: APIs completas
+              - generic [ref=e1216]: Fase 2
+          - paragraph [ref=e1217]: "Obligación completa para Grupo 2. Exposición total de APIs financieras: seguros, fondos, cajas de compensación y administradoras bajo estándar NCG 514."
+          - generic [ref=e1218]:
+            - img [ref=e1219]
+            - generic [ref=e1221]: NEXOS SFA permite a entidades G2 reutilizar módulos Connect, Trust y Consent con configuración específica para sus productos.
+    - generic [ref=e1223]:
+      - generic [ref=e1224]:
+        - generic [ref=e1225]: Caso de implementación real
+        - heading "En producción con el escenario más complejo del SFA" [level=2] [ref=e1226]
+        - paragraph [ref=e1227]: NEXOS SFA está actualmente en implementación para una institución con roles simultáneos de IPI (Grupo 2) e IPC (Grupo 1 para pagos) — el escenario regulatorio más complejo del SFA chileno.
+      - generic [ref=e1229]:
+        - generic [ref=e1230]:
+          - generic [ref=e1231]: ● En implementación activa
+          - heading "Institución con rol dual IPI + IPC" [level=3] [ref=e1232]
+          - paragraph [ref=e1233]: La institución opera simultáneamente como Institución Proveedora de Información (IPI) para el Grupo 2 y como Institución Proveedora de Consentimientos (IPC) para el Grupo 1 en el segmento de pagos. Este es el escenario de mayor complejidad técnica y regulatoria del SFA.
+          - generic [ref=e1234]:
+            - generic [ref=e1235]:
+              - generic [ref=e1236]: Fase I de arquitectura
+              - generic [ref=e1237]: Completada
+            - generic [ref=e1238]:
+              - generic [ref=e1239]: Fase II de productos SFA
+              - generic [ref=e1240]: En curso
+            - generic [ref=e1241]:
+              - generic [ref=e1242]: Certificación CMF
+              - generic [ref=e1243]: Oct 2026
+            - generic [ref=e1244]:
+              - generic [ref=e1245]: Go-live producción
+              - generic [ref=e1246]: Ene 2027
+          - button "Hablar con un experto sobre tu caso →" [ref=e1247] [cursor=pointer]
+        - generic [ref=e1248]:
+          - paragraph [ref=e1249]: Arquitectura de roles
+          - generic [ref=e1250]:
+            - generic [ref=e1251]:
+              - generic [ref=e1252]:
+                - generic [ref=e1253]: IPC
+                - generic [ref=e1254]: Grupo 1 · Pagos
+              - paragraph [ref=e1255]: Institución Proveedora de Consentimientos. Expone APIs de pagos e iniciación de transacciones bajo estándar regulatorio.
+            - generic [ref=e1258]: NEXOS SFA
+            - generic [ref=e1260]:
+              - generic [ref=e1261]:
+                - generic [ref=e1262]: IPI
+                - generic [ref=e1263]: Grupo 2 · Datos
+              - paragraph [ref=e1264]: Institución Proveedora de Información. Consume APIs de datos de otras instituciones para enriquecer sus servicios.
+            - generic [ref=e1265]:
+              - generic [ref=e1266]: Add-On PSBI/PSIP
+              - generic [ref=e1267]: Extensión para consumir el SFA como TPP certificado
+      - generic [ref=e1268]:
+        - generic [ref=e1269]:
+          - generic [ref=e1270]: "4"
+          - generic [ref=e1271]: GAPs resueltos
+          - generic [ref=e1272]: Consentimiento · Datos · HA · Seguridad
+        - generic [ref=e1273]:
+          - generic [ref=e1274]: "2"
+          - generic [ref=e1275]: Fases ejecutadas
+          - generic [ref=e1276]: Arquitectura completada · Productos en curso
+        - generic [ref=e1277]:
+          - generic [ref=e1278]: IPI+IPC
+          - generic [ref=e1279]: Rol dual
+          - generic [ref=e1280]: Grupo 1 para pagos · Grupo 2 para datos
+        - generic [ref=e1281]:
+          - generic [ref=e1282]: Add-On
+          - generic [ref=e1283]: PSBI/PSIP
+          - generic [ref=e1284]: Extensión arquitectónica para consumir el SFA
+    - generic [ref=e1286]:
+      - generic [ref=e1287]:
+        - generic [ref=e1288]: Modelos de implementación
+        - heading "Tres caminos para cumplir el SFA" [level=2] [ref=e1289]
+        - paragraph [ref=e1290]: Cada institución tiene un punto de partida distinto. NEXOS SFA se adapta a tu realidad operativa y regulatoria.
+      - generic [ref=e1291]:
+        - button "▦ 4 a 5 meses IMPLEMENTACIÓN MODULAR Integración en la plataforma del cliente On-Premise / Hybrid" [ref=e1292] [cursor=pointer]:
+          - generic [ref=e1293]:
+            - generic [ref=e1294]: ▦
+            - generic [ref=e1295]: 4 a 5 meses
+          - paragraph [ref=e1296]: IMPLEMENTACIÓN MODULAR
+          - paragraph [ref=e1297]: Integración en la plataforma del cliente
+          - paragraph [ref=e1298]: On-Premise / Hybrid
+        - button "○ 12 a 15 semanas MODELO SaaS CLOUD-NATIVE Habilitación en la nube del cliente Cloud-Native · Multi-AZ · RTO ≤25 min" [ref=e1299] [cursor=pointer]:
+          - generic [ref=e1300]:
+            - generic [ref=e1301]: ○
+            - generic [ref=e1302]: 12 a 15 semanas
+          - paragraph [ref=e1303]: MODELO SaaS CLOUD-NATIVE
+          - paragraph [ref=e1304]: Habilitación en la nube del cliente
+          - paragraph [ref=e1305]: Cloud-Native · Multi-AZ · RTO ≤25 min
+        - button "◎ 4 a 5 meses MODELO HUB Plataforma compartida para grupos de empresas Multi-entidad · Shared SaaS" [ref=e1306] [cursor=pointer]:
+          - generic [ref=e1307]:
+            - generic [ref=e1308]: ◎
+            - generic [ref=e1309]: 4 a 5 meses
+          - paragraph [ref=e1310]: MODELO HUB
+          - paragraph [ref=e1311]: Plataforma compartida para grupos de empresas
+          - paragraph [ref=e1312]: Multi-entidad · Shared SaaS
+      - generic [ref=e1314]:
+        - generic [ref=e1315]:
+          - generic [ref=e1316]:
+            - generic [ref=e1317]: ▦
+            - generic [ref=e1318]:
+              - paragraph [ref=e1319]: IMPLEMENTACIÓN MODULAR
+              - heading "Integración en la plataforma del cliente" [level=3] [ref=e1320]
+          - paragraph [ref=e1321]: NEXOS SFA se despliega como módulos integrados sobre la infraestructura y tecnología existente de la institución. Ideal para entidades que requieren control total del entorno, integración profunda con sistemas legacy y certificación ante la CMF con su propio entorno.
+          - generic [ref=e1322]:
+            - paragraph [ref=e1323]: Ideal para
+            - generic [ref=e1324]:
+              - generic [ref=e1327]: Bancos y emisores Grupo 1
+              - generic [ref=e1330]: Entidades con infraestructura propia
+              - generic [ref=e1333]: Requerimientos de datos sensibles on-premise
+          - generic [ref=e1334]:
+            - generic [ref=e1335]: Tiempo estimado
+            - generic [ref=e1336]: 4 a 5 meses
+          - button "Solicitar assessment gratuito →" [ref=e1337] [cursor=pointer]
+        - generic [ref=e1338]:
+          - paragraph [ref=e1339]: Plan de trabajo
+          - generic [ref=e1340]:
+            - generic [ref=e1341]:
+              - generic [ref=e1342]:
+                - generic [ref=e1343]: Fase 1
+                - generic [ref=e1344]: 4–6 semanas
+              - heading "Assessment y arquitectura" [level=4] [ref=e1345]
+              - generic [ref=e1346]:
+                - generic [ref=e1349]: Levantamiento de sistemas existentes
+                - generic [ref=e1352]: GAP analysis regulatorio
+                - generic [ref=e1355]: Diseño de arquitectura target
+                - generic [ref=e1358]: Plan de integración
+            - generic [ref=e1359]:
+              - generic [ref=e1360]:
+                - generic [ref=e1361]: Fase 2
+                - generic [ref=e1362]: 6–8 semanas
+              - heading "Implementación core" [level=4] [ref=e1363]
+              - generic [ref=e1364]:
+                - generic [ref=e1367]: Deploy de módulos base
+                - generic [ref=e1370]: Integración de consentimientos
+                - generic [ref=e1373]: Configuración de seguridad
+                - generic [ref=e1376]: Setup de auditoría
+            - generic [ref=e1377]:
+              - generic [ref=e1378]:
+                - generic [ref=e1379]: Fase 3
+                - generic [ref=e1380]: 4–6 semanas
+              - heading "APIs y productos" [level=4] [ref=e1381]
+              - generic [ref=e1382]:
+                - generic [ref=e1385]: Habilitación de APIs NCG 514
+                - generic [ref=e1388]: Integración con core bancario
+                - generic [ref=e1391]: Testing de endpoints
+                - generic [ref=e1394]: Certificación sandbox CMF
+    - generic [ref=e1396]:
+      - generic [ref=e1397]:
+        - generic [ref=e1399]: Arquitectura Modular
+        - heading "Se adapta a tu realidad, no al revés" [level=2] [ref=e1400]:
+          - text: Se adapta a tu realidad,
+          - text: no al revés
+        - paragraph [ref=e1401]: "NEXOS SFA es una plataforma composable: activas solo los módulos que necesitas, en el orden que necesitas, integrándose con los sistemas que ya tienes. Sin reemplazar tu infraestructura existente."
+      - generic [ref=e1402]:
+        - generic [ref=e1403]:
+          - button "⬡ Connect Módulo base — siempre activo Capa de integración con el core bancario y sistemas legados de la institución." [ref=e1404] [cursor=pointer]:
+            - generic [ref=e1405]: ⬡
+            - generic [ref=e1406]:
+              - generic [ref=e1407]:
+                - generic [ref=e1408]: Connect
+                - generic [ref=e1409]: Módulo base — siempre activo
+              - paragraph [ref=e1410]: Capa de integración con el core bancario y sistemas legados de la institución.
+          - 'button "◈ Trust Activación: IPI / IPC / PSBI Gestión de identidad y autenticación segura para clientes y terceros." [ref=e1412] [cursor=pointer]':
+            - generic [ref=e1413]: ◈
+            - generic [ref=e1414]:
+              - generic [ref=e1415]:
+                - generic [ref=e1416]: Trust
+                - generic [ref=e1417]: "Activación: IPI / IPC / PSBI"
+              - paragraph [ref=e1418]: Gestión de identidad y autenticación segura para clientes y terceros.
+          - 'button "◎ Consent Activación: IPC / PSIP Gestión del ciclo de vida completo de los consentimientos de clientes." [ref=e1420] [cursor=pointer]':
+            - generic [ref=e1421]: ◎
+            - generic [ref=e1422]:
+              - generic [ref=e1423]:
+                - generic [ref=e1424]: Consent
+                - generic [ref=e1425]: "Activación: IPC / PSIP"
+              - paragraph [ref=e1426]: Gestión del ciclo de vida completo de los consentimientos de clientes.
+          - 'button "◉ Monitor Activación: todos los roles Observabilidad regulatoria y reportería automática hacia la CMF." [ref=e1428] [cursor=pointer]':
+            - generic [ref=e1429]: ◉
+            - generic [ref=e1430]:
+              - generic [ref=e1431]:
+                - generic [ref=e1432]: Monitor
+                - generic [ref=e1433]: "Activación: todos los roles"
+              - paragraph [ref=e1434]: Observabilidad regulatoria y reportería automática hacia la CMF.
+        - generic [ref=e1436]:
+          - generic [ref=e1437]:
+            - generic [ref=e1438]:
+              - generic [ref=e1439]: ⬡
+              - generic [ref=e1440]:
+                - heading "Módulo Connect" [level=3] [ref=e1441]
+                - text: Módulo base — siempre activo
+            - paragraph [ref=e1442]: Capa de integración con el core bancario y sistemas legados de la institución.
+          - generic [ref=e1443]:
+            - generic [ref=e1444]:
+              - paragraph [ref=e1445]: Integración con sistemas existentes
+              - paragraph [ref=e1446]: Se conecta a cualquier CBS, ERP o CRM sin modificar los sistemas existentes. Activación no-invasiva.
+            - generic [ref=e1447]:
+              - paragraph [ref=e1448]: Sistemas compatibles
+              - generic [ref=e1449]:
+                - generic [ref=e1450]: Core Bancario (CBS)
+                - generic [ref=e1451]: ERP Financiero
+                - generic [ref=e1452]: CRM Institucional
+                - generic [ref=e1453]: SGC de Consentimientos
+                - generic [ref=e1454]: + cualquier sistema propietario
+      - generic [ref=e1455]:
+        - heading "Proceso de integración en 4 pasos" [level=3] [ref=e1456]
+        - generic [ref=e1457]:
+          - generic [ref=e1458]:
+            - generic [ref=e1460]: "01"
+            - heading "Assessment de Brechas" [level=4] [ref=e1461]
+            - paragraph [ref=e1462]: Mapeamos los sistemas existentes de la institución e identificamos exactamente qué módulos de NEXOS SFA son necesarios para cumplir con la NCG 514 según el rol regulatorio.
+            - generic [ref=e1463]: 1–2 semanas
+          - generic [ref=e1464]:
+            - generic [ref=e1466]: "02"
+            - heading "Diseño de Integración" [level=4] [ref=e1467]
+            - paragraph [ref=e1468]: Definimos la arquitectura de integración específica para el core bancario y sistemas legados de la institución, sin modificar los sistemas existentes.
+            - generic [ref=e1469]: 2–3 semanas
+          - generic [ref=e1470]:
+            - generic [ref=e1472]: "03"
+            - heading "Activación Gradual" [level=4] [ref=e1473]
+            - paragraph [ref=e1474]: Desplegamos los módulos requeridos uno a uno, en paralelo a la operación normal. Cada módulo se valida de forma independiente antes de activar el siguiente.
+            - generic [ref=e1475]: 3–8 semanas
+          - generic [ref=e1476]:
+            - generic [ref=e1477]: "04"
+            - heading "Certificación CMF" [level=4] [ref=e1478]
+            - paragraph [ref=e1479]: Ejecutamos las pruebas de certificación ante la CMF desde el ambiente de sandbox homologado de NEXOS SFA, con acompañamiento de nuestro equipo regulatorio.
+            - generic [ref=e1480]: 4–6 semanas
+      - generic [ref=e1482]:
+        - generic [ref=e1483]:
+          - generic [ref=e1485]: Integración No-Invasiva
+          - heading "Compatible con los sistemas que ya tienes" [level=3] [ref=e1486]
+          - paragraph [ref=e1487]: "La capa ACL (Anti-Corruption Layer) de NEXOS SFA actúa como un adaptador inteligente entre la plataforma y los sistemas existentes de la institución. No reemplaza el core bancario: lo complementa con las capacidades regulatorias que exige la NCG 514."
+          - paragraph [ref=e1489]:
+            - strong [ref=e1490]: "Principio de diseño:"
+            - text: NEXOS SFA nunca modifica los sistemas existentes de la institución. Toda la lógica regulatoria vive en la plataforma, no en el core bancario.
+          - button "Evaluar mi caso de integración →" [ref=e1491] [cursor=pointer]
+        - generic [ref=e1492]:
+          - paragraph [ref=e1493]: Sistemas con los que se integra
+          - generic [ref=e1494]:
+            - generic [ref=e1495]:
+              - paragraph [ref=e1497]: Core Bancario (CBS)
+              - paragraph [ref=e1498]: Temenos, Finacle, Mambu, sistemas propietarios
+            - generic [ref=e1499]:
+              - paragraph [ref=e1501]: ERP Financiero
+              - paragraph [ref=e1502]: SAP, Oracle, Microsoft Dynamics
+            - generic [ref=e1503]:
+              - paragraph [ref=e1505]: CRM Institucional
+              - paragraph [ref=e1506]: Salesforce, HubSpot, sistemas propietarios
+            - generic [ref=e1507]:
+              - paragraph [ref=e1509]: SGC de Consentimientos
+              - paragraph [ref=e1510]: Sistemas existentes de gestión de consentimientos
+            - generic [ref=e1511]:
+              - paragraph [ref=e1513]: IdP / Autenticación
+              - paragraph [ref=e1514]: Active Directory, LDAP, sistemas de identidad propios
+            - generic [ref=e1515]:
+              - paragraph [ref=e1517]: Sistemas de Monitoreo
+              - paragraph [ref=e1518]: Grafana, Datadog, herramientas internas
+    - generic [ref=e1520]:
+      - generic [ref=e1521]:
+        - generic [ref=e1522]: Ventajas competitivas
+        - heading "Por qué NEXOS SFA y no desarrollar desde cero" [level=2] [ref=e1523]
+        - paragraph [ref=e1524]: Construir una plataforma SFA desde cero toma 18–24 meses y cuesta millones. NEXOS SFA lo hace en 4–5 meses con arquitectura probada y cumplimiento garantizado.
+      - generic [ref=e1525]:
+        - generic [ref=e1526]:
+          - generic [ref=e1527]:
+            - generic [ref=e1528]: 🔐
+            - generic [ref=e1529]:
+              - heading "Cumplimiento normativo nativo" [level=3] [ref=e1530]
+              - text: FAPI 2.0 · NCG 514 · Ley 21.521
+          - paragraph [ref=e1531]: Diseñado desde cero para el marco regulatorio chileno. El cumplimiento no es un add-on, es la base de la plataforma. Certificación ante la CMF, gestión de consentimientos y auditoría regulatoria integrados en cada módulo.
+          - generic [ref=e1532]:
+            - generic [ref=e1533]:
+              - img [ref=e1534]
+              - generic [ref=e1537]: Certificación sandbox CMF integrada
+            - generic [ref=e1538]:
+              - img [ref=e1539]
+              - generic [ref=e1542]: Audit log inmutable para reportes regulatorios
+            - generic [ref=e1543]:
+              - img [ref=e1544]
+              - generic [ref=e1547]: Scopes NCG 514 pre-configurados
+        - generic [ref=e1548]:
+          - generic [ref=e1549]:
+            - generic [ref=e1550]: ⬡
+            - generic [ref=e1551]:
+              - heading "Acelerador reutilizable modular" [level=3] [ref=e1552]
+              - text: 4 módulos composables · Deploy en semanas
+          - paragraph [ref=e1553]: No se construye desde cero. NEXOS SFA es un acelerador probado con módulos pre-construidos, patrones de integración validados y arquitectura de referencia documentada para el SFA chileno.
+          - generic [ref=e1554]:
+            - generic [ref=e1555]:
+              - img [ref=e1556]
+              - generic [ref=e1559]: Time-to-market 4–5 meses vs 18+ meses custom
+            - generic [ref=e1560]:
+              - img [ref=e1561]
+              - generic [ref=e1564]: "Módulos independientes: Connect, Trust, Consent, Monitor"
+            - generic [ref=e1565]:
+              - img [ref=e1566]
+              - generic [ref=e1569]: Reutilizable para múltiples instituciones del grupo
+        - generic [ref=e1570]:
+          - generic [ref=e1571]:
+            - generic [ref=e1572]: 📊
+            - generic [ref=e1573]:
+              - heading "Observabilidad regulatoria integrada" [level=3] [ref=e1574]
+              - text: Dashboards CMF · Alertas SLA · Trazabilidad
+          - paragraph [ref=e1575]: El cumplimiento regulatorio requiere evidencia. NEXOS Monitor incluye dashboards pre-configurados para reportes CMF, alertas de SLA, trazabilidad de solicitudes y métricas de consentimientos en tiempo real.
+          - generic [ref=e1576]:
+            - generic [ref=e1577]:
+              - img [ref=e1578]
+              - generic [ref=e1581]: Dashboards CMF listos para auditoría
+            - generic [ref=e1582]:
+              - img [ref=e1583]
+              - generic [ref=e1586]: Alertas automáticas de SLA ≤5 min
+            - generic [ref=e1587]:
+              - img [ref=e1588]
+              - generic [ref=e1591]: Trazabilidad end-to-end de cada solicitud
+        - generic [ref=e1592]:
+          - generic [ref=e1593]:
+            - generic [ref=e1594]: ⚡
+            - generic [ref=e1595]:
+              - heading "Evolución continua con la normativa" [level=3] [ref=e1596]
+              - text: Siempre al día · Sin costo de actualización
+          - paragraph [ref=e1597]: La regulación evoluciona. NEXOS SFA también. Cada cambio normativo de la CMF se incorpora automáticamente a la plataforma. Tu institución siempre cumple, sin proyectos de actualización ni costos adicionales.
+          - generic [ref=e1598]:
+            - generic [ref=e1599]:
+              - img [ref=e1600]
+              - generic [ref=e1603]: Actualizaciones regulatorias incluidas en el servicio
+            - generic [ref=e1604]:
+              - img [ref=e1605]
+              - generic [ref=e1608]: Roadmap alineado al calendario CMF
+            - generic [ref=e1609]:
+              - img [ref=e1610]
+              - generic [ref=e1613]: Sin obsolescencia tecnológica ni deuda regulatoria
+      - generic [ref=e1614]:
+        - generic [ref=e1615]:
+          - generic [ref=e1616]: Criterio
+          - generic [ref=e1617]: NEXOS SFA
+          - generic [ref=e1618]: Desarrollo a medida
+        - generic [ref=e1619]:
+          - generic [ref=e1620]: Time-to-market
+          - generic [ref=e1621]: 4–5 meses
+          - generic [ref=e1622]: 18–24 meses
+        - generic [ref=e1623]:
+          - generic [ref=e1624]: Cumplimiento NCG 514
+          - generic [ref=e1625]: Nativo y certificado
+          - generic [ref=e1626]: Requiere desarrollo
+        - generic [ref=e1627]:
+          - generic [ref=e1628]: Actualizaciones normativas
+          - generic [ref=e1629]: Incluidas en el servicio
+          - generic [ref=e1630]: Proyecto adicional
+        - generic [ref=e1631]:
+          - generic [ref=e1632]: Integración con core bancario
+          - generic [ref=e1633]: Sin modificar sistemas
+          - generic [ref=e1634]: Riesgo alto
+        - generic [ref=e1635]:
+          - generic [ref=e1636]: Observabilidad regulatoria
+          - generic [ref=e1637]: Dashboards CMF listos
+          - generic [ref=e1638]: Desarrollo adicional
+        - generic [ref=e1639]:
+          - generic [ref=e1640]: Soporte multi-entidad
+          - generic [ref=e1641]: Modelo Hub disponible
+          - generic [ref=e1642]: Rediseño completo
+    - generic [ref=e1644]:
+      - generic [ref=e1645]:
+        - generic [ref=e1647]: Preguntas Frecuentes
+        - heading "Todo lo que necesitas saber antes de tomar la decisión" [level=2] [ref=e1648]:
+          - text: Todo lo que necesitas saber
+          - text: antes de tomar la decisión
+        - paragraph [ref=e1649]: Las preguntas que más nos hacen los equipos de tecnología, cumplimiento y dirección de instituciones financieras en Chile.
+      - generic [ref=e1650]:
+        - generic [ref=e1651]:
+          - button "Implementación ¿Cuánto tiempo toma implementar NEXOS SFA y cumplir con la NCG 514?" [ref=e1652] [cursor=pointer]:
+            - generic [ref=e1653]:
+              - generic [ref=e1654]: Implementación
+              - generic [ref=e1655]: ¿Cuánto tiempo toma implementar NEXOS SFA y cumplir con la NCG 514?
+            - img [ref=e1657]
+          - paragraph [ref=e1660]: El proceso completo —desde el assessment inicial hasta la certificación ante la CMF— varía según el modelo de implementación y la complejidad de los sistemas existentes. El modelo SaaS Cloud permite llegar a producción en 12 a 15 semanas, ideal para entidades del Grupo 2 con plazos ajustados. El modelo Modular On-Premise, orientado a bancos del Grupo 1 con infraestructura propia, opera en 4 a 5 meses e incluye las fases de assessment, homologación, despliegue y certificación CMF. El modelo Hub para grupos financieros con múltiples entidades también opera en 4 a 5 meses. En todos los casos, el primer hito regulatorio (octubre 2026) es alcanzable con holgura.
+        - button "Comercial ¿Cuál es el modelo de licenciamiento? ¿Se cede el código fuente?" [ref=e1662] [cursor=pointer]:
+          - generic [ref=e1663]:
+            - generic [ref=e1664]: Comercial
+            - generic [ref=e1665]: ¿Cuál es el modelo de licenciamiento? ¿Se cede el código fuente?
+          - img [ref=e1667]
+        - button "Integración ¿Cómo se integra NEXOS SFA con nuestro core bancario y sistemas legados?" [ref=e1670] [cursor=pointer]:
+          - generic [ref=e1671]:
+            - generic [ref=e1672]: Integración
+            - generic [ref=e1673]: ¿Cómo se integra NEXOS SFA con nuestro core bancario y sistemas legados?
+          - img [ref=e1675]
+        - button "Regulatorio ¿Cómo funciona el proceso de certificación ante la CMF y qué incluye NEXOS SFA?" [ref=e1678] [cursor=pointer]:
+          - generic [ref=e1679]:
+            - generic [ref=e1680]: Regulatorio
+            - generic [ref=e1681]: ¿Cómo funciona el proceso de certificación ante la CMF y qué incluye NEXOS SFA?
+          - img [ref=e1683]
+        - button "Servicio ¿Qué ocurre cuando la CMF modifica la normativa? ¿Hay costos adicionales?" [ref=e1686] [cursor=pointer]:
+          - generic [ref=e1687]:
+            - generic [ref=e1688]: Servicio
+            - generic [ref=e1689]: ¿Qué ocurre cuando la CMF modifica la normativa? ¿Hay costos adicionales?
+          - img [ref=e1691]
+      - generic [ref=e1693]:
+        - generic [ref=e1694]:
+          - paragraph [ref=e1695]: ¿Tienes preguntas específicas sobre tu institución?
+          - paragraph [ref=e1696]: Nuestro equipo de cumplimiento regulatorio puede analizar tu caso particular sin compromiso.
+        - button "Hablar con un Experto →" [ref=e1697] [cursor=pointer]
+    - generic [ref=e1699]:
+      - generic [ref=e1700]:
+        - img "NEXOS SFA" [ref=e1703]
+        - heading "Solicitar Assessment de Brechas Gratuito" [level=2] [ref=e1704]
+        - paragraph [ref=e1705]: Nuestro equipo técnico analiza tu situación regulatoria actual, identifica las brechas específicas respecto a la NCG 514, y entrega un plan de trabajo con tiempos y modelo de implementación recomendado para tu tipo de institución. Sin compromiso. El modelo SaaS te lleva a producción en 12 a 15 semanas.
+        - generic [ref=e1706]:
+          - button "Solicitar Assessment de Brechas Gratuito →" [ref=e1707] [cursor=pointer]
+          - button "Hablar con un experto" [ref=e1708] [cursor=pointer]
+        - generic [ref=e1709]:
+          - link "comercial@prodigio.cl" [ref=e1710] [cursor=pointer]:
+            - /url: mailto:comercial@prodigio.cl
+            - img [ref=e1711]
+            - text: comercial@prodigio.cl
+          - generic [ref=e1714]: ·
+          - link "prodigio.tech" [ref=e1715] [cursor=pointer]:
+            - /url: https://prodigio.tech
+            - img [ref=e1716]
+            - text: prodigio.tech
+          - generic [ref=e1720]: ·
+          - generic [ref=e1721]: Santiago, Chile
+      - generic [ref=e1722]:
+        - img "NEXOS SFA by Prodigio.tech" [ref=e1723]
+        - paragraph [ref=e1724]:
+          - text: NEXOS SFA es un producto de
+          - link "Prodigio.tech" [ref=e1725] [cursor=pointer]:
+            - /url: https://prodigio.tech
+          - text: · Sistema de Finanzas Abiertas · NCG 514 · Ley 21.521 · Chile
+        - generic [ref=e1726]:
+          - generic [ref=e1727]: NCG 514
+          - generic [ref=e1728]: FAPI 2.0
+          - generic [ref=e1729]: CMF

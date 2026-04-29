@@ -1,45 +1,110 @@
-Cla# Sisteco — Brand Guidelines
-> Versión 1.0 · Febrero 2026
+# Sisteco — Brand Guidelines
+
+> Versión 2.0 · 2026-04-23
+> Reemplaza la v1 (febrero 2026), que estaba alineada con un posicionamiento SaaS/Sales Infrastructure ya descontinuado.
+> Fuente autoritativa para toda la comunicación visual y verbal de Sisteco.
 
 ---
 
 ## 1. Identidad de Marca
 
-### Misión
-Sisteco es la **infraestructura inteligente** que automatiza la prospección B2B. No somos una herramienta más: somos la capa de orquestación que conecta extracción de datos, IA y activación multicanal en un único sistema cohesionado.
+### Qué es Sisteco
+
+**Sisteco automatiza la prospección B2B en Chile como servicio operado.** No vendemos una herramienta para que el cliente la opere — operamos el sistema y entregamos prospectos calificados, listos para conversar, con datos del SII y cumplimiento Ley 21.719 incluido.
 
 ### Posicionamiento
-- **Categoría:** B2B Sales Infrastructure / Revenue Automation
-- **Para:** Equipos de ventas y founders de empresas SaaS, agencias y consultoras
-- **Diferencial:** Composable — cada capa trabaja en sincronía para convertir datos en ingresos
+
+- **Categoría:** Automatización de prospección B2B como servicio (no SaaS, no plataforma).
+- **Para:** Consultoras tech, ciber-boutiques y empresas chilenas con equipo comercial activo (1–15 personas) que necesitan flujo constante de oportunidades calificadas sin contratar más equipo ni operar herramientas extranjeras.
+- **Diferencial:** Operamos por ti. Tu equipo no toca PhantomBuster, Apollo, Sales Navigator ni nada — recibe prospectos en planilla con scoring, datos del SII y RUT verificado. Ley 21.719 cubierta de fábrica.
+
+### Tagline
+
+**"Menos leads, más cierres."**
+
+Significado: rechazamos la lógica de volumen ciego. Entregamos menos prospectos pero calificados con criterio chileno (SII + Señal Sisteco), que tu equipo puede convertir en conversaciones reales.
 
 ### Personalidad de Marca
-| Atributo | Expresión práctica 
+
+| Atributo | Expresión práctica |
 |---|---|
-| **Técnico pero cercano** | Lenguaje preciso sin jerga innecesaria |
-| **Orientado a resultados** | Métricas siempre presentes (10x, 40%, 500+) |
-| **Confiable** | Arquitectura modular, GDPR compliant |
-| **Eficiente** | Sin fricciones, setup en 5 minutos |
+| **Directo** | Va al punto en la primera frase. Sin calentar el motor. |
+| **Técnico pero accesible** | Sabe de tecnología, no asume que el cliente también |
+| **Chileno** | UF como estándar, Ley 21.719 (no GDPR), SII como fuente, "po"/"weón" en informal |
+| **Honesto** | No exagera, no promete resultados, no inventa testimonios ni métricas |
+| **Sin florituras** | Cero "espero que este mensaje te encuentre bien" / "no dudes en contactarme" |
 
 ### Voz y Tono
-- **Idioma principal:** Español (es-ES), tuteo profesional (`tu`)
-- **Verbos de acción:** Automatiza, Escala, Orquesta, Convierte
-- **Nunca:** Frases largas, promesas vagas, tono corporativo frío
-- **Siempre:** Métrica concreta > afirmación genérica
 
-**Ejemplos de copy aprobados:**
+- **Idioma principal:** Español **es-CL** (chileno). NO es-ES.
+- **Tuteo profesional:** "tú" en copy público, "Ud." solo en contextos formales muy específicos (contratos legales).
+- **Verbos de acción:** Operamos, calificamos, entregamos, sistematizamos.
+- **Nunca:** "Sinergia", "ecosistema", "disrumpir", "paradigma", "solución end-to-end", "best-in-class", "world-class", "cutting-edge".
+- **Nunca métricas inventadas:** prohibido "10x", "5x", "500+ leads", "40% más conversión" si no hay fuente verificable. Usar solo métricas con fuente real.
+- **Siempre:** Concreto > abstracto. Ejemplo real > concepto.
+
+### Ejemplos de copy aprobados
+
 ```
-✅ "Pasamos de 20 a 200 leads al día, con mejor calidad."
-✅ "Configura tu primer workflow en minutos, no en días."
-✅ "Tu equipo solo habla con leads que ya quieren comprar."
+✅ "Operamos tu prospección. Tu equipo recibe prospectos con SII y scoring."
+✅ "Cumplimos Ley 21.719 de fábrica. RAT documentado por cliente."
+✅ "Cobro trimestral. UF. Sin sorpresas."
+✅ "Primer batch en 21 días o el mes siguiente sin cargo."
 
 ❌ "Solución innovadora de vanguardia para el crecimiento empresarial."
+❌ "Pasamos de 20 a 200 leads al día con mejor calidad." (métrica inventada)
+❌ "10x más leads en 30 días." (métrica inventada)
 ❌ "Plataforma integral de gestión comercial avanzada."
+❌ "GDPR compliant" (debe ser "Ley 21.719")
 ```
+
+### Términos prohibidos
+
+- "GDPR compliant" → usar "Ley 21.719".
+- "SaaS", "plataforma", "herramienta" → usar "servicio operado", "sistema".
+- "lead" como sinónimo único → alternar con "prospecto", "oportunidad".
+- "SDR" → usar "ejecutivo de prospección" o "vendedor junior".
+- "Crecimiento", "Base", "Consultoría", "Enterprise" como nombres de plan → usar **Junior · Senior · Manager**.
+- Métricas sin fuente verificable.
 
 ---
 
-## 2. Paleta de Colores
+## 2. Pricing y Planes (referencia para copy)
+
+| Plan | Precio | Cobro | Cómo se publica |
+|---|---|---|---|
+| **Gratis** | 0 UF | — | "Probar antes de comprometerte" |
+| **Junior** | 20 UF/mes | Trimestral (60 UF) | Precio visible en landing |
+| **Senior** ⭐ | 50 UF/mes | Trimestral (150 UF) | Precio visible + "Recomendado" |
+| **Manager** | ~100 UF/mes referencial | Trimestral, alcance caso a caso | "Hablemos" (no precio explícito) |
+
+**Descuentos (combinables solo entre sí, NO con otros):**
+- 15% de descuento sobre el primer trimestre (con contrato trimestral firmado).
+- 10% de descuento si paga el año adelantado.
+
+**Reglas de comunicación de precio:**
+- UF siempre como precio primario. USD/CLP solo como referencia.
+- "Cobro trimestral" siempre presente — no se ofrece mensual.
+- "1 UF ≈ CLP 38.500 (referencia abril 2026)" como nota al pie cuando aplique.
+- Nunca mencionar planes deprecados (Base/Crecimiento/Enterprise) en copy nuevo.
+
+Detalle completo: `The Agentic Company/docs/research/2026-04-23-pricing-final-formalizado.md`.
+
+---
+
+## 3. Ley 21.719 (Compliance Chile)
+
+Sisteco cumple **Ley 21.719** de Protección de Datos Personales (Chile). Esto es un **moat competitivo** — Apollo, Instantly, Clay y los demás competidores extranjeros no cumplen Ley 21.719.
+
+**Reglas de copy:**
+- Siempre referirse como "**Ley 21.719**", nunca "GDPR" en aislado.
+- Si se menciona GDPR, debe ser comparativo: "*Ley 21.719, modelada sobre GDPR*". Pero el principal es Ley 21.719.
+- "RAT" (Registro de Actividades de Tratamiento) es el documento que entregamos a cada cliente.
+- Self-host de fuentes y assets es regla — Google Fonts CDN está prohibido por Ley 21.719.
+
+---
+
+## 4. Paleta de Colores
 
 ### Colores Primarios
 
@@ -104,22 +169,27 @@ radial-gradient(ellipse at center, rgba(197, 237, 54, 0.07) 0%, transparent 70%)
 
 ---
 
-## 3. Tipografía
+## 5. Tipografía
 
 ### Familias
 
 | Familia | Uso | Pesos disponibles |
 |---|---|---|
-| **Sharp Grotesk** | Headings (h1–h6), botones, navegación, labels | 400 (Book), 500 (Medium), 700 (Bold) |
-| **Source Sans 3** | Body text, párrafos, formularios | 400, 600 |
+| **Space Grotesk** | Headings (h1–h6), botones, navegación, labels, números grandes | 300-700 (variable, SIL OFL) |
+| **Hanken Grotesk** | Body text, párrafos, formularios, UI | 100-900 (variable, SIL OFL) |
 | **Nasalization** | Logo wordmark (`Sisteco`) únicamente | 400 |
 
 ```css
 /* CSS Variables */
---font-heading: 'Sharp Grotesk', sans-serif;
---font-body: 'Source Sans 3', sans-serif;
+--font-heading: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+--font-body: 'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
 /* Nasalization solo en .logo-text */
+/* Ambas self-host WOFF2 en /assets/fonts/ — Ley 21.719 prohíbe Google Fonts CDN */
 ```
+
+### Decisión 2026-04-23
+
+Migración Sharp Grotesk + Source Sans 3 → **Space Grotesk + Hanken Grotesk**. Razón: ambas SIL OFL (costo $0), variable fonts (1 archivo por familia cubre todos los pesos), self-host compatible con Ley 21.719. Decisión documentada en `The Agentic Company/docs/research/2026-04-23-comparativa-tipografia-web.md`.
 
 ### Escala Tipográfica
 
@@ -136,18 +206,19 @@ radial-gradient(ellipse at center, rgba(197, 237, 54, 0.07) 0%, transparent 70%)
 | **Logo** | `18px` | 400 | `0.02em` | `1` | Wordmark únicamente (Nasalization) |
 | **Section Label** | `12px` | 700 | `0.1em` | `1` | Eyebrow tags de sección (uppercase) |
 | **Badge** | `13px` | 700 | `0.05em` | `1` | `.new-badge`, pills |
-| **Metric Value** | `28–48px` | 700 | `-0.02em` | `1` | KPI numbers (10x, 500+, 40%) |
+| **Metric Value** | `28–48px` | 700 | `-0.02em` | `1` | KPI numbers (solo con fuente real) |
 
 ### Reglas Tipográficas
 
-- **Siempre** usar Sharp Grotesk para cualquier texto que no sea párrafo corrido.
-- El peso 500 (Medium) es el default de headings — el 700 solo para números KPI y badges.
-- No usar italic en Sharp Grotesk (no forma parte de la personalidad de marca).
-- Los section labels van siempre en **uppercase + tracking 0.1em**, son el "eyebrow" que introduce la sección.
+- **Space Grotesk** para todo lo que no sea párrafo corrido.
+- El peso 500 es default de headings; 700 para números KPI y badges.
+- No usar italic en Space Grotesk (no forma parte de la personalidad).
+- Section labels en **uppercase + tracking 0.1em** — el "eyebrow" de la sección.
+- **Self-host obligatorio.** Google Fonts CDN → prohibido por Ley 21.719.
 
 ---
 
-## 4. Espaciado y Layout
+## 6. Espaciado y Layout
 
 ### Grid y Contenedor
 
@@ -186,12 +257,12 @@ radial-gradient(ellipse at center, rgba(197, 237, 54, 0.07) 0%, transparent 70%)
 
 ---
 
-## 5. Componentes
+## 7. Componentes
 
 ### Botones
 
 ```
-btn-primary   → bg:#c5ed36  text:#111  pill  padding:10px 22px  font:SharpGrotesk 500 14px
+btn-primary   → bg:#c5ed36  text:#111  pill  padding:10px 22px  font:SpaceGrotesk 500-600 14px
 btn-primary hover → bg:#b3d82f  translateY(-2px)  box-shadow:0 8px 25px rgba(197,237,54,0.3)
 
 btn-ghost     → bg:transparent  text:#666  pill
@@ -231,44 +302,37 @@ btn-shine     → efecto shimmer blanco en hover (para CTAs prominentes)
 - Border: `1px solid #e5e5e5`
 - Radius: `var(--radius-md)` = 14px
 - Hover: lift (`translateY(-4px)`) + border `#c5ed36`
-- Diagrama: icono micro-workflow en header de card
 
 **Testimonial Card (light)**
 - Background: `#fff`, border: `1px solid #e5e5e5`, radius: 14px
-- Stars: `★★★★★` en `#c5ed36`
+- ⚠️ **Solo testimonios reales con cliente real verificable.** Prohibido inventar.
 
 **Testimonial Card Featured (dark)**
 - Background: `#111`
 - Texto blanco + acento lime
-- Badge "Caso destacado" con borde lime
-- Métrica grande (10x) en lime bold
+- Métrica solo si tiene fuente real verificable
 
 **Hero Dashboard**
 - Background: `rgba(255,255,255,0.9)` con glassmorphism
 - Radius: 16px, border: `1px solid rgba(229,229,229,0.8)`
-- Header con dots decorativos (rojo/amarillo/verde)
 
 ### Formularios
 
 ```
-Input email  →  bg:#fff  border:#e5e5e5  radius:var(--radius-sm)=12px  padding:12px 16px
-             →  focus: border:#c5ed36  box-shadow:0 0 0 3px rgba(197,237,54,0.15)
-             →  font: Source Sans 3 16px  placeholder:#999
+Input  →  bg:#fff  border:#e5e5e5  radius:var(--radius-sm)=12px  padding:12px 16px
+       →  focus: border:#c5ed36  box-shadow:0 0 0 3px rgba(197,237,54,0.15)
+       →  font: Hanken Grotesk 16px  placeholder:#999
 ```
 
 ### Avatares
 
 - Círculo, `radius:50%`, 36–40px
 - Iniciales en 2 letras, peso 600
-- Paleta interna: lime+dark (`#c5ed36`/`#111`), dark+white (`#111`/`#fff`), neutral (`#f0f0f0`/`#666`)
-
-### Infra Layers (Pill horizontal)
-
-Cada capa es una fila con: número `01`–`05` (Nasalization) + título + descripción + tool pills. Las capas se conectan con conectores `arrow-down`. Sin línea de spine vertical (eliminada en v1).
+- Paleta interna: lime+dark, dark+white, neutral
 
 ---
 
-## 6. Iconografía
+## 8. Iconografía
 
 ### Sistema Principal
 **Lucide Icons** (versión `0.468.0`)
@@ -283,42 +347,34 @@ Cada capa es una fila con: número `01`–`05` (Nasalization) + título + descri
 | Concepto | Icono |
 |---|---|
 | Automatización / CTA | `sparkles`, `zap` |
-| Seguridad / GDPR | `shield`, `shield-check` |
-| Datos / IA | `database`, `brain`, `sparkles` |
-| Tiempo / eficiencia | `clock`, `timer` |
+| Compliance / Ley 21.719 | `shield`, `shield-check` |
+| Datos / SII | `database`, `file-search` |
+| Tiempo / SLA | `clock`, `timer` |
 | Crecimiento | `trending-up`, `line-chart` |
 | Multicanal | `mail`, `linkedin`, `message-circle` |
-| Leads | `users`, `user-check` |
-
-### Brand SVGs (integrations)
-Ubicados en `assets/icons/`:
-- `scrapingbee.svg` — extracción web
-- `firecrawl.svg` — crawling
-- `claude.svg` — AI análisis
-- `gemini.svg` — AI análisis
-- `kimi.svg` — AI análisis
-
-Los brand SVGs siempre van con texto debajo (`<span>NombreHerramienta</span>`) para accesibilidad y contexto.
+| Prospectos | `users`, `user-check` |
 
 ### Logo Sisteco
+
 Ubicado en `assets/logos/`:
-- `Logo 2 no background.png` — versión positiva (para fondo claro, navbar)
+- `Logo Sisteco-01.png` — versión positiva (para fondo claro, navbar)
 - `Logo Sisteco Negativo-01.png` — versión negativa (para fondo oscuro, footer)
 - En navbar: altura fija `28px`, ancho auto
-- En footer: clase `.footer-logo` con altura definida
 - Wordmark: Nasalization 18px, `letter-spacing: 0.02em`, color `#111111`
+
+**Regla crítica:** **Nunca mencionar Claude/Gemini/Kimi en frontend público.** Las marcas de modelos AI no se exponen al usuario final.
 
 **Zona de exclusión del logo:** Espacio mínimo equivalente a la altura del icono en todos los lados.
 
 ---
 
-## 7. Motion y Animaciones
+## 9. Motion y Animaciones
 
 ### Easing Principal
 ```css
 --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 ```
-Se usa en todos los hover de botones, cards y nav items. Transmite energía y precisión.
+Se usa en hover de botones, cards y nav items. Transmite energía y precisión.
 
 ### Transiciones Estándar
 | Elemento | Duración | Easing |
@@ -328,28 +384,18 @@ Se usa en todos los hover de botones, cards y nav items. Transmite energía y pr
 | Nav collapse | `0.3–0.5s` | `ease` |
 | Shimmer shine | `0.7s` | `ease` |
 
-### Keyframes Definidas
+### Principios
 
-```
-bgFloat      → fondo animado lime, 20-25s, infinite, easing ease-in-out
-barGrow      → barras del chart del dashboard crecen desde 0 al valor definido
-slideInLead  → lead items entran desde la derecha con fadeIn
-floatUp      → badges flotantes del hero se elevan suavemente, infinito
-livePulse    → dot del badge "en vivo" late en escala 0.8↔1.2, 1.5s infinito
-fadeInUp     → elementos de sección aparecen desde abajo con scroll (GSAP ScrollTrigger)
-```
-
-### Principios de Animación
-1. **Propósito:** Cada animación comunica algo (datos en vivo, crecimiento, precisión). Sin decoración vacía.
-2. **Sutil en fondo, expresivo en interacción:** El animated-bg es a 4–7% opacidad. Los hover son nítidos.
-3. **`prefers-reduced-motion`:** Las animaciones infinitas deben detenerse si el usuario lo indica.
-4. **ScrollTrigger:** El `fadeInUp` de GSAP se aplica a `.section-title`, `.feature-card`, `.infra-layer`, etc. con `start: "top 85%"`.
+1. **Propósito:** Cada animación comunica algo. Sin decoración vacía.
+2. **Sutil en fondo, expresivo en interacción:** El animated-bg a 4–7% opacidad. Hover nítidos.
+3. **`prefers-reduced-motion`:** Las animaciones infinitas se detienen si el usuario lo indica.
+4. **GSAP ScrollTrigger:** `fadeInUp` aplicado a `.section-title`, `.feature-card`, etc.
 
 ---
 
-## 8. Patrones de Sección
+## 10. Patrones de Sección
 
-### Estructura Estándar de Sección
+### Estructura Estándar
 
 ```html
 <section class="[nombre]-section">
@@ -359,117 +405,136 @@ fadeInUp     → elementos de sección aparecen desde abajo con scroll (GSAP Scr
       Título con <span class="gradient-text">palabra clave</span>
     </h2>
     <p class="section-desc">Descripción de apoyo, máx. 2 líneas.</p>
-    <!-- Contenido: grid de cards, lista, etc. -->
+    <!-- Contenido -->
   </div>
 </section>
 ```
 
 - `section-label`: eyebrow en lime
-- `section-title`: Sharp Grotesk 500, con 1 fragmento en gradient-text
-- `section-desc`: Source Sans 3, `#666`, centrado, máx 600px ancho
+- `section-title`: Space Grotesk 500-600, con 1 fragmento en gradient-text
+- `section-desc`: Hanken Grotesk 400, `#666`, centrado, máx 600px ancho
 
 ### Secciones Oscuras (Dark Surface)
-Usadas para romper la monotonía de la página:
+
 - **CTA Section:** bg `#111`, texto blanco, gradient-text-light en la keyword, btn-primary lime
 - **Footer:** bg `#111`, borde superior lime sutil (`rgba(197,237,54,0.15)`)
-- **Featured testimonial card:** bg `#111` inline dentro de sección clara
-
-### Patrón de Social Proof
-- **Logos Bar:** fila horizontal de herramientas con iconos + texto, separador visual entre "Data tools" y "Channels"
-- **Testimonials:** siempre 3 cards en grid, 1 de ellas featured/dark para ancla visual
-- **Stats en CTA:** 3 métricas en fila (ícono + número grande + label)
+- **Featured testimonial card:** bg `#111` inline dentro de sección clara (solo con testimonio real)
 
 ---
 
-## 9. Responsive y Mobile
+## 11. Responsive y Mobile
 
 | Breakpoint | Comportamiento |
 |---|---|
 | `> 1024px` | 2 columnas en hero, hero-visual visible |
 | `768px – 1024px` | Hero colapsa a 1 col centrado, visual oculto |
-| `≤ 768px` | Nav collapsa a hamburger, btn-primary en nav oculto, mobile-cta visible en menú |
+| `≤ 768px` | Nav colapsa a hamburger, btn-primary en nav oculto, mobile-cta visible en menú |
 
-**Mobile-first principles:**
-- El contenido nunca se trunca — siempre colapsa a 1 columna
-- Touch targets mínimo 44px
-- El hero en mobile centra el texto y el form ocupa full width
-
----
-
-## 10. Fondo Visual Ambiental
-
-Dos capas siempre presentes en toda la app:
-
-```html
-<div class="animated-bg"></div>     <!-- glow lime flotante, position:fixed, z-index:0 -->
-<div class="grid-pattern-overlay"></div>  <!-- grid 60x60px, 2% opacidad, position:fixed -->
-```
-
-El grid pattern refuerza la sensación de "sistema técnico/infraestructura". Nunca suprimirlo en aplicaciones web. En documentos o PDFs: omitir.
+**Mobile-first:**
+- El contenido nunca se trunca — colapsa a 1 columna.
+- Touch targets mínimo 44px.
+- Hero en mobile centra texto y form ocupa full width.
 
 ---
 
-## 11. Integrations & Stack Visual
+## 12. Estructura de Comunicación
 
-Cuando se represente la arquitectura de Sisteco usar el modelo de **5 capas composables**:
+### Email de outreach (voz Felipe)
 
-```
-01 · Adquisición de Datos    → ScrapingBee, Firecrawl
-      ↓
-02 · Inteligencia AI         → Claude, Gemini, Kimi
-      ↓
-03 · Sisteco Core            → Motor de orquestación central
-      ↓
-04 · Activación              → Email, LinkedIn, WhatsApp
-      ↓
-05 · Retención               → CRM Sync, Reporting
-```
+1. Línea 1: Contexto específico de la empresa del prospecto (no genérico).
+2. Línea 2-3: Problema concreto que resuelve Sisteco para esa empresa.
+3. Línea 4: Prueba social o métrica real (cliente real con permiso).
+4. Línea 5: Un solo CTA claro y específico.
+5. Firma: Felipe — sin cargo inflado.
 
-Los números `01`–`05` usan **Nasalization** para crear coherencia con el logo. Las capas van de mayor distancia al lead (arriba) a mayor cercanía (abajo).
+### Propuesta comercial
+
+1. Problema primero (1 párrafo).
+2. Solución concreta (qué hace Sisteco, qué NO hace).
+3. Precio claro con desglose en UF + equivalente CLP del día.
+4. Próximos pasos con fecha.
+
+### Subject lines
+
+- Formato Touch 1: "Presentación entre [SDR] / [Prospecto]" — primer nombre, no completo.
+- Nunca clickbait, nunca emoji en formal.
 
 ---
 
-## 12. Do's & Don'ts
+## 13. Do's & Don'ts
 
 ### Colores
 ```
-✅ DO    Usar lime solo como acento en botones, badges, highlights y métricas clave
-✅ DO    Usar #111 como fondo en secciones de alto impacto (CTA, footer)
-✅ DO    Usar gradient-text en exactamente 1–2 palabras de cada heading de sección
-❌ DON'T Usar lime como color de fondo en superficies grandes
-❌ DON'T Combinar más de 2 colores de acento distintos en la misma pantalla
-❌ DON'T Usar colores fuera de la paleta definida (ej: azul, rojo, naranja) salvo en logos de terceros
+✅ Lime como acento en botones, badges, highlights y métricas reales
+✅ #111 como fondo en secciones de alto impacto (CTA, footer)
+✅ gradient-text en 1-2 palabras clave de cada heading
+❌ Lime como fondo de superficies grandes
+❌ Más de 2 colores de acento en la misma pantalla
+❌ Colores fuera de paleta (azul, rojo, naranja) salvo logos terceros
 ```
 
 ### Tipografía
 ```
-✅ DO    Sharp Grotesk para todos los headings, botones y labels
-✅ DO    Nasalization exclusivamente para el wordmark "Sisteco"
-✅ DO    Métricas grandes (KPIs) en peso 700 para máximo impacto
-❌ DON'T Usar Nasalization en texto corrido o headings de sección
-❌ DON'T Mezclar más de 2 familias tipográficas en la misma pantalla
-❌ DON'T Texto en lime sobre fondo blanco (ratio de contraste insuficiente)
-```
-
-### Logo
-```
-✅ DO    Logo positivo (con background) en fondos claros
-✅ DO    Logo negativo en footer y fondos oscuros
-✅ DO    Zona de exclusión ≥ altura del icono en todos los lados
-❌ DON'T Distorsionar proporciones del logo
-❌ DON'T Colocar el logo sobre fondos muy texturizados sin zona limpia
-❌ DON'T Usar el logo en colores que no sean los originales
+✅ Space Grotesk para headings, botones y labels
+✅ Hanken Grotesk para body, párrafos y UI
+✅ Self-host WOFF2 — Ley 21.719 prohíbe Google Fonts CDN
+✅ Nasalization exclusivamente para wordmark "Sisteco"
+❌ Nasalization en texto corrido o headings de sección
+❌ Mezclar más de 2 familias en la misma pantalla
+❌ Texto en lime sobre fondo blanco (contraste insuficiente)
 ```
 
 ### Voz
 ```
-✅ DO    Métricas específicas: "10x más leads en 30 días"
-✅ DO    Beneficio antes que feature: "Tu equipo solo habla con quien quiere comprar"
-✅ DO    CTAs con verbo de acción: "Comenzar prueba gratuita", "Ver cómo funciona"
-❌ DON'T Promesas vagas: "Solución integral para el crecimiento"
-❌ DON'T Jargon técnico sin contexto: "ML pipeline orchestration"
-❌ DON'T CTAs pasivos: "Más información", "Saber más"
+✅ Métricas con fuente real verificable
+✅ Beneficio antes que feature: "Tu equipo solo recibe prospectos calificados"
+✅ CTAs con verbo de acción: "Empieza con Junior", "Conversemos"
+✅ "Ley 21.719" siempre en contexto compliance
+✅ UF como precio primario
+✅ es-CL (chileno), tuteo profesional
+❌ Métricas inventadas (10x, 5x, "500+ leads", "40%")
+❌ Promesas de resultado vagas ("solución integral")
+❌ "GDPR compliant" / "SaaS" / "platform" / "lead" como sinónimo único
+❌ Nombres de modelos AI (Claude/Gemini/Kimi) en frontend público
+❌ Planes deprecados (Base/Crecimiento/Enterprise/Consultoría)
 ```
+
+### Logo
+```
+✅ Logo positivo en fondos claros, negativo en oscuros
+✅ Zona de exclusión ≥ altura del icono en todos los lados
+❌ Distorsionar proporciones
+❌ Colores que no sean los originales
+```
+
+---
+
+## 14. Origen de Recursos Físicos (Source of Truth)
+
+| Recurso | Tipo | Ubicación Base |
+|---|---|---|
+| **Nasalization** | Fuente (OTF) | `Landing Page/assets/logos/Nasalization Rg.otf` |
+| **Space Grotesk** | Fuente (WOFF2 variable) | `Landing Page/assets/fonts/SpaceGrotesk-Variable.woff2` (SIL OFL 1.1) |
+| **Hanken Grotesk** | Fuente (WOFF2 variable) | `Landing Page/assets/fonts/HankenGrotesk-Variable.woff2` (SIL OFL 1.1) |
+| **Logo positivo** | PNG | `Landing Page/assets/logos/Logo Sisteco-01.png` |
+| **Logo negativo** | PNG | `Landing Page/assets/logos/Logo Sisteco Negativo-01.png` |
+| **Icono favicon** | PNG | `Landing Page/pngiconosisteco.png` |
+
+> **Instrucción para agentes:** Al inicializar nuevos proyectos web, copiar estos archivos originales desde sus ubicaciones hacia el subdirectorio de assets del nuevo proyecto (`/assets/fonts/`, `/assets/logos/`) antes de renderizar la UI. **Nunca cargar fuentes desde Google Fonts CDN** — viola Ley 21.719.
+
+---
+
+## 15. Datos de Contacto Oficial
+
+| Canal | Valor |
+|---|---|
+| Email | contacto@sisteco.cl |
+| Teléfono | +56 9 40065566 |
+| Dirección | Las Condes, Santiago |
+| Web | sisteco.cl |
+| Demo | cal.com/sisteco/demo |
+| Conversación comercial | cal.com/sisteco/ventas |
+| LinkedIn | linkedin.com/company/sisteco |
 
 ---
 
@@ -487,8 +552,8 @@ Los números `01`–`05` usan **Nasalization** para crear coherencia con el logo
 --color-border:       #e5e5e5;
 
 /* ── TYPOGRAPHY ──────────────────────── */
---font-heading: 'Sharp Grotesk', sans-serif;
---font-body:    'Source Sans 3', sans-serif;
+--font-heading: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+--font-body:    'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
 /* Nasalization solo en logo-text */
 
 /* ── SPACING / RADIUS ────────────────── */
@@ -503,4 +568,9 @@ Los números `01`–`05` usan **Nasalization** para crear coherencia con el logo
 
 ---
 
-*Estas guidelines se derivan de la implementación real de la landing page de Sisteco (v1, febrero 2026). Actualizar este documento ante cualquier cambio mayor en el sistema de diseño.*
+## Changelog
+
+- **v2.0 — 2026-04-23:** Reescrito desde cero. Alinea con pivote workflows-first (servicio operado, no SaaS). Nueva nomenclatura de planes (Junior/Senior/Manager). Tipografía migrada a Space Grotesk + Hanken Grotesk (decisión 2026-04-23). Cambia "GDPR compliant" → "Ley 21.719". Elimina métricas inventadas. Ajusta idioma a es-CL. Cal.com canónico actualizado a `sisteco/demo` y `sisteco/ventas`.
+- **v1.0 — feb 2026:** Versión inicial alineada con posicionamiento "B2B Sales Infrastructure". Deprecada por cambio de modelo de negocio.
+
+*Fuente autoritativa para toda comunicación visual y verbal de Sisteco. Actualizar este documento ante cualquier cambio mayor en posicionamiento o sistema de diseño.*

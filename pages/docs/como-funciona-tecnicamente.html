@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentacion Tecnica — Como Funciona Sisteco | Motor de Scoring IA, Arquitectura Reactiva, Ley 21.719</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/pages.css">
+    <link rel="stylesheet" href="/css/seo-pages.css">
+    <meta name="description"
+        content="Documentacion tecnica de Sisteco: motor de scoring de 100 puntos con IA, arquitectura agentica reactiva, integracion SII, y compliance Ley 21.719 con Privacy by Design. Para ingenieros, CTOs y equipos tecnicos.">
+    <link rel="icon" type="image/png" href="/assets/logos/sisteco-icon.png">
+    <meta property="og:title" content="Documentacion Tecnica — Como Funciona Sisteco">
+    <meta property="og:description" content="Arquitectura tecnica: scoring IA de 100 puntos, capa de workflows agentica, base de datos reactiva, integracion SII, Privacy by Design para Ley 21.719.">
+    <meta property="og:type" content="article">
+    <link rel="canonical" href="https://sisteco.cl/docs/como-funciona-tecnicamente">
+    <meta property="og:url" content="https://sisteco.cl/docs/como-funciona-tecnicamente">
+    <meta property="og:image" content="https://sisteco.cl/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Documentacion Tecnica — Como Funciona Sisteco">
+    <meta name="twitter:description" content="Arquitectura tecnica: scoring IA 100 pts, workflows agenticos, base de datos reactiva, SII, Ley 21.719.">
+    <meta name="twitter:image" content="https://sisteco.cl/assets/og-image.png">
+    <!-- Fonts: self-hosted via style.css (Ley 21.719) -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Como Funciona Sisteco: Documentacion Tecnica del Motor de Scoring, Arquitectura y Compliance",
+      "description": "Documentacion tecnica detallada del motor de scoring de 100 puntos, la arquitectura agentica reactiva, la integracion con el SII, y el framework de compliance Ley 21.719.",
+      "author": {"@type": "Organization", "name": "Sisteco", "url": "https://sisteco.cl"},
+      "publisher": {"@type": "Organization", "name": "Sisteco", "url": "https://sisteco.cl", "logo": {"@type": "ImageObject", "url": "https://sisteco.cl/assets/logos/sisteco-icon.png"}},
+      "datePublished": "2026-04-07",
+      "dateModified": "2026-04-25",
+      "mainEntityOfPage": "https://sisteco.cl/docs/como-funciona-tecnicamente",
+      "about": [
+        {"@type": "Thing", "name": "Lead Scoring con IA"},
+        {"@type": "Thing", "name": "Workflow automation"},
+        {"@type": "Thing", "name": "Base de datos reactiva"},
+        {"@type": "Thing", "name": "Ley 21.719 compliance"},
+        {"@type": "Thing", "name": "Privacy by Design"}
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://sisteco.cl/"},
+        {"@type": "ListItem", "position": 2, "name": "Documentacion", "item": "https://sisteco.cl/docs"},
+        {"@type": "ListItem", "position": 3, "name": "Como Funciona Tecnicamente", "item": "https://sisteco.cl/docs/como-funciona-tecnicamente"}
+      ]
+    }
+    </script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo navbar-item">
+                <img src="/assets/logos/sisteco-icon.png" alt="Sisteco Logo" width="28" height="28">
+                <span class="logo-text">Sisteco</span>
+            </a>
+            <div class="nav-links">
+                <a href="/pages/vision.html" class="btn btn-ghost navbar-item">Vision</a>
+                <a href="/soluciones" class="btn btn-ghost navbar-item">Soluciones</a>
+                <a href="/como-funciona" class="btn btn-ghost navbar-item">Infraestructura</a>
+                <a href="/precios" class="btn btn-ghost navbar-item">Precios</a>
+            </div>
+            <a href="/#hero" class="btn btn-primary navbar-item">Empezar ahora</a>
+            <button class="hamburger" aria-label="Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="page-hero seo-hero docs-hero">
+        <div class="seo-hero-bg" aria-hidden="true">
+            <div class="seo-orb seo-orb-1"></div>
+            <div class="seo-orb seo-orb-2"></div>
+        </div>
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="/">Inicio</a>
+                <span>/</span>
+                <span>Documentacion Tecnica</span>
+            </div>
+            <h1 class="page-hero-title">Como Funciona Sisteco: Documentacion Tecnica</h1>
+            <p class="page-hero-subtitle">Arquitectura del motor de scoring de 100 puntos, capa de workflows agentica, base de datos reactiva, datos del SII, y framework de compliance Ley 21.719. Para ingenieros, CTOs y equipos que evaluan la plataforma.</p>
+        </div>
+    </section>
+
+    <!-- Video -->
+    <section class="seo-video-section">
+        <div class="container">
+            <div class="video-embed-wrapper" data-gsap="fade-up">
+                <div class="video-placeholder">
+                    <i data-lucide="play-circle" aria-hidden="true"></i>
+                    <p>Video: Arquitectura tecnica de Sisteco en 10 minutos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOC -->
+    <section class="seo-section docs-toc-section">
+        <div class="container">
+            <div class="docs-toc" data-gsap="fade-up">
+                <h2>Indice</h2>
+                <ol>
+                    <li><a href="#arquitectura">Arquitectura General</a></li>
+                    <li><a href="#scoring">Motor de Scoring de 100 Puntos</a></li>
+                    <li><a href="#workflows-datos">Capa de Workflows + Base de Datos Reactiva</a></li>
+                    <li><a href="#sii">Integracion con el SII</a></li>
+                    <li><a href="#compliance">Framework de Compliance Ley 21.719</a></li>
+                    <li><a href="#seguridad">Arquitectura de Seguridad</a></li>
+                    <li><a href="#stack">Stack Tecnologico Completo</a></li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- 1. Arquitectura General -->
+    <section class="seo-section" id="arquitectura">
+        <div class="container">
+            <div class="docs-content" data-gsap="fade-up">
+                <span class="seo-label">Seccion 1</span>
+                <h2>Arquitectura General</h2>
+                <p>Sisteco opera como un servicio de automatizacion de ventas B2B (Service-as-a-Software). La arquitectura se organiza en 5 capas independientes que se comunican a traves de eventos y HTTP actions:</p>
+
+                <div class="docs-architecture">
+                    <div class="docs-layer">
+                        <h3>Capa 1: Captura de Datos</h3>
+                        <p>Responsable de la extraccion de leads desde multiples fuentes. Opera mediante un orquestador de workflows propietario self-hosted que se ejecuta en horarios programados o bajo demanda.</p>
+                        <ul>
+                            <li><strong>Automatizacion de LinkedIn</strong>: Un motor propietario ejecuta busquedas de LinkedIn Sales Navigator segun el ICP definido por el cliente. Los resultados se parsean y normalizan en un formato estandar de lead, con monitoreo de limites para evitar suspensiones de cuenta.</li>
+                            <li><strong>Web Scraping</strong>: Un motor de web scraping extrae informacion de sitios web de empresas objetivo: pagina de equipo, sobre nosotros, stack tecnologico, blog.</li>
+                            <li><strong>SII Enrichment</strong>: Consulta al Servicio de Impuestos Internos para validar RUT, obtener tamano real de empresa, actividad economica y estado tributario. (Ver seccion 4).</li>
+                            <li><strong>Normalizacion</strong>: Todos los datos se unifican en un schema de Convex (ver seccion 3) con campos estandar: nombre, empresa, cargo, email, telefono, fuente, fecha de captura, y metadata de enriquecimiento.</li>
+                        </ul>
+                    </div>
+
+                    <div class="docs-layer">
+                        <h3>Capa 2: Inteligencia y Scoring</h3>
+                        <p>El motor de scoring asigna un puntaje de 0 a 100 a cada lead. Usa un modelo de lenguaje optimizado para latencia y costo que evalua dos dimensiones con pesos iguales. (Ver seccion 2 para el detalle completo del algoritmo).</p>
+                    </div>
+
+                    <div class="docs-layer">
+                        <h3>Capa 3: Personalizacion con IA</h3>
+                        <p>Cada lead con score >= 40 (B o superior) pasa por un pipeline de personalizacion:</p>
+                        <ul>
+                            <li>Se lee la web real de la empresa del prospecto via web scraping</li>
+                            <li>Se extrae contexto relevante: servicios, tamano, industria, noticias recientes</li>
+                            <li>Un modelo de lenguaje genera un email personalizado basado en el contexto real — no es una plantilla con campos reemplazados</li>
+                            <li>Se genera la secuencia completa de 5 emails con variaciones de asunto y angulo</li>
+                        </ul>
+                    </div>
+
+                    <div class="docs-layer">
+                        <h3>Capa 4: Orquestacion Multi-Canal</h3>
+                        <p>La secuencia de contacto se ejecuta a traves de multiples canales segun el plan del cliente:</p>
+                        <ul>
+                            <li><strong>Email</strong>: Resend como proveedor transaccional. Secuencias de 5 emails en 35 dias con envio a las 9 AM CLT.</li>
+                            <li><strong>LinkedIn</strong>: Solicitudes de conexion y mensajes InMail automatizados via el motor propietario de automatizacion.</li>
+                            <li><strong>WhatsApp Business API</strong>: Mensajes directos para leads S (add-on).</li>
+                            <li><strong>Slack</strong>: Alertas internas al equipo del cliente cuando un lead responde.</li>
+                            <li><strong>Instagram DM</strong>: Para perfiles B2C-adjacent (add-on).</li>
+                        </ul>
+                        <p>El motor de ruteo decide el canal basado en: score del lead, interacciones previas, canal preferido detectado, y disponibilidad del canal en el plan del cliente.</p>
+                    </div>
+
+                    <div class="docs-layer">
+                        <h3>Capa 5: Analytics y Feedback Loop</h3>
+                        <p>Metricas en tiempo real se almacenan en Convex y se presentan en un dashboard multi-tenant:</p>
+                        <ul>
+                            <li>Tasas de apertura, click, respuesta y conversion por campana</li>
+                            <li>Heatmap de mejor horario de envio por industria</li>
+                            <li>Score distribution y evolucion temporal</li>
+                            <li>Pipeline value estimado basado en scores y tasas de conversion historicas</li>
+                        </ul>
+                        <p>Los datos de respuesta alimentan el modelo de scoring para mejorar las predicciones con el tiempo (feedback loop).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Motor de Scoring -->
+    <section class="seo-section seo-section--alt" id="scoring">
+        <div class="container">
+            <div class="docs-content" data-gsap="fade-up">
+                <span class="seo-label">Seccion 2</span>
+                <h2>Motor de Scoring de 100 Puntos</h2>
+                <p>El motor de scoring es el componente central de la inteligencia de Sisteco. Evalua cada lead en una escala de 0 a 100 puntos, distribuidos en dos dimensiones de 50 puntos cada una.</p>
+
+                <h3>Dimension 1: Perfil del Decisor (0-50 puntos)</h3>
+                <p>Evalua la persona individual como tomador de decision potencial.</p>
+
+                <div class="docs-scoring-detail">
+                    <h4>1.1 Nivel jerarquico y cargo (0-15 pts)</h4>
+                    <p>C-Level (CEO, CTO, CFO, COO): 15 pts. VP/Director: 12 pts. Gerente: 9 pts. Jefe de area: 6 pts. Coordinador/Analista: 3 pts. Sin cargo claro: 0 pts.</p>
+                    <p><em>Logica</em>: Los niveles mas altos tienen mayor capacidad de decision y presupuesto. En empresas chilenas medianas, la decision de compra para un servicio de automatizacion de ventas tipicamente reside en la gerencia comercial o general.</p>
+
+                    <h4>1.2 Antiguedad en el cargo (0-10 pts)</h4>
+                    <p>0-6 meses: 10 pts. 6-12 meses: 8 pts. 1-2 anos: 6 pts. 2-5 anos: 4 pts. 5+ anos: 2 pts.</p>
+                    <p><em>Logica</em>: Los ejecutivos nuevos en su cargo tienen mayor propension a implementar cambios y justificar nuevas inversiones. Es una senal de timing fuerte.</p>
+
+                    <h4>1.3 Actividad digital (0-10 pts)</h4>
+                    <p>Se evalua presencia y actividad en LinkedIn: frecuencia de publicaciones, engagement con contenido de la industria, participacion en grupos relevantes, y completitud del perfil.</p>
+                    <p>Perfil activo + contenido reciente: 10 pts. Perfil completo pero inactivo: 5 pts. Perfil minimo: 2 pts. Sin perfil: 0 pts.</p>
+
+                    <h4>1.4 Match con ICP (0-15 pts)</h4>
+                    <p>Compara el perfil del lead con el Ideal Customer Profile definido por el cliente. Evalua: industria, tamano de empresa, cargo objetivo, y ubicacion geografica.</p>
+                    <p>Match completo en 4/4 criterios: 15 pts. 3/4: 11 pts. 2/4: 7 pts. 1/4: 3 pts. 0/4: 0 pts.</p>
+                </div>
+
+                <h3>Dimension 2: Senales de Empresa (0-50 puntos)</h3>
+                <p>Evalua la empresa como organizacion y su propension a comprar.</p>
+
+                <div class="docs-scoring-detail">
+                    <h4>2.1 Datos del SII (0-20 pts)</h4>
+                    <p>Esta es la ventaja competitiva clave. Consultamos el Servicio de Impuestos Internos de Chile para obtener datos reales:</p>
+                    <ul>
+                        <li><strong>RUT valido y empresa activa</strong>: 5 pts (requisito base)</li>
+                        <li><strong>Tamano por trabajadores</strong>: 50-100: 3 pts, 100-500: 5 pts, 500+: 4 pts (la ventana de 100-500 es nuestro ICP ideal)</li>
+                        <li><strong>Actividad economica compatible</strong>: Match con industrias objetivo: 5 pts</li>
+                        <li><strong>Estado tributario al dia</strong>: 5 pts (indicador de salud financiera)</li>
+                    </ul>
+                    <p><em>Por que 20 puntos (el peso mas alto)</em>: Los datos del SII son los mas confiables disponibles en Chile. A diferencia de LinkedIn o bases de datos privadas, son datos declarados legalmente. Ningun otro proveedor de lead scoring en Chile o el extranjero utiliza esta fuente.</p>
+
+                    <h4>2.2 Senales de crecimiento (0-10 pts)</h4>
+                    <p>Detectamos senales de crecimiento a traves de web scraping y monitoreo de fuentes publicas:</p>
+                    <ul>
+                        <li>Contrataciones recientes en LinkedIn (especialmente ventas/marketing): 0-4 pts</li>
+                        <li>Expansion (nuevas oficinas, nuevos mercados): 0-3 pts</li>
+                        <li>Presencia en noticias positivas (premios, alianzas): 0-3 pts</li>
+                    </ul>
+
+                    <h4>2.3 Stack tecnologico (0-10 pts)</h4>
+                    <p>Analizamos el stack tecnologico de la empresa para evaluar madurez digital:</p>
+                    <ul>
+                        <li>Usa CRM (HubSpot, Pipedrive, Salesforce): 3 pts (indica madurez en ventas)</li>
+                        <li>Tiene presencia web profesional: 2 pts</li>
+                        <li>Usa herramientas de marketing digital: 3 pts</li>
+                        <li>Tiene blog o contenido activo: 2 pts</li>
+                    </ul>
+
+                    <h4>2.4 Timing (0-10 pts)</h4>
+                    <p>Senales de que la empresa esta en un momento propicio para comprar:</p>
+                    <ul>
+                        <li>Cambio reciente de liderazgo (nuevo CEO, VP Sales): 0-4 pts</li>
+                        <li>Ronda de financiamiento reciente: 0-3 pts</li>
+                        <li>Licitacion publica relevante: 0-3 pts</li>
+                    </ul>
+                </div>
+
+                <h3>Clasificacion por Score</h3>
+                <div class="docs-classification">
+                    <p><strong>S (80-100)</strong>: Alta probabilidad de conversion. El equipo de ventas debe contactar dentro de 24 horas. Se activa alerta inmediata en Slack.</p>
+                    <p><strong>A (60-79)</strong>: Buen prospecto. Se activa secuencia de email personalizada. Follow-up en 1-2 semanas si no hay respuesta.</p>
+                    <p><strong>B (40-59)</strong>: Potencial a mediano plazo. Se incluye en campana de contenido y se monitorean cambios de senales.</p>
+                    <p><strong>C (&lt;40)</strong>: No invertir recursos. La empresa no calza con el ICP, no tiene presupuesto, o la industria es incompatible.</p>
+                </div>
+
+                <h3>Modelo de IA</h3>
+                <p>El scoring utiliza un <strong>modelo de lenguaje optimizado para latencia y costo</strong> como motor de inferencia. Los criterios de seleccion del modelo son:</p>
+                <ul>
+                    <li><strong>Latencia</strong>: Permite scoring en tiempo real (&lt;2 segundos por lead)</li>
+                    <li><strong>Costo</strong>: Ordenes de magnitud mas barato que modelos frontier, critico para scoring de alto volumen</li>
+                    <li><strong>Contexto</strong>: Suficiente ventana de contexto para procesar el perfil del lead + datos de empresa + ICP</li>
+                    <li><strong>Consistencia</strong>: Resultados reproducibles con mismos inputs, importante para auditar el scoring</li>
+                </ul>
+                <p>El modelo recibe un prompt estructurado con los datos del lead, los pesos definidos, y retorna el puntaje con justificacion por cada dimension. La justificacion se almacena para trazabilidad y cumplimiento de la Ley 21.719. La eleccion del modelo se revisa periodicamente y puede cambiar conforme evoluciona el estado del arte.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Workflows + Datos -->
+    <section class="seo-section" id="workflows-datos">
+        <div class="container">
+            <div class="docs-content" data-gsap="fade-up">
+                <span class="seo-label">Seccion 3</span>
+                <h2>Capa de Workflows + Base de Datos Reactiva</h2>
+
+                <h3>Orquestador de Workflows Propietario</h3>
+                <p>Sisteco opera un orquestador de workflows self-hosted en infraestructura propia. Esto da control total sobre la ejecucion, los datos y los limites de cuota.</p>
+                <ul>
+                    <li><strong>Self-hosted</strong>: Los datos nunca salen de la infraestructura controlada por Sisteco.</li>
+                    <li><strong>Workflows como producto</strong>: Cada capacidad agentica (prospeccion, scoring, email, retencion) es un workflow versionado. Los templates son el producto vendible.</li>
+                    <li><strong>Catalogo de templates</strong>: 11 templates (T1-T11) organizados por plan. Base: LinkedIn + ICP Score + SII. Crecimiento: + Sales Navigator + CRM directo.</li>
+                </ul>
+
+                <h3>Convex: Base de Datos Reactiva</h3>
+                <p>Convex es una base de datos reactiva en la nube que sirve como sistema de registro central para todos los leads, scores, y estado de campanas.</p>
+                <ul>
+                    <li><strong>Schema tipado</strong>: Definido en TypeScript (<code>convex/schema.ts</code>). Cada campo tiene tipo, validacion, y documentacion.</li>
+                    <li><strong>Queries reactivas</strong>: El dashboard se actualiza en tiempo real cuando un lead cambia de estado. Sin polling.</li>
+                    <li><strong>Mutations atomicas</strong>: Las escrituras son transaccionales. Un lead nunca queda en estado inconsistente.</li>
+                    <li><strong>Actions para side effects</strong>: Llamadas a APIs externas (SII, modelos de IA, email transaccional) se ejecutan como actions con retry automatico.</li>
+                </ul>
+
+                <h3>Patron de Comunicacion Workflows-Datos</h3>
+                <p>El orquestador se comunica con Convex exclusivamente a traves de HTTP actions en el gateway de Convex. Patron critico:</p>
+                <ul>
+                    <li>Endpoint: <code>*.convex.site</code> (HTTP actions)</li>
+                    <li><strong>Nunca</strong> se usa <code>/api/*</code> para HTTP actions desde el orquestador</li>
+                    <li>Autenticacion via token JWT en header Authorization</li>
+                    <li>Payloads en JSON con schema validado en ambos lados</li>
+                </ul>
+                <p>Este patron garantiza que la capa de workflows y la base de datos estan desacopladas: si el orquestador se cae, los datos en Convex estan intactos. Si Convex tiene downtime, el orquestador encola los requests.</p>
+
+                <h3>Flujo de Datos Tipico</h3>
+                <ol>
+                    <li>El orquestador ejecuta workflow de prospeccion (extraccion + enriquecimiento web)</li>
+                    <li>Leads normalizados se envian a Convex via HTTP action POST</li>
+                    <li>Convex mutation almacena el lead y dispara un trigger interno</li>
+                    <li>El orquestador recibe webhook de "nuevo lead" y ejecuta workflow de scoring</li>
+                    <li>Scoring (modelo de IA optimizado) se ejecuta como action del workflow</li>
+                    <li>Score + justificacion se guardan en Convex via HTTP action PATCH</li>
+                    <li>Dashboard reactivo muestra el nuevo lead con score en tiempo real</li>
+                    <li>Si score &gt;= 80 (S), Convex dispara alerta a Slack via action</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SII -->
+    <section class="seo-section seo-section--alt" id="sii">
+        <div class="container">
+            <div class="docs-content" data-gsap="fade-up">
+                <span class="seo-label">Seccion 4</span>
+                <h2>Integracion con el SII (Servicio de Impuestos Internos)</h2>
+
+                <h3>Que datos obtenemos</h3>
+                <p>El SII es la autoridad tributaria de Chile. A traves de consultas a sus portales publicos, Sisteco obtiene:</p>
+                <ul>
+                    <li><strong>Validacion de RUT</strong>: Confirmamos que el RUT existe, esta activo, y corresponde a la empresa declarada</li>
+                    <li><strong>Razon social</strong>: Nombre legal completo de la empresa</li>
+                    <li><strong>Actividad economica</strong>: Codigo y descripcion del rubro declarado ante el SII</li>
+                    <li><strong>Tamano de empresa</strong>: Clasificacion por numero de trabajadores reportados (micro, pequena, mediana, grande)</li>
+                    <li><strong>Estado tributario</strong>: Si la empresa esta al dia con sus obligaciones o tiene anotaciones</li>
+                    <li><strong>Fecha de inicio de actividades</strong>: Antiguedad real de la empresa</li>
+                </ul>
+
+                <h3>Por que los datos del SII son superiores</h3>
+                <p>Los datos del SII son <strong>declarados legalmente</strong>. A diferencia de LinkedIn (auto-reportado), bases de datos privadas (estimaciones), o scraping web (desactualizado), los datos del SII reflejan la realidad fiscal de la empresa:</p>
+                <ul>
+                    <li>El numero de trabajadores es el reportado para cotizaciones previsionales — no una estimacion</li>
+                    <li>La actividad economica es la declarada para efectos tributarios — no una categoria de LinkedIn</li>
+                    <li>El estado tributario es un indicador directo de salud financiera que ningun otro lead scoring considera</li>
+                </ul>
+                <p>Ningun competidor internacional (Apollo, ZoomInfo, Instantly, Clay, HubSpot) tiene acceso a estos datos porque son especificos del sistema tributario chileno.</p>
+
+                <h3>Aspectos legales de la consulta</h3>
+                <p>Todos los datos que Sisteco consulta del SII son de acceso publico a traves de los portales del servicio. No se accede a informacion tributaria privada ni a declaraciones de renta. El proceso cumple con la Ley 21.719 porque:</p>
+                <ul>
+                    <li>Los datos consultados son publicos y de libre acceso</li>
+                    <li>Se procesan bajo la base legal de interes legitimo en contexto B2B</li>
+                    <li>Se documentan en el RAT como parte del flujo de enriquecimiento</li>
+                    <li>El titular tiene derecho a solicitar la eliminacion de sus datos en cualquier momento</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Compliance -->
+    <section class="seo-section" id="compliance">
+        <div class="container">
+            <div class="docs-content" data-gsap="fade-up">
+                <span class="seo-label">Seccion 5</span>
+                <h2>Framework de Compliance Ley 21.719</h2>
+                <p>La Ley 21.719 de Proteccion de Datos Personales de Chile entra en vigencia en diciembre 2026. Sisteco fue disenado con un framework de compliance que cubre 6 pilares:</p>
+
+                <h3>Pilar 1: Privacy by Design</h3>
+                <p>La proteccion de datos se incorpora desde el diseno de la arquitectura, no como un parche posterior. Cada nuevo flujo de datos, cada nuevo campo en el schema, y cada nueva integracion pasa por una evaluacion de impacto en privacidad antes de implementarse.</p>
+
+                <h3>Pilar 2: Base Legal Documentada</h3>
+                <p>Cada tratamiento de datos tiene una base legal clara y documentada:</p>
+                <ul>
+                    <li><strong>Datos publicos del SII</strong>: Interes legitimo (Art. 13 Ley 21.719) — datos de acceso publico para fines de evaluacion comercial</li>
+                    <li><strong>Datos de LinkedIn</strong>: Interes legitimo + datos manifiestamente publicos (perfiles profesionales publicados por el titular)</li>
+                    <li><strong>Email de contacto</strong>: Interes legitimo en contexto B2B (comunicacion comercial relevante al cargo del titular)</li>
+                    <li><strong>Scoring con IA</strong>: Interes legitimo + EIPD realizada + derecho a intervencion humana garantizado</li>
+                </ul>
+
+                <h3>Pilar 3: Registro de Actividades de Tratamiento (RAT)</h3>
+                <p>Sisteco mantiene un RAT completo que documenta para cada flujo de datos:</p>
+                <ul>
+                    <li>Responsable del tratamiento</li>
+                    <li>Finalidad del tratamiento</li>
+                    <li>Categorias de datos procesados</li>
+                    <li>Base legal aplicable</li>
+                    <li>Destinatarios de los datos</li>
+                    <li>Transferencias internacionales (si aplica)</li>
+                    <li>Plazos de retencion</li>
+                    <li>Medidas de seguridad implementadas</li>
+                </ul>
+
+                <h3>Pilar 4: EIPD para Scoring con IA</h3>
+                <p>La Evaluacion de Impacto en Proteccion de Datos (EIPD) es obligatoria cuando se usan decisiones automatizadas que afectan a personas. Nuestra EIPD para el motor de scoring cubre:</p>
+                <ul>
+                    <li><strong>Descripcion del tratamiento</strong>: Que datos se procesan, como se ponderan, que modelo de IA se usa</li>
+                    <li><strong>Evaluacion de necesidad y proporcionalidad</strong>: Por que necesitamos scoring automatizado y por que cada dato es necesario</li>
+                    <li><strong>Evaluacion de riesgos</strong>: Riesgos de discriminacion, sesgos del modelo, datos incorrectos</li>
+                    <li><strong>Medidas de mitigacion</strong>: Justificacion almacenada por cada score, derecho a revision humana, auditoria periodica del modelo</li>
+                    <li><strong>Garantia de no discriminacion</strong>: El scoring no usa datos sensibles (genero, edad, etnia, religion)</li>
+                </ul>
+
+                <h3>Pilar 5: Derechos ARCO</h3>
+                <p>Sisteco garantiza los derechos ARCO del titular:</p>
+                <ul>
+                    <li><strong>Acceso</strong>: El titular puede solicitar todos sus datos en formato estructurado. Entrega en 24 horas.</li>
+                    <li><strong>Rectificacion</strong>: El titular puede solicitar correccion de datos incorrectos.</li>
+                    <li><strong>Cancelacion</strong>: El titular puede solicitar eliminacion completa de sus datos de todos los sistemas.</li>
+                    <li><strong>Oposicion</strong>: El titular puede oponerse al tratamiento. Se implementa opt-out automatico en cada comunicacion.</li>
+                </ul>
+
+                <h3>Pilar 6: Seguridad Tecnica</h3>
+                <p>Ver seccion 6 para el detalle completo de la arquitectura de seguridad.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Seguridad -->
+    <section class="seo-section seo-section--alt" id="seguridad">
+        <div class="container">
+            <div class="docs-content" data-gsap="fade-up">
+                <span class="seo-label">Seccion 6</span>
+                <h2>Arquitectura de Seguridad</h2>
+
+                <h3>Autenticacion y Autorizacion</h3>
+                <ul>
+                    <li><strong>Clerk</strong> como proveedor de autenticacion: Email + Google OAuth</li>
+                    <li>JWT tokens con template "convex" (audience: "convex", incluye org_id)</li>
+                    <li>MFA habilitado para cuentas de administrador</li>
+                    <li>Sesiones con expiracion y refresh token seguro</li>
+                </ul>
+
+                <h3>Encriptacion</h3>
+                <ul>
+                    <li><strong>En transito</strong>: TLS 1.3 en todas las comunicaciones</li>
+                    <li><strong>En reposo</strong>: Encriptacion AES-256 en Convex (managed)</li>
+                    <li><strong>Credenciales</strong>: Variables de entorno, nunca en codigo fuente</li>
+                </ul>
+
+                <h3>Headers de Seguridad HTTP</h3>
+                <ul>
+                    <li><code>X-Content-Type-Options: nosniff</code></li>
+                    <li><code>X-Frame-Options: DENY</code></li>
+                    <li><code>X-XSS-Protection: 1; mode=block</code></li>
+                    <li><code>Referrer-Policy: strict-origin-when-cross-origin</code></li>
+                    <li><code>Permissions-Policy: camera=(), microphone=(), geolocation=()</code></li>
+                    <li>Content Security Policy con whitelist estricto</li>
+                </ul>
+
+                <h3>Analytics Privados</h3>
+                <ul>
+                    <li><strong>PostHog EU (Frankfurt)</strong>: Datos de analytics procesados en la UE</li>
+                    <li>IP anonimizada por defecto (<code>ip: false</code>)</li>
+                    <li>Opt-out de captura por defecto (<code>opt_out_capturing_by_default: true</code>)</li>
+                    <li>Session recording con masking de inputs</li>
+                    <li>Solo person profiles para usuarios identificados</li>
+                </ul>
+
+                <h3>Infraestructura</h3>
+                <ul>
+                    <li><strong>Vercel</strong>: Hosting del frontend con edge functions</li>
+                    <li><strong>Convex</strong>: Base de datos managed con backups automaticos</li>
+                    <li><strong>Railway</strong>: orquestador de workflows self-hosted con aislamiento de red</li>
+                    <li><code>npm audit</code> periodico para dependencias</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Stack -->
+    <section class="seo-section" id="stack">
+        <div class="container">
+            <div class="docs-content" data-gsap="fade-up">
+                <span class="seo-label">Seccion 7</span>
+                <h2>Stack Tecnologico Completo</h2>
+
+                <div class="docs-stack-grid">
+                    <div class="docs-stack-category">
+                        <h3>Frontend</h3>
+                        <ul>
+                            <li>HTML/CSS/JS (vanilla — sin frameworks)</li>
+                            <li>GSAP 3.12.7 (animaciones + ScrollTrigger)</li>
+                            <li>Lucide 0.468.0 (iconos)</li>
+                            <li>JetBrains Mono + Sharp Grotesk + Source Sans 3 (tipografia)</li>
+                        </ul>
+                    </div>
+                    <div class="docs-stack-category">
+                        <h3>Backend</h3>
+                        <ul>
+                            <li>Node.js (scripts y serverless functions)</li>
+                            <li>Convex (base de datos reactiva)</li>
+                            <li>Vercel Serverless Functions (API endpoints)</li>
+                        </ul>
+                    </div>
+                    <div class="docs-stack-category">
+                        <h3>IA y Datos</h3>
+                        <ul>
+                            <li>Modelo de lenguaje optimizado para latencia y costo (scoring)</li>
+                            <li>Motor propietario de automatizacion LinkedIn</li>
+                            <li>Motor de web scraping</li>
+                            <li>SII (datos tributarios chilenos)</li>
+                        </ul>
+                    </div>
+                    <div class="docs-stack-category">
+                        <h3>Automatizacion</h3>
+                        <ul>
+                            <li>Orquestador de workflows propietario self-hosted</li>
+                            <li>11 templates de workflow (T1-T11)</li>
+                            <li>Cron jobs para secuencias programadas</li>
+                        </ul>
+                    </div>
+                    <div class="docs-stack-category">
+                        <h3>Comunicacion</h3>
+                        <ul>
+                            <li>Resend (email transaccional)</li>
+                            <li>WhatsApp Business API (add-on)</li>
+                            <li>Slack (alertas internas)</li>
+                        </ul>
+                    </div>
+                    <div class="docs-stack-category">
+                        <h3>Pagos y Facturacion</h3>
+                        <ul>
+                            <li>dLocal Go (tarjeta internacional)</li>
+                            <li>Reveniu (Chile — tarjeta, transferencia)</li>
+                            <li>Bsale (DTE / factura electronica)</li>
+                        </ul>
+                    </div>
+                    <div class="docs-stack-category">
+                        <h3>Auth y Seguridad</h3>
+                        <ul>
+                            <li>Clerk (Email + Google OAuth + MFA)</li>
+                            <li>JWT con template Convex</li>
+                            <li>TLS 1.3 + CSP estricto</li>
+                        </ul>
+                    </div>
+                    <div class="docs-stack-category">
+                        <h3>Analytics</h3>
+                        <ul>
+                            <li>PostHog EU (Frankfurt)</li>
+                            <li>Privacy-first: opt-out por defecto</li>
+                            <li>IP anonimizada, inputs masked</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="page-cta">
+        <div class="container">
+            <div class="cta-card" data-gsap="fade-up">
+                <h2>Prueba la infraestructura</h2>
+                <p>14 dias gratis, sin tarjeta de credito. Ve el scoring en accion con tus propios leads.</p>
+                <div class="cta-buttons">
+                    <a href="/#hero" class="btn btn-primary btn-lg">Empezar gratis</a>
+                    <a href="/precios" class="btn btn-ghost btn-lg">Ver precios</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand-inline">
+                    <img src="/assets/logos/sisteco-icon.png" alt="Sisteco" class="footer-logo" width="28" height="28">
+                    <span class="footer-tagline">Tu departamento de ventas agéntico</span>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/sisteco/" target="_blank" rel="noopener" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="mailto:contacto@sisteco.cl" aria-label="Email"><i data-lucide="mail"></i></a>
+                </div>
+            </div>
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h4>Producto</h4>
+                    <a href="/soluciones">Soluciones</a>
+                    <a href="/como-funciona">Infraestructura</a>
+                    <a href="/precios">Precios</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <a href="/pages/vision.html">Vision</a>
+                    <a href="/sobre-nosotros">Sobre nosotros</a>
+                    <a href="/contacto">Contacto</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="/privacidad">Privacidad</a>
+                    <a href="/terminos">Terminos</a>
+                    <a href="/cookies">Cookies</a>
+                    <a href="/gdpr">Ley 21.719</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <a href="mailto:contacto@sisteco.cl">contacto@sisteco.cl</a>
+                    <a href="tel:+56940065566">+56 9 40065566</a>
+                    <span class="footer-address">Av. Alonso de Cordova 5870 Of. 413, Las Condes, Santiago</span>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sisteco. Todos los derechos reservados.</p>
+                <div class="footer-bottom-links">
+                    <a href="/privacidad">Privacidad</a>
+                    <a href="/terminos">Terminos</a>
+                    <a href="/cookies">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/pages.js" defer></script>
+</body>
+
+</html>

@@ -1,0 +1,608 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "Sisteco Logo Sisteco" [ref=e4] [cursor=pointer]:
+        - /url: "#"
+        - img "Sisteco Logo" [ref=e5]
+        - generic [ref=e6]: Sisteco
+      - generic [ref=e7]:
+        - link "Visión" [ref=e8] [cursor=pointer]:
+          - /url: pages/vision.html
+        - link "Soluciones" [ref=e9] [cursor=pointer]:
+          - /url: pages/soluciones.html
+        - link "Infraestructura" [ref=e10] [cursor=pointer]:
+          - /url: pages/como-funciona.html
+        - link "Precios" [ref=e11] [cursor=pointer]:
+          - /url: pages/precios.html
+      - link "Empezar ahora" [ref=e12] [cursor=pointer]:
+        - /url: "#hero"
+  - banner [ref=e13]:
+    - generic [ref=e16]:
+      - link "La empresa agéntica de ventas B2B →" [ref=e17] [cursor=pointer]:
+        - /url: pages/vision.html
+        - img [ref=e18]
+        - text: La empresa agéntica de ventas B2B →
+      - heading "Mientras desarrollas el PRODUCTO ideal, nosotros te traemos al cliente." [level=1] [ref=e20]:
+        - generic [ref=e21]: Mientras desarrollas
+        - generic [ref=e22]:
+          - text: el
+          - emphasis [ref=e23]: PRODUCTO
+          - text: ideal,
+        - generic [ref=e24]: nosotros te traemos al cliente.
+      - paragraph [ref=e25]: Potenciamos a tu equipo de ventas B2B con leads calificados listos para cerrar. Un ecosistema de agentes que trabaja 24/7 extrayendo, investigando y verificando oportunidades reales para empresas tech.
+      - generic [ref=e26]:
+        - generic [ref=e27]:
+          - textbox "Tu correo de empresa" [ref=e28]
+          - button "Empezar ahora" [ref=e29] [cursor=pointer]
+        - generic [ref=e30]:
+          - generic [ref=e31]:
+            - img [ref=e32]
+            - generic [ref=e35]: Sin tarjeta de crédito
+          - generic [ref=e36]: ·
+          - generic [ref=e37]:
+            - img [ref=e38]
+            - generic [ref=e41]: Operativo 24/7
+          - generic [ref=e42]: ·
+          - generic [ref=e43]:
+            - img [ref=e44]
+            - generic [ref=e47]: Ley 21.719 + GDPR
+  - generic [ref=e49]:
+    - paragraph [ref=e50]: Tu stack de ventas tech, orquestado por agentes
+    - generic [ref=e51]:
+      - generic [ref=e52]:
+        - img [ref=e53]
+        - generic [ref=e56]: Email
+      - generic [ref=e57]:
+        - img [ref=e58]
+        - generic [ref=e60]: LinkedIn
+      - generic [ref=e61]:
+        - img [ref=e62]
+        - generic [ref=e64]: WhatsApp
+      - generic [ref=e65]:
+        - img [ref=e66]
+        - generic [ref=e68]: Slack
+      - generic [ref=e69]:
+        - img [ref=e70]
+        - generic [ref=e74]: Instagram
+      - generic [ref=e76]:
+        - img [ref=e77]
+        - generic [ref=e79]: HubSpot
+      - generic [ref=e80]:
+        - img [ref=e81]
+        - generic [ref=e83]: Salesforce
+      - generic [ref=e84]:
+        - img [ref=e85]
+        - generic [ref=e89]: Base de datos
+      - generic [ref=e91]:
+        - img [ref=e92]
+        - generic [ref=e100]: IA Avanzada
+      - generic [ref=e101]:
+        - img [ref=e102]
+        - generic [ref=e105]: Ley 21.719
+      - generic [ref=e106]:
+        - img [ref=e107]
+        - generic [ref=e110]: 24/7
+  - generic [ref=e112]:
+    - generic [ref=e113]: Así trabajamos por ti
+    - heading "La cascada que convierte leads tech en oportunidades reales" [level=2] [ref=e114]
+    - paragraph [ref=e115]: "Cuatro pasos que nuestros agentes ejecutan todos los días: extracción en LinkedIn, investigación de mercado, verificación del lead y entrega directa a tu CRM. Tú no configuras nada — nosotros operamos la cascada completa."
+    - generic [ref=e116]:
+      - link "Prospección con IA - Ver detalles" [ref=e117] [cursor=pointer]:
+        - /url: pages/soluciones.html#data-quality
+        - generic [ref=e118]:
+          - generic [ref=e119]:
+            - img [ref=e121]
+            - generic [ref=e124]: 01 - Prospección
+          - heading "Prospección con IA que filtra por ti" [level=3] [ref=e125]
+          - paragraph [ref=e126]: Motor de scoring de 100 puntos. Clasifica automáticamente cada prospecto en HOT, WARM, NURTURE o SKIP.
+          - generic [ref=e127]:
+            - generic [ref=e128]:
+              - img [ref=e129]
+              - generic [ref=e131]: "Scoring dual: perfil + empresa"
+            - generic [ref=e132]:
+              - img [ref=e133]
+              - generic [ref=e135]: Enriquecimiento en tiempo real
+            - generic [ref=e136]:
+              - img [ref=e137]
+              - generic [ref=e139]: Extracción automática LinkedIn + web
+          - generic [ref=e140]:
+            - generic [ref=e141]:
+              - generic [ref=e142]: 5-7x
+              - generic [ref=e143]: Más conversiones
+            - generic [ref=e144]:
+              - generic [ref=e145]: "-70%"
+              - generic [ref=e146]: Costo por lead
+        - generic [ref=e148]:
+          - generic [ref=e149]:
+            - img [ref=e151]
+            - generic [ref=e155]: LinkedIn
+          - generic [ref=e158]:
+            - img [ref=e160]
+            - generic [ref=e170]: IA
+          - generic [ref=e173]:
+            - generic [ref=e174]: HOT
+            - generic [ref=e175]: WARM
+            - generic [ref=e176]: SKIP
+        - img [ref=e178]
+      - generic [ref=e180]:
+        - link "Secuencias automatizadas - Ver detalles" [ref=e181] [cursor=pointer]:
+          - /url: pages/soluciones.html#ai-247
+          - generic [ref=e182]:
+            - img [ref=e184]
+            - generic [ref=e187]: 02 - Secuencias
+          - heading "Ventas automatizadas que cierran deals" [level=4] [ref=e188]
+          - paragraph [ref=e189]: 5 emails personalizados en 35 días. Envío a las 9AM con detección de respuestas.
+          - generic [ref=e190]:
+            - generic [ref=e191]:
+              - img [ref=e192]
+              - generic [ref=e194]: 5 emails, 35 días, 9AM
+            - generic [ref=e195]:
+              - img [ref=e196]
+              - generic [ref=e198]: Detección automática de interés
+          - generic [ref=e199]:
+            - generic [ref=e200]:
+              - generic [ref=e201]: "5"
+              - generic [ref=e202]: Emails
+            - generic [ref=e203]:
+              - generic [ref=e204]: 78%
+              - generic [ref=e205]: Compra al 1ro
+          - img [ref=e207]
+        - link "Omnicanal - Ver detalles" [ref=e209] [cursor=pointer]:
+          - /url: pages/soluciones.html#omnichannel
+          - generic [ref=e210]:
+            - img [ref=e212]
+            - generic [ref=e218]: 03 - Omnicanal
+          - heading "Todos tus canales, un solo pipeline" [level=4] [ref=e219]
+          - paragraph [ref=e220]: Pipeline unificado LinkedIn, Email, Slack y Notion con routing inteligente.
+          - generic [ref=e221]:
+            - generic [ref=e222]:
+              - img [ref=e223]
+              - generic [ref=e225]: LinkedIn, Email, Slack, Notion
+            - generic [ref=e226]:
+              - img [ref=e227]
+              - generic [ref=e229]: Routing por comportamiento
+          - generic [ref=e230]:
+            - generic [ref=e231]:
+              - generic [ref=e232]: 89%
+              - generic [ref=e233]: Retención
+            - generic [ref=e234]:
+              - generic [ref=e235]: +40%
+              - generic [ref=e236]: Respuestas
+          - img [ref=e238]
+        - link "Análisis e Inteligencia - Ver detalles" [ref=e240] [cursor=pointer]:
+          - /url: pages/soluciones.html#analytics
+          - generic [ref=e241]:
+            - img [ref=e243]
+            - generic [ref=e245]: 04 - Análisis
+          - heading "Datos que impulsan decisiones" [level=4] [ref=e246]
+          - paragraph [ref=e247]: Dashboards en tiempo real, reportes automáticos y alertas inteligentes.
+          - generic [ref=e248]:
+            - generic [ref=e249]:
+              - img [ref=e250]
+              - generic [ref=e252]: Pipeline en tiempo real
+            - generic [ref=e253]:
+              - img [ref=e254]
+              - generic [ref=e256]: Alertas por anomalías
+          - generic [ref=e257]:
+            - generic [ref=e258]:
+              - generic [ref=e259]: 360°
+              - generic [ref=e260]: Pipeline
+            - generic [ref=e261]:
+              - generic [ref=e262]: Real-time
+              - generic [ref=e263]: Datos
+          - img [ref=e265]
+        - link "Seguridad y Compliance - Ver detalles" [ref=e267] [cursor=pointer]:
+          - /url: pages/soluciones.html#security
+          - generic [ref=e268]:
+            - img [ref=e270]
+            - generic [ref=e273]: 05 - Seguridad
+          - heading "Compliance total, sin compromisos" [level=4] [ref=e274]
+          - paragraph [ref=e275]: Ley 21.719, encriptación E2E y privacy by design en cada workflow.
+          - generic [ref=e276]:
+            - generic [ref=e277]:
+              - img [ref=e278]
+              - generic [ref=e280]: Ley 21.719 + GDPR
+            - generic [ref=e281]:
+              - img [ref=e282]
+              - generic [ref=e284]: Encriptación end-to-end
+          - generic [ref=e285]:
+            - generic [ref=e286]:
+              - generic [ref=e287]: Ley 21.719
+              - generic [ref=e288]: Compliance
+            - generic [ref=e289]:
+              - generic [ref=e290]: E2E
+              - generic [ref=e291]: Encriptación
+          - img [ref=e293]
+  - generic [ref=e296]:
+    - generic [ref=e297]: Cómo opera nuestra cascada
+    - heading "Del signal al lead cerrable — en cascada agéntica" [level=2] [ref=e298]
+    - paragraph [ref=e299]: Capturamos señales de redes sociales y la web. Agentes IA verifican que sean leads reales, cruzan cada perfil contra tu ICP y curan los mejores para tu nicho. Tu equipo recibe leads listos para cerrar — con trazabilidad completa bajo Ley 21.719.
+    - generic [ref=e300]:
+      - generic [ref=e301]:
+        - generic [ref=e302]:
+          - generic [ref=e303]: AGÉNTICA · INVESTIGACIÓN CONTINUA 24/7
+          - heading "Pipeline Sisteco — Cascada de prospección, verificación y curación por ICP" [level=3] [ref=e304]
+        - button "Pausar animación del diagrama" [ref=e305] [cursor=pointer]:
+          - generic [ref=e307]: Pausar
+      - generic [ref=e308]:
+        - generic:
+          - generic: FUENTES DE LEADS
+          - generic: SISTECO — CAPA AGÉNTICA
+          - generic: ENTREGA AL EQUIPO DE VENTAS
+        - img [ref=e309]
+        - generic:
+          - generic [ref=e321]:
+            - img [ref=e323]
+            - generic [ref=e325]: LinkedIn
+            - generic [ref=e326]: Red profesional B2B
+          - generic [ref=e327]:
+            - img [ref=e329]
+            - generic [ref=e331]: Instagram
+            - generic [ref=e332]: Señales sociales
+          - generic [ref=e333]:
+            - img [ref=e335]
+            - generic [ref=e339]: Web / SII
+            - generic [ref=e340]: Directorios y RUT
+          - generic [ref=e341]:
+            - img [ref=e343]
+            - generic [ref=e348]: Señales de mercado
+            - generic [ref=e349]: Eventos, prensa, triggers
+        - generic [ref=e350]:
+          - generic [ref=e351]: INVESTIGACIÓN CONTINUA · LEY 21.719
+          - generic [ref=e352]: Sisteco
+          - generic [ref=e353]: Cascada agéntica de prospección B2B
+          - list [ref=e354]:
+            - listitem [ref=e355]:
+              - generic [ref=e357]: "01"
+              - text: Captura
+            - listitem [ref=e358]:
+              - generic [ref=e360]: "02"
+              - text: Verifica
+            - listitem [ref=e361]:
+              - generic [ref=e363]: "03"
+              - text: ICP
+            - listitem [ref=e364]:
+              - generic [ref=e366]: "04"
+              - text: Curar
+        - generic:
+          - generic [ref=e367]:
+            - img [ref=e369]
+            - generic [ref=e371]: CRM
+            - generic [ref=e372]: HubSpot · Salesforce
+          - generic [ref=e373]:
+            - img [ref=e375]
+            - generic [ref=e379]: Dashboard
+            - generic [ref=e380]: Trazabilidad Sisteco
+          - generic [ref=e381]:
+            - img [ref=e383]
+            - generic [ref=e385]: Slack
+            - generic [ref=e386]: Alertas al vendedor
+          - generic [ref=e387]:
+            - img [ref=e389]
+            - generic [ref=e392]: Email / Handoff
+            - generic [ref=e393]: Reunión agendada
+      - generic [ref=e394]:
+        - tablist "Filtrar etapas de la cascada" [ref=e395]:
+          - button "Cascada completa" [ref=e396] [cursor=pointer]
+          - button "Captura" [ref=e397] [cursor=pointer]
+          - button "Verificación + ICP" [ref=e398] [cursor=pointer]
+          - button "Entrega" [ref=e399] [cursor=pointer]
+        - list "Leyenda de flujos" [ref=e400]:
+          - listitem [ref=e401]: Captura de fuentes
+          - listitem [ref=e403]: Verificación + ICP
+          - listitem [ref=e405]: Entrega a ventas
+    - generic [ref=e407]:
+      - heading "Especialistas en prospección B2B para el nicho tech chileno" [level=3] [ref=e408]
+      - generic [ref=e409]:
+        - article [ref=e410]:
+          - generic [ref=e411]: "01"
+          - heading "Capturamos donde tus clientes dejan señal" [level=4] [ref=e412]
+          - paragraph [ref=e413]: LinkedIn, Instagram, directorios web y triggers de mercado — todo el mapa de señal para SaaS, ciberseguridad y startups tech de 10+ empleados.
+        - article [ref=e414]:
+          - generic [ref=e415]: "02"
+          - heading "Verificamos que el lead sea real" [level=4] [ref=e416]
+          - paragraph [ref=e417]: Cruzamos cada contacto contra datos del SII, validamos RUT, tamaño de empresa y actividad económica. Descartamos fantasmas antes de que lleguen a tu equipo.
+        - article [ref=e418]:
+          - generic [ref=e419]: "03"
+          - heading "Investigamos el ajuste a tu ICP" [level=4] [ref=e420]
+          - paragraph [ref=e421]: Un agente investiga el perfil — stack tecnológico, señales de crecimiento, timing de compra — y puntúa qué tan bien calza con tu cliente ideal.
+        - article [ref=e422]:
+          - generic [ref=e423]: "04"
+          - heading "Entregamos solo los mejores" [level=4] [ref=e424]
+          - paragraph [ref=e425]: Tu equipo recibe una shortlist curada en su CRM, Slack y dashboard, con trazabilidad completa bajo Ley 21.719. Sin ruido, sin leads fríos.
+  - generic [ref=e427]:
+    - generic [ref=e428]: Por qué Sisteco
+    - heading "Elige tu camino" [level=2] [ref=e429]
+    - paragraph [ref=e430]: "Compara las opciones reales: hacerlo tú, contratar un vendedor, o dejar que Sisteco haga el trabajo por ti"
+    - generic [ref=e432]:
+      - generic [ref=e433]:
+        - generic [ref=e435]: Armarlo por tu cuenta
+        - generic [ref=e436]: Contratar vendedor
+        - generic [ref=e437]:
+          - generic [ref=e438]: Recomendado
+          - text: Sisteco
+      - generic [ref=e439]:
+        - generic [ref=e440]: Costo mensual
+        - generic [ref=e441]: ~$1,253 USD
+        - generic [ref=e442]: CLP 1.7M
+        - generic [ref=e443]:
+          - img [ref=e444]
+          - generic [ref=e446]: Desde 15 UF (~$590 USD)
+      - generic [ref=e447]:
+        - generic [ref=e448]: Setup time
+        - generic [ref=e449]:
+          - img [ref=e450]
+          - generic [ref=e453]: 2-4 semanas
+        - generic [ref=e454]:
+          - img [ref=e455]
+          - generic [ref=e458]: 1-2 meses
+        - generic [ref=e459]:
+          - img [ref=e460]
+          - generic [ref=e462]: < 24 horas
+      - generic [ref=e463]:
+        - generic [ref=e464]: Time to first value
+        - generic [ref=e465]:
+          - img [ref=e466]
+          - generic [ref=e469]: 2-4 semanas
+        - generic [ref=e470]:
+          - img [ref=e471]
+          - generic [ref=e474]: 1-2 meses
+        - generic [ref=e475]:
+          - img [ref=e476]
+          - generic [ref=e478]: Hoy
+      - generic [ref=e479]:
+        - generic [ref=e480]: Canales activos
+        - generic [ref=e481]: 1-2
+        - generic [ref=e482]: "1"
+        - generic [ref=e483]:
+          - img [ref=e484]
+          - generic [ref=e486]: "5"
+      - generic [ref=e487]:
+        - generic [ref=e488]: Horario
+        - generic [ref=e489]:
+          - img [ref=e490]
+          - generic [ref=e493]: 8h/día
+        - generic [ref=e494]:
+          - img [ref=e495]
+          - generic [ref=e498]: 8h/día
+        - generic [ref=e499]:
+          - img [ref=e500]
+          - generic [ref=e502]: 24/7
+      - generic [ref=e503]:
+        - generic [ref=e504]: Leads/semana
+        - generic [ref=e505]: ~50
+        - generic [ref=e506]: ~30
+        - generic [ref=e507]:
+          - img [ref=e508]
+          - generic [ref=e510]: 200+
+      - generic [ref=e511]:
+        - generic [ref=e512]: Tasa respuesta
+        - generic [ref=e513]: 2-5%
+        - generic [ref=e514]: 3-7%
+        - generic [ref=e515]:
+          - img [ref=e516]
+          - generic [ref=e518]: 15-25%
+      - generic [ref=e519]:
+        - generic [ref=e520]: Cash at risk
+        - generic [ref=e521]:
+          - img [ref=e522]
+          - generic [ref=e525]: $3-8K setup
+        - generic [ref=e526]:
+          - img [ref=e527]
+          - generic [ref=e530]: $14K/yr min
+        - generic [ref=e531]:
+          - img [ref=e532]
+          - generic [ref=e534]: $0 setup
+      - generic [ref=e535]:
+        - generic [ref=e536]: ROI esperado
+        - generic [ref=e537]:
+          - img [ref=e538]
+          - generic [ref=e539]: Incierto
+        - generic [ref=e540]:
+          - img [ref=e541]
+          - generic [ref=e542]: Incierto
+        - generic [ref=e543]:
+          - img [ref=e544]
+          - generic [ref=e546]: 391% (Forrester)
+  - generic [ref=e548]:
+    - generic [ref=e549]: "[02.x] Tu equipo agéntico"
+    - heading "Todo lo que un departamento de ventas necesita" [level=2] [ref=e550]
+    - paragraph [ref=e551]: Nuestros agentes de IA operan tu prospección de extremo a extremo. Extracción, análisis y secuencias multicanal — todo gestionado por Sisteco para que tú solo cierres.
+    - generic [ref=e552]:
+      - link "→ Extracción Inteligente Obtén datos de prospectos desde cualquier fuente web con precisión y velocidad. Nuestra tecnología avanzada captura información relevante en tiempo real. 99.9% Precisión <1s Por consulta Ver más" [ref=e553] [cursor=pointer]:
+        - /url: pages/soluciones.html#extraccion
+        - generic [ref=e554]:
+          - generic [ref=e555]:
+            - img [ref=e557]
+            - generic [ref=e560]: →
+            - img [ref=e562]
+          - heading "Extracción Inteligente" [level=3] [ref=e566]
+          - paragraph [ref=e567]: Obtén datos de prospectos desde cualquier fuente web con precisión y velocidad. Nuestra tecnología avanzada captura información relevante en tiempo real.
+          - generic [ref=e568]:
+            - generic [ref=e569]:
+              - generic [ref=e570]: 99.9%
+              - generic [ref=e571]: Precisión
+            - generic [ref=e572]:
+              - generic [ref=e573]: <1s
+              - generic [ref=e574]: Por consulta
+          - img [ref=e576]
+          - generic [ref=e579]:
+            - text: Ver más
+            - img [ref=e580]
+      - link "→ → IA que se mejora sola Nuestros sistemas de inteligencia artificial se auto-optimizan con cada interacción. Menos leads, mayor calidad. Solo hablas con prospectos que quieren comprar. 95% Precisión scoring 10x Enriquecimiento Ver más" [ref=e582] [cursor=pointer]:
+        - /url: pages/soluciones.html#analisis
+        - generic [ref=e583]:
+          - generic [ref=e584]:
+            - img [ref=e586]
+            - generic [ref=e590]: →
+            - img [ref=e592]
+            - generic [ref=e602]: →
+            - img [ref=e604]
+          - heading "IA que se mejora sola" [level=3] [ref=e608]
+          - paragraph [ref=e609]: Nuestros sistemas de inteligencia artificial se auto-optimizan con cada interacción. Menos leads, mayor calidad. Solo hablas con prospectos que quieren comprar.
+          - generic [ref=e610]:
+            - generic [ref=e611]:
+              - generic [ref=e612]: 95%
+              - generic [ref=e613]: Precisión scoring
+            - generic [ref=e614]:
+              - generic [ref=e615]: 10x
+              - generic [ref=e616]: Enriquecimiento
+          - img [ref=e618]
+          - generic [ref=e621]:
+            - text: Ver más
+            - img [ref=e622]
+      - link "→ Secuencias Multicanal Ejecuta campañas automatizadas por email, LinkedIn y más canales. Crea journeys personalizados que adaptan el mensaje según el comportamiento del prospecto. 5+ Canales 40% Más respuestas Ver más" [ref=e624] [cursor=pointer]:
+        - /url: pages/soluciones.html#secuencias
+        - generic [ref=e625]:
+          - generic [ref=e626]:
+            - img [ref=e628]
+            - generic [ref=e630]: →
+            - generic [ref=e631]:
+              - img [ref=e632]
+              - img [ref=e635]
+              - img [ref=e639]
+          - heading "Secuencias Multicanal" [level=3] [ref=e641]
+          - paragraph [ref=e642]: Ejecuta campañas automatizadas por email, LinkedIn y más canales. Crea journeys personalizados que adaptan el mensaje según el comportamiento del prospecto.
+          - generic [ref=e643]:
+            - generic [ref=e644]:
+              - generic [ref=e645]: 5+
+              - generic [ref=e646]: Canales
+            - generic [ref=e647]:
+              - generic [ref=e648]: 40%
+              - generic [ref=e649]: Más respuestas
+          - img [ref=e651]
+          - generic [ref=e654]:
+            - text: Ver más
+            - img [ref=e655]
+    - generic [ref=e657]:
+      - generic [ref=e658]:
+        - img [ref=e660]
+        - generic [ref=e663]:
+          - heading "Disponible 24/7" [level=4] [ref=e664]
+          - paragraph [ref=e665]: Tu negocio nunca duerme
+      - generic [ref=e666]:
+        - img [ref=e668]
+        - generic [ref=e671]:
+          - heading "Ley 21.719 Compliant" [level=4] [ref=e672]
+          - paragraph [ref=e673]: Protección de datos de nivel empresarial
+      - generic [ref=e674]:
+        - img [ref=e676]
+        - generic [ref=e680]:
+          - heading "Vende más, preocúpate menos" [level=4] [ref=e681]
+          - paragraph [ref=e682]: Bajo volumen, alta conversión
+  - generic [ref=e684]:
+    - generic [ref=e685]: Nuestra Visión
+    - heading "Construimos la infraestructura agéntica de ventas para Chile y LATAM" [level=2] [ref=e686]
+    - paragraph [ref=e687]: Hoy automatizamos tu prospección. Mañana, agentes autónomos gestionando el ciclo completo de ventas en la región.
+    - generic [ref=e688]:
+      - generic [ref=e689]:
+        - generic [ref=e690]: "2026"
+        - heading "Automatización inteligente" [level=4] [ref=e691]
+        - paragraph [ref=e692]: Workflows agénticos, lead scoring con datos del SII y compliance nativa Ley 21.719
+      - generic [ref=e694]:
+        - generic [ref=e695]: "2027"
+        - heading "Pipeline agéntico completo" [level=4] [ref=e696]
+        - paragraph [ref=e697]: Integración CRM, automatización full-pipeline y optimización autónoma del ciclo de ventas
+      - generic [ref=e699]:
+        - generic [ref=e700]: "2028"
+        - heading "Data intelligence Chile" [level=4] [ref=e701]
+        - paragraph [ref=e702]: Primera consultoría de ventas basada en data acumulada de todas las fuentes. Pilotos agent-to-agent (A2A)
+      - generic [ref=e704]:
+        - generic [ref=e705]: "2030"
+        - heading "Expansión LATAM" [level=4] [ref=e706]
+        - paragraph [ref=e707]: Infraestructura agéntica de ventas para la región. 1-2 países más con inteligencia de negocios local
+    - link "Ver nuestra visión completa" [ref=e709] [cursor=pointer]:
+      - /url: pages/vision.html
+  - generic [ref=e711]:
+    - generic [ref=e712]:
+      - img [ref=e713]
+      - text: Tu departamento de ventas agéntico
+    - heading "Deja que nosotros vendamos por ti" [level=2] [ref=e715]
+    - paragraph [ref=e716]: Prueba gratis con 10 leads enriquecidos. Sin tarjeta de crédito, sin configuración. Nosotros prospectamos, calificamos y te entregamos reuniones listas para cerrar.
+    - link "Solicitar una demo" [ref=e717] [cursor=pointer]:
+      - /url: pages/agendar-demo.html
+      - text: Solicitar una demo
+      - img [ref=e718]
+    - generic [ref=e720]:
+      - generic [ref=e721]:
+        - img [ref=e723]
+        - generic [ref=e726]: 24/7
+        - generic [ref=e727]: Operativo siempre
+      - generic [ref=e728]:
+        - img [ref=e730]
+        - generic [ref=e732]: <5min
+        - generic [ref=e733]: Tiempo de respuesta
+      - generic [ref=e734]:
+        - img [ref=e736]
+        - generic [ref=e739]: Ley 21.719
+        - generic [ref=e740]: Compliance total
+  - contentinfo [ref=e741]:
+    - generic [ref=e742]:
+      - generic [ref=e743]:
+        - generic [ref=e744]:
+          - img "Sisteco" [ref=e745]
+          - generic [ref=e746]: Tu departamento de ventas agéntico
+        - generic [ref=e747]:
+          - link "LinkedIn" [ref=e748] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/sisteco/
+            - img [ref=e749]
+          - link "Email" [ref=e753] [cursor=pointer]:
+            - /url: mailto:contacto@sisteco.cl
+            - img [ref=e754]
+      - generic [ref=e757]:
+        - generic [ref=e758]:
+          - heading "Producto" [level=4] [ref=e759]
+          - link "Soluciones" [ref=e760] [cursor=pointer]:
+            - /url: pages/soluciones.html
+          - link "Infraestructura" [ref=e761] [cursor=pointer]:
+            - /url: pages/como-funciona.html
+          - link "Precios" [ref=e762] [cursor=pointer]:
+            - /url: pages/precios.html
+        - generic [ref=e763]:
+          - heading "Empresa" [level=4] [ref=e764]
+          - link "Visión" [ref=e765] [cursor=pointer]:
+            - /url: pages/vision.html
+          - link "Sobre nosotros" [ref=e766] [cursor=pointer]:
+            - /url: pages/sobre-nosotros.html
+          - link "Contacto" [ref=e767] [cursor=pointer]:
+            - /url: pages/contacto.html
+        - generic [ref=e768]:
+          - heading "Legal" [level=4] [ref=e769]
+          - link "Privacidad" [ref=e770] [cursor=pointer]:
+            - /url: pages/privacidad.html
+          - link "Términos" [ref=e771] [cursor=pointer]:
+            - /url: pages/terminos.html
+          - link "Cookies" [ref=e772] [cursor=pointer]:
+            - /url: pages/cookies.html
+          - link "Ley 21.719" [ref=e773] [cursor=pointer]:
+            - /url: pages/gdpr.html
+        - generic [ref=e774]:
+          - heading "Contacto" [level=4] [ref=e775]
+          - link "contacto@sisteco.cl" [ref=e776] [cursor=pointer]:
+            - /url: mailto:contacto@sisteco.cl
+          - link "+56 9 40065566" [ref=e777] [cursor=pointer]:
+            - /url: tel:+56940065566
+          - generic [ref=e778]: Av. Alonso de Córdova 5870 Of. 413, Las Condes, Santiago
+      - generic [ref=e779]:
+        - paragraph [ref=e780]: © 2026 Sisteco. Todos los derechos reservados.
+        - generic [ref=e781]:
+          - link "Privacidad" [ref=e782] [cursor=pointer]:
+            - /url: pages/privacidad.html
+          - link "Términos" [ref=e783] [cursor=pointer]:
+            - /url: pages/terminos.html
+          - link "Cookies" [ref=e784] [cursor=pointer]:
+            - /url: pages/cookies.html
+  - dialog "Consentimiento de cookies" [ref=e785]:
+    - generic [ref=e786]:
+      - paragraph [ref=e787]:
+        - text: Usamos cookies para mejorar tu experiencia.
+        - link "Politica de privacidad" [ref=e788] [cursor=pointer]:
+          - /url: pages/privacidad.html
+      - generic [ref=e789]:
+        - button "Aceptar" [ref=e790] [cursor=pointer]
+        - button "Rechazar" [ref=e791] [cursor=pointer]
+  - option "Selecciona..." [selected]
+  - option "1-5 personas"
+  - option "6-20 personas"
+  - option "21-50 personas"
+  - option "Más de 50"

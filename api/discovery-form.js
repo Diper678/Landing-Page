@@ -168,7 +168,7 @@ function buildNotificationEmail({ name, email, company, role, teamSize, crm, pai
           <p style="margin: 0; font-size: 14px; color: #111; line-height: 1.5;">${escapeHtml(pain)}</p>
         </div>` : ''}
         <div style="margin-top: 20px; text-align: center;">
-          <a href="https://cal.com/felipe-sisteco/demo" style="display: inline-block; background: #c5ed36; color: #111; padding: 10px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 14px;">Ver calendario de demos</a>
+          <a href="https://cal.com/sisteco/demo" style="display: inline-block; background: #c5ed36; color: #111; padding: 10px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 14px;">Ver calendario de demos</a>
         </div>
       </div>
     </div>

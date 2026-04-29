@@ -6,14 +6,22 @@
 const DLOCALGO_BASE_URL = process.env.DLOCALGO_BASE_URL || 'https://api.dlocalgo.com/v1';
 
 // ── Plan key → env var mapping ──────────────────────────────────────
-// Frontend sends planKey (e.g. "base_monthly"), we resolve to the actual
+// Frontend sends planKey (e.g. "junior_monthly"), we resolve to the actual
 // dLocal Go plan ID stored in environment variables.
+//
+// Pricing autoritativo: docs/research/2026-04-23-pricing-final-formalizado.md
+// Junior:  20 UF/mes (~USD 770) — trimestral 60 UF (~USD 2,310)
+// Senior:  50 UF/mes (~USD 1,925) — trimestral 150 UF (~USD 5,775)
+// Manager: ~100 UF/mes ("Hablemos") — trimestral 300 UF (~USD 11,550)
+//
+// Sisteco no ofrece cobro mensual operativo (compromiso mínimo 1 trimestre).
+// Las claves _monthly se mantienen por compatibilidad con dLocal (recurring monthly engine).
 const PLAN_KEY_TO_ENV = {
-  base_monthly:       'DLOCALGO_PLAN_BASE_MONTHLY',
-  base_annual:        'DLOCALGO_PLAN_BASE_ANNUAL',
-  growth_monthly:     'DLOCALGO_PLAN_GROWTH_MONTHLY',
-  growth_annual:      'DLOCALGO_PLAN_GROWTH_ANNUAL',
-  enterprise_monthly: 'DLOCALGO_PLAN_ENTERPRISE_MONTHLY',
+  junior_monthly:  'DLOCALGO_PLAN_JUNIOR_MONTHLY',
+  junior_annual:   'DLOCALGO_PLAN_JUNIOR_ANNUAL',
+  senior_monthly:  'DLOCALGO_PLAN_SENIOR_MONTHLY',
+  senior_annual:   'DLOCALGO_PLAN_SENIOR_ANNUAL',
+  manager_monthly: 'DLOCALGO_PLAN_MANAGER_MONTHLY',
 };
 
 function resolvePlanId(planKey) {
@@ -23,22 +31,23 @@ function resolvePlanId(planKey) {
 
 // Plan IDs válidos (del Dashboard dLocal Go → Subscriptions)
 const ALLOWED_PLANS = new Set([
-  process.env.DLOCALGO_PLAN_BASE_MONTHLY,
-  process.env.DLOCALGO_PLAN_BASE_ANNUAL,
-  process.env.DLOCALGO_PLAN_GROWTH_MONTHLY,
-  process.env.DLOCALGO_PLAN_GROWTH_ANNUAL,
-  process.env.DLOCALGO_PLAN_ENTERPRISE_MONTHLY,
+  process.env.DLOCALGO_PLAN_JUNIOR_MONTHLY,
+  process.env.DLOCALGO_PLAN_JUNIOR_ANNUAL,
+  process.env.DLOCALGO_PLAN_SENIOR_MONTHLY,
+  process.env.DLOCALGO_PLAN_SENIOR_ANNUAL,
+  process.env.DLOCALGO_PLAN_MANAGER_MONTHLY,
 ]);
 
 // Precios de los planes (para cobro único inicial o cuando la API
-// de suscripciones usa amount directo en vez de plan_id)
-// Precios con IVA incluido (19%) — neto × 1.19
+// de suscripciones usa amount directo en vez de plan_id).
+// USD aprox del día — el cobro real se ajusta con la UF del día en pasarela CLP.
+// IVA 19% incluido. Junior 20 UF × 1.19 ≈ USD 916; Senior 50 UF × 1.19 ≈ USD 2,290; Manager ≈ USD 4,581.
 const PLAN_AMOUNTS = {
-  base_monthly:       { amount: 472.43,  currency: 'USD', label: 'Sisteco Prospección Base - Mensual (IVA incl.)' },
-  base_annual:        { amount: 4240.68, currency: 'USD', label: 'Sisteco Prospección Base - Anual (IVA incl.)' },
-  growth_monthly:     { amount: 948.43,  currency: 'USD', label: 'Sisteco Crecimiento - Mensual (IVA incl.)' },
-  growth_annual:      { amount: 8525.16, currency: 'USD', label: 'Sisteco Crecimiento - Anual (IVA incl.)' },
-  enterprise_monthly: { amount: 2142.00, currency: 'USD', label: 'Sisteco Enterprise Omnicanal - Mensual (IVA incl.)' },
+  junior_monthly:  { amount: 916.30,   currency: 'USD', label: 'Sisteco Junior - Mensual (IVA incl.)' },
+  junior_annual:   { amount: 9897.00,  currency: 'USD', label: 'Sisteco Junior - Anual con 10% desc (IVA incl.)' },
+  senior_monthly:  { amount: 2290.75,  currency: 'USD', label: 'Sisteco Senior - Mensual (IVA incl.)' },
+  senior_annual:   { amount: 24740.10, currency: 'USD', label: 'Sisteco Senior - Anual con 10% desc (IVA incl.)' },
+  manager_monthly: { amount: 4581.50,  currency: 'USD', label: 'Sisteco Manager - Mensual (IVA incl.)' },
 };
 
 const CHECKOUT_ALLOWED_ORIGINS = ['https://sisteco.com', 'https://sisteco-landing.vercel.app', 'https://landing-page-felipe-s-projects-cf2ac967.vercel.app', 'http://localhost:3000'];

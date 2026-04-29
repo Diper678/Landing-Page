@@ -290,7 +290,7 @@ function initPageAnimations() {
 
     // Content cards stagger with ScrollTrigger
     if (typeof ScrollTrigger !== 'undefined') {
-        document.querySelectorAll('.content-card, .dashboard-feature, .pricing-card, .team-card, .app-mockup, .lead-scoring-block, .core-feature, .stack-column, .cta-card, .bento-card').forEach((card, i) => {
+        document.querySelectorAll('.content-card, .dashboard-feature, .pricing-card, .team-card, .app-mockup, .lead-scoring-block, .core-feature, .stack-column, .cta-card').forEach((card, i) => {
             gsap.fromTo(card,
                 { y: 40, opacity: 0 },
                 {

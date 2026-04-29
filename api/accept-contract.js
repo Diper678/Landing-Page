@@ -6,9 +6,9 @@ import { z } from 'zod';
 const allowedOrigins = ['https://sisteco.com', 'https://sisteco-landing.vercel.app', 'http://localhost:3000'];
 
 const PLAN_NAMES = {
-  inicio: 'Inicio',
-  crecimiento: 'Crecimiento',
-  enterprise: 'Enterprise',
+  junior: 'Junior',
+  senior: 'Senior',
+  manager: 'Manager',
 };
 
 const acceptSchema = z.object({

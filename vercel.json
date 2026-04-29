@@ -4,6 +4,20 @@
   "outputDirectory": ".",
   "headers": [
     {
+      "source": "/llms.txt",
+      "headers": [
+        { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
+    {
+      "source": "/mirrors/(.*).md",
+      "headers": [
+        { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=86400" }
+      ]
+    },
+    {
       "source": "/(.*)",
       "headers": [
         { "key": "X-Content-Type-Options", "value": "nosniff" },
@@ -13,31 +27,38 @@
         { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://unpkg.com https://app.cal.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://*.convex.cloud https://*.upstash.io https://api.resend.com https://app.cal.com; frame-src https://app.cal.com"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://unpkg.com https://app.cal.com https://eu-assets.i.posthog.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob: https:; connect-src 'self' https://*.convex.cloud https://*.upstash.io https://api.resend.com https://app.cal.com https://eu.i.posthog.com https://eu-assets.i.posthog.com; worker-src 'self' blob:; frame-src https://app.cal.com https://www.youtube.com https://www.youtube-nocookie.com"
         }
       ]
     }
   ],
   "rewrites": [
+    { "source": "/soluciones.md", "destination": "/mirrors/soluciones.md" },
+    { "source": "/precios.md", "destination": "/mirrors/precios.md" },
+    { "source": "/como-funciona.md", "destination": "/mirrors/como-funciona.md" },
+    { "source": "/sobre-nosotros.md", "destination": "/mirrors/sobre-nosotros.md" },
+    { "source": "/soluciones/automatizacion-prospeccion-ia-chile", "destination": "/pages/soluciones/automatizacion-prospeccion-ia-chile.html" },
+    { "source": "/soluciones/lead-scoring-datos-sii-ia", "destination": "/pages/soluciones/lead-scoring-datos-sii-ia.html" },
+    { "source": "/soluciones/compliance-ia-ley-21719-ventas", "destination": "/pages/soluciones/compliance-ia-ley-21719-ventas.html" },
+    { "source": "/docs/como-funciona-tecnicamente", "destination": "/pages/docs/como-funciona-tecnicamente.html" },
+    { "source": "/recursos", "destination": "/pages/recursos/index.html" },
+    { "source": "/recursos/api/posts.json", "destination": "/pages/recursos/api/posts.json" },
+    { "source": "/recursos/posts/:slug", "destination": "/pages/recursos/posts/:slug.html" },
     { "source": "/soluciones", "destination": "/pages/soluciones.html" },
     { "source": "/como-funciona", "destination": "/pages/como-funciona.html" },
-    { "source": "/integraciones", "destination": "/pages/integraciones.html" },
-    { "source": "/dashboard", "destination": "/pages/dashboard.html" },
+    { "source": "/vision", "destination": "/pages/vision.html" },
     { "source": "/precios", "destination": "/pages/precios.html" },
     { "source": "/sobre-nosotros", "destination": "/pages/sobre-nosotros.html" },
-    { "source": "/blog", "destination": "/pages/blog.html" },
-    { "source": "/api-docs", "destination": "/pages/api.html" },
-    { "source": "/documentacion", "destination": "/pages/documentacion.html" },
-    { "source": "/tutoriales", "destination": "/pages/tutoriales.html" },
-    { "source": "/webinars", "destination": "/pages/webinars.html" },
-    { "source": "/soporte", "destination": "/pages/soporte.html" },
     { "source": "/contacto", "destination": "/pages/contacto.html" },
-    { "source": "/carreras", "destination": "/pages/carreras.html" },
     { "source": "/privacidad", "destination": "/pages/privacidad.html" },
     { "source": "/terminos", "destination": "/pages/terminos.html" },
     { "source": "/cookies", "destination": "/pages/cookies.html" },
     { "source": "/gdpr", "destination": "/pages/gdpr.html" },
-    { "source": "/agendar-demo", "destination": "/pages/agendar-demo.html" }
+    { "source": "/agendar-demo", "destination": "/pages/agendar-demo.html" },
+    { "source": "/gracias", "destination": "/pages/gracias.html" },
+    { "source": "/pago-exitoso", "destination": "/pages/gracias.html" },
+    { "source": "/pago-fallido", "destination": "/pages/pago-fallido.html" },
+    { "source": "/pago-rechazado", "destination": "/pages/pago-fallido.html" }
   ],
   "crons": [
     {

@@ -1,3 +1,7 @@
+> ⚠️ **DEPRECADO 2026-04-23** — Estrategia financiera Q1 2026 con pricing Base/Growth/Enterprise. Superada por pricing UF (Junior 20 / Senior 50 / Manager 100).
+> Solo valor histórico — útil para entender la transición.
+> Pricing autoritativo actual: `The Agentic Company/docs/research/2026-04-23-pricing-final-formalizado.md`.
+
 # Estrategia Financiera y de Precios — Sisteco
 **Fecha:** 2026-02-27 | **Analista:** Claude Sonnet 4.6 (rol: Analista Financiero Senior Tech, 5+ años, Chile)
 

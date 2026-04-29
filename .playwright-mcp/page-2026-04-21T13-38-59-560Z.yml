@@ -1,0 +1,176 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "Sisteco Logo Sisteco" [ref=e4] [cursor=pointer]:
+        - /url: ../index.html
+        - img "Sisteco Logo" [ref=e5]
+        - generic [ref=e6]: Sisteco
+      - generic [ref=e7]:
+        - link "Visión" [ref=e8] [cursor=pointer]:
+          - /url: vision.html
+        - link "Soluciones" [ref=e9] [cursor=pointer]:
+          - /url: soluciones.html
+        - link "Infraestructura" [ref=e10] [cursor=pointer]:
+          - /url: como-funciona.html
+        - link "Plataforma" [ref=e11] [cursor=pointer]:
+          - /url: dashboard.html
+        - link "Precios" [ref=e12] [cursor=pointer]:
+          - /url: precios.html
+      - button "Menu" [ref=e13] [cursor=pointer]
+  - generic [ref=e18]:
+    - generic [ref=e19]:
+      - link "Inicio" [ref=e20] [cursor=pointer]:
+        - /url: ../index.html
+      - generic [ref=e21]: /
+      - generic [ref=e22]: Visión
+    - 'heading "Service-as-a-Software: la empresa agéntica que trabaja por ti" [level=1] [ref=e23]'
+    - paragraph [ref=e24]: Hoy operamos tu prospección completa como servicio. Mañana tendrás la plataforma. Lo que Clay hace en US por $3.1B, nosotros lo hacemos en Chile — y vamos por LATAM.
+  - generic [ref=e26]:
+    - paragraph [ref=e27]: "El modelo SaaS te vende la herramienta y te desea suerte. Nosotros operamos tu prospección completa: desde la extracción de datos hasta el cierre. Tú recibes reuniones agendadas, no dashboards vacíos."
+    - generic [ref=e28]:
+      - generic [ref=e29]:
+        - img [ref=e32]
+        - heading "1. Service-as-a-Software" [level=3] [ref=e36]
+        - paragraph [ref=e37]: "No te vendemos un CRM y te deseamos suerte. Operamos tu prospección completa: extracción de datos, enriquecimiento, scoring, secuencias de contacto y seguimiento. Tú recibes reuniones agendadas."
+        - generic [ref=e38]:
+          - generic [ref=e39]:
+            - generic [ref=e40]: 5-7x
+            - generic [ref=e41]: Más conversiones
+          - generic [ref=e42]:
+            - generic [ref=e43]: 24/7
+            - generic [ref=e44]: Operación continua
+      - generic [ref=e45]:
+        - img [ref=e48]
+        - heading "2. El modelo Clay, en Chile" [level=3] [ref=e58]
+        - paragraph [ref=e59]: "Clay levantó $3.1B vendiendo herramientas de prospección en US. Nosotros hacemos lo mismo en Chile, pero como servicio: con datos SII, RUT, compliance Ley 21.719 y conocimiento del mercado local que ningún SaaS gringo tiene."
+        - generic [ref=e61]:
+          - generic [ref=e62]: $3.1B
+          - generic [ref=e63]: Modelo probado (Clay)
+      - generic [ref=e64]:
+        - img [ref=e67]
+        - heading "3. De servicio a plataforma" [level=3] [ref=e70]
+        - paragraph [ref=e71]: Empezamos haciendo el trabajo por ti. Mientras operamos, acumulamos datos e inteligencia comercial del mercado chileno. Eso se convierte en la plataforma que LATAM necesita — y nadie más puede construir.
+        - generic [ref=e73]:
+          - generic [ref=e74]: "2030"
+          - generic [ref=e75]: Plataforma LATAM
+    - generic [ref=e76]:
+      - heading "Tu departamento de ventas agéntico con Sisteco" [level=2] [ref=e77]
+      - paragraph [ref=e78]: Sin contratar vendedores. Sin implementar software. Nosotros operamos la prospección completa y tú te enfocas en cerrar.
+      - generic [ref=e79]:
+        - generic [ref=e80]:
+          - generic [ref=e81]: 5-7x
+          - generic [ref=e82]: Más conversiones
+        - generic [ref=e83]:
+          - generic [ref=e84]: <5min
+          - generic [ref=e85]: Tiempo de respuesta
+        - generic [ref=e86]:
+          - generic [ref=e87]: 24/7
+          - generic [ref=e88]: Operación continua
+        - generic [ref=e89]:
+          - generic [ref=e90]: 391%
+          - generic [ref=e91]: ROI (Forrester)
+    - generic [ref=e92]:
+      - img [ref=e93]
+      - generic [ref=e96]:
+        - heading "Compliance Ley 21.719 + GDPR" [level=4] [ref=e97]
+        - paragraph [ref=e98]: Cada extracción y contacto cumple con la Ley 21.719 de Protección de Datos Personales de Chile y estándares GDPR. Consentimiento, trazabilidad y derecho a eliminación integrados desde el primer workflow.
+  - generic [ref=e100]:
+    - generic [ref=e101]: Hoja de Ruta
+    - heading "Service-as-a-Software → Plataforma LATAM" [level=2] [ref=e102]
+    - paragraph [ref=e103]: Empezamos haciendo el trabajo por ti. Con cada cliente, acumulamos datos e inteligencia que se convierten en plataforma. Ese es el camino.
+    - generic [ref=e104]:
+      - generic [ref=e105]:
+        - generic [ref=e106]: "2026"
+        - heading "Service-as-a-Software" [level=3] [ref=e107]
+        - paragraph [ref=e108]: Sisteco opera tu prospección completa. Lead scoring con datos SII y RUT. Secuencias multicanal automatizadas. Compliance Ley 21.719 desde el día uno. Lo que Clay hace en US por $3.1B, nosotros lo hacemos en Chile como servicio gestionado — sin que tengas que contratar vendedores ni implementar software.
+      - generic [ref=e109]:
+        - generic [ref=e110]: "2027"
+        - heading "Modelo híbrido" [level=3] [ref=e111]
+        - paragraph [ref=e112]: Plataforma self-serve + servicio gestionado. Los clientes que quieran operar sus propios workflows agénticos pueden hacerlo. Self-annealing que optimiza cada ciclo sin intervención manual. Inicio de expansión LATAM con datos localizados por mercado.
+      - generic [ref=e113]:
+        - generic [ref=e114]: "2028"
+        - heading "Data intelligence Chile" [level=3] [ref=e115]
+        - paragraph [ref=e116]: "La primera consultoría de ventas basada en datos acumulados operando como servicio: SII, registros empresariales, interacciones de mercado, patrones de compra por industria. Nunca antes se ha hecho esto en Chile. Pilotos de agent-to-agent (A2A) commerce."
+      - generic [ref=e117]:
+        - generic [ref=e118]: "2030"
+        - heading "Plataforma LATAM" [level=3] [ref=e119]
+        - paragraph [ref=e120]: Infraestructura agéntica self-serve para toda la región. Los datos acumulados desde 2026 se convierten en el foso competitivo más profundo de Latinoamérica. Agent-to-agent commerce cross-border con datos locales y compliance regional integrado.
+  - generic [ref=e123]:
+    - generic [ref=e124]: Por qué Sisteco
+    - heading "La empresa agéntica de ventas. Service-as-a-Software para Chile y LATAM." [level=2] [ref=e125]:
+      - text: La empresa agéntica de ventas.
+      - text: Service-as-a-Software para Chile y LATAM.
+    - generic [ref=e126]:
+      - paragraph [ref=e127]: Clay levantó $3.1B vendiendo herramientas de prospección en US. Nosotros no vendemos herramientas — hacemos el trabajo. Operamos tu prospección completa como servicio gestionado, con la misma tecnología de punta pero adaptada al mercado chileno.
+      - paragraph [ref=e128]: "Un CRM gringo no sabe qué es un RUT, no consulta el SII, no entiende la Ley 21.719 y no tiene idea de cómo se cierran negocios en Santiago. Esa brecha es nuestro foso — y se profundiza con cada cliente que se suma a la red. Datos geográficamente localizados en Chile: ese es el activo que no se importa."
+      - paragraph [ref=e129]:
+        - text: Empezamos como servicio. Con cada operación acumulamos inteligencia comercial que ningún SaaS puede replicar.
+        - strong [ref=e130]: "Ese es el camino de Service-as-a-Software a plataforma:"
+        - text: primero hacemos el trabajo, después construimos la plataforma sobre los datos que solo nosotros tenemos. Scoring predictivo calibrado para el mercado local. Self-annealing que se optimiza en cada ciclo. La infraestructura agéntica que LATAM necesita.
+    - generic [ref=e131]:
+      - generic [ref=e132]: Sisteco · Service-as-a-Software
+      - paragraph [ref=e133]: Tu departamento de ventas agéntico. Hoy como servicio, mañana como plataforma.
+      - paragraph [ref=e134]: "Operamos tu prospección completa: extracción de datos, enriquecimiento SII y RUT, lead scoring con IA, secuencias multicanal, seguimiento y cierre. Compliance Ley 21.719 integrado — no como checkbox, sino como ventaja competitiva. Vende más, preocúpate menos."
+    - generic [ref=e135]:
+      - link "Empieza hoy" [ref=e136] [cursor=pointer]:
+        - /url: ../index.html#hero
+      - link "Ver infraestructura" [ref=e137] [cursor=pointer]:
+        - /url: como-funciona.html
+  - contentinfo [ref=e138]:
+    - generic [ref=e139]:
+      - generic [ref=e140]:
+        - generic [ref=e141]:
+          - img "Sisteco" [ref=e142]
+          - generic [ref=e143]: Tu departamento de ventas agéntico
+        - generic [ref=e144]:
+          - link "LinkedIn" [ref=e145] [cursor=pointer]:
+            - /url: https://www.linkedin.com/company/sisteco/
+            - img [ref=e146]
+          - link "Email" [ref=e150] [cursor=pointer]:
+            - /url: mailto:contacto@sisteco.cl
+            - img [ref=e151]
+      - generic [ref=e154]:
+        - generic [ref=e155]:
+          - heading "Producto" [level=4] [ref=e156]
+          - link "Soluciones" [ref=e157] [cursor=pointer]:
+            - /url: soluciones.html
+          - link "Infraestructura" [ref=e158] [cursor=pointer]:
+            - /url: como-funciona.html
+          - link "Plataforma" [ref=e159] [cursor=pointer]:
+            - /url: dashboard.html
+          - link "Precios" [ref=e160] [cursor=pointer]:
+            - /url: precios.html
+        - generic [ref=e161]:
+          - heading "Empresa" [level=4] [ref=e162]
+          - link "Visión" [ref=e163] [cursor=pointer]:
+            - /url: vision.html
+          - link "Sobre nosotros" [ref=e164] [cursor=pointer]:
+            - /url: sobre-nosotros.html
+          - link "Contacto" [ref=e165] [cursor=pointer]:
+            - /url: contacto.html
+        - generic [ref=e166]:
+          - heading "Legal" [level=4] [ref=e167]
+          - link "Privacidad" [ref=e168] [cursor=pointer]:
+            - /url: privacidad.html
+          - link "Términos" [ref=e169] [cursor=pointer]:
+            - /url: terminos.html
+          - link "Cookies" [ref=e170] [cursor=pointer]:
+            - /url: cookies.html
+          - link "Ley 21.719" [ref=e171] [cursor=pointer]:
+            - /url: gdpr.html
+        - generic [ref=e172]:
+          - heading "Contacto" [level=4] [ref=e173]
+          - link "contacto@sisteco.cl" [ref=e174] [cursor=pointer]:
+            - /url: mailto:contacto@sisteco.cl
+          - link "+56 9 40065566" [ref=e175] [cursor=pointer]:
+            - /url: tel:+56940065566
+          - generic [ref=e176]: Av. Alonso de Córdova 5870 Of. 413, Las Condes, Santiago
+      - generic [ref=e177]:
+        - paragraph [ref=e178]: © 2026 Sisteco. Todos los derechos reservados.
+        - generic [ref=e179]:
+          - link "Privacidad" [ref=e180] [cursor=pointer]:
+            - /url: privacidad.html
+          - link "Términos" [ref=e181] [cursor=pointer]:
+            - /url: terminos.html
+          - link "Cookies" [ref=e182] [cursor=pointer]:
+            - /url: cookies.html

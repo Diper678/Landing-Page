@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /email-previews/
+Disallow: /pages/success.html
+
+Sitemap: https://landing-page-felipe-s-projects-cf2ac967.vercel.app/sitemap.xml

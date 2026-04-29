@@ -9,7 +9,7 @@
     <meta name="description" content="Revisa y firma tu contrato de servicios con Sisteco. Firma electrónica conforme a Ley 19.799 de Chile.">
     <link rel="icon" type="image/png" href="../assets/logos/sisteco-icon.png">
     <meta name="robots" content="noindex, nofollow">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Fonts: self-hosted via style.css (Ley 21.719) -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
@@ -482,7 +482,6 @@
                 <a href="vision.html" class="btn btn-ghost navbar-item">Visión</a>
                 <a href="soluciones.html" class="btn btn-ghost navbar-item">Soluciones</a>
                 <a href="como-funciona.html" class="btn btn-ghost navbar-item">Infraestructura</a>
-                <a href="dashboard.html" class="btn btn-ghost navbar-item">Plataforma</a>
                 <a href="precios.html" class="btn btn-ghost navbar-item">Precios</a>
             </div>
             <a href="../index.html#hero" class="btn btn-primary navbar-item">Empezar ahora</a>
@@ -598,7 +597,7 @@
                                 <p>Sisteco se compromete a prestar al Cliente los servicios de automatización de prospección y ventas B2B descritos en el Plan <strong id="clause-plan">—</strong> elegido por el Cliente, según los términos de este contrato.</p>
                                 <p>Los servicios incluyen:</p>
                                 <ul>
-                                    <li>Plataforma de pipeline de leads automatizado</li>
+                                    <li>Plataforma de calificación y entrega de prospectos</li>
                                     <li>Dashboard de ventas con inteligencia artificial</li>
                                     <li>Scoring y calificación de prospectos</li>
                                     <li>Alertas en tiempo real (Discord/email)</li>
@@ -656,12 +655,12 @@
                             <div class="clause-content">
                                 <p><strong>5.1 Rol de las partes:</strong></p>
                                 <ul>
-                                    <li>Sisteco actúa como RESPONSABLE del tratamiento de datos de prospectos captados mediante sus herramientas de prospección (PhantomBuster, SII, etc.)</li>
+                                    <li>Sisteco actúa como RESPONSABLE del tratamiento de datos de prospectos captados mediante sus herramientas de prospección (datos del SII, fuentes públicas profesionales, etc.)</li>
                                     <li>Cuando el Cliente provee sus propios datos de contactos, el Cliente actúa como Responsable y Sisteco como Encargado (Data Processor)</li>
                                 </ul>
                                 <p><strong>5.2 Base legal:</strong> El tratamiento de datos de prospectos B2B se basa en:</p>
                                 <ul>
-                                    <li>(a) Interés legítimo (Art. 13 Ley 21.719): captación de leads de empresas con más de 50 empleados con cargos de decisión comercial</li>
+                                    <li>(a) Interés legítimo (Art. 13 Ley 21.719): captación de leads de empresas con más de 10 empleados con cargos de decisión comercial</li>
                                     <li>(b) Contrato: datos necesarios para la prestación del servicio contratado</li>
                                 </ul>
                                 <p><strong>5.3 Obligaciones de Sisteco:</strong></p>
@@ -762,7 +761,7 @@
                             <i data-lucide="chevron-down" class="clause-toggle"></i>
                         </div>
                         <div class="clause-content">
-                            <p>Este DPA regula el tratamiento de datos personales que el Responsable encomienda al Encargado en el contexto de los servicios de la plataforma Sisteco (pipeline de leads, dashboard, scoring).</p>
+                            <p>Este DPA regula el tratamiento de datos personales que el Responsable encomienda al Encargado en el contexto de los servicios de la plataforma Sisteco (calificación de prospectos, dashboard, scoring).</p>
                         </div>
                     </div>
 
@@ -798,7 +797,7 @@
                                     <tr>
                                         <td>Interacciones</td>
                                         <td>Estado contacto, fechas, respuestas</td>
-                                        <td>Seguimiento pipeline</td>
+                                        <td>Seguimiento de cartera</td>
                                         <td>3 años</td>
                                     </tr>
                                 </tbody>
@@ -850,7 +849,6 @@
                                     <tr><td>Vercel Inc.</td><td>USA</td><td>Hosting y serverless</td><td>SCC</td></tr>
                                     <tr><td>Clerk Inc.</td><td>USA</td><td>Autenticación</td><td>SCC</td></tr>
                                     <tr><td>Resend Inc.</td><td>USA</td><td>Envío de emails</td><td>SCC</td></tr>
-                                    <tr><td>PhantomBuster</td><td>Francia</td><td>Prospección LinkedIn</td><td>Adequacy Decision EU + SCC Chile</td></tr>
                                     <tr><td>Google LLC (Gemini)</td><td>USA</td><td>Scoring IA</td><td>SCC</td></tr>
                                 </tbody>
                             </table>
@@ -1018,7 +1016,6 @@
                     <h4>Producto</h4>
                     <a href="soluciones.html">Soluciones</a>
                     <a href="como-funciona.html">Infraestructura</a>
-                    <a href="dashboard.html">Plataforma</a>
                     <a href="precios.html">Precios</a>
                 </div>
                 <div class="footer-col">
@@ -1060,9 +1057,9 @@
         : '/api';
 
     const PLAN_NAMES = {
-        inicio: 'Inicio',
-        crecimiento: 'Crecimiento',
-        enterprise: 'Enterprise',
+        junior: 'Junior',
+        senior: 'Senior',
+        manager: 'Manager',
     };
 
     let contractData = null;

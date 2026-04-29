@@ -208,7 +208,15 @@ async function sendDiscordPaymentNotification(email, plan, amount) {
     return;
   }
 
-  const planNames = { base: 'Base', growth: 'Crecimiento', enterprise: 'Enterprise' };
+  const planNames = {
+    junior: 'Junior',
+    senior: 'Senior',
+    manager: 'Manager',
+    // Compatibilidad con suscripciones legacy (clientes pre-2026-04-23):
+    base: 'Junior (legacy Base)',
+    growth: 'Senior (legacy Crecimiento)',
+    enterprise: 'Manager (legacy Enterprise)',
+  };
   const displayPlan = planNames[plan] || plan || 'Desconocido';
   const displayAmount = amount ? ` ($${amount})` : '';
 

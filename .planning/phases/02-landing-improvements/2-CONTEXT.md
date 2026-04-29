@@ -93,7 +93,7 @@ Improve the Sisteco landing page UX/UI based on competitor analysis (Apollo, Amp
 - **index.html teaser:** Compact section before CTA — headline + subtext + 4-step timeline (2026-2030) + CTA to vision.html
 - **vision.html full version:** Expand existing content with the autonomous agents future vision
 - Timeline: 2026 (ventas B2B) → 2027 (pipelines completos) → 2028 (agent-to-agent) → 2030 (departamentos autónomos)
-- Core message: "Menos leads, mas cierres. Automatizacion de ventas B2B hecha para Chile."
+- Core message: "Vende más, preocúpate menos. Automatizacion de ventas B2B hecha para Chile."
 
 ### Claude's Discretion
 - Bento grid exact CSS grid-template values (responsive breakpoints)

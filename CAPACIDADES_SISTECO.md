@@ -9,7 +9,7 @@
 
 Sisteco es una infraestructura de ventas automatizada diseñada para empresas B2B en Chile y Latinoamérica. Construimos y desplegamos workflows de automatización que cubren todo el ciclo comercial: desde identificar al decisor correcto hasta cerrar el contrato y automatizar la facturación.
 
-**Propuesta de valor:** "Menos leads, más cierres" — bajo volumen, alta conversión.
+**Propuesta de valor:** "Vende más, preocúpate menos" — bajo volumen, alta conversión.
 
 ---
 

@@ -81,7 +81,7 @@ export function welcomeEmail(email) {
     <p>Ejecutamos campañas automatizadas por email, LinkedIn y más canales. Mensajes personalizados con IA que generan respuestas reales.</p>
   </div>
 
-  <a href="https://cal.com/felipe-sisteco/demo" class="cta-btn">Agendar una demo →</a>
+  <a href="https://cal.com/sisteco/demo" class="cta-btn">Agendar una demo →</a>
 
   <p>En los próximos días te compartiremos casos de éxito y una oferta especial para que empieces sin riesgo.</p>
 
@@ -125,7 +125,7 @@ export function caseStudyEmail(email) {
     <p>ROI en el primer trimestre</p>
   </div>
 
-  <a href="https://cal.com/felipe-sisteco/demo" class="cta-btn">Agendar demo gratuita →</a>
+  <a href="https://cal.com/sisteco/demo" class="cta-btn">Agendar demo gratuita →</a>
 
   <p>Mañana te compartiremos algo especial para que puedas probarlo con tu equipo.</p>
 
@@ -158,7 +158,7 @@ export function quickWinEmail(email) {
 
   <p>Sin presión, sin compromiso. Si no ves valor, no pierdes nada.</p>
 
-  <a href="https://cal.com/felipe-sisteco/demo" class="cta-btn">Agendar mi consultoría gratuita →</a>
+  <a href="https://cal.com/sisteco/demo" class="cta-btn">Agendar mi consultoría gratuita →</a>
 
   <p style="font-size: 14px; color: #666;">Esta oferta es válida por los próximos 7 días. Después de eso, las consultorías tienen un costo de $150 USD.</p>
 
@@ -195,9 +195,9 @@ export function demoConfirmationEmail(email, companyName) {
     <p>• ¿Cuál es tu mayor cuello de botella en prospección?</p>
   </div>
 
-  <a href="https://cal.com/felipe-sisteco/demo" class="cta-btn">Agendar tu demo ahora →</a>
+  <a href="https://cal.com/sisteco/demo" class="cta-btn">Agendar tu demo ahora →</a>
 
-  <p style="margin-top:12px;font-size:14px;color:#666;">¿Prefieres una conversación 1:1 con Felipe? <a href="https://cal.com/felipe-sisteco/ventas" style="color:#111;font-weight:600;">Agenda aquí →</a></p>
+  <p style="margin-top:12px;font-size:14px;color:#666;">¿Prefieres una conversación 1:1 con Felipe? <a href="https://cal.com/sisteco/ventas" style="color:#111;font-weight:600;">Agenda aquí →</a></p>
 
   ${footer}
 </div></body></html>`;
@@ -207,7 +207,14 @@ export function demoConfirmationEmail(email, companyName) {
 
 // ── Payment Confirmation Email ───────────────────────────────────────────────
 export function paymentConfirmationEmail(email, { name, plan, billingCycle, amount }) {
-  const planNames = { base: 'Base', growth: 'Crecimiento', enterprise: 'Enterprise' };
+  const planNames = {
+    junior: 'Junior',
+    senior: 'Senior',
+    manager: 'Manager',
+    base: 'Junior',
+    growth: 'Senior',
+    enterprise: 'Manager',
+  };
   const cycleNames = { monthly: 'Mensual', annual: 'Anual' };
   const displayPlan = planNames[plan] || plan || 'Suscripción';
   const displayCycle = cycleNames[billingCycle] || billingCycle || '';
@@ -289,7 +296,7 @@ export function onboardingWelcomeEmail(email, { name, plan }) {
     <p>${checkSvg} Integrar tu CRM actual (si aplica)</p>
   </div>
 
-  <a href="https://cal.com/felipe-sisteco/demo" class="cta-btn">Agendar sesión de configuración →</a>
+  <a href="https://cal.com/sisteco/demo" class="cta-btn">Agendar sesión de configuración →</a>
 
   <div class="feature-box">
     ${iconClipboard}
@@ -334,7 +341,7 @@ export function onboardingSessionReminderEmail(email) {
 
   <p>En la sesión de configuración (60 min) haremos todo el setup para que recibas leads calificados en tu Sheet o CRM en menos de 48 horas.</p>
 
-  <a href="https://cal.com/felipe-sisteco/demo" class="cta-btn">Agendar ahora →</a>
+  <a href="https://cal.com/sisteco/demo" class="cta-btn">Agendar ahora →</a>
 
   <div class="feature-box">
     ${iconSparkles}
@@ -410,7 +417,7 @@ export function onboardingWeekReviewEmail(email) {
   <div class="feature-box" style="background: #f0f9e0; border-color: #c5ed36;">
     ${iconBrain}
     <p><strong>Dato clave:</strong></p>
-    <p>Las empresas que responden en menos de <span class="accent">5 minutos</span> tienen 21x más probabilidades de cerrar. Tu pipeline entrega los leads justo cuando están listos — asegúrate de que tu equipo los contacte rápido.</p>
+    <p>Responder rápido es la diferencia entre cerrar un cliente o perderlo con la competencia. Tu pipeline entrega los leads justo cuando están listos — asegúrate de que tu equipo los contacte en <span class="accent">menos de 5 minutos</span>.</p>
   </div>
 
   <a href="mailto:contacto@sisteco.cl" class="cta-btn">Agendar revisión de resultados →</a>

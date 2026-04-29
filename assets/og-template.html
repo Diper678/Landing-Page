@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1200">
+<title>Sisteco OG Image</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1200px;
+    height: 630px;
+    overflow: hidden;
+    background: #111111;
+    font-family: -apple-system, 'Segoe UI', system-ui, sans-serif;
+    position: relative;
+  }
+
+  .container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  /* Left side — 60% */
+  .left {
+    width: 60%;
+    padding: 60px 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .badge-top {
+    display: inline-block;
+    background: rgba(197, 237, 54, 0.15);
+    color: #c5ed36;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(197, 237, 54, 0.25);
+    margin-bottom: 28px;
+    width: fit-content;
+  }
+
+  .title {
+    font-size: 80px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -2px;
+    line-height: 1;
+    margin-bottom: 16px;
+  }
+
+  .subtitle {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.4;
+    max-width: 480px;
+    margin-bottom: 40px;
+  }
+
+  .badges-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .badge-feature {
+    background: #c5ed36;
+    color: #111111;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 6px;
+    letter-spacing: 0.2px;
+  }
+
+  /* Right side — 40% */
+  .right {
+    width: 40%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Floating cards — abstract graphic */
+  .card {
+    position: absolute;
+    border-radius: 16px;
+    background: #c5ed36;
+  }
+
+  .card-1 {
+    width: 220px;
+    height: 160px;
+    top: 80px;
+    right: 40px;
+    opacity: 0.12;
+    transform: rotate(-6deg);
+  }
+
+  .card-2 {
+    width: 200px;
+    height: 140px;
+    top: 140px;
+    right: 80px;
+    opacity: 0.22;
+    transform: rotate(-3deg);
+  }
+
+  .card-3 {
+    width: 240px;
+    height: 170px;
+    top: 190px;
+    right: 20px;
+    opacity: 0.35;
+    transform: rotate(2deg);
+  }
+
+  .card-4 {
+    width: 180px;
+    height: 130px;
+    top: 280px;
+    right: 100px;
+    opacity: 0.55;
+    transform: rotate(-1deg);
+    border: 2px solid rgba(197, 237, 54, 0.4);
+    background: rgba(197, 237, 54, 0.08);
+  }
+
+  /* Inner details on card-3 to simulate a dashboard card */
+  .card-3::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 60%;
+    height: 12px;
+    background: rgba(17, 17, 17, 0.25);
+    border-radius: 6px;
+  }
+
+  .card-3::after {
+    content: '';
+    position: absolute;
+    top: 44px;
+    left: 20px;
+    width: 40%;
+    height: 12px;
+    background: rgba(17, 17, 17, 0.15);
+    border-radius: 6px;
+  }
+
+  /* Glow effect */
+  .glow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(197, 237, 54, 0.12) 0%, transparent 70%);
+    top: 50%;
+    right: 10%;
+    transform: translate(0, -50%);
+    z-index: 1;
+  }
+
+  /* Bottom bar */
+  .bottom-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #c5ed36;
+    z-index: 10;
+  }
+
+  /* URL bottom-left */
+  .url {
+    position: absolute;
+    bottom: 20px;
+    left: 56px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.4);
+    z-index: 10;
+    letter-spacing: 0.5px;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <div class="badge-top">Agencia agéntica · Chile</div>
+      <div class="title">Sisteco</div>
+      <div class="subtitle">Prospección calificada para consultoras tech, ciber-boutiques e ISVs chilenos</div>
+      <div class="badges-row">
+        <div class="badge-feature">Datos del SII</div>
+        <div class="badge-feature">Ley 21.719 cumplida</div>
+        <div class="badge-feature">Cascada agéntica</div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="glow"></div>
+      <div class="card card-1"></div>
+      <div class="card card-2"></div>
+      <div class="card card-3"></div>
+      <div class="card card-4"></div>
+    </div>
+  </div>
+  <div class="url">sisteco.cl</div>
+  <div class="bottom-bar"></div>
+</body>
+</html>

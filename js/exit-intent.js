@@ -8,7 +8,7 @@
 
   const SESSION_KEY = 'sisteco_exit_shown';
   const DELAY_MS    = 5000;   // esperar 5s antes de activar (usuario leyendo)
-  const CTA_LINK    = 'https://cal.com/felipesisteco/demo';
+  const CTA_LINK    = 'https://cal.com/sisteco/demo';
 
   // No mostrar si ya se vio en esta sesión
   if (sessionStorage.getItem(SESSION_KEY)) return;
@@ -105,7 +105,7 @@
         font-size: 1.6rem; font-weight: 800;
         color: #111; margin: 0 0 14px;
         line-height: 1.2;
-        font-family: 'Sharp Grotesk', sans-serif;
+        font-family: 'Space Grotesk', system-ui, sans-serif;
       }
       .exit-sub {
         font-size: 1rem; color: #444;

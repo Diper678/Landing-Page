@@ -1,3 +1,6 @@
+> ⚠️ **DEPRECADO 2026-04-23** — Setup Stripe abandonado (requería entidad legal chilena que no se constituyó). Pasarelas activas: Flow.cl (principal), dLocal Go, Reveniu.
+> Solo valor histórico.
+
 # Guía: Configurar Stripe para Sisteco
 **Tiempo estimado: 45-90 minutos**
 

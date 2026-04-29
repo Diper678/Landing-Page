@@ -1,3 +1,6 @@
+> ⚠️ **DEPRECADO 2026-04-23** — Estado de planificación v1.0 con pricing antiguo ($397/$797/$1,800). Reemplazado por pricing UF Junior 20 / Senior 50 / Manager 100.
+> Solo valor histórico.
+
 # STATE
 
 milestone_version: v1.0

@@ -1,0 +1,23 @@
+{
+  "posts": [
+    {
+      "slug": "10-herramientas-prospeccion-b2b-tech-chile",
+      "url": "/recursos/posts/10-herramientas-prospeccion-b2b-tech-chile",
+      "category": "Reviews",
+      "title": "Las 10 herramientas de prospección B2B tech que analizamos en 2026 (y cuál elegiría para Chile)",
+      "excerpt": "Comparamos Apollo, Clay, Phantombuster, HubSpot, Pipedrive, Salesforce, Outreach, Lemlist, Instantly y Lusha para empresas tech B2B chilenas. Precios, fit local, veredicto honesto.",
+      "author": "Felipe Martínez",
+      "date": "2026-04-21",
+      "readingTime": "12 min",
+      "cover": "/assets/og-image.png",
+      "featured": true
+    }
+  ],
+  "categories": [
+    {"slug": "reviews", "name": "Reviews"},
+    {"slug": "comparativas", "name": "Comparativas"},
+    {"slug": "tacticas", "name": "Tácticas"},
+    {"slug": "opinion", "name": "Opinión Felipe"},
+    {"slug": "casos", "name": "Casos"}
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "nanobanana-mcp",
+  "version": "1.0.0",
+  "description": "MCP server wrapping Google Nano Banana 2 (fal-ai/nano-banana-2) for UI/UX mockup generation",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "@fal-ai/client": "^1.5.0",
+    "@google/generative-ai": "^0.24.1",
+    "@inferencesh/sdk": "^0.5.10",
+    "@modelcontextprotocol/sdk": "^1.13.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

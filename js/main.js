@@ -200,6 +200,12 @@ function handleCTAClick(event) {
       }, 500);
     }
   }
+
+  // Demo CTA buttons open the modal instead of navigating
+  if (buttonId === 'cta-bottom' || buttonId === 'cta-demo' || buttonId === 'cta-agendar') {
+    event.preventDefault();
+    openModal();
+  }
 }
 
 function handleNavClick(event) {
@@ -557,9 +563,9 @@ function initScrollReveal() {
   // Animate section labels (below-fold only)
   gsap.utils.toArray('.bento-section .section-label, .features .section-label, .cta-section .cta-badge').forEach(el => {
     gsap.fromTo(el,
-      { y: 20, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out',
-        scrollTrigger: { trigger: el, start: 'top 85%', once: true }
+      { y: 15, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out',
+        scrollTrigger: { trigger: el, start: 'top 95%', once: true }
       }
     );
   });
@@ -567,9 +573,9 @@ function initScrollReveal() {
   // Animate section titles (below-fold only)
   gsap.utils.toArray('.bento-section .section-title, .cta-section h2').forEach(el => {
     gsap.fromTo(el,
-      { y: 30, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.7, ease: 'power3.out', delay: 0.1,
-        scrollTrigger: { trigger: el, start: 'top 85%', once: true }
+      { y: 20, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out',
+        scrollTrigger: { trigger: el, start: 'top 95%', once: true }
       }
     );
   });
@@ -577,9 +583,9 @@ function initScrollReveal() {
   // Animate section descriptions
   gsap.utils.toArray('.bento-section .section-desc, .cta-section > .container > p').forEach(el => {
     gsap.fromTo(el,
-      { y: 20, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.6, ease: 'power3.out', delay: 0.2,
-        scrollTrigger: { trigger: el, start: 'top 85%', once: true }
+      { y: 15, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.4, ease: 'power3.out', delay: 0.1,
+        scrollTrigger: { trigger: el, start: 'top 95%', once: true }
       }
     );
   });
@@ -588,9 +594,9 @@ function initScrollReveal() {
   const logosBar = document.querySelector('.logos-bar');
   if (logosBar) {
     gsap.fromTo(logosBar,
-      { y: 20, opacity: 0 },
-      { y: 0, opacity: 1, duration: 0.7, ease: 'power3.out',
-        scrollTrigger: { trigger: logosBar, start: 'top 90%', once: true }
+      { y: 15, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out',
+        scrollTrigger: { trigger: logosBar, start: 'top 95%', once: true }
       }
     );
   }
@@ -607,13 +613,17 @@ function initBentoAnimations() {
   const bentoGrid = document.querySelector('.bento-grid');
   if (!bentoGrid) return;
 
+  const allCards = bentoGrid.querySelectorAll('.bento-card');
+  // Setear opacity via JS — si GSAP no carga, las tarjetas quedan visibles (CSS ya no tiene opacity:0)
+  gsap.set(allCards, { opacity: 0 });
+
   // Hero card (enters first)
   const heroCard = bentoGrid.querySelector('.bento-card--hero');
   if (heroCard) {
     gsap.fromTo(heroCard,
-      { y: 60, opacity: 0, scale: 0.96 },
-      { y: 0, opacity: 1, scale: 1, duration: 0.8, ease: 'power3.out',
-        scrollTrigger: { trigger: bentoGrid, start: 'top 80%', once: true }
+      { y: 30, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.5, ease: 'power3.out',
+        scrollTrigger: { trigger: bentoGrid, start: 'top 95%', once: true }
       }
     );
   }
@@ -622,9 +632,9 @@ function initBentoAnimations() {
   const smallCards = bentoGrid.querySelectorAll('.bento-card:not(.bento-card--hero)');
   if (smallCards.length > 0) {
     gsap.fromTo(smallCards,
-      { y: 50, opacity: 0, scale: 0.95 },
-      { y: 0, opacity: 1, scale: 1, duration: 0.6, stagger: 0.12, ease: 'power3.out', delay: 0.3,
-        scrollTrigger: { trigger: bentoGrid, start: 'top 80%', once: true }
+      { y: 25, opacity: 0 },
+      { y: 0, opacity: 1, duration: 0.4, stagger: 0.06, ease: 'power3.out', delay: 0.1,
+        scrollTrigger: { trigger: bentoGrid, start: 'top 95%', once: true }
       }
     );
   }
@@ -769,7 +779,35 @@ function init() {
     lucide.createIcons();
   }
 
+  initEcosystemDiagram();
+
   console.log('Sisteco Landing initialized');
+}
+
+function initEcosystemDiagram() {
+  const diagram = document.querySelector('.eco-diagram');
+  if (!diagram) return;
+
+  const filters = diagram.querySelectorAll('[data-eco-filter]');
+  filters.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const flow = btn.getAttribute('data-eco-filter');
+      diagram.setAttribute('data-eco-flow', flow);
+      filters.forEach((b) => b.classList.toggle('is-active', b === btn));
+    });
+  });
+
+  const pauseBtn = diagram.querySelector('[data-eco-pause]');
+  if (pauseBtn) {
+    const label = pauseBtn.querySelector('.eco-diagram__pause-label');
+    pauseBtn.addEventListener('click', () => {
+      const paused = diagram.getAttribute('data-eco-paused') === 'true';
+      const next = !paused;
+      diagram.setAttribute('data-eco-paused', String(next));
+      pauseBtn.setAttribute('aria-pressed', String(next));
+      if (label) label.textContent = next ? 'Reanudar' : 'Pausar';
+    });
+  }
 }
 
 // Run on DOM ready

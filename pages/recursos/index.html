@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos — Análisis, reviews y tácticas de prospección B2B tech | Sisteco</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../../css/pages.css">
+    <meta name="description"
+        content="Análisis, comparativas y tácticas reales de prospección B2B tech en Chile. Escrito por el equipo de Sisteco — sin relleno, sin clichés, sin afiliados.">
+    <link rel="icon" type="image/png" href="../../assets/logos/sisteco-icon.png">
+    <meta property="og:title" content="Recursos de prospección B2B tech — Sisteco">
+    <meta property="og:description" content="Análisis, comparativas y tácticas reales de cómo construir pipeline para empresas tech chilenas.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://sisteco.cl/recursos">
+    <meta property="og:url" content="https://sisteco.cl/recursos">
+    <meta property="og:image" content="https://sisteco.cl/assets/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Recursos de prospección B2B tech — Sisteco">
+    <meta name="twitter:description" content="Análisis, comparativas y tácticas reales de prospección B2B tech para empresas chilenas.">
+    <meta name="twitter:image" content="https://sisteco.cl/assets/og-image.png">
+    <!-- Fonts: self-hosted via style.css (Ley 21.719) -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Recursos Sisteco",
+      "description": "Análisis, comparativas y tácticas de prospección B2B tech para empresas chilenas.",
+      "url": "https://sisteco.cl/recursos",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Sisteco",
+        "url": "https://sisteco.cl",
+        "logo": "https://sisteco.cl/assets/logos/sisteco-icon.png"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://sisteco.cl/"},
+        {"@type": "ListItem", "position": 2, "name": "Recursos", "item": "https://sisteco.cl/recursos"}
+      ]
+    }
+    </script>
+</head>
+
+<body>
+    <div class="animated-bg"></div>
+    <div class="grid-pattern-overlay"></div>
+
+    <nav class="navbar">
+        <div class="container">
+            <a href="../../index.html" class="logo navbar-item">
+                <img src="../../assets/logos/sisteco-icon.png" alt="Sisteco Logo" width="28" height="28">
+                <span class="logo-text">Sisteco</span>
+            </a>
+            <div class="nav-links">
+                <a href="../vision.html" class="btn btn-ghost navbar-item">Visión</a>
+                <a href="../soluciones.html" class="btn btn-ghost navbar-item">Soluciones</a>
+                <a href="../como-funciona.html" class="btn btn-ghost navbar-item">Infraestructura</a>
+                <a href="../precios.html" class="btn btn-ghost navbar-item">Precios</a>
+                <a href="index.html" class="btn btn-ghost navbar-item is-active">Recursos</a>
+            </div>
+            <a href="../../index.html#hero" class="btn btn-primary navbar-item">Empezar ahora</a>
+            <button class="hamburger" aria-label="Menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero recursos-hero">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../../index.html">Inicio</a>
+                <span>/</span>
+                <span>Recursos</span>
+            </div>
+            <span class="section-label">Newsletter técnico</span>
+            <h1>Recursos de prospección tech B2B para empresas que venden.</h1>
+            <p>Análisis, comparativas y tácticas reales de cómo estamos construyendo pipeline para empresas tech chilenas. Escrito por el equipo de Sisteco — sin relleno, sin clichés, sin enlaces de afiliado.</p>
+        </div>
+    </section>
+
+    <!-- Category filter + feed -->
+    <section class="recursos-feed-section">
+        <div class="container">
+            <div class="recursos-filters" role="tablist" aria-label="Filtrar por categoría">
+                <button class="recursos-filter is-active" data-filter="all" role="tab" aria-selected="true">Todos</button>
+                <button class="recursos-filter" data-filter="Reviews" role="tab" aria-selected="false">Reviews</button>
+                <button class="recursos-filter" data-filter="Comparativas" role="tab" aria-selected="false">Comparativas</button>
+                <button class="recursos-filter" data-filter="Tácticas" role="tab" aria-selected="false">Tácticas</button>
+                <button class="recursos-filter" data-filter="Opinión Felipe" role="tab" aria-selected="false">Opinión Felipe</button>
+                <button class="recursos-filter" data-filter="Casos" role="tab" aria-selected="false">Casos</button>
+            </div>
+
+            <div id="recursos-feed" class="recursos-feed" aria-live="polite"></div>
+
+            <div id="recursos-sentinel" class="recursos-sentinel" aria-hidden="true"></div>
+
+            <div id="recursos-status" class="recursos-status">
+                <p class="recursos-loading-text">Cargando…</p>
+            </div>
+
+            <div id="recursos-empty" class="recursos-empty" hidden>
+                <p>No hay posts en esta categoría todavía. Vuelve pronto — publicamos los viernes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter CTA -->
+    <section class="recursos-subscribe">
+        <div class="container">
+            <div class="recursos-subscribe-card">
+                <div>
+                    <h2>Recibe el próximo análisis en tu inbox</h2>
+                    <p>Un email cada viernes. Review, táctica u opinión sobre prospección tech B2B. Sin spam — puedes salir cuando quieras.</p>
+                </div>
+                <form class="recursos-subscribe-form" action="https://formspree.io/f/mnnpqjnq" method="POST" novalidate>
+                    <label class="visually-hidden" for="recursos-email">Correo</label>
+                    <input id="recursos-email" type="email" name="email" placeholder="tu@empresa.cl" required>
+                    <button type="submit" class="btn btn-primary">Suscribirme</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand-inline">
+                    <img src="../../assets/logos/sisteco-icon.png" alt="Sisteco" class="footer-logo" width="28" height="28">
+                    <span class="footer-tagline">Tu departamento de ventas agéntico</span>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/sisteco/" target="_blank" rel="noopener" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+                    <a href="mailto:contacto@sisteco.cl" aria-label="Email"><i data-lucide="mail"></i></a>
+                </div>
+            </div>
+            <div class="footer-columns">
+                <div class="footer-col">
+                    <h4>Producto</h4>
+                    <a href="../soluciones.html">Soluciones</a>
+                    <a href="../como-funciona.html">Infraestructura</a>
+                    <a href="../precios.html">Precios</a>
+                    <a href="index.html">Recursos</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Empresa</h4>
+                    <a href="../vision.html">Visión</a>
+                    <a href="../sobre-nosotros.html">Sobre nosotros</a>
+                    <a href="../contacto.html">Contacto</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="../privacidad.html">Privacidad</a>
+                    <a href="../terminos.html">Términos</a>
+                    <a href="../cookies.html">Cookies</a>
+                    <a href="../gdpr.html">Ley 21.719</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Contacto</h4>
+                    <a href="mailto:contacto@sisteco.cl">contacto@sisteco.cl</a>
+                    <a href="tel:+56940065566">+56 9 40065566</a>
+                    <span class="footer-address">Av. Alonso de Córdova 5870 Of. 413, Las Condes, Santiago</span>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sisteco. Todos los derechos reservados.</p>
+                <div class="footer-bottom-links">
+                    <a href="../privacidad.html">Privacidad</a>
+                    <a href="../terminos.html">Términos</a>
+                    <a href="../cookies.html">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../../js/pages.js" defer></script>
+    <script src="../../js/recursos.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex,nofollow" />
+<title>Sisteco × Aspillaga Hornauer — Demo en vivo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.js"></script>
+<style>
+  /* Sisteco brand fonts */
+  @font-face{
+    font-family:'Nasalization';
+    src:url('../assets/logos/Nasalization Rg.otf') format('opentype');
+    font-weight:400;font-style:normal;font-display:swap;
+  }
+  @font-face{
+    font-family:'Sharp Grotesk';
+    src:url('../assets/fonts/SharpGrotesk-Book20.otf') format('opentype');
+    font-weight:400;font-style:normal;font-display:swap;
+  }
+  @font-face{
+    font-family:'Sharp Grotesk';
+    src:url('../assets/fonts/SharpGrotesk-Medium20.otf') format('opentype');
+    font-weight:500;font-style:normal;font-display:swap;
+  }
+  @font-face{
+    font-family:'Sharp Grotesk';
+    src:url('../assets/fonts/SharpGrotesk-Bold20.otf') format('opentype');
+    font-weight:700;font-style:normal;font-display:swap;
+  }
+
+  :root {
+    --bg-primary: #F8F7F5;
+    --bg-surface: #FFFFFF;
+    --bg-dark: #111111;
+    --text-primary: #111111;
+    --text-secondary: #666666;
+    --text-muted: #999999;
+    --text-on-dark: #FFFFFF;
+    --text-on-dark-muted: rgba(255,255,255,0.65);
+    --accent: #c5ed36;
+    --accent-hover: #b3d82f;
+    --danger: #dc2626;
+    --warning: #f59e0b;
+    --success: #10b981;
+    --border: #e5e5e5;
+    --border-subtle: #f0f0f0;
+    --border-dark: rgba(255,255,255,0.12);
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+    --shadow-md: 0 4px 16px rgba(0,0,0,0.06);
+    --shadow-lg: 0 12px 40px rgba(0,0,0,0.10);
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+
+    --font-heading: 'Sharp Grotesk', system-ui, -apple-system, sans-serif;
+    --font-body: 'Source Sans 3', system-ui, -apple-system, "Segoe UI", sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+    --font-logo: 'Nasalization', sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-body);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+  }
+  h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); letter-spacing: -0.03em; }
+  h2 { font-size: clamp(1.625rem, 3vw, 2.25rem); }
+  h3 { font-size: clamp(1.125rem, 1.8vw, 1.375rem); }
+  p { color: var(--text-secondary); font-size: 1.0625rem; }
+  code, .mono { font-family: var(--font-mono); font-size: 0.875rem; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 clamp(1.25rem, 3vw, 2rem); }
+
+  /* HERO */
+  .hero {
+    background: var(--bg-dark);
+    color: var(--text-on-dark);
+    padding: clamp(2rem, 4vw, 3rem) 0 clamp(3.5rem, 6vw, 5rem);
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    right: -15%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(197,237,54,0.14) 0%, rgba(197,237,54,0) 70%);
+    pointer-events: none;
+  }
+  .hero-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .hero-logo {
+    font-family: var(--font-logo);
+    font-size: 1.375rem;
+    letter-spacing: 0.08em;
+    color: var(--text-on-dark);
+    text-transform: uppercase;
+  }
+  .hero-nav-meta {
+    font-size: 0.8125rem;
+    color: var(--text-on-dark-muted);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .hero-inner { position: relative; z-index: 2; max-width: 820px; }
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(197,237,54,0.12);
+    border: 1px solid rgba(197,237,54,0.35);
+    color: var(--accent);
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  .hero-eyebrow .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 12px var(--accent);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+  .hero h1 { color: var(--text-on-dark); margin-bottom: 1.25rem; }
+  .hero h1 .accent { color: var(--accent); }
+  .hero-sub {
+    font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
+    color: var(--text-on-dark-muted);
+    max-width: 680px;
+    margin-bottom: 2rem;
+  }
+  .hero-stat-callout {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.875rem;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border-dark);
+    border-left: 3px solid var(--accent);
+    padding: 1rem 1.25rem;
+    border-radius: var(--radius-md);
+    font-size: 0.9375rem;
+    color: var(--text-on-dark-muted);
+    max-width: 680px;
+  }
+  .hero-stat-callout strong { color: var(--text-on-dark); font-weight: 600; }
+
+  /* SECTION BASE */
+  section.block { padding: clamp(3.5rem, 6vw, 5rem) 0; }
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-heading);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+  }
+  .section-label::before {
+    content: '';
+    width: 20px; height: 1px;
+    background: var(--text-secondary);
+  }
+  .section-title { margin-bottom: 1rem; }
+  .section-intro { font-size: 1.125rem; max-width: 640px; margin-bottom: 2.5rem; }
+
+  /* LEADS */
+  .leads-grid { display: grid; gap: 0.875rem; }
+  .lead-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 1.5rem;
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 1.25rem;
+    align-items: center;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .lead-card:hover {
+    border-color: var(--text-primary);
+    box-shadow: var(--shadow-md);
+  }
+  .lead-rank {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    min-width: 28px;
+  }
+  .lead-main { min-width: 0; }
+  .lead-company {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.0625rem;
+    color: var(--text-primary);
+    margin-bottom: 0.125rem;
+  }
+  .lead-meta {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .lead-meta .sep { color: var(--border); }
+  .lead-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.375rem 0.75rem;
+    border-radius: 100px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    font-family: var(--font-mono);
+    white-space: nowrap;
+  }
+  .status-hot {
+    background: rgba(220,38,38,0.08);
+    color: var(--danger);
+    border: 1px solid rgba(220,38,38,0.2);
+  }
+  .status-warm {
+    background: rgba(245,158,11,0.08);
+    color: var(--warning);
+    border: 1px solid rgba(245,158,11,0.25);
+  }
+  .status-nurture {
+    background: rgba(16,185,129,0.08);
+    color: var(--success);
+    border: 1px solid rgba(16,185,129,0.25);
+  }
+  .lead-score {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    min-width: 60px;
+  }
+  .score-num {
+    font-family: var(--font-heading);
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+  }
+  .score-label {
+    font-size: 0.6875rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 0.25rem;
+  }
+  @media (max-width: 640px) {
+    .lead-card { grid-template-columns: auto 1fr; }
+    .lead-status, .lead-score { grid-column: 2 / -1; justify-self: start; }
+  }
+
+  /* FLUJO */
+  .flujo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  .flujo-step {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    position: relative;
+  }
+  .flujo-num {
+    font-family: var(--font-heading);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    background: var(--accent);
+    padding: 0.25rem 0.625rem;
+    border-radius: 100px;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+  }
+  .flujo-step h4 {
+    font-family: var(--font-heading);
+    font-size: 1.0625rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  .flujo-step p { font-size: 0.9375rem; color: var(--text-secondary); }
+
+  /* DRAFT */
+  .draft-wrap {
+    background: var(--bg-surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-top: 1.5rem;
+  }
+  .draft-header {
+    background: var(--bg-primary);
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+  }
+  .draft-header i { width: 16px; height: 16px; }
+  .draft-body { padding: 1.75rem 1.75rem 1.5rem; }
+  .draft-field {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border-subtle);
+    font-size: 0.9375rem;
+  }
+  .draft-field:last-of-type { border-bottom: none; margin-bottom: 1rem; }
+  .draft-label {
+    color: var(--text-muted);
+    min-width: 70px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    padding-top: 0.15rem;
+    font-family: var(--font-heading);
+  }
+  .draft-value { color: var(--text-primary); }
+  .draft-message {
+    padding: 1.25rem 0 0;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-primary);
+  }
+  .draft-message p { color: var(--text-primary); margin-bottom: 0.875rem; font-size: 1rem; }
+  .draft-message .highlight {
+    background: rgba(197,237,54,0.25);
+    padding: 0.1em 0.3em;
+    border-radius: 3px;
+  }
+  .draft-thread{display:flex;flex-direction:column;gap:.6rem;margin-top:.25rem}
+  .draft-bubble{
+    padding:.625rem .875rem;border-radius:14px;font-size:.9375rem;line-height:1.5;
+    max-width:82%;word-wrap:break-word;
+  }
+  .draft-bubble.in{background:#f3f2ef;color:var(--text-primary);align-self:flex-start;border-bottom-left-radius:4px}
+  .draft-bubble.out{background:#dcf8c6;color:var(--text-primary);align-self:flex-end;border-bottom-right-radius:4px}
+  .draft-bubble small{display:block;color:var(--text-muted);font-size:.6875rem;margin-top:2px;font-family:var(--font-mono)}
+
+  /* CTA */
+  .cta-block {
+    background: var(--bg-dark);
+    color: var(--text-on-dark);
+    border-radius: var(--radius-lg);
+    padding: clamp(2.5rem, 5vw, 4rem);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .cta-block::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 30%, rgba(197,237,54,0.10) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .cta-block h2 { color: var(--text-on-dark); position: relative; margin-bottom: 1rem; }
+  .cta-block p {
+    color: var(--text-on-dark-muted);
+    max-width: 540px;
+    margin: 0 auto 2rem;
+    position: relative;
+    font-size: 1.0625rem;
+  }
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.625rem;
+    background: var(--accent);
+    color: var(--text-primary);
+    padding: 0.875rem 1.75rem;
+    border-radius: 100px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.2s ease, transform 0.2s ease;
+    position: relative;
+  }
+  .cta-btn:hover { background: var(--accent-hover); transform: translateY(-1px); }
+  .cta-btn i { width: 18px; height: 18px; }
+
+  /* FOOTER */
+  .foot {
+    padding: 2rem 0 3rem;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.875rem;
+  }
+  .foot-meta {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-nav">
+      <div class="hero-logo">Sisteco</div>
+      <div class="hero-nav-meta">Demo en vivo · Abril 2026</div>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-eyebrow">
+        <span class="dot"></span>
+        Personalizado para Aspillaga Hornauer
+      </div>
+      <h1>No les faltan leads,<br/>les falta <span class="accent">velocidad</span>.</h1>
+      <p class="hero-sub">
+        Ustedes ya tienen flujo: WhatsApp, Instagram, Meta Ads y el cotizador
+        web traen consultas todos los días. El problema no es conseguir leads —
+        es que en este rubro le compran al primero que responde, y cuando
+        alguien pregunta por un Mazda CX-5 a las 22:30 un domingo, nadie contesta.
+      </p>
+      <div class="hero-stat-callout">
+        <i data-lucide="zap" style="width:20px;height:20px;color:var(--accent);"></i>
+        <div>
+          <strong>10 conversaciones reales de esta semana</strong> que un agente Sisteco
+          habría calificado, agendado test drive y pasado al vendedor correcto
+          en menos de 11 segundos.
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- LEADS -->
+<section class="block">
+  <div class="container">
+    <div class="section-label">Leads priorizados</div>
+    <h2 class="section-title">10 consultas que Sisteco atendería hoy en Aspillaga Hornauer</h2>
+    <p class="section-intro">
+      Muestra representativa de los canales que ya usan: WhatsApp
+      (+56 9 4789 0647), Instagram (@aspillagahornauer), Meta Ads y
+      cotizador web. El score combina intención (modelo, financiamiento,
+      canje) con contexto (horario, sucursal, historial). Clasificación
+      automática en HOT / WARM / NURTURE.
+    </p>
+
+    <div class="leads-grid">
+
+      <div class="lead-card">
+        <div class="lead-rank">01</div>
+        <div class="lead-main">
+          <div class="lead-company">Mazda CX-5 GT · canje Corolla 2019</div>
+          <div class="lead-meta">
+            <span>WhatsApp</span><span class="sep">·</span>
+            <span class="mono">Viña del Mar</span><span class="sep">·</span>
+            <span>Test drive sábado 11:00</span>
+          </div>
+        </div>
+        <div class="lead-status status-hot">
+          <i data-lucide="flame" style="width:14px;height:14px;"></i>
+          HOT
+        </div>
+        <div class="lead-score"><div class="score-num">94</div><div class="score-label">Score</div></div>
+      </div>
+
+      <div class="lead-card">
+        <div class="lead-rank">02</div>
+        <div class="lead-main">
+          <div class="lead-company">Suzuki Swift 0 km · financiamiento 48m</div>
+          <div class="lead-meta">
+            <span>Cotizador web</span><span class="sep">·</span>
+            <span class="mono">Quillota</span><span class="sep">·</span>
+            <span>Pie 20% aprobado preliminar</span>
+          </div>
+        </div>
+        <div class="lead-status status-hot">
+          <i data-lucide="flame" style="width:14px;height:14px;"></i>
+          HOT
+        </div>
+        <div class="lead-score"><div class="score-num">91</div><div class="score-label">Score</div></div>
+      </div>
+
+      <div class="lead-card">
+        <div class="lead-rank">03</div>
+        <div class="lead-main">
+          <div class="lead-company">Renault Kardian · comparando con Duster</div>
+          <div class="lead-meta">
+            <span>Instagram DM</span><span class="sep">·</span>
+            <span class="mono">Coquimbo</span><span class="sep">·</span>
+            <span>Pidió ficha técnica y colores</span>
+          </div>
+        </div>
+        <div class="lead-status status-hot">
+          <i data-lucide="flame" style="width:14px;height:14px;"></i>
+          HOT
+        </div>
+        <div class="lead-score"><div class="score-num">88</div><div class="score-label">Score</div></div>
+      </div>
+
+      <div class="lead-card">
+        <div class="lead-rank">04</div>
+        <div class="lead-main">
+          <div class="lead-company">Changan CS35 Plus · flota 3 unidades</div>
+          <div class="lead-meta">
+            <span>Meta Ads</span><span class="sep">·</span>
+            <span class="mono">Ovalle</span><span class="sep">·</span>
+            <span>Empresa minera · factura</span>
+          </div>
+        </div>
+        <div class="lead-status status-hot">
+          <i data-lucide="flame" style="width:14px;height:14px;"></i>
+          HOT
+        </div>
+        <div class="lead-score"><div class="score-num">86</div><div class="score-label">Score</div></div>
+      </div>
+
+      <div class="lead-card">
+        <div class="lead-rank">05</div>
+        <div class="lead-main">
+          <div class="lead-company">Great Wall Poer · usado, cambio diesel</div>
+          <div class="lead-meta">
+            <span>WhatsApp</span><span class="sep">·</span>
+            <span class="mono">La Ligua</span><span class="sep">·</span>
+            <span>Canje pendiente tasación</span>
+          </div>
+        </div>
+        <div class="lead-status status-warm">
+          <i data-lucide="clock" style="width:14px;height:14px;"></i>
+          WARM
+        </div>
+        <div class="lead-score"><div class="score-num">74</div><div class="score-label">Score</div></div>
+      </div>
+
+      <div class="lead-card">
+        <div class="lead-rank">06</div>
+        <div class="lead-main">
+          <div class="lead-company">Deepal S07 · consulta autonomía real</div>
+          <div class="lead-meta">
+            <span>Instagram DM</span><span class="sep">·</span>
+            <span class="mono">Viña del Mar</span><span class="sep">·</span>
+            <span>Primera compra EV · indeciso</span>
+          </div>
+        </div>
+        <div class="lead-status status-warm">
+          <i data-lucide="clock" style="width:14px;height:14px;"></i>
+          WARM
+        </div>
+        <div class="lead-score"><div class="score-num">71</div><div class="score-label">Score</div></div>
+      </div>
+
+      <div class="lead-card">
+        <div class="lead-rank">07</div>
+        <div class="lead-main">
+          <div class="lead-company">DFSK Glory · uso transporte escolar</div>
+          <div class="lead-meta">
+            <span>Cotizador web</span><span class="sep">·</span>
+            <span class="mono">El Belloto</span><span class="sep">·</span>
+            <span>Requiere permiso circulación</span>
+          </div>
+        </div>
+        <div class="lead-status status-warm">
+          <i data-lucide="clock" style="width:14px;height:14px;"></i>
+          WARM
+        </div>
+        <div class="lead-score"><div class="score-num">68</div><div class="score-label">Score</div></div>
+      </div>
+
+      <div class="lead-card">
+        <div class="lead-rank">08</div>
+        <div class="lead-main">
+          <div class="lead-company">Mazda 3 seminuevo · 2021 bajo km</div>
+          <div class="lead-meta">
+            <span>WhatsApp</span><span class="sep">·</span>
+            <span class="mono">Viña del Mar</span><span class="sep">·</span>
+            <span>Compra fin de año · ahorrando</span>
+          </div>
+        </div>
+        <div class="lead-status status-nurture">
+          <i data-lucide="sprout" style="width:14px;height:14px;"></i>
+          NURTURE
+        </div>
+        <div class="lead-score"><div class="score-num">58</div><div class="score-label">Score</div></div>
+      </div>
+
+      <div class="lead-card">
+        <div class="lead-rank">09</div>
+        <div class="lead-main">
+          <div class="lead-company">Suzuki Baleno · regalo universitario</div>
+          <div class="lead-meta">
+            <span>Instagram DM</span><span class="sep">·</span>
+            <span class="mono">Coquimbo</span><span class="sep">·</span>
+            <span>Decisión familiar · marzo 2027</span>
+          </div>
+        </div>
+        <div class="lead-status status-nurture">
+          <i data-lucide="sprout" style="width:14px;height:14px;"></i>
+          NURTURE
+        </div>
+        <div class="lead-score"><div class="score-num">52</div><div class="score-label">Score</div></div>
+      </div>
+
+      <div class="lead-card">
+        <div class="lead-rank">10</div>
+        <div class="lead-main">
+          <div class="lead-company">Servicio técnico · Mazda CX-3 2019</div>
+          <div class="lead-meta">
+            <span>WhatsApp</span><span class="sep">·</span>
+            <span class="mono">Quillota</span><span class="sep">·</span>
+            <span>Cliente existente · cross-sell posible</span>
+          </div>
+        </div>
+        <div class="lead-status status-nurture">
+          <i data-lucide="sprout" style="width:14px;height:14px;"></i>
+          NURTURE
+        </div>
+        <div class="lead-score"><div class="score-num">47</div><div class="score-label">Score</div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FLUJO -->
+<section class="block" style="background: var(--bg-surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="container">
+    <div class="section-label">Qué hace el sistema</div>
+    <h2 class="section-title">Cuatro pasos, sin que ustedes toquen nada</h2>
+    <p class="section-intro">
+      Esto corre 24/7 sobre sus canales actuales. Los vendedores de cada
+      sucursal reciben solo los leads calientes, ya agendados — sin cambiar
+      de herramienta, sin nuevo CRM.
+    </p>
+
+    <div class="flujo">
+      <div class="flujo-step">
+        <span class="flujo-num">01</span>
+        <h4>Escuchar</h4>
+        <p>WhatsApp Business, Instagram DM, cotizador web y Meta Ads Leads en un solo inbox unificado por sucursal.</p>
+      </div>
+      <div class="flujo-step">
+        <span class="flujo-num">02</span>
+        <h4>Calificar</h4>
+        <p>Agente IA pregunta modelo, presupuesto, plazo, canje y financiamiento. Responde en menos de 11 segundos, en tono Aspillaga.</p>
+      </div>
+      <div class="flujo-step">
+        <span class="flujo-num">03</span>
+        <h4>Agendar</h4>
+        <p>Asigna test drive con el vendedor correcto según marca y sucursal. Confirma por WhatsApp y correo, sincroniza con calendarios.</p>
+      </div>
+      <div class="flujo-step">
+        <span class="flujo-num">04</span>
+        <h4>Seguir</h4>
+        <p>Si no compra, entra en secuencia de nurture 30-90 días. Alertas automáticas cuando el cliente vuelve a mostrar intención.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DRAFT -->
+<section class="block">
+  <div class="container">
+    <div class="section-label">Conversación ejemplo</div>
+    <h2 class="section-title">Así se ve la atención del lead #01</h2>
+    <p class="section-intro">
+      Consulta real reconstruida de WhatsApp Business. Mismo número, mismo
+      tono, misma sucursal. El cliente no nota que es un agente — solo que
+      le respondieron altiro.
+    </p>
+
+    <div class="draft-wrap">
+      <div class="draft-header">
+        <i data-lucide="message-circle"></i>
+        WhatsApp · +56 9 4789 0647 (Aspillaga Hornauer)
+      </div>
+      <div class="draft-body">
+        <div class="draft-field">
+          <div class="draft-label">Cliente</div>
+          <div class="draft-value">María José · primer contacto · origen Instagram</div>
+        </div>
+        <div class="draft-field">
+          <div class="draft-label">Sucursal</div>
+          <div class="draft-value">Viña del Mar · Quillota 766</div>
+        </div>
+        <div class="draft-field">
+          <div class="draft-label">Asignado</div>
+          <div class="draft-value">Carolina R. · vendedora Mazda Viña (automático por modelo + sucursal)</div>
+        </div>
+
+        <div class="draft-thread">
+          <div class="draft-bubble in">
+            Hola, vi un <strong>Mazda CX-5</strong> en su Instagram. ¿Tienen stock en Viña?
+            <small>Cliente · 14:02</small>
+          </div>
+          <div class="draft-bubble out">
+            ¡Hola! Sí, tenemos <strong>CX-5 2026</strong> en Quillota 766, Viña. ¿Te interesa versión R o GT? 🚗
+            <small>Sisteco · 14:02 · respondido en 9 s</small>
+          </div>
+          <div class="draft-bubble in">
+            La GT. Tengo un Corolla 2019 para canje, ¿reciben?
+            <small>Cliente · 14:03</small>
+          </div>
+          <div class="draft-bubble out">
+            Por supuesto. Pásame patente y km y te hago la tasación en línea. ¿Cuándo te acomoda venir a probarlo?
+            <small>Sisteco · 14:03</small>
+          </div>
+          <div class="draft-bubble in">
+            Sábado en la mañana. Patente GHJK-45, 68.000 km.
+            <small>Cliente · 14:04</small>
+          </div>
+          <div class="draft-bubble out">
+            Listo. Te agendé con <strong>Carolina, sábado 11:00 en Viña</strong>. Canje estimado:
+            <span class="highlight">$8.900.000</span>. Confirmación al WhatsApp y correo ✅
+            <small>Sisteco · 14:04 · test drive confirmado</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="block">
+  <div class="container">
+    <div class="cta-block">
+      <h2>Esto mismo, corriendo 24/7 en sus 5 sucursales.</h2>
+      <p>
+        Lo que acaban de ver — 10 leads calificados, clasificados y con
+        test drive agendado — es una muestra. El sistema corre con
+        <strong style="color:var(--accent);">todos los canales de Aspillaga Hornauer</strong>,
+        todos los días, sin que la fuerza de ventas toque una herramienta nueva.
+      </p>
+      <a href="mailto:felipe.martinez@sisteco.cl?subject=Aspillaga%20Hornauer%20%C3%97%20Sisteco%20%E2%80%94%20kickoff" class="cta-btn">
+        Agendar kickoff
+        <i data-lucide="arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div>Sisteco · Empresa agéntica de ventas B2B · Santiago, Chile</div>
+  <div class="foot-meta">
+    <span>sisteco.cl</span>
+    <span>·</span>
+    <span>contacto@sisteco.cl</span>
+    <span>·</span>
+    <span>+56 9 4006 5566</span>
+  </div>
+</footer>
+
+<script>
+  if (window.lucide && typeof window.lucide.createIcons === 'function') {
+    window.lucide.createIcons();
+  }
+</script>
+</body>
+</html>

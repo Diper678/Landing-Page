@@ -1,3 +1,7 @@
+> ⚠️ **DEPRECADO 2026-04-23** — Setup con planes Base/Crecimiento/Enterprise. Reemplazado por Junior/Senior/Manager + Flow.cl como pasarela principal.
+> Para setup actual: ver `Landing Page/.env.example` (Flow + dLocal + Reveniu actualizado) y `Landing Page/scripts/setup-dlocalgo-plans.js`.
+> Solo valor histórico.
+
 # Guía: Configurar Pagos — dLocal Go + Reveniu
 **Reemplaza:** ~~STRIPE_SETUP.md~~ (eliminado — Stripe requiere entidad legal chilena)
 **Procesador principal:** dLocal Go API | **Quick-start:** Reveniu (sin código)

@@ -18,7 +18,7 @@
     <meta name="twitter:title" content="Agenda tu Demo Personalizada — Sisteco | Automatización Ventas B2B">
     <meta name="twitter:description" content="Agenda una demo personalizada de 30 minutos con Sisteco. Descubre cómo automatizar tu prospección B2B con workflows inteligentes, lead scoring y compliance Ley 21.719.">
     <meta name="twitter:image" content="https://landing-page-felipe-s-projects-cf2ac967.vercel.app/assets/og-image.png">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Fonts: self-hosted via style.css (Ley 21.719) -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
@@ -125,6 +125,7 @@
 
         .discovery-benefits h3 {
             font-size: 20px;
+            font-weight: 500;
             margin-bottom: 24px;
         }
 
@@ -154,7 +155,7 @@
 
         .benefit-item h4 {
             font-size: 15px;
-            font-weight: 600;
+            font-weight: 500;
             margin-bottom: 4px;
         }
 
@@ -173,6 +174,7 @@
 
         .benefit-trust p {
             font-size: 13px;
+            font-weight: 400;
             color: var(--color-text-sub);
             display: flex;
             align-items: center;
@@ -308,7 +310,6 @@
                 <a href="vision.html" class="btn btn-ghost navbar-item">Visión</a>
                 <a href="soluciones.html" class="btn btn-ghost navbar-item">Soluciones</a>
                 <a href="como-funciona.html" class="btn btn-ghost navbar-item">Infraestructura</a>
-                <a href="dashboard.html" class="btn btn-ghost navbar-item">Plataforma</a>
                 <a href="precios.html" class="btn btn-ghost navbar-item">Precios</a>
             </div>
             <a href="../index.html#hero" class="btn btn-primary navbar-item">Empezar ahora</a>
@@ -475,7 +476,7 @@
                 <!-- Cal.com inline embed will render here -->
                 <div class="calcom-fallback" id="calcom-fallback">
                     <p>Cargando calendario...</p>
-                    <a href="https://cal.com/felipe-sisteco/demo" target="_blank" rel="noopener" class="btn btn-primary">
+                    <a href="https://cal.com/sisteco/demo" target="_blank" rel="noopener" class="btn btn-primary">
                         <i data-lucide="external-link" style="width:16px;height:16px;margin-right:8px"></i>
                         Abrir calendario en nueva pestaña
                     </a>
@@ -501,7 +502,6 @@
                     <h4>Producto</h4>
                     <a href="soluciones.html">Soluciones</a>
                     <a href="como-funciona.html">Infraestructura</a>
-                    <a href="dashboard.html">Plataforma</a>
                     <a href="precios.html">Precios</a>
                 </div>
                 <div class="footer-col">
@@ -713,7 +713,7 @@
                     // Cal.com script not loaded - show fallback link
                     fallback.innerHTML = `
                         <p>Haz clic en el botón para agendar tu demo de 30 minutos.</p>
-                        <a href="https://cal.com/felipe-sisteco/demo?name=${encodeURIComponent(name || '')}&email=${encodeURIComponent(email || '')}" target="_blank" rel="noopener" class="btn btn-primary">
+                        <a href="https://cal.com/sisteco/demo?name=${encodeURIComponent(name || '')}&email=${encodeURIComponent(email || '')}" target="_blank" rel="noopener" class="btn btn-primary">
                             Agendar demo en Cal.com
                         </a>
                     `;
@@ -725,7 +725,7 @@
                 console.error('Cal.com embed error:', err);
                 fallback.innerHTML = `
                     <p>Haz clic en el botón para agendar tu demo de 30 minutos.</p>
-                    <a href="https://cal.com/felipe-sisteco/demo?name=${encodeURIComponent(name || '')}&email=${encodeURIComponent(email || '')}" target="_blank" rel="noopener" class="btn btn-primary">
+                    <a href="https://cal.com/sisteco/demo?name=${encodeURIComponent(name || '')}&email=${encodeURIComponent(email || '')}" target="_blank" rel="noopener" class="btn btn-primary">
                         Agendar demo en Cal.com
                     </a>
                 `;

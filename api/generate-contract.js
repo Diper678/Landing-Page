@@ -6,15 +6,15 @@ import { z } from 'zod';
 const allowedOrigins = ['https://sisteco.com', 'https://sisteco-landing.vercel.app', 'http://localhost:3000'];
 
 const PLAN_NAMES = {
-  inicio: 'Inicio',
-  crecimiento: 'Crecimiento',
-  enterprise: 'Enterprise',
+  junior: 'Junior',
+  senior: 'Senior',
+  manager: 'Manager',
 };
 
 const generateSchema = z.object({
   email: z.string().email().max(255),
   company: z.string().min(1).max(200),
-  plan: z.enum(['inicio', 'crecimiento', 'enterprise']),
+  plan: z.enum(['junior', 'senior', 'manager']),
   price: z.number().positive(),
   billingCycle: z.enum(['mensual', 'anual']),
 });

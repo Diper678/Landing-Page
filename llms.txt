@@ -1,0 +1,218 @@
+# Sisteco — La empresa agéntica de ventas B2B para empresas tech en Chile
+
+> Sisteco es la infraestructura agéntica de ventas B2B para empresas tech chilenas (ciberseguridad, software, SaaS). Mientras desarrollas tu producto, nuestro ecosistema de agentes extrae leads desde LinkedIn, los investiga, los verifica y los entrega directo a tu CRM. No somos una agencia de marketing. No somos un SaaS. Somos la infraestructura que conecta tu producto tech con clientes reales.
+
+## About
+
+Sisteco se enfoca en un nicho claro: empresas tech B2B chilenas de 10+ personas (SaaS, ciberseguridad, software, startups tech) cuyo fundador o gerente de ventas tiene un gran producto pero no tiene tiempo para prospectar. Reemplazamos la necesidad de contratar una agencia de marketing o un equipo interno de prospección con un ecosistema de agentes autónomos que corre una cascada de 4 pasos:
+
+1. **Captura** — extraemos señales desde LinkedIn, Instagram, directorios web y triggers de mercado (eventos, prensa, contrataciones).
+2. **Verificación** — cruzamos cada contacto contra datos del SII (RUT, tamaño real, actividad económica) para descartar leads fantasma antes de que lleguen a tu equipo.
+3. **Investigación ICP** — un agente investiga stack tecnológico, señales de crecimiento y timing de compra para puntuar el ajuste contra tu Ideal Customer Profile.
+4. **Curación y entrega** — entregamos una shortlist de los mejores leads directo a tu CRM (HubSpot, Salesforce, Pipedrive, Notion), Slack y dashboard Sisteco, con trazabilidad completa bajo Ley 21.719.
+
+La "parte agéntica más continua" del proceso es la investigación: agentes corren 24/7 haciendo market research sobre leads y buscando señales, cubriendo tanto la captura como la investigación ICP.
+
+Nos especializamos en el mercado chileno con integraciones locales que ningún competidor internacional tiene: validación de RUT, datos del SII (Servicio de Impuestos Internos), y cumplimiento nativo de la Ley 21.719 de Protección de Datos Personales de Chile.
+
+Fundada en 2025 en Santiago de Chile. Equipo: Felipe Martínez (Co-founder, Ingeniería y Diseño), Cristián Martínez G. (Co-founder, Estrategia Comercial y Tecnología), Jhonatan Ramírez G. (Head of IT & Arquitectura).
+
+## Services
+
+Sisteco ofrece 5 capacidades integradas:
+
+### 1. Prospección con IA
+- Extracción de leads desde LinkedIn y web
+- Motor de scoring de 100 puntos (clasifica HOT / WARM / NURTURE / SKIP)
+- Enriquecimiento con datos del SII (tamaño real de empresa, actividad económica)
+- Validación de RUT y datos corporativos
+- Resultado: 5-7x más conversiones, -70% costo por lead calificado
+
+### 2. Calificación y Scoring de Leads
+- Scoring dual: perfil del tomador de decisión + señales de la empresa
+- Incorpora datos del SII para validar tamaño real de empresa
+- 97% de precisión en clasificación de leads
+- Integra señales de timing (contrataciones, expansión, etc.)
+
+### 3. Secuencias de Email Automatizadas
+- Secuencias de 5 emails en 35 días (enviados a las 9 AM)
+- Mensajes personalizados por IA para cada lead individual
+- Detección automática de respuestas con alertas instantáneas
+- Cadencia multi-semana con pausas inteligentes
+
+### 4. Orquestación Omnicanal
+- 5+ canales activos: Email, LinkedIn, WhatsApp, Slack, Instagram
+- Ruteo inteligente según comportamiento del lead
+- Historial unificado cross-canal
+- 89% retención con omnicanal vs 33% sin
+
+### 5. Compliance y Seguridad
+- Cumplimiento nativo Ley 21.719 (Chile, vigente diciembre 2026)
+- Compatible GDPR
+- Encriptación end-to-end
+- Arquitectura Privacy by Design
+- Consentimiento opt-in y portabilidad de datos por defecto
+
+## Pricing
+
+Todos los planes incluyen onboarding, soporte y sin costo de setup. Descuento 25% en pago anual. Garantía de 30 días o devolución del dinero.
+
+### Plan Gratis
+- 10 leads enriquecidos
+- 2 prospecciones de prueba
+- Dashboard básico de métricas
+- Scoring AI (HOT/WARM/NURTURE/SKIP)
+- Sin tarjeta de crédito
+
+### Plan Junior — 20 UF/mes (~USD 770 / ~CLP 770,000)
+- Cobro trimestral (60 UF por cuota)
+- LinkedIn scraping + calificación con criterio chileno (SII + Señal Sisteco)
+- Entrega semanal en planilla Google Sheets compartida
+- Cumplimiento Ley 21.719 (RAT documentado por cliente)
+- Verificación de email antes de entrega
+- SLA 21 días para primer batch
+- Audit de ICP gratis pre-firma
+- Soporte email durante horario hábil
+
+### Plan Senior (Recomendado) — 50 UF/mes (~USD 1,925 / ~CLP 1,925,000)
+- Cobro trimestral (150 UF por cuota)
+- Todo lo de Junior, más:
+- Sales Navigator como fuente adicional
+- Sincronización directa al CRM del cliente (HubSpot, Pipedrive, Salesforce)
+- Enriquecimiento de contacto con Hunter / Prospeo
+- Reentrega del batch si no da el ancho (Mes 1)
+- Revisión trimestral con análisis de qué cerró / qué calibrar
+- Ajustes de criterio de calificación cada 30 días
+
+### Plan Manager — Hablemos (~100 UF/mes referencial)
+- Cobro trimestral, alcance caso a caso
+- Todo lo de Senior, más:
+- Omnicanal: LinkedIn + email coordinado
+- Enriquecimiento contextual avanzado (Firecrawl + datos de noticias, contrataciones, expansiones)
+- Reporte ejecutivo mensual en PDF
+- Felipe como consultor directo en la cuenta (1 reunión mensual de 60 min)
+- SLA reforzado: primer batch en ≤14 días
+- Hasta 2 perfiles de ICP distintos en paralelo
+
+### Descuentos
+- 15% de descuento sobre el primer trimestre (con contrato trimestral)
+- 10% de descuento si se paga el año adelantado
+- Los descuentos no se acumulan
+
+### Notas de pricing
+- 1 UF ≈ CLP 38,500 (referencia abril 2026). El cobro se ajusta al valor de la UF al día.
+- Clientes fuera de Chile (LATAM): cobro en USD al equivalente del día, compromiso anual obligatorio.
+- Sisteco no ofrece cobro mensual: el sistema necesita 3 meses de calibración para entregar resultados confiables.
+
+### Add-ons disponibles para todos los planes
+- WhatsApp Business API: +USD 150/mes
+- Usuarios adicionales: +USD 49/usuario/mes
+- Leads extra (por 10,000): +USD 97
+- Integración CRM Premium: +USD 99/mes
+- Reportes PDF ejecutivos: +USD 79/mes
+- Automatización Instagram DM: +USD 99/mes
+- Data Analytics y reportes Excel: +USD 150/mes
+
+## Locations
+
+Santiago de Chile. Oficina: Av. Alonso de Córdova 5870 Of. 413, Las Condes, Santiago de Chile.
+Servicio disponible para empresas en todo Chile. Expansión a Colombia y Perú planificada para 2027.
+
+## Contact
+
+- Email: contacto@sisteco.cl (respuesta < 24 horas)
+- Teléfono: +56 9 40065566 (lunes a viernes, 9:00-18:00 CLT)
+- Agendar demo: cal.com/sisteco/demo
+- Agendar conversación comercial: cal.com/sisteco/ventas
+- LinkedIn: linkedin.com/company/sisteco
+- Horario: Lunes a Viernes, 9:00-18:00 hora Chile (CLT)
+
+## Service Area
+
+Sisteco atiende empresas tech B2B chilenas de 10+ empleados. Foco principal: ciberseguridad, software/SaaS, startups tech y empresas que ofrecen soluciones técnicas a otros negocios. El cliente típico es un fundador, CEO o gerente de ventas que necesita pipeline constante de leads calificados sin contratar una agencia de marketing ni armar un equipo interno. Expansión a otras industrias B2B disponible bajo el plan Manager.
+
+## Key Facts
+
+- Operamos 24/7 — tu departamento de prospección nunca duerme
+- 5-7x más conversiones vs prospección manual
+- -70% en costo por lead calificado
+- 97% de precisión en scoring de leads
+- Únicos en Chile con integración SII para validar datos de empresa
+- Compliance nativo Ley 21.719 — ningún competidor internacional lo tiene
+- ROI promedio de 391% (benchmark Forrester para automatización de ventas)
+- Costo 1/3 de un equipo de prospección interno (SDR junior en Chile: ~CLP 1.7M/mes con overhead)
+- Garantía 30 días o devolución del dinero
+- Sin contratos de permanencia — cancela cuando quieras
+- Facturación con DTE (boleta/factura electrónica válida ante el SII)
+
+## What Makes Sisteco Different
+
+1. **No es software, es un servicio**: No te vendemos una herramienta para que la operes tú. Nosotros operamos tu departamento de prospección. Tu equipo solo cierra.
+
+2. **Datos locales reales**: Integramos el SII (Servicio de Impuestos Internos de Chile) para validar RUT, tamaño real de empresa, y actividad económica. Ningún competidor internacional (Apollo, Instantly, Clay, HubSpot) tiene esto.
+
+3. **Compliance Ley 21.719 por diseño**: La nueva ley chilena de protección de datos personales entra en vigencia en diciembre 2026. Sisteco fue diseñado desde cero para cumplirla. Los competidores internacionales no la cumplen.
+
+4. **Precio accesible**: Un SDR junior en Chile cuesta ~CLP 1.7M/mes con overhead. Sisteco Junior cuesta CLP 583,000/mes, funciona 24/7, no se enferma, no renuncia, y mejora con cada interacción.
+
+5. **Multi-canal inteligente**: No solo email. Orquestamos Email + LinkedIn + WhatsApp + Slack + Instagram con contexto compartido entre canales.
+
+## Frequently Asked Questions
+
+### ¿Qué es el Plan Fundadores?
+Los primeros 10 clientes obtienen 40% de descuento permanente. A cambio, participan como caso de estudio para validar y mejorar el servicio.
+
+### ¿Hay prueba gratis?
+Sí. 14 días de acceso completo sin tarjeta de crédito. No se cobra automáticamente al terminar.
+
+### ¿Cómo pago?
+dLocal Go (tarjeta de crédito/débito internacional), Reveniu (Chile — tarjeta, transferencia), o transferencia bancaria para el plan Manager.
+
+### ¿Puedo cambiar de plan?
+Sí. Upgrade o downgrade en cualquier momento con prorrateo. Cancela sin penalidad.
+
+### ¿Emiten factura válida en Chile?
+Sí. Emitimos DTE (documento tributario electrónico) válido ante el SII.
+
+### ¿Qué pasa si supero mi límite de leads?
+Te avisamos al 80% de tu límite mensual. Puedes comprar add-ons de leads extra sin cambiar de plan.
+
+### ¿Garantía de resultados?
+Garantía de 30 días. Si no estás satisfecho después del periodo de prueba, devolución completa.
+
+### ¿Cómo se integra con mi CRM actual?
+Sync nativo con HubSpot, Pipedrive y Salesforce. Para otros CRM, el plan Manager incluye integraciones custom.
+
+### ¿Es seguro compartir datos de mis clientes?
+Sí. Arquitectura Privacy by Design, encriptación end-to-end, cumplimiento Ley 21.719 y GDPR. Consentimiento opt-in y portabilidad de datos por defecto.
+
+### ¿Necesito saber de tecnología para usarlo?
+No. Sisteco es un servicio operado — nosotros configuramos todo. Tú solo recibes leads calificados y reportes.
+
+## Certifications and Compliance
+
+- Cumplimiento Ley 21.719 de Protección de Datos Personales (Chile)
+- Compatible GDPR (Reglamento General de Protección de Datos, UE)
+- Arquitectura Privacy by Design
+- Analytics con PostHog EU (Frankfurt) — datos no salen de la UE
+- Evaluación de Impacto en Protección de Datos (EIPD) para scoring con IA
+- Registro de Actividades de Tratamiento (RAT) documentado
+
+## Documentation
+
+- [Homepage](https://sisteco.cl/)
+- [Solutions](https://sisteco.cl/soluciones)
+- [Pricing](https://sisteco.cl/precios)
+- [How It Works](https://sisteco.cl/como-funciona)
+- [About Us](https://sisteco.cl/sobre-nosotros)
+- [Vision](https://sisteco.cl/vision)
+- [Book a Demo](https://sisteco.cl/agendar-demo)
+- [Contact](https://sisteco.cl/contacto)
+- [Privacy Policy](https://sisteco.cl/privacidad)
+- [Terms of Service](https://sisteco.cl/terminos)
+- [Automated Prospecting (BoF)](https://sisteco.cl/soluciones/automatizacion-prospeccion-ia-chile)
+- [Lead Scoring with SII Data (BoF)](https://sisteco.cl/soluciones/lead-scoring-datos-sii-ia)
+- [AI Compliance Ley 21.719 (BoF)](https://sisteco.cl/soluciones/compliance-ia-ley-21719-ventas)
+- [Technical Documentation](https://sisteco.cl/docs/como-funciona-tecnicamente)
+- [Resources / Newsletter](https://sisteco.cl/recursos) — Weekly analysis, reviews and tactics on B2B tech prospecting in Chile
+- [Review: 10 B2B tech prospecting tools for Chile (2026)](https://sisteco.cl/recursos/posts/10-herramientas-prospeccion-b2b-tech-chile) — Honest comparison of Apollo.io, Clay.com, Phantombuster, HubSpot Sales Hub, Pipedrive, Salesforce Sales Cloud, Outreach.io, Lemlist, Instantly.ai, Lusha. Includes pricing in USD, Chile fit score (0-10), recommended stack by team size (0-2 / 3-10 / 10+), and FAQ optimized for LLM citations.

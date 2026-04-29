@@ -154,7 +154,15 @@ async function sendDiscordNotification(email, plan, amount, tipo) {
   const webhookUrl = process.env.DISCORD_WEBHOOK_URL;
   if (!webhookUrl) return;
 
-  const planNames = { base: 'Base', growth: 'Crecimiento', enterprise: 'Enterprise' };
+  const planNames = {
+    junior: 'Junior',
+    senior: 'Senior',
+    manager: 'Manager',
+    // Compatibilidad con suscripciones legacy (clientes pre-2026-04-23):
+    base: 'Junior (legacy Base)',
+    growth: 'Senior (legacy Crecimiento)',
+    enterprise: 'Manager (legacy Enterprise)',
+  };
   const displayPlan = planNames[plan] || plan || '';
   const displayAmount = amount ? ` ($${amount})` : '';
   const emojis = { PAGO: '💰', CANCELACION: '❌', CANCELACION_RENOVACION: '⚠️' };
