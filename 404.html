@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Página no encontrada — Sisteco</title>
+    <link rel="icon" type="image/png" href="/assets/logos/sisteco-icon.png">
+    <style>
+        :root {
+            --bg: #F8F7F5;
+            --text: #111111;
+            --muted: #6b6b6b;
+            --accent: #c5ed36;
+            --accent-hover: #b3d82f;
+            --border: #e5e5e5;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { height: 100%; }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+            line-height: 1.5;
+        }
+        .wrap {
+            max-width: 520px;
+            text-align: center;
+        }
+        .logo {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 32px;
+            display: block;
+        }
+        .code {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--muted);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        h1 {
+            font-size: clamp(28px, 5vw, 40px);
+            font-weight: 600;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        p {
+            font-size: 16px;
+            color: var(--muted);
+            margin-bottom: 32px;
+        }
+        .actions {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background 0.15s ease, border-color 0.15s ease;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: var(--text);
+        }
+        .btn-primary:hover {
+            background: var(--accent-hover);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: var(--text);
+            border: 1px solid var(--border);
+        }
+        .btn-secondary:hover {
+            border-color: var(--text);
+        }
+    </style>
+</head>
+<body>
+    <main class="wrap">
+        <img src="/assets/logos/sisteco-icon.png" alt="Sisteco" class="logo" width="48" height="48">
+        <div class="code">Error 404</div>
+        <h1>Esta página no existe</h1>
+        <p>La URL que buscas se movió o nunca estuvo aquí. Volvamos al inicio.</p>
+        <div class="actions">
+            <a href="/" class="btn btn-primary">Ir al inicio</a>
+            <a href="/contacto" class="btn btn-secondary">Contactar</a>
+        </div>
+    </main>
+</body>
+</html>

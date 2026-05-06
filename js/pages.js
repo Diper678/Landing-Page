@@ -98,7 +98,7 @@ function initScrollToTop() {
 
     window.addEventListener('scroll', () => {
         btn.classList.toggle('visible', window.scrollY > 400);
-    });
+    }, { passive: true });
 
     btn.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -358,7 +358,7 @@ function initScrollProgress() {
         const docHeight = document.documentElement.scrollHeight - window.innerHeight;
         const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
         bar.style.width = progress + '%';
-    });
+    }, { passive: true });
 }
 
 function initCustomCursor() {

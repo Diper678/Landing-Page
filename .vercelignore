@@ -1,0 +1,52 @@
+# Screenshots de QA / review en raíz (no deben ir a producción)
+landing-full.png
+landing-full-review.png
+soluciones-full.png
+soluciones-hero-review.png
+soluciones-hero-v2.png
+precios-full.png
+precios-full-review.png
+vision-full.png
+vision-hero-v2.png
+hero-soluciones-viewport.png
+hero-vision-detail.png
+hero-vision-detail2.png
+hero-como-funciona-detail.png
+como-funciona-full.png
+como-funciona-hero-v2.png
+prod-diagrama-fix.png
+prod-diag-v2.png
+prod-ecosistema.png
+prod-hub.png
+prod-niche.png
+nexos-snapshot.md
+
+# Brand source files (no son web assets)
+assets/logos/Sisteco Familia de Logos.ai
+assets/logos/Sisteco Familia de Logos.pdf
+Logo Sisteco/
+
+# Carpetas de trabajo / referencia que NO se sirven en producción
+Inspiration/
+Sharp_Grotesk/
+sisteco-knowledge/
+demos/
+docs/
+email-previews/
+mcp-servers/
+
+# NOTA: mirrors/ NO se ignora — los .md son servidos via rewrites en vercel.json
+
+# Documentación interna del repo
+BRAND_GUIDELINES.md
+CAPACIDADES_SISTECO.md
+SOLUCIONES.md
+CLAUDE.md
+GEMINI.md
+README.mcp.md
+MIGRATION_SUPABASE_TO_CONVEX.md
+
+# Build artifacts / lock files
+node_modules/
+*.log
+skills-lock.json
