@@ -498,11 +498,16 @@ function initScrollProgress() {
   bar.style.width = '0%';
   document.body.appendChild(bar);
 
+  let ticking = false;
   window.addEventListener('scroll', () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-    bar.style.width = progress + '%';
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
+      bar.style.width = progress + '%';
+      ticking = false;
+    });
   }, { passive: true });
 }
 
