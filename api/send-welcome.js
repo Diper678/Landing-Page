@@ -5,11 +5,13 @@
 
 import { convex } from './_lib/convex.js';
 import { api } from '../convex/_generated/api.js';
-import { resend } from './_lib/resend.js';
+import { resend, FROM_EMAIL } from './_lib/resend.js';
 import { onboardingWelcomeEmail } from './_lib/email-templates.js';
 import { z } from 'zod';
 
-const FROM_EMAIL = 'Felipe Palma - Sisteco <contacto@sisteco.cl>';
+// FROM_EMAIL viene de _lib/resend.js (env FROM_EMAIL o default verificado
+// noreply@onboarding.sisteco.cl). Antes se hardcodeaba contacto@sisteco.cl,
+// dominio raíz NO verificado en Resend → 403 silencioso en onboarding.
 
 const allowedOrigins = ['https://sisteco.com', 'https://sisteco-landing.vercel.app', 'http://localhost:3000'];
 
