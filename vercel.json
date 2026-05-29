@@ -63,7 +63,7 @@
         { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://unpkg.com https://app.cal.com https://eu-assets.i.posthog.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob: https:; connect-src 'self' https://*.convex.cloud https://*.upstash.io https://api.resend.com https://app.cal.com https://eu.i.posthog.com https://eu-assets.i.posthog.com; worker-src 'self' blob:; frame-src https://app.cal.com https://www.youtube.com https://www.youtube-nocookie.com"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://unpkg.com https://app.cal.com https://eu-assets.i.posthog.com; style-src 'self' 'unsafe-inline'; font-src 'self'; img-src 'self' data: blob: https:; connect-src 'self' https://*.convex.cloud https://*.convex.site https://*.upstash.io https://api.resend.com https://app.cal.com https://eu.i.posthog.com https://eu-assets.i.posthog.com; worker-src 'self' blob:; frame-src https://app.cal.com https://www.youtube.com https://www.youtube-nocookie.com"
         }
       ]
     }
@@ -91,6 +91,10 @@
     { "source": "/cookies", "destination": "/pages/cookies.html" },
     { "source": "/gdpr", "destination": "/pages/gdpr.html" },
     { "source": "/agendar-demo", "destination": "/pages/agendar-demo.html" },
+    { "source": "/suscribete", "destination": "/pages/suscribete.html" },
+    { "source": "/material", "destination": "/pages/suscribete.html" },
+    { "source": "/agenda", "destination": "/pages/agenda.html" },
+    { "source": "/agendar", "destination": "/pages/agenda.html" },
     { "source": "/gracias", "destination": "/pages/gracias.html" },
     { "source": "/pago-exitoso", "destination": "/pages/gracias.html" },
     { "source": "/pago-fallido", "destination": "/pages/pago-fallido.html" },

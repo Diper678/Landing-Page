@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Suscríbete — Sisteco</title>
+  <link rel="icon" href="/pngiconosisteco.png">
+  <style>
+    /* Fuentes self-host (Ley 21.719 prohíbe Google Fonts CDN) */
+    @font-face {
+      font-family: 'Space Grotesk';
+      src: url('/assets/fonts/SpaceGrotesk-Variable.woff2') format('woff2-variations');
+      font-weight: 300 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Hanken Grotesk';
+      src: url('/assets/fonts/HankenGrotesk-Variable.woff2') format('woff2-variations');
+      font-weight: 100 900;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #F8F7F5;
+      --text: #111111;
+      --text-secondary: #666666;
+      --accent: #c5ed36;
+      --accent-hover: #b3d82f;
+      --border: #e5e5e5;
+      --border-error: #d93025;
+      --radius-sm: 12px;
+      --radius-md: 14px;
+      --radius-pill: 100px;
+      --shadow: 0 2px 16px rgba(0,0,0,0.08);
+      --font-heading: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+      --font-body: 'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    }
+
+    html, body {
+      min-height: 100%;
+      background: var(--bg);
+      font-family: var(--font-body);
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    h1, h2 {
+      font-family: var(--font-heading);
+      letter-spacing: -0.02em;
+    }
+
+    /* Honeypot — oculto visualmente y para lectores de pantalla */
+    .honeypot {
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+      opacity: 0;
+      width: 0;
+      height: 0;
+      pointer-events: none;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 520px;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow);
+      padding: 48px 40px;
+    }
+
+    /* Cabecera */
+    .card-header {
+      margin-bottom: 32px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--accent);
+      color: var(--text);
+      font-family: var(--font-heading);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 100px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: var(--text-secondary);
+      font-size: 15px;
+    }
+
+    /* Error box */
+    .error-box {
+      display: none;
+      background: #fef2f2;
+      border: 1px solid #fca5a5;
+      border-radius: var(--radius-sm);
+      padding: 12px 16px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      color: #b91c1c;
+    }
+    .error-box.visible { display: block; }
+
+    /* Formulario */
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    input[type="text"],
+    input[type="email"] {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-body);
+      font-size: 15px;
+      color: var(--text);
+      background: #fff;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      outline: none;
+      appearance: none;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus {
+      border-color: #999;
+      box-shadow: 0 0 0 3px rgba(197,237,54,0.2);
+    }
+    input[type="text"].input-error,
+    input[type="email"].input-error {
+      border-color: var(--border-error);
+    }
+
+    /* Consent */
+    .consent-group {
+      margin-top: 20px;
+      margin-bottom: 24px;
+    }
+
+    .consent-label {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      cursor: pointer;
+    }
+
+    .consent-label input[type="checkbox"] {
+      flex-shrink: 0;
+      margin-top: 3px;
+      width: 18px;
+      height: 18px;
+      accent-color: var(--text);
+      cursor: pointer;
+    }
+
+    .consent-text {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+    .consent-text a {
+      color: var(--text);
+      text-decoration: underline;
+    }
+    .consent-text a:hover { color: #444; }
+
+    /* Botón */
+    .btn-submit {
+      width: 100%;
+      padding: 14px 20px;
+      background: var(--accent);
+      color: var(--text);
+      border: none;
+      border-radius: var(--radius-pill);
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.15s ease;
+    }
+    .btn-submit:hover:not(:disabled) {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+    }
+    .btn-submit:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* Thank-you state */
+    .thankyou {
+      display: none;
+      text-align: center;
+    }
+    .thankyou.visible { display: block; }
+
+    .check-circle {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+    }
+    .check-circle svg {
+      width: 32px;
+      height: 32px;
+      stroke: #111;
+      stroke-width: 3;
+      fill: none;
+    }
+
+    .thankyou h1 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+    .thankyou p {
+      color: var(--text-secondary);
+      font-size: 15px;
+    }
+    .thankyou .ty-secondary {
+      margin-top: 8px;
+      font-size: 13px;
+      opacity: 0.85;
+    }
+    .thankyou:focus {
+      outline: none;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      margin-top: 24px;
+      color: var(--text-secondary);
+      font-size: 13px;
+    }
+    footer a { color: var(--text-secondary); text-decoration: underline; }
+
+    /* Responsive */
+    @media (max-width: 560px) {
+      .card { padding: 32px 24px; }
+      h1 { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="card">
+
+      <!-- Error box (oculto por defecto) -->
+      <div class="error-box" id="error-box" role="alert"></div>
+
+      <!-- Formulario -->
+      <div id="form-section">
+        <div class="card-header">
+          <div class="badge" id="badge">Material gratuito</div>
+          <h1 id="titulo">Suscríbete al material</h1>
+          <p class="subtitle" id="subtitulo">Te enviamos material seleccionado sobre ventas y automatización.</p>
+        </div>
+
+        <form id="suscripcion-form" novalidate>
+          <!-- Honeypot — no tocar, es seguridad anti-bot -->
+          <input
+            type="text"
+            name="website"
+            id="website"
+            class="honeypot"
+            autocomplete="off"
+            tabindex="-1"
+            aria-hidden="true"
+          >
+
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Tu nombre"
+              autocomplete="name"
+              maxlength="80"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="tu@empresa.cl"
+              autocomplete="email"
+              required
+            >
+          </div>
+
+          <div class="consent-group">
+            <label class="consent-label">
+              <input type="checkbox" id="consent" name="consent" required aria-describedby="consent-text">
+              <span class="consent-text" id="consent-text">
+                Autorizo a Sisteco SpA a usar mi email y nombre para recibir material educativo curado, y enriquecer el envío con datos profesionales públicos (LinkedIn, etc.). Puedo darme de baja en cualquier momento con un click.
+                <a href="/privacidad#suscripcion" target="_blank" rel="noopener">Política de privacidad</a>
+              </span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn-submit" id="btn-submit">Quiero el material</button>
+        </form>
+      </div>
+
+      <!-- Thank-you state (oculto por defecto) -->
+      <div class="thankyou" id="thankyou" tabindex="-1">
+        <div class="check-circle" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><polyline points="4 12 10 18 20 6"/></svg>
+        </div>
+        <h1 id="ty-title">Listo, quedaste suscrito</h1>
+        <p id="ty-msg"><span id="ty-msg-prefix">Te escribimos desde </span><strong id="ty-email"></strong><span id="ty-msg-suffix"> en la próxima hora.</span></p>
+        <p class="ty-secondary">Si no llega, revisa spam o promociones.</p>
+      </div>
+
+    </div>
+
+    <footer>
+      Sisteco SpA · Las Condes, Santiago · +56 9 4006 5566 ·
+      <a href="mailto:contacto@sisteco.cl">contacto@sisteco.cl</a> ·
+      <a href="/terminos">Términos</a> ·
+      <a href="/privacidad">Privacidad</a>
+    </footer>
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+
+      /* ──────────────────────────────────────────────
+         Constantes de consent (versión + texto literal)
+      ────────────────────────────────────────────── */
+      var CONSENT_VERSION = 'v1.0';
+      var CONSENT_TEXT = 'Autorizo a Sisteco SpA a usar mi email y nombre para recibir material educativo curado, y enriquecer el envío con datos profesionales públicos (LinkedIn, etc.). Puedo darme de baja en cualquier momento con un click.';
+
+      /* ──────────────────────────────────────────────
+         Copy adaptativo por origen
+      ────────────────────────────────────────────── */
+      var COPY = {
+        'sisteco-ig': {
+          badge:     'Material gratuito',
+          titulo:    'Material para vender mejor con automatización',
+          subtitulo: 'Te enviamos guías, casos y herramientas que usamos en Sisteco para conseguir más cierres con menos esfuerzo.',
+          btnLabel:  'Quiero el material',
+          fromEmail: 'contacto@sisteco.cl',
+          tyTitle:   'Listo, quedaste suscrito',
+          tyMsg:     'Te escribimos desde '
+        },
+        'felipe-ig': {
+          badge:     'Lista personal',
+          titulo:    'Te mando lo que estoy aprendiendo',
+          subtitulo: 'Notas reales sobre ventas, automatización y lo que funciona (y lo que no) en el día a día.',
+          btnLabel:  'Suscribirme',
+          fromEmail: 'felipe@sisteco.cl',
+          tyTitle:   'Anotado, gracias',
+          tyMsg:     'Te escribo desde '
+        }
+      };
+
+      var DEFAULT_COPY = {
+        badge:     'Material gratuito',
+        titulo:    'Suscríbete al material',
+        subtitulo: 'Te enviamos material seleccionado sobre ventas y automatización.',
+        btnLabel:  'Quiero el material',
+        fromEmail: 'felipe@sisteco.cl',
+        tyTitle:   'Listo, quedaste suscrito',
+        tyMsg:     'Te escribimos desde '
+      };
+
+      /* ──────────────────────────────────────────────
+         Leer query params
+      ────────────────────────────────────────────── */
+      var params       = new URLSearchParams(window.location.search);
+      var fromParam    = params.get('from') || '';
+      var utmSource    = params.get('utm_source')   || undefined;
+      var utmMedium    = params.get('utm_medium')   || undefined;
+      var utmCampaign  = params.get('utm_campaign') || undefined;
+
+      /* Normalizar origen */
+      var recognizedOrigen;
+      if (fromParam === 'sisteco-ig') {
+        recognizedOrigen = 'sisteco-ig';
+      } else if (fromParam === 'felipe-ig') {
+        recognizedOrigen = 'felipe-ig';
+      } else if (fromParam && fromParam.length > 0) {
+        recognizedOrigen = 'other';
+      } else {
+        recognizedOrigen = 'direct';
+      }
+
+      /* Elegir copy */
+      var copy = COPY[fromParam] || DEFAULT_COPY;
+
+      /* ──────────────────────────────────────────────
+         Aplicar copy al DOM
+      ────────────────────────────────────────────── */
+      document.getElementById('badge').textContent    = copy.badge;
+      document.getElementById('titulo').textContent   = copy.titulo;
+      document.getElementById('subtitulo').textContent = copy.subtitulo;
+      document.getElementById('btn-submit').textContent = copy.btnLabel;
+      document.title = copy.titulo + ' — Sisteco';
+
+      /* ──────────────────────────────────────────────
+         Referencias DOM
+      ────────────────────────────────────────────── */
+      var form         = document.getElementById('suscripcion-form');
+      var formSection  = document.getElementById('form-section');
+      var errorBox     = document.getElementById('error-box');
+      var btnSubmit    = document.getElementById('btn-submit');
+      var thankyou     = document.getElementById('thankyou');
+      var tyTitle      = document.getElementById('ty-title');
+      var tyMsgPrefix  = document.getElementById('ty-msg-prefix');
+      var tyEmail      = document.getElementById('ty-email');
+
+      /* ──────────────────────────────────────────────
+         Helpers
+      ────────────────────────────────────────────── */
+      function showError(msg) {
+        errorBox.textContent = msg;
+        errorBox.classList.add('visible');
+        errorBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+
+      function clearError() {
+        errorBox.textContent = '';
+        errorBox.classList.remove('visible');
+      }
+
+      function setInputError(el, hasError) {
+        if (hasError) {
+          el.classList.add('input-error');
+        } else {
+          el.classList.remove('input-error');
+        }
+      }
+
+      function isValidEmail(val) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+      }
+
+      /* ──────────────────────────────────────────────
+         Submit handler
+      ────────────────────────────────────────────── */
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        clearError();
+
+        var nombreEl  = document.getElementById('nombre');
+        var emailEl   = document.getElementById('email');
+        var consentEl = document.getElementById('consent');
+        var honeypotEl = document.getElementById('website');
+
+        var nombre  = nombreEl.value.trim();
+        var email   = emailEl.value.trim();
+        var consent = consentEl.checked;
+
+        /* Validaciones básicas */
+        var hasError = false;
+
+        setInputError(nombreEl, false);
+        setInputError(emailEl, false);
+
+        if (!nombre || nombre.length > 80) {
+          setInputError(nombreEl, true);
+          hasError = true;
+        }
+        if (!email || !isValidEmail(email)) {
+          setInputError(emailEl, true);
+          hasError = true;
+        }
+        if (!consent) {
+          showError('Debes aceptar la autorización para continuar.');
+          return;
+        }
+        if (hasError) {
+          showError('Completa los campos requeridos antes de continuar.');
+          return;
+        }
+
+        /* Silenciar si honeypot fue llenado (bot) — no mostrar error, simular éxito */
+        if (honeypotEl.value) {
+          formSection.style.display = 'none';
+          thankyou.classList.add('visible');
+          thankyou.focus();
+          return;
+        }
+
+        /* Construir payload */
+        var payload = {
+          email:          email,
+          nombre:         nombre,
+          consent:        true,
+          consentVersion: CONSENT_VERSION,
+          consentText:    CONSENT_TEXT,
+          origen:         recognizedOrigen,
+          website:        ''
+        };
+
+        if (fromParam) {
+          payload.origenRaw = fromParam.slice(0, 50);
+        }
+
+        var hasUtm = utmSource || utmMedium || utmCampaign;
+        if (hasUtm) {
+          payload.utm = {};
+          if (utmSource)   payload.utm.source   = utmSource.slice(0, 50);
+          if (utmMedium)   payload.utm.medium   = utmMedium.slice(0, 50);
+          if (utmCampaign) payload.utm.campaign = utmCampaign.slice(0, 100);
+        }
+
+        /* Deshabilitar botón durante el request */
+        btnSubmit.disabled = true;
+        btnSubmit.textContent = 'Enviando...';
+
+        fetch('https://animated-pika-122.convex.site/subscribe', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        })
+        .then(function (res) {
+          return res.json().then(function (data) {
+            return { ok: res.ok, status: res.status, data: data };
+          });
+        })
+        .then(function (result) {
+          if (result.ok) {
+            /* Éxito: mostrar thank-you */
+            formSection.style.display = 'none';
+            tyTitle.textContent     = copy.tyTitle;
+            tyMsgPrefix.textContent = copy.tyMsg;
+            tyEmail.textContent     = copy.fromEmail;
+            thankyou.classList.add('visible');
+            thankyou.focus();
+          } else {
+            var msg = (result.data && result.data.message)
+              ? result.data.message
+              : 'Hubo un problema. Intenta de nuevo en un momento.';
+            showError(msg);
+            btnSubmit.disabled = false;
+            btnSubmit.textContent = copy.btnLabel;
+          }
+        })
+        .catch(function () {
+          showError('No pudimos conectar. Si persiste, escribe a contacto@sisteco.cl.');
+          btnSubmit.disabled = false;
+          btnSubmit.textContent = copy.btnLabel;
+        });
+      });
+
+      /* Limpiar error al editar campos */
+      ['nombre', 'email'].forEach(function (id) {
+        document.getElementById(id).addEventListener('input', function () {
+          this.classList.remove('input-error');
+          if (!document.querySelector('.input-error')) clearError();
+        });
+      });
+
+    })();
+  </script>
+</body>
+</html>
