@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agenda tu Demo Personalizada — Sisteco | Automatización Ventas B2B</title>
+    <title>Agenda una reunión — Sisteco | Tu agente de ventas autónomo</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../css/pages.css">
-    <meta name="description" content="Agenda una demo personalizada de 30 minutos con Sisteco. Descubre cómo automatizar tu prospección B2B con workflows inteligentes, lead scoring y compliance Ley 21.719.">
+    <meta name="description" content="Agenda 30 minutos con Sisteco. Te mostramos cómo tu agente de ventas autónomo te llena la agenda de reuniones con empresas que califican: datos del SII, multicanal y Ley 21.719.">
     <link rel="icon" type="image/png" href="../assets/logos/sisteco-icon.png">
-    <meta property="og:title" content="Agenda tu Demo Personalizada — Sisteco | Automatización Ventas B2B">
-    <meta property="og:description" content="Agenda una demo personalizada de 30 minutos con Sisteco. Descubre cómo automatizar tu prospección B2B con workflows inteligentes, lead scoring y compliance Ley 21.719.">
+    <meta property="og:title" content="Agenda una reunión — Sisteco | Tu agente de ventas autónomo">
+    <meta property="og:description" content="Agenda 30 minutos con Sisteco. Te mostramos cómo tu agente de ventas autónomo te llena la agenda de reuniones con empresas que califican: datos del SII, multicanal y Ley 21.719.">
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://landing-page-felipe-s-projects-cf2ac967.vercel.app/agendar-demo">
     <meta property="og:url" content="https://landing-page-felipe-s-projects-cf2ac967.vercel.app/agendar-demo">
     <meta property="og:image" content="https://landing-page-felipe-s-projects-cf2ac967.vercel.app/assets/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Agenda tu Demo Personalizada — Sisteco | Automatización Ventas B2B">
-    <meta name="twitter:description" content="Agenda una demo personalizada de 30 minutos con Sisteco. Descubre cómo automatizar tu prospección B2B con workflows inteligentes, lead scoring y compliance Ley 21.719.">
+    <meta name="twitter:title" content="Agenda una reunión — Sisteco | Tu agente de ventas autónomo">
+    <meta name="twitter:description" content="Agenda 30 minutos con Sisteco. Te mostramos cómo tu agente de ventas autónomo te llena la agenda de reuniones con empresas que califican: datos del SII, multicanal y Ley 21.719.">
     <meta name="twitter:image" content="https://landing-page-felipe-s-projects-cf2ac967.vercel.app/assets/og-image.png">
     <!-- Fonts: self-hosted via style.css (Ley 21.719) -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
@@ -310,9 +310,9 @@
                 <a href="vision.html" class="btn btn-ghost navbar-item">Visión</a>
                 <a href="soluciones.html" class="btn btn-ghost navbar-item">Soluciones</a>
                 <a href="como-funciona.html" class="btn btn-ghost navbar-item">Infraestructura</a>
-                <a href="precios.html" class="btn btn-ghost navbar-item">Precios</a>
+                <a href="recursos/index.html" class="btn btn-ghost navbar-item">Recursos</a>
             </div>
-            <a href="../index.html#hero" class="btn btn-primary navbar-item">Empezar ahora</a>
+            <a href="https://cal.com/sisteco/ventas" target="_blank" rel="noopener" class="btn btn-primary navbar-item" data-cta-id="cta-navbar">Agenda una reunión</a>
             <button class="hamburger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
         </div>
     </nav>
@@ -323,10 +323,10 @@
             <div class="breadcrumb">
                 <a href="../index.html">Inicio</a>
                 <span>/</span>
-                <span class="current">Agendar Demo</span>
+                <span class="current">Agenda una reunión</span>
             </div>
-            <h1>Agenda tu Demo Personalizada</h1>
-            <p>Completa este formulario y agenda una sesión de 30 minutos para ver cómo Sisteco puede automatizar tu prospección B2B</p>
+            <h1>Agenda una reunión</h1>
+            <p>Cuéntanos de tu empresa y elige un horario. En 30 minutos te mostramos cómo tu agente de ventas te llena la agenda de reuniones con clientes que califican.</p>
         </div>
     </section>
 
@@ -337,8 +337,8 @@
                 <!-- Form -->
                 <div>
                     <form class="discovery-form" id="discovery-form">
-                        <h3>Cuéntanos sobre tu empresa</h3>
-                        <p class="form-subtitle">Con esta información preparamos una demo enfocada en tus necesidades específicas.</p>
+                        <h3>Cuéntanos de tu empresa</h3>
+                        <p class="form-subtitle">Con esto preparamos la reunión enfocada en tu caso, no un demo genérico.</p>
 
                         <div class="form-row">
                             <div class="form-group">
@@ -348,7 +348,7 @@
                             <div class="form-group">
                                 <label for="disc-email">Email corporativo *</label>
                                 <input type="email" id="disc-email" required placeholder="tu@empresa.com">
-                                <span class="email-hint" id="email-hint">Usamos email corporativo para preparar tu demo</span>
+                                <span class="email-hint" id="email-hint">Usamos tu email corporativo para preparar la reunión</span>
                             </div>
                         </div>
 
@@ -388,8 +388,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="disc-pain">Mayor dolor en ventas</label>
-                            <textarea id="disc-pain" rows="4" placeholder="Ej: Nuestros vendedores pierden mucho tiempo prospectando manualmente..."></textarea>
+                            <label for="disc-pain">¿Qué te duele hoy en ventas?</label>
+                            <textarea id="disc-pain" rows="4" placeholder="Ej: mis vendedores pierden tiempo prospectando a mano y llegan pocas reuniones a la semana..."></textarea>
                         </div>
 
                         <div class="form-group">
@@ -405,7 +405,7 @@
 
                         <button type="submit" class="btn btn-primary btn-full" id="disc-submit">
                             <i data-lucide="calendar" style="width:18px;height:18px;margin-right:8px"></i>
-                            Enviar y agendar demo
+                            Enviar y elegir horario
                         </button>
                     </form>
 
@@ -414,51 +414,51 @@
                         <div class="success-icon">
                             <i data-lucide="check-circle-2"></i>
                         </div>
-                        <h3>¡Listo! Recibimos tu información</h3>
-                        <p>Ahora agenda tu demo de 30 minutos en el calendario de abajo. Prepararemos una sesión personalizada basada en lo que nos contaste.</p>
+                        <h3>Listo, recibimos tus datos</h3>
+                        <p>Ahora elige un horario en el calendario de abajo. Preparamos la reunión de 30 minutos con lo que nos contaste.</p>
                     </div>
                 </div>
 
                 <!-- Benefits Sidebar -->
                 <div class="discovery-benefits">
-                    <h3>¿Qué verás en la demo?</h3>
+                    <h3>¿Qué verás en la reunión?</h3>
 
                     <div class="benefit-item">
                         <div class="benefit-icon"><i data-lucide="search"></i></div>
                         <div>
-                            <h4>Prospección automatizada</h4>
-                            <p>Cómo encontramos y calificamos tus leads ideales con IA y datos del SII.</p>
+                            <h4>Prospección por señales</h4>
+                            <p>Cómo encontramos empresas que están en momento de compra usando datos del SII, no listas frías.</p>
                         </div>
                     </div>
 
                     <div class="benefit-item">
-                        <div class="benefit-icon"><i data-lucide="brain"></i></div>
+                        <div class="benefit-icon"><i data-lucide="bot"></i></div>
                         <div>
-                            <h4>Lead scoring inteligente</h4>
-                            <p>Sistema de puntuación de 100 puntos que prioriza los prospectos con mayor probabilidad de compra.</p>
+                            <h4>Tu agente, de punta a punta</h4>
+                            <p>Cómo el agente prospecta, escribe, hace seguimiento y agenda la reunión, sin que muevas un dedo.</p>
                         </div>
                     </div>
 
                     <div class="benefit-item">
                         <div class="benefit-icon"><i data-lucide="mail"></i></div>
                         <div>
-                            <h4>Secuencias multicanal</h4>
-                            <p>Email, LinkedIn y más canales trabajando en sincronía para generar reuniones.</p>
+                            <h4>Multicanal</h4>
+                            <p>Email, LinkedIn y WhatsApp trabajando juntos para llenarte la agenda de reuniones.</p>
                         </div>
                     </div>
 
                     <div class="benefit-item">
-                        <div class="benefit-icon"><i data-lucide="bar-chart-3"></i></div>
+                        <div class="benefit-icon"><i data-lucide="calendar-check"></i></div>
                         <div>
-                            <h4>Dashboard en tiempo real</h4>
-                            <p>Métricas claras de cartera, conversión y ROI de tu inversión.</p>
+                            <h4>Reuniones con contexto</h4>
+                            <p>Llegas a cada reunión sabiendo quién es la empresa, su giro y por qué le interesas.</p>
                         </div>
                     </div>
 
                     <div class="benefit-trust">
                         <p><i data-lucide="clock"></i> 30 minutos, sin compromiso</p>
-                        <p><i data-lucide="shield-check"></i> Compliance Ley 21.719</p>
-                        <p><i data-lucide="zap"></i> Resultados desde el primer mes</p>
+                        <p><i data-lucide="shield-check"></i> Cumplimos la Ley 21.719</p>
+                        <p><i data-lucide="database"></i> Datos del SII, no listas compradas</p>
                     </div>
                 </div>
             </div>
@@ -470,13 +470,13 @@
         <div class="container">
             <div class="section-header">
                 <h2>Elige tu horario</h2>
-                <p>Selecciona el día y hora que más te acomode para tu demo personalizada de 30 minutos.</p>
+                <p>Elige el día y la hora que te acomode. Son 30 minutos.</p>
             </div>
             <div class="calcom-wrapper" id="calcom-wrapper">
                 <!-- Cal.com inline embed will render here -->
                 <div class="calcom-fallback" id="calcom-fallback">
                     <p>Cargando calendario...</p>
-                    <a href="https://cal.com/sisteco/demo" target="_blank" rel="noopener" class="btn btn-primary">
+                    <a href="https://cal.com/sisteco/ventas" target="_blank" rel="noopener" class="btn btn-primary">
                         <i data-lucide="external-link" style="width:16px;height:16px;margin-right:8px"></i>
                         Abrir calendario en nueva pestaña
                     </a>
@@ -490,7 +490,7 @@
             <div class="footer-top">
                 <div class="footer-brand-inline">
                     <img src="../assets/logos/sisteco-icon.png" alt="Sisteco" class="footer-logo" width="28" height="28">
-                    <span class="footer-tagline">Infraestructura inteligente para ventas B2B</span>
+                    <span class="footer-tagline">Tu agente de ventas autónomo. Te llenamos la agenda de reuniones; tú cierras.</span>
                 </div>
                 <div class="footer-social">
                     <a href="https://www.linkedin.com/company/sisteco/" target="_blank" rel="noopener" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
@@ -572,7 +572,7 @@
                         emailHint.textContent = 'Por favor usa tu email corporativo (no Gmail, Hotmail, etc.)';
                         emailHint.classList.add('error');
                     } else {
-                        emailHint.textContent = 'Usamos email corporativo para preparar tu demo';
+                        emailHint.textContent = 'Usamos tu email corporativo para preparar la reunión';
                         emailHint.classList.remove('error');
                     }
                 });
@@ -670,7 +670,7 @@
                         calSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     }, 400);
 
-                    showPageToast('Información recibida. Ahora agenda tu demo.', 'success');
+                    showPageToast('Datos recibidos. Ahora elige tu horario.', 'success');
 
                 } catch (error) {
                     showPageToast(error.message || 'Error al enviar el formulario', 'error');
@@ -694,7 +694,7 @@
 
                     // Create Cal.com inline embed
                     Cal('inline', {
-                        calLink: 'felipe-sisteco/demo',
+                        calLink: 'sisteco/ventas',
                         elementOrSelector: '#calcom-wrapper',
                         config: {
                             name: name || '',
@@ -712,9 +712,9 @@
                 } else {
                     // Cal.com script not loaded - show fallback link
                     fallback.innerHTML = `
-                        <p>Haz clic en el botón para agendar tu demo de 30 minutos.</p>
-                        <a href="https://cal.com/sisteco/demo?name=${encodeURIComponent(name || '')}&email=${encodeURIComponent(email || '')}" target="_blank" rel="noopener" class="btn btn-primary">
-                            Agendar demo en Cal.com
+                        <p>Haz clic en el botón para agendar tu reunión de 30 minutos.</p>
+                        <a href="https://cal.com/sisteco/ventas?name=${encodeURIComponent(name || '')}&email=${encodeURIComponent(email || '')}" target="_blank" rel="noopener" class="btn btn-primary">
+                            Agenda una reunión
                         </a>
                     `;
                     if (typeof lucide !== 'undefined') {
@@ -724,9 +724,9 @@
             } catch (err) {
                 console.error('Cal.com embed error:', err);
                 fallback.innerHTML = `
-                    <p>Haz clic en el botón para agendar tu demo de 30 minutos.</p>
-                    <a href="https://cal.com/sisteco/demo?name=${encodeURIComponent(name || '')}&email=${encodeURIComponent(email || '')}" target="_blank" rel="noopener" class="btn btn-primary">
-                        Agendar demo en Cal.com
+                    <p>Haz clic en el botón para agendar tu reunión de 30 minutos.</p>
+                    <a href="https://cal.com/sisteco/ventas?name=${encodeURIComponent(name || '')}&email=${encodeURIComponent(email || '')}" target="_blank" rel="noopener" class="btn btn-primary">
+                        Agenda una reunión
                     </a>
                 `;
             }
