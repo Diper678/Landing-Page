@@ -6,38 +6,41 @@
 
 ## Mision
 
-Sisteco automatiza ventas B2B para empresas chilenas. Workflows inteligentes que hacen la prospeccion para que tus vendedores solo cierren.
+Sisteco es tu agente de ventas autónomo. Detecta, califica, contacta y te agenda reuniones con empresas que sí te pueden comprar. Tú solo cierras.
 
 ## Posicionamiento
 
-- **Categoria:** Agentic Sales Infrastructure / B2B Revenue Automation
-- **Identidad central:** "Somos Sisteco, la empresa agéntica de ventas"
-- **Para:** Equipos de ventas y founders de empresas medianas en Chile (50+ empleados), especialmente sectores SaaS, agencias y consultoras
-- **Diferencial:** Composable — cada capa trabaja en sinconia para convertir datos en ingresos. Self-hosted. Sin limites.
+- **Categoria:** Agente de ventas autónomo / Service-as-a-Software (el agente hace el trabajo, no es una herramienta que operas tú)
+- **Identidad central:** "Tu agente de ventas autónomo que te agenda reuniones"
+- **Unidad de valor:** reuniones agendadas (NO "leads" ni "cierres")
+- **Para:** Empresas tech B2B en Chile, desde 10+ empleados (SaaS, integradores TI, agencias, consultoras)
+- **Diferencial (moat):** datos del SII (RUT, giro, tamaño real) · prospección por señales (no listas frías) · cumplimiento Ley 21.719. Lo que un servicio de afuera no puede hacer en Chile.
 - **Mercado principal:** Chile (2026) → LATAM: Colombia, Peru, Mexico (2027+)
 
 ## Propuesta de valor central
 
-> "Vende más, preocúpate menos."
+> "Llenamos tu agenda. Tú cierras."
 
-Sisteco no genera volumen de leads — genera leads calificados con IA. El enfoque es calidad > cantidad. Y no solo prospección: el ciclo completo de ventas, gestionado por agentes.
+Sisteco no entrega listas ni volumen. Nuestro agente trabaja 24/7, filtra capa por capa y te deja en el calendario reuniones con contexto: quién es y por qué ahora. El ciclo completo, operado por el agente; tú te enfocas en cerrar.
 
 ## Slogan / Tagline
 
-- **Principal:** "Somos Sisteco, la empresa agéntica de ventas"
-- "Infraestructura inteligente para ventas B2B"
-- "Vende más, preocúpate menos"
-- "Donde las empresas no duermen, gracias a la tecnologia"
-- "Vende más, preocúpate menos. Automatizacion de ventas B2B hecha para Chile."
+- **Principal:** "Llenamos tu agenda. Tú cierras."
+- **Producto:** "Tu agente de ventas autónomo"
+- **CTA único:** "Agenda una reunión" (→ cal.com/sisteco/ventas)
+- "Donde las empresas no duermen, gracias a la tecnología"
+- "Hoy tu agente de ventas. Mañana, la plataforma de LATAM." (visión)
+
+> Taglines legados (no usar en la reposición): "Somos Sisteco, la empresa agéntica de ventas", "Vende más, preocúpate menos", "Menos leads, más cierres".
 
 ## Personalidad de Marca
 
 | Atributo | Expresion practica |
 |---|---|
-| Tecnico pero cercano | Lenguaje preciso sin jerga innecesaria |
-| Orientado a resultados | Metricas siempre presentes (10x, 40%, 391% ROI) |
-| Confiable | Arquitectura modular, Ley 21.719 compliant |
-| Eficiente | Sin fricciones, setup < 24 horas |
+| Directo | Va al punto. Sin floritura ni jerga corporativa |
+| Orientado al resultado | La unidad es la reunión agendada, no la métrica inflada |
+| Confiable | Datos del SII, cumplimiento Ley 21.719 desde el día uno |
+| Cercano (es-CL) | Lenguaje chileno, claro, sin anglicismos innecesarios |
 
 ## Voz y Tono
 
@@ -46,18 +49,34 @@ Sisteco no genera volumen de leads — genera leads calificados con IA. El enfoq
 - **Nunca:** Frases largas, promesas vagas, tono corporativo frio
 - **Siempre:** Metrica concreta > afirmacion generica
 
-### Ejemplos de copy aprobados
+### Ejemplos de copy aprobados (reposición)
 
 ```
-DO:  "Pasamos de 20 a 200 leads al dia, con mejor calidad."
-DO:  "Tu equipo solo habla con leads que ya quieren comprar."
-DO:  "5-7x mas conversiones vs. stack DIY"
-DO:  "21x mas conversiones cuando respondes en < 5 minutos"
+DO:  "Llenamos tu agenda. Tú cierras."
+DO:  "No recibes una lista. Recibes reuniones."
+DO:  "Tu agente vigila el mercado 24/7 y te agenda reuniones con quien sí te puede comprar."
+DO:  "Reunión agendada, con el contexto de quién y por qué ahora."
+DO:  "Datos del SII: lo que un servicio de afuera no puede hacer en Chile."
 
+NO:  "leads" / "cierres" como unidad de valor (la unidad es la reunión)
+NO:  "departamento de ventas agéntico" / "empresa agéntica de ventas" (posicionamiento viejo)
+NO:  anglicismos: scoring, timing, ICP, self-annealing, shortlist, hiring, stack
 NO:  "Solucion innovadora de vanguardia para el crecimiento empresarial."
-NO:  "Plataforma integral de gestion comercial avanzada."
-NO:  "Mas informacion" / "Saber mas" (CTAs pasivos)
+NO:  "Mas informacion" / "Saber mas" (CTAs pasivos) — el CTA único es "Agenda una reunión"
 ```
+
+### Traducciones de voz (es-CL, evitar anglicismos)
+
+| Evitar | Usar |
+|---|---|
+| scoring | calificar |
+| timing | momento |
+| ICP | perfil |
+| self-annealing | se mejora / se ajusta sola |
+| shortlist | lista |
+| hiring | contrataciones |
+| ambient research | vigilancia continua |
+| stack | infraestructura / herramientas |
 
 ---
 
@@ -91,6 +110,8 @@ NO:  "Mas informacion" / "Saber mas" (CTAs pasivos)
 ```
 
 Los numeros `01`-`05` usan fuente Nasalization para coherencia con el logo.
+
+> **Versión pública (reposición):** en la web esta arquitectura se cuenta como "el motor por dentro" en 5 capas (captura → verificación SII → calificación → activación → entrega de reuniones), con el diagrama `assets/diagrams/motor-infraestructura.svg`, sin nombres de proveedores y con la reunión agendada como salida. Los nombres de herramientas (ScrapingBee, Gemini, n8n, etc.) son internos, no van en el frontend.
 
 ---
 
@@ -145,4 +166,4 @@ Los numeros `01`-`05` usan fuente Nasalization para coherencia con el logo.
 
 ---
 
-*Ultima actualizacion: 2026-03-04*
+*Ultima actualizacion: 2026-06-07 — reposición a "tu agente de ventas autónomo / reuniones"*

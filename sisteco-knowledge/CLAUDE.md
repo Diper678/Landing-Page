@@ -7,11 +7,13 @@
 
 ## Contexto de la empresa
 
-**Sisteco** es una plataforma B2B SaaS de automatizacion de ventas para empresas medianas chilenas.
-- **Mision:** Infraestructura inteligente para ventas B2B
-- **Tagline:** "Vende más, preocúpate menos"
-- **Mercado:** Chile (50+ empleados) → LATAM (2027+)
-- **Contacto:** contacto@sisteco.cl · +56 9 40065566 · Las Condes, Santiago de Chile
+**Sisteco** es un agente de ventas autónomo (Service-as-a-Software): hace el trabajo de prospección por ti y te agenda reuniones. No es una herramienta que operas tú.
+- **Identidad / producto:** "Tu agente de ventas autónomo que te agenda reuniones"
+- **Tagline:** "Llenamos tu agenda. Tú cierras."
+- **Unidad de valor:** reuniones agendadas (NO "leads" ni "cierres")
+- **CTA único:** "Agenda una reunión" → cal.com/sisteco/ventas
+- **Mercado:** Chile, empresas tech B2B desde 10+ empleados → LATAM (2027+)
+- **Contacto:** contacto@sisteco.cl · +56 9 40065566 · Av. Alonso de Córdova 5870 Of. 413, Las Condes, Santiago de Chile
 
 ## Stack tecnologico estandar
 
@@ -45,24 +47,25 @@ Texto:       #111111
 Acento:      #c5ed36 (lime)
 Hover:       #b3d82f
 Borde:       #e5e5e5
-Font heading: Sharp Grotesk
-Font body:    Source Sans 3
+Font heading: Space Grotesk (self-host assets/fonts/SpaceGrotesk-Variable.woff2)
+Font body:    Hanken Grotesk (self-host assets/fonts/HankenGrotesk-Variable.woff2)
 Font logo:    Nasalization (SOLO para el wordmark "Sisteco")
 Iconos:       Lucide 0.468.0
+Fuentes self-hosted (sin Google Fonts CDN) por cumplimiento Ley 21.719
 ```
 
-## Reglas de contenido
+## Reglas de contenido (reposición "agente de ventas autónomo")
 
-- NUNCA inventar testimonios, metricas o estadisticas
-- NUNCA mencionar Claude/Gemini/Kimi en el frontend publico
-- SIEMPRE usar "Ley 21.719" (no solo "GDPR") en contexto Chile
-- SIEMPRE usar contacto Chile: contacto@sisteco.cl, +56 9 40065566, Santiago
-- Metricas verificadas que SI se pueden usar:
-  - 5-7x mas conversiones vs stack DIY
-  - 21x mas conversiones respondiendo < 5 minutos
-  - 78% de clientes compran del primer vendedor en responder
-  - 391% ROI en automatizacion (Forrester/PolyAI)
-  - 89% retencion omnicanal vs 33% monocanal
+- La unidad de valor es la **reunión agendada**. NO usar "leads" ni "cierres" como promesa.
+- NO usar el posicionamiento viejo: "departamento de ventas agéntico", "empresa agéntica de ventas".
+- CTA único: **"Agenda una reunión"** → cal.com/sisteco/ventas (también WhatsApp wa.me/56940065566 y mailto).
+- **Sin precios fijos** en el frontend público: planes a medida ("diseñamos el plan según a quién quieres llegar y cuántas reuniones necesitas").
+- Voz Felipe (es-CL): directa, sin floritura, sin anglicismos (scoring→calificar, timing→momento, ICP→perfil, self-annealing→se ajusta sola, stack→infraestructura).
+- NUNCA inventar testimonios, metricas o estadisticas.
+- NUNCA mencionar Claude/Gemini/Kimi ni nombres de proveedores (Apollo, Clay, Instantly, n8n, Convex) en el frontend publico.
+- SIEMPRE usar "Ley 21.719" (no solo "GDPR") en contexto Chile.
+- SIEMPRE usar contacto Chile: contacto@sisteco.cl, +56 9 40065566, Av. Alonso de Córdova 5870 Of. 413, Las Condes, Santiago.
+- Métricas de investigación (21x, 78%, 391% ROI, 89% omnicanal): son de respaldo interno; en la web ya NO se lideran. Si se usan, citar contexto y nunca como dato propio inventado.
 
 ## Documentos de referencia en este proyecto
 
