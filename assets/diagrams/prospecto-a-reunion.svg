@@ -1,0 +1,52 @@
+<svg width="100%" viewBox="0 0 680 230" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Del prospecto a la reunión</title>
+<desc>Flujo: prospecto calificado, secuencia multicanal (email, LinkedIn, WhatsApp), respuesta detectada y reunión agendada en tu calendario.</desc>
+
+<style>
+  .h-title { font-family: "Space Grotesk", system-ui, sans-serif; font-size: 16px; font-weight: 600; fill: #111111; }
+  .h-sub   { font-family: "Hanken Grotesk", system-ui, sans-serif; font-size: 12px; font-weight: 400; fill: #666666; }
+  .n-t     { font-family: "Space Grotesk", system-ui, sans-serif; font-size: 13px; font-weight: 600; fill: #111111; }
+  .n-cap   { font-family: "Hanken Grotesk", system-ui, sans-serif; font-size: 10px; font-weight: 400; fill: #666666; }
+  .box     { fill: #FFFFFF; stroke: #E5E5E5; stroke-width: 1; }
+  .box-accent { fill: #c5ed36; stroke: #b3d82f; stroke-width: 1; }
+  .flow    { fill: none; stroke: #111111; stroke-width: 1.5; }
+</style>
+
+<defs>
+  <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+
+<text x="340" y="30" text-anchor="middle" class="h-title">Del prospecto a la reunión</text>
+<text x="340" y="50" text-anchor="middle" class="h-sub">Lo que el agente hace después de calificar</text>
+
+<!-- Node 1 -->
+<rect class="box" x="20" y="92" width="140" height="70" rx="10"/>
+<text x="90" y="122" text-anchor="middle" class="n-t">Prospecto</text>
+<text x="90" y="140" text-anchor="middle" class="n-t">calificado</text>
+
+<line class="flow" x1="160" y1="127" x2="187" y2="127" marker-end="url(#arr)"/>
+
+<!-- Node 2 -->
+<rect class="box" x="187" y="92" width="140" height="70" rx="10"/>
+<text x="257" y="122" text-anchor="middle" class="n-t">Secuencia</text>
+<text x="257" y="140" text-anchor="middle" class="n-t">multicanal</text>
+<text x="257" y="180" text-anchor="middle" class="n-cap">email · LinkedIn · WhatsApp</text>
+
+<line class="flow" x1="327" y1="127" x2="354" y2="127" marker-end="url(#arr)"/>
+
+<!-- Node 3 -->
+<rect class="box" x="354" y="92" width="140" height="70" rx="10"/>
+<text x="424" y="122" text-anchor="middle" class="n-t">Respuesta</text>
+<text x="424" y="140" text-anchor="middle" class="n-t">detectada</text>
+
+<line class="flow" x1="494" y1="127" x2="521" y2="127" marker-end="url(#arr)"/>
+
+<!-- Node 4 (accent) -->
+<rect class="box-accent" x="521" y="92" width="140" height="70" rx="10"/>
+<text x="591" y="122" text-anchor="middle" class="n-t">Reunión</text>
+<text x="591" y="140" text-anchor="middle" class="n-t">agendada</text>
+<text x="591" y="180" text-anchor="middle" class="n-cap">en tu calendario</text>
+
+</svg>

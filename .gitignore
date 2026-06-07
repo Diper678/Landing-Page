@@ -38,3 +38,8 @@ npm-debug.log*
 .agent/
 .agents/
 .superpowers/
+
+# Diagram/landing preview artifacts (Playwright)
+.playwright-mcp/
+diag-*.png
+docs/_commitmsg.txt

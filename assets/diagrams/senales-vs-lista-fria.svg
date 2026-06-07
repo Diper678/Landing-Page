@@ -1,0 +1,58 @@
+<svg width="100%" viewBox="0 0 680 330" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Señales vs. lista fría</title>
+<desc>Comparación: la lista fría escribe sin momento, con mensaje genérico y baja respuesta; la prospección por señales actúa en el momento real (licitación, contratación, cambio de cargo) con un mensaje con contexto, y por eso responden.</desc>
+
+<style>
+  .h-title { font-family: "Space Grotesk", system-ui, sans-serif; font-size: 16px; font-weight: 600; fill: #111111; }
+  .chip-t  { font-family: "Space Grotesk", system-ui, sans-serif; font-size: 13px; font-weight: 600; }
+  .row-t   { font-family: "Hanken Grotesk", system-ui, sans-serif; font-size: 13px; font-weight: 500; fill: #111111; }
+  .card-cold { fill: #FFFFFF; stroke: #E5E5E5; stroke-width: 1; }
+  .card-sign { fill: #FAFDF0; stroke: #c5ed36; stroke-width: 1.5; }
+  .chip-cold { fill: #F1F0EC; stroke: #E5E5E5; stroke-width: 1; }
+  .chip-sign { fill: #c5ed36; stroke: #b3d82f; stroke-width: 1; }
+  .mk-cold   { fill: none; stroke: #b3b3ad; stroke-width: 1.5; }
+  .mk-sign   { fill: #c5ed36; stroke: #111111; stroke-width: 1.2; }
+</style>
+
+<text x="340" y="32" text-anchor="middle" class="h-title">Por qué las señales le ganan a la lista fría</text>
+
+<!-- LEFT: Lista fría -->
+<rect class="chip-cold" x="40" y="58" width="120" height="30" rx="15"/>
+<text x="100" y="78" text-anchor="middle" class="chip-t" fill="#666666">Lista fría</text>
+
+<rect class="card-cold" x="40" y="100" width="280" height="200" rx="12"/>
+<!-- row 1 -->
+<circle class="mk-cold" cx="66" cy="140" r="6"/>
+<text x="84" y="136" class="row-t">Sin momento: escribes</text>
+<text x="84" y="154" class="row-t">porque toca, no porque pasó algo.</text>
+<!-- row 2 -->
+<circle class="mk-cold" cx="66" cy="200" r="6"/>
+<text x="84" y="196" class="row-t">Mensaje genérico, el</text>
+<text x="84" y="214" class="row-t">mismo para todos.</text>
+<!-- row 3 -->
+<circle class="mk-cold" cx="66" cy="260" r="6"/>
+<text x="84" y="256" class="row-t">La mayoría ni abre, y</text>
+<text x="84" y="274" class="row-t">quemas la lista.</text>
+
+<!-- RIGHT: Señales -->
+<rect class="chip-sign" x="360" y="58" width="120" height="30" rx="15"/>
+<text x="420" y="78" text-anchor="middle" class="chip-t" fill="#111111">Señales</text>
+
+<rect class="card-sign" x="360" y="100" width="280" height="200" rx="12"/>
+<!-- row 1 -->
+<circle cx="386" cy="140" r="9" fill="none" stroke="#c5ed36" stroke-width="2"/>
+<path d="M381 140 l4 5 l8 -10" fill="none" stroke="#111111" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="404" y="136" class="row-t">Momento real: licitación,</text>
+<text x="404" y="154" class="row-t">contratación, cambio de cargo.</text>
+<!-- row 2 -->
+<circle cx="386" cy="200" r="9" fill="none" stroke="#c5ed36" stroke-width="2"/>
+<path d="M381 200 l4 5 l8 -10" fill="none" stroke="#111111" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="404" y="196" class="row-t">El mensaje nombra lo que</text>
+<text x="404" y="214" class="row-t">pasó en su empresa.</text>
+<!-- row 3 -->
+<circle cx="386" cy="260" r="9" fill="none" stroke="#c5ed36" stroke-width="2"/>
+<path d="M381 260 l4 5 l8 -10" fill="none" stroke="#111111" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="404" y="256" class="row-t">Llega cuando importa.</text>
+<text x="404" y="274" class="row-t">Por eso responden.</text>
+
+</svg>
