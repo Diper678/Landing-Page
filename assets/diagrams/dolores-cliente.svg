@@ -1,0 +1,47 @@
+<svg width="100%" viewBox="0 0 680 380" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Los dolores del cliente — lo que pasa hoy</title>
+<desc>Cuatro frases reales de equipos comerciales: el equipo administra en vez de vender, no saben de dónde sale el próximo cliente, dependen de referidos que no escalan, y reinician la búsqueda en cada proyecto. Resultado: las reuniones no llegan.</desc>
+
+<style>
+  .h-title { font-family: "Space Grotesk", system-ui, sans-serif; font-size: 18px; font-weight: 600; fill: #111111; }
+  .h-sub   { font-family: "Hanken Grotesk", system-ui, sans-serif; font-size: 13px; font-weight: 400; fill: #666666; }
+  .q-glyph { font-family: "Space Grotesk", system-ui, sans-serif; font-size: 44px; font-weight: 700; fill: #c5ed36; }
+  .q-text  { font-family: "Hanken Grotesk", system-ui, sans-serif; font-size: 14px; font-weight: 500; fill: #111111; }
+  .card    { fill: #FFFFFF; stroke: #E5E5E5; stroke-width: 1; }
+  .accent  { fill: #c5ed36; stroke: #b3d82f; stroke-width: 1; }
+  .a-text  { font-family: "Space Grotesk", system-ui, sans-serif; font-size: 15px; font-weight: 600; fill: #111111; }
+</style>
+
+<!-- Header -->
+<text x="340" y="34" text-anchor="middle" class="h-title">Lo que pasa hoy</text>
+<text x="340" y="56" text-anchor="middle" class="h-sub">Lo que escuchamos de equipos comerciales como el tuyo</text>
+
+<!-- Card 1 -->
+<rect class="card" x="40" y="84" width="280" height="104" rx="12"/>
+<text x="64" y="128" class="q-glyph">&#8220;</text>
+<text x="66" y="150" class="q-text">Mi equipo no vende,</text>
+<text x="66" y="170" class="q-text">administra.</text>
+
+<!-- Card 2 -->
+<rect class="card" x="360" y="84" width="280" height="104" rx="12"/>
+<text x="384" y="128" class="q-glyph">&#8220;</text>
+<text x="386" y="150" class="q-text">No sé de dónde va a salir</text>
+<text x="386" y="170" class="q-text">el próximo cliente.</text>
+
+<!-- Card 3 -->
+<rect class="card" x="40" y="200" width="280" height="104" rx="12"/>
+<text x="64" y="244" class="q-glyph">&#8220;</text>
+<text x="66" y="266" class="q-text">Todos vienen por referidos,</text>
+<text x="66" y="286" class="q-text">y eso no puede escalar.</text>
+
+<!-- Card 4 -->
+<rect class="card" x="360" y="200" width="280" height="104" rx="12"/>
+<text x="384" y="244" class="q-glyph">&#8220;</text>
+<text x="386" y="266" class="q-text">Termino un proyecto y</text>
+<text x="386" y="286" class="q-text">empiezo de cero otra vez.</text>
+
+<!-- Accent conclusion -->
+<rect class="accent" x="190" y="324" width="300" height="40" rx="20"/>
+<text x="340" y="349" text-anchor="middle" class="a-text">Resultado: las reuniones no llegan</text>
+
+</svg>

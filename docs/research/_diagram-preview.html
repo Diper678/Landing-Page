@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preview diagramas Sisteco</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Hanken+Grotesk:wght@100..900&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #F8F7F5; color: #111; font-family: "Hanken Grotesk", system-ui, sans-serif; padding: 40px; }
+  h1 { font-family: "Space Grotesk", sans-serif; font-size: 18px; margin-bottom: 4px; }
+  .meta { color: #666; font-size: 13px; margin-bottom: 24px; }
+  .frame { border: 1px solid #e5e5e5; border-radius: 16px; padding: 28px; max-width: 760px; margin: 0 auto 28px; }
+  .frame.light { background: #F8F7F5; }
+  .frame.dark { background: #111111; }
+  .frame .cap { font-family: "Space Grotesk", sans-serif; font-size: 11px; color: #888; margin-bottom: 16px; letter-spacing: 1px; text-transform: uppercase; }
+  .frame svg { display: block; width: 100%; height: auto; }
+</style>
+</head>
+<body>
+  <h1 id="title">Preview de diagramas — branding Sisteco</h1>
+  <div class="meta" id="meta">Cargando…</div>
+
+  <div class="frame light"><div class="cap">Fondo claro (#F8F7F5)</div><div id="slot-light"></div></div>
+  <div class="frame dark"><div class="cap">Fondo oscuro (#111)</div><div id="slot-dark"></div></div>
+
+<script>
+  // ?d=proceso-senales  -> /assets/diagrams/proceso-senales.svg
+  const params = new URLSearchParams(location.search);
+  const name = params.get('d') || 'proceso-senales';
+  const url = '/assets/diagrams/' + name + '.svg';
+  document.getElementById('meta').textContent = url;
+  fetch(url).then(r => r.text()).then(svg => {
+    document.getElementById('slot-light').innerHTML = svg;
+    document.getElementById('slot-dark').innerHTML = svg;
+    document.title = name + ' — preview';
+  }).catch(e => { document.getElementById('meta').textContent = 'ERROR: ' + e; });
+</script>
+</body>
+</html>

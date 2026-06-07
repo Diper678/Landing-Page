@@ -1,0 +1,64 @@
+<svg width="100%" viewBox="0 0 680 400" role="img" xmlns="http://www.w3.org/2000/svg">
+<title>Quién hace qué — el agente vs. tú</title>
+<desc>El agente de ventas autónomo encuentra, califica con datos del SII, contacta y agenda. Tú solo cierras: apareces a la reunión.</desc>
+
+<style>
+  .h-title  { font-family: "Space Grotesk", system-ui, sans-serif; font-size: 18px; font-weight: 600; fill: #111111; }
+  .h-sub    { font-family: "Hanken Grotesk", system-ui, sans-serif; font-size: 13px; font-weight: 400; fill: #666666; }
+  .col-lbl  { font-family: "Space Grotesk", system-ui, sans-serif; font-size: 11px; font-weight: 600; fill: #666666; letter-spacing: 2px; }
+  .step-t   { font-family: "Space Grotesk", system-ui, sans-serif; font-size: 14px; font-weight: 600; fill: #111111; }
+  .step-s   { font-family: "Hanken Grotesk", system-ui, sans-serif; font-size: 11px; font-weight: 400; fill: #666666; }
+  .card     { fill: #FFFFFF; stroke: #E5E5E5; stroke-width: 1; }
+  .panel    { fill: #c5ed36; stroke: #b3d82f; stroke-width: 1; }
+  .you-lbl  { font-family: "Space Grotesk", system-ui, sans-serif; font-size: 12px; font-weight: 600; fill: #111111; letter-spacing: 3px; }
+  .you-big  { font-family: "Space Grotesk", system-ui, sans-serif; font-size: 38px; font-weight: 700; fill: #111111; }
+  .you-sub  { font-family: "Hanken Grotesk", system-ui, sans-serif; font-size: 13px; font-weight: 500; fill: #111111; }
+  .flow     { fill: none; stroke: #111111; stroke-width: 1.5; }
+  .conn     { fill: none; stroke: #c9c9c4; stroke-width: 1.5; }
+</style>
+
+<defs>
+  <marker id="arrow2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+
+<!-- Header -->
+<text x="340" y="34" text-anchor="middle" class="h-title">Quién hace qué</text>
+<text x="340" y="56" text-anchor="middle" class="h-sub">El agente hace el trabajo pesado. Tú haces lo que sabes hacer.</text>
+
+<!-- LEFT: El agente -->
+<text x="44" y="94" class="col-lbl">EL AGENTE</text>
+
+<rect class="card" x="40" y="104" width="356" height="56" rx="10"/>
+<text x="60" y="130" class="step-t">Encuentra</text>
+<text x="60" y="148" class="step-s">Detecta señales de compra, 24/7</text>
+
+<rect class="card" x="40" y="170" width="356" height="56" rx="10"/>
+<text x="60" y="196" class="step-t">Califica</text>
+<text x="60" y="214" class="step-s">Cruza datos del SII + encaje real</text>
+
+<rect class="card" x="40" y="236" width="356" height="56" rx="10"/>
+<text x="60" y="262" class="step-t">Contacta</text>
+<text x="60" y="280" class="step-s">Mensaje por señal, en cada canal</text>
+
+<rect class="card" x="40" y="302" width="356" height="56" rx="10"/>
+<text x="60" y="328" class="step-t">Agenda</text>
+<text x="60" y="346" class="step-s">La reunión, en tu calendario</text>
+
+<!-- connectors between steps -->
+<line class="conn" x1="218" y1="160" x2="218" y2="170" marker-end="url(#arrow2)"/>
+<line class="conn" x1="218" y1="226" x2="218" y2="236" marker-end="url(#arrow2)"/>
+<line class="conn" x1="218" y1="292" x2="218" y2="302" marker-end="url(#arrow2)"/>
+
+<!-- handoff arrow to You -->
+<line class="flow" x1="396" y1="330" x2="438" y2="330" marker-end="url(#arrow2)"/>
+
+<!-- RIGHT: Tú -->
+<rect class="panel" x="446" y="104" width="194" height="254" rx="14"/>
+<text x="543" y="150" text-anchor="middle" class="you-lbl">TÚ</text>
+<text x="543" y="238" text-anchor="middle" class="you-big">Cierras</text>
+<text x="543" y="284" text-anchor="middle" class="you-sub">Apareces solo</text>
+<text x="543" y="302" text-anchor="middle" class="you-sub">a la reunión.</text>
+
+</svg>
