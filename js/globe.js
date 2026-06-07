@@ -90,36 +90,40 @@
 
     // Track last canvas size to avoid constant re-allocation
     let lastW = 0, lastH = 0;
+    // Cache the 2D context and the static glow gradient (rebuilt only on resize)
+    const ctx = canvas.getContext('2d');
+    let glowGrad = null;
 
     function draw() {
-      const dpr = window.devicePixelRatio || 1;
+      // Cap DPR so high-density screens don't multiply the per-frame pixel work
+      const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
       const w   = canvas.clientWidth;
       const h   = canvas.clientHeight;
-
-      if (w !== lastW || h !== lastH) {
-        canvas.width  = w * dpr;
-        canvas.height = h * dpr;
-        lastW = w; lastH = h;
-      }
-
-      const ctx = canvas.getContext('2d');
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
       const cx = w / 2;
       const cy = h / 2;
       const radius = Math.min(w, h) * 0.40;
       const fov    = 600;
 
+      if (w !== lastW || h !== lastH) {
+        canvas.width  = w * dpr;
+        canvas.height = h * dpr;
+        lastW = w; lastH = h;
+        // Rebuild the glow gradient only when the size actually changes
+        glowGrad = ctx.createRadialGradient(cx, cy, radius * 0.6, cx, cy, radius * 1.6);
+        glowGrad.addColorStop(0, 'rgba(197, 237, 54, 0.08)');
+        glowGrad.addColorStop(1, 'rgba(197, 237, 54, 0)');
+      }
+
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
       if (!drag.active) rotY += AUTO_SPEED;
       time += 0.015;
 
       ctx.clearRect(0, 0, w, h);
 
-      // Subtle lime glow behind globe
-      const glow = ctx.createRadialGradient(cx, cy, radius * 0.6, cx, cy, radius * 1.6);
-      glow.addColorStop(0, 'rgba(197, 237, 54, 0.08)');
-      glow.addColorStop(1, 'rgba(197, 237, 54, 0)');
-      ctx.fillStyle = glow;
+      // Subtle lime glow behind globe (cached gradient)
+      ctx.fillStyle = glowGrad;
       ctx.fillRect(0, 0, w, h);
 
       // Globe outline ring
