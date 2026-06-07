@@ -4,21 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soluciones — Cascada de prospección tech B2B | Sisteco</title>
+    <title>Soluciones — Qué hace tu agente de ventas | Sisteco</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/home-2026.css">
     <meta name="description"
-        content="LinkedIn → investigación → verificación → CRM. Cascada agéntica que entrega leads calificados B2B a empresas tech chilenas.">
+        content="Cómo trabaja tu agente de ventas autónomo: detecta señales reales, califica con datos del SII, contacta por email, LinkedIn y WhatsApp, y te agenda reuniones. Para empresas tech B2B en Chile. Ley 21.719.">
     <link rel="icon" type="image/png" href="../assets/logos/sisteco-icon.png">
-    <meta property="og:title" content="Soluciones — Cascada de prospección tech B2B | Sisteco">
-    <meta property="og:description" content="LinkedIn, investigación, verificación y entrega al CRM. Una cascada de agentes que entrega leads calificados a empresas tech B2B chilenas.">
+    <meta property="og:title" content="Soluciones — Qué hace tu agente de ventas | Sisteco">
+    <meta property="og:description" content="Detecta señales, califica con el SII, contacta y te agenda reuniones. Un agente de ventas que trabaja solo para empresas tech B2B en Chile.">
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://sisteco.cl/soluciones">
     <meta property="og:url" content="https://sisteco.cl/soluciones">
     <meta property="og:image" content="https://sisteco.cl/assets/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Soluciones — Cascada de prospección tech B2B | Sisteco">
-    <meta name="twitter:description" content="LinkedIn, investigación, verificación y entrega al CRM. Leads calificados para empresas tech B2B chilenas.">
+    <meta name="twitter:title" content="Soluciones — Qué hace tu agente de ventas | Sisteco">
+    <meta name="twitter:description" content="Detecta señales, califica con el SII, contacta y te agenda reuniones. Para empresas tech B2B en Chile.">
     <meta name="twitter:image" content="https://sisteco.cl/assets/og-image.png">
     <!-- Fonts: self-hosted via style.css (Ley 21.719) -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
@@ -47,10 +48,9 @@
                 <a href="vision.html" class="btn btn-ghost navbar-item">Visión</a>
                 <a href="soluciones.html" class="btn btn-ghost navbar-item">Soluciones</a>
                 <a href="como-funciona.html" class="btn btn-ghost navbar-item">Infraestructura</a>
-                <a href="precios.html" class="btn btn-ghost navbar-item">Precios</a>
                 <a href="recursos/index.html" class="btn btn-ghost navbar-item">Recursos</a>
             </div>
-            <a href="../index.html#hero" class="btn btn-primary navbar-item">Empezar ahora</a>
+            <a href="#agenda" class="btn btn-primary navbar-item" data-cta-id="cta-navbar-soluciones">Agenda una reunión</a>
             <button class="hamburger" aria-label="Menu" aria-expanded="false">
                 <span></span>
                 <span></span>
@@ -59,283 +59,179 @@
         </div>
     </nav>
 
-    <!-- Page Hero -->
-    <section class="page-hero soluciones-hero">
-        <!-- Animated background orbs -->
-        <div class="soluciones-hero-orbs">
-            <div class="soluciones-orb soluciones-orb-1"></div>
-            <div class="soluciones-orb soluciones-orb-2"></div>
-            <div class="soluciones-orb soluciones-orb-3"></div>
-        </div>
-        <!-- Grid dots -->
-        <div class="soluciones-hero-grid"></div>
-        <div class="container">
-            <div class="breadcrumb">
+    <!-- ============================================================
+         PAGE HERO
+         ============================================================ -->
+    <header class="rh-pagehero">
+        <div class="rh-container">
+            <nav class="rh-breadcrumb" aria-label="Ruta">
                 <a href="../index.html">Inicio</a>
                 <span>/</span>
                 <span>Soluciones</span>
-            </div>
-            <h1 class="page-hero-title">Un sistema de prospección tech <span class="gradient-text">que funciona mientras tú construyes.</span></h1>
-            <p class="page-hero-subtitle">LinkedIn → investigación de mercado → verificación del lead → entrega directa a tu CRM. Cuatro pasos orquestados por agentes para empresas tech B2B. No somos agencia. No somos SaaS. Somos la infraestructura que conecta tu producto con clientes reales.</p>
+            </nav>
+            <h1 class="rh-ph-title">Lo que hace tu agente, <em>paso a paso</em>.</h1>
+            <p class="rh-ph-sub">
+                Tu agente de ventas detecta a quién le sirve lo que vendes, lo califica, lo contacta y te agenda la reunión. Acá está cada paso, sin humo: lo que hace, cómo lo hace y qué te llega a ti.
+            </p>
+            <a href="#agenda" class="rh-btn rh-btn--primary rh-btn--lg" data-cta-id="cta-hero-soluciones">
+                Agenda una reunión
+                <i data-lucide="arrow-right"></i>
+            </a>
         </div>
-    </section>
+    </header>
 
-    <!-- Solutions Bento Grid -->
-    <section class="bento-section" style="padding-top: 60px;">
-        <div class="container">
-            <div class="bento-grid">
-                <!-- Hidden anchors for backward compatibility with index.html links -->
-                <span id="extraccion" style="position:absolute;"></span>
-                <span id="analisis" style="position:absolute;"></span>
-                <span id="secuencias" style="position:absolute;"></span>
-                <span id="data-quality" style="position:absolute;"></span>
-                <span id="analytics" style="position:absolute;"></span>
-                <span id="ai-247" style="position:absolute;"></span>
-                <span id="omnichannel" style="position:absolute;"></span>
+    <!-- ============================================================
+         EL PROCESO
+         ============================================================ -->
+    <section class="rh-section rh-bg-white" id="proceso">
+        <div class="rh-container">
+            <h2 class="rh-h2 rh-reveal">De una señal real a una reunión en tu calendario.</h2>
+            <p class="rh-lead rh-reveal">
+                No compramos una base y la disparamos a todo el mundo. El agente trabaja en cinco pasos, y cada uno descarta lo que no sirve antes de pasar al siguiente.
+            </p>
 
-                <!-- Hero Card: Captura -->
-                <div class="bento-card bento-card--hero" id="captura" style="opacity:1;">
-                    <div class="bento-hero-left">
-                        <div class="bento-card-header">
-                            <div class="bento-card-icon">
-                                <i data-lucide="radar" style="width:24px;height:24px"></i>
-                            </div>
-                            <span class="bento-card-label">01 — Captura</span>
-                        </div>
-                        <h3>Capturamos señales antes que tu competencia</h3>
-                        <p>Nuestros agentes extraen señales desde LinkedIn, Instagram, directorios web y triggers de mercado — eventos, prensa, rondas de inversión, contrataciones recientes. La investigación es continua: corren 24/7 buscando oportunidades que todavía nadie persigue.</p>
-                        <div class="bento-features">
-                            <div class="bento-feature">
-                                <i data-lucide="check" style="width:16px;height:16px"></i>
-                                <span>LinkedIn + Instagram + directorios web</span>
-                            </div>
-                            <div class="bento-feature">
-                                <i data-lucide="check" style="width:16px;height:16px"></i>
-                                <span>Triggers: prensa, rondas, hiring, eventos</span>
-                            </div>
-                            <div class="bento-feature">
-                                <i data-lucide="check" style="width:16px;height:16px"></i>
-                                <span>Captura ambiente 24/7 sin configurar</span>
-                            </div>
-                        </div>
-                        <div class="bento-stats">
-                            <div class="bento-stat">
-                                <span class="stat-value">4+</span>
-                                <span class="stat-label">Fuentes de señal</span>
-                            </div>
-                            <div class="bento-stat">
-                                <span class="stat-value">24/7</span>
-                                <span class="stat-label">Ambient research</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bento-hero-right">
-                        <div class="bento-flow-diagram">
-                            <div class="bento-flow-node bento-flow-node--linkedin">
-                                <div class="bento-flow-node-icon">
-                                    <i data-lucide="linkedin" style="width:20px;height:20px"></i>
-                                </div>
-                                <span>LinkedIn</span>
-                            </div>
-                            <div class="bento-flow-connector">
-                                <div class="bento-flow-dot"></div>
-                            </div>
-                            <div class="bento-flow-node bento-flow-node--ai">
-                                <div class="bento-flow-node-icon">
-                                    <i data-lucide="brain" style="width:20px;height:20px"></i>
-                                </div>
-                                <span>IA</span>
-                            </div>
-                            <div class="bento-flow-connector">
-                                <div class="bento-flow-dot"></div>
-                            </div>
-                            <div class="bento-flow-labels">
-                                <span class="bento-flow-pill bento-flow-pill--s">S</span>
-                                <span class="bento-flow-pill bento-flow-pill--a">A</span>
-                                <span class="bento-flow-pill bento-flow-pill--c">C</span>
-                            </div>
-                        </div>
+            <div class="rh-steplist rh-reveal">
+                <div class="rh-steprow">
+                    <div class="rh-steprow__n">1</div>
+                    <div>
+                        <h3 class="rh-steprow__t">Detecta</h3>
+                        <p class="rh-steprow__d">Vigila señales 24/7: cambios de cargo, licitaciones, contrataciones, prensa y movimientos en LinkedIn. No espera a que tú armes una lista; busca el momento en que una empresa empieza a necesitarte.</p>
                     </div>
                 </div>
-
-                <!-- Row of 4 cards -->
-                <div class="bento-grid-row">
-                    <!-- Card 2: Verificación -->
-                    <div class="bento-card" id="verificacion" style="opacity:1;">
-                        <div class="bento-card-header">
-                            <div class="bento-card-icon">
-                                <i data-lucide="shield-check" style="width:24px;height:24px"></i>
-                            </div>
-                            <span class="bento-card-label">02 — Verificación</span>
-                        </div>
-                        <h4>Descartamos leads fantasma antes que lleguen</h4>
-                        <p>Cruzamos cada contacto contra datos del SII — RUT, tamaño real de empresa y actividad económica. Tu equipo nunca más pierde tiempo investigando empresas que no existen o que quedan fuera de tu mercado objetivo.</p>
-                        <div class="bento-features">
-                            <div class="bento-feature">
-                                <i data-lucide="check" style="width:16px;height:16px"></i>
-                                <span>Validación RUT + SII en tiempo real</span>
-                            </div>
-                            <div class="bento-feature">
-                                <i data-lucide="check" style="width:16px;height:16px"></i>
-                                <span>Tamaño real + actividad económica</span>
-                            </div>
-                        </div>
-                        <div class="bento-stats">
-                            <div class="bento-stat">
-                                <span class="stat-value">97%</span>
-                                <span class="stat-label">Precisión</span>
-                            </div>
-                            <div class="bento-stat">
-                                <span class="stat-value">0</span>
-                                <span class="stat-label">Leads fantasma</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 3: Investigación ICP -->
-                    <div class="bento-card" id="investigacion-icp" style="opacity:1;">
-                        <div class="bento-card-header">
-                            <div class="bento-card-icon">
-                                <i data-lucide="brain-circuit" style="width:24px;height:24px"></i>
-                            </div>
-                            <span class="bento-card-label">03 — Investigación ICP</span>
-                        </div>
-                        <h4>Investigamos el ajuste con tu producto tech</h4>
-                        <p>Agentes analizan stack tecnológico, señales de crecimiento, noticias y timing de compra. Cada lead recibe un puntaje 0-100 contra tu ICP real — el que sale de trabajar con clientes, no el que dibujaste en un pitch deck.</p>
-                        <div class="bento-features">
-                            <div class="bento-feature">
-                                <i data-lucide="check" style="width:16px;height:16px"></i>
-                                <span>Stack tech + señales de crecimiento</span>
-                            </div>
-                            <div class="bento-feature">
-                                <i data-lucide="check" style="width:16px;height:16px"></i>
-                                <span>Scoring 100 puntos vs tu ICP</span>
-                            </div>
-                        </div>
-                        <div class="bento-stats">
-                            <div class="bento-stat">
-                                <span class="stat-value">24/7</span>
-                                <span class="stat-label">Market research</span>
-                            </div>
-                            <div class="bento-stat">
-                                <span class="stat-value">100</span>
-                                <span class="stat-label">Puntos ICP</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 4: Curación y entrega -->
-                    <div class="bento-card" id="curacion-entrega" style="opacity:1;">
-                        <div class="bento-card-header">
-                            <div class="bento-card-icon">
-                                <i data-lucide="send" style="width:24px;height:24px"></i>
-                            </div>
-                            <span class="bento-card-label">04 — Curación y entrega</span>
-                        </div>
-                        <h4>Entregamos solo los mejores — directo a tu CRM</h4>
-                        <p>Curamos una shortlist diaria y la entregamos a HubSpot, Salesforce, Pipedrive, Notion o tu base propia. Alertas en Slack y dashboard Sisteco con trazabilidad completa. Tú haces lo que sabes hacer: cerrar.</p>
-                        <div class="bento-features">
-                            <div class="bento-feature">
-                                <i data-lucide="check" style="width:16px;height:16px"></i>
-                                <span>CRM nativo + Slack + dashboard</span>
-                            </div>
-                            <div class="bento-feature">
-                                <i data-lucide="check" style="width:16px;height:16px"></i>
-                                <span>Shortlist diaria, sin spam de leads</span>
-                            </div>
-                        </div>
-                        <div class="bento-stats">
-                            <div class="bento-stat">
-                                <span class="stat-value">24/7</span>
-                                <span class="stat-label">Operación continua</span>
-                            </div>
-                            <div class="bento-stat">
-                                <span class="stat-value">&lt;11s</span>
-                                <span class="stat-label">Respuesta agéntica</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 5: Trust layer — Ley 21.719 -->
-                    <div class="bento-card" id="security" style="opacity:1;">
-                        <div class="bento-card-header">
-                            <div class="bento-card-icon">
-                                <i data-lucide="lock" style="width:24px;height:24px"></i>
-                            </div>
-                            <span class="bento-card-label">Trust layer</span>
-                        </div>
-                        <h4>Trazabilidad completa bajo Ley 21.719</h4>
-                        <p>Cada señal capturada, cada verificación SII, cada contacto entregado queda registrado. Compliance chileno nativo, GDPR compatible, encriptación E2E y privacy by design. El deadline de diciembre 2026 no es tu problema.</p>
-                        <div class="bento-features">
-                            <div class="bento-feature">
-                                <i data-lucide="check" style="width:16px;height:16px"></i>
-                                <span>Ley 21.719 + GDPR nativo</span>
-                            </div>
-                            <div class="bento-feature">
-                                <i data-lucide="check" style="width:16px;height:16px"></i>
-                                <span>Trazabilidad end-to-end</span>
-                            </div>
-                        </div>
-                        <div class="bento-stats">
-                            <div class="bento-stat">
-                                <span class="stat-value">Ley 21.719</span>
-                                <span class="stat-label">Nativo</span>
-                            </div>
-                            <div class="bento-stat">
-                                <span class="stat-value">Dic '26</span>
-                                <span class="stat-label">Ready</span>
-                            </div>
-                        </div>
+                <div class="rh-steprow">
+                    <div class="rh-steprow__n">2</div>
+                    <div>
+                        <h3 class="rh-steprow__t">Enriquece</h3>
+                        <p class="rh-steprow__d">Cruza cada empresa con los <strong>datos del SII</strong> (RUT, giro, tamaño real) y verifica el contacto con LinkedIn. Descarta lo que no existe o queda fuera de tu mercado antes de gastar un minuto en ello.</p>
                     </div>
                 </div>
+                <div class="rh-steprow">
+                    <div class="rh-steprow__n">3</div>
+                    <div>
+                        <h3 class="rh-steprow__t">Califica</h3>
+                        <p class="rh-steprow__d">Se queda solo con quien encaja en tu perfil y tiene el momento correcto. No te llena la bandeja: prefiere pocas conversaciones buenas a muchas tibias.</p>
+                    </div>
+                </div>
+                <div class="rh-steprow">
+                    <div class="rh-steprow__n">4</div>
+                    <div>
+                        <h3 class="rh-steprow__t">Contacta</h3>
+                        <p class="rh-steprow__d">Escribe un mensaje que nombra la señal específica de esa empresa, por el canal donde está: email, LinkedIn o WhatsApp. Nada de plantilla genérica para todos.</p>
+                    </div>
+                </div>
+                <div class="rh-steprow">
+                    <div class="rh-steprow__n">5</div>
+                    <div>
+                        <h3 class="rh-steprow__t">Agenda</h3>
+                        <p class="rh-steprow__d">Cuando responden, coordina y deja la reunión puesta en tu calendario, con el contexto de quién es y por qué ahora. Tú apareces a cerrar.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rh-fig-wrap rh-reveal" style="max-width:760px;margin:40px auto 0">
+                <div class="rh-figure" data-diagram="proceso-senales" role="img" aria-label="Pipeline del agente: detecta señales, enriquece con datos del SII, califica, contacta y agenda. Resultado: un prospecto calificado, listo para agendar."></div>
             </div>
         </div>
     </section>
 
-    <!-- Differentiators — Dark Section -->
-    <section class="page-section page-section-dark">
-        <div class="container">
-            <span class="section-label">Por qué no somos agencia ni SaaS</span>
-            <h2 class="section-title center" style="color:#fff;">No somos agencia. No somos SaaS. <span class="gradient-text-light">Somos infraestructura.</span></h2>
-            <p class="section-desc" style="color:#aaa;">Tres razones por las que nuestra cascada agéntica supera a una agencia de marketing y a cualquier SaaS que tengas que operar tú.</p>
+    <!-- ============================================================
+         QUÉ RECIBES
+         ============================================================ -->
+    <section class="rh-section rh-bg-warm" id="que-recibes">
+        <div class="rh-container">
+            <h2 class="rh-h2 rh-reveal">No recibes una lista. Recibes reuniones.</h2>
+            <p class="rh-lead rh-reveal">
+                La diferencia con una agencia o con un software de prospección es simple: no te entregamos contactos para que los trabajes tú. Te llegan reuniones agendadas, con contexto: quién es la persona, por qué ahora, y qué señal lo gatilló. Llegas a la conversación sabiendo de qué hablar.
+            </p>
 
-            <div class="grid-3">
-                <div class="content-card content-card-dark">
-                    <div class="card-icon">
-                        <i data-lucide="refresh-cw" style="width:24px;height:24px"></i>
-                    </div>
-                    <h3>Mejoramos sin que hagas nada</h3>
-                    <p>Nuestros agentes aprenden con cada ciclo de prospección. Analizan qué emails convirtieron, qué scoring fue certero y ajustan automáticamente. Tú solo ves los resultados mejorar.</p>
-                </div>
-                <div class="content-card content-card-dark">
-                    <div class="card-icon">
-                        <i data-lucide="database" style="width:24px;height:24px"></i>
-                    </div>
-                    <h3>Conocemos el mercado chileno</h3>
-                    <p>Enriquecemos con datos SII, validamos RUT y registros empresariales chilenos. El contexto local que ningún servicio gringo te va a dar.</p>
-                </div>
-                <div class="content-card content-card-dark">
-                    <div class="card-icon">
-                        <i data-lucide="zap" style="width:24px;height:24px"></i>
-                    </div>
-                    <h3>Respondemos en &lt;11 segundos por ti</h3>
-                    <p>Nuestros agentes nunca duermen. Responder rápido es la diferencia entre ganar al cliente o perderlo con la competencia. Nosotros respondemos en 11 segundos — tú ni te enteras.</p>
-                </div>
+            <blockquote class="rh-quote rh-reveal">
+                <p>"Sisteco no es una herramienta que tú operas. Es un servicio. No hay nada que configurar ni aprender."</p>
+            </blockquote>
+
+            <div class="rh-fig-wrap rh-reveal" style="max-width:760px;margin:40px auto 0">
+                <div class="rh-figure" data-diagram="prospecto-a-reunion" role="img" aria-label="Del prospecto a la reunión: prospecto calificado, secuencia multicanal por email, LinkedIn y WhatsApp, respuesta detectada y reunión agendada en tu calendario."></div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="page-section" style="padding:80px 0;">
-        <div class="container">
-            <div class="cta-card">
-                <h2>Sigue construyendo tu producto. Nosotros traemos al cliente.</h2>
-                <p>Prospección agéntica 24/7 para empresas tech B2B chilenas. Tú cierras deals, no persigues leads fantasma. Y el deadline de la Ley 21.719 no espera.</p>
-                <div class="cta-buttons">
-                    <a href="https://cal.com/sisteco/demo" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Hablar con un especialista</a>
-                    <a href="como-funciona.html" class="btn btn-outline btn-outline--light btn-lg">Ver cómo funciona</a>
+    <!-- ============================================================
+         POR QUÉ FUNCIONA
+         ============================================================ -->
+    <section class="rh-section rh-bg-dark" id="por-que">
+        <div class="rh-container">
+            <h2 class="rh-h2 rh-reveal">Por qué funciona mejor que una agencia o un software.</h2>
+            <p class="rh-lead rh-reveal">
+                No es una herramienta más para que tu equipo opere, ni una agencia que te manda un reporte a fin de mes. Es un agente que trabaja solo y mejora solo.
+            </p>
+
+            <div class="rh-cards-3 rh-reveal">
+                <div class="rh-card">
+                    <div class="rh-card__icon"><i data-lucide="refresh-cw"></i></div>
+                    <h3 class="rh-card__t">Se mejora solo</h3>
+                    <p class="rh-card__d">El agente aprende con cada ciclo: qué mensaje generó respuesta, a quién calificó bien y a quién no. Ajusta solo. Tú ves los resultados mejorar sin tocar nada.</p>
+                </div>
+                <div class="rh-card">
+                    <div class="rh-card__icon"><i data-lucide="database"></i></div>
+                    <h3 class="rh-card__t">Conoce Chile</h3>
+                    <p class="rh-card__d">Enriquece con datos del SII, valida RUT y giro real. El contexto local que un servicio de afuera no te va a dar.</p>
+                </div>
+                <div class="rh-card">
+                    <div class="rh-card__icon"><i data-lucide="radar"></i></div>
+                    <h3 class="rh-card__t">Señales, no listas frías</h3>
+                    <p class="rh-card__d">No compra una base y la dispara a todo el mundo. Actúa en el momento real, cuando algo cambió en la empresa. Por eso responden.</p>
                 </div>
             </div>
+
+            <div class="rh-fig-wrap rh-reveal" style="max-width:760px;margin:40px auto 0">
+                <div class="rh-figure" data-diagram="senales-vs-lista-fria" role="img" aria-label="Por qué las señales le ganan a la lista fría: la lista fría escribe sin momento y con mensaje genérico; las señales actúan en el momento real con un mensaje con contexto, y por eso responden."></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         BANDA — LEY 21.719
+         ============================================================ -->
+    <section class="rh-section rh-section--tight rh-band">
+        <div class="rh-container">
+            <div class="rh-band__row rh-reveal">
+                <span class="rh-band__icon"><i data-lucide="shield-check"></i></span>
+                <p class="rh-band__text">Cada señal capturada, cada verificación del SII y cada contacto entregado queda registrado. Cumplimiento de la Ley 21.719 desde el día uno.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         CIERRE / AGENDA
+         ============================================================ -->
+    <section class="rh-section rh-bg-dark rh-close" id="agenda">
+        <div class="rh-container rh-container--narrow">
+            <h2 class="rh-h2 rh-reveal">¿Te sirve para tu caso? Hablemos.</h2>
+            <p class="rh-lead rh-reveal">
+                Diseñamos un plan según a quién quieres llegar y cuántas reuniones necesitas. La forma más rápida de saber si te sirve es conversar 20 minutos.
+            </p>
+
+            <div class="rh-contact rh-reveal">
+                <a href="https://cal.com/sisteco/ventas" target="_blank" rel="noopener" class="rh-contact__card rh-contact__card--primary" data-cta-id="cta-agenda-cal-soluciones">
+                    <span class="rh-contact__icon"><i data-lucide="calendar-check"></i></span>
+                    <span class="rh-contact__label">Agenda una reunión</span>
+                    <span class="rh-contact__value">20 minutos, sin compromiso</span>
+                </a>
+                <a href="https://wa.me/56940065566" target="_blank" rel="noopener" class="rh-contact__card" data-cta-id="cta-agenda-whatsapp-soluciones">
+                    <span class="rh-contact__icon"><i data-lucide="message-circle"></i></span>
+                    <span class="rh-contact__label">WhatsApp</span>
+                    <span class="rh-contact__value">+56 9 40065566</span>
+                </a>
+                <a href="mailto:contacto@sisteco.cl" class="rh-contact__card" data-cta-id="cta-agenda-email-soluciones">
+                    <span class="rh-contact__icon"><i data-lucide="mail"></i></span>
+                    <span class="rh-contact__label">Email</span>
+                    <span class="rh-contact__value">contacto@sisteco.cl</span>
+                </a>
+            </div>
+
+            <p class="rh-trust-line rh-reveal">
+                <i data-lucide="shield-check"></i>
+                Datos verificados del SII. Cumplimiento Ley 21.719 desde el día uno.
+            </p>
         </div>
     </section>
 
@@ -344,7 +240,7 @@
             <div class="footer-top">
                 <div class="footer-brand-inline">
                     <img src="../assets/logos/sisteco-icon.png" alt="Sisteco" class="footer-logo" width="28" height="28">
-                    <span class="footer-tagline">Tu departamento de ventas agéntico</span>
+                    <span class="footer-tagline">Tu agente de ventas autónomo. Te llenamos la agenda de reuniones; tú cierras.</span>
                 </div>
                 <div class="footer-social">
                     <a href="https://www.linkedin.com/company/sisteco/" target="_blank" rel="noopener" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
@@ -356,7 +252,7 @@
                     <h4>Producto</h4>
                     <a href="soluciones.html">Soluciones</a>
                     <a href="como-funciona.html">Infraestructura</a>
-                    <a href="precios.html">Precios</a>
+                    <a href="../index.html#agenda">Planes a medida</a>
                     <a href="recursos/index.html">Recursos</a>
                 </div>
                 <div class="footer-col">
@@ -391,6 +287,7 @@
     </footer>
 
     <script src="../js/pages.js" defer></script>
+    <script src="../js/diagrams.js" defer></script>
 </body>
 
 </html>
