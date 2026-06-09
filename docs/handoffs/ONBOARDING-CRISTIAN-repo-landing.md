@@ -33,12 +33,22 @@ Esto es de una sola vez. Si nunca usaste GitHub, sigue los tres pasos en orden. 
 3. GitHub te manda un código al correo para confirmar. Revisa tu bandeja (y spam), copia el código y pégalo.
 4. Cuando te pregunte el plan, elige **Free** (gratis). Listo, ya tienes cuenta.
 
-> ¿Ya tienes cuenta pero no sabes entrar? En `github.com` aprieta **Sign in**. Si olvidaste la clave, "Forgot password" te manda un reset al correo. Pásale tu nombre de usuario a Felipe para el paso 1.2.
+> ¿Ya tienes cuenta pero no sabes entrar? En `github.com` aprieta **Sign in**. Si olvidaste la clave, "Forgot password" te manda un reset al correo. Avísale a Felipe **con qué correo** tienes (o vas a crear) tu cuenta: con eso te invita en el paso 1.2.
 
-### 1.2 — Felipe te invita al repo
+### 1.2 — Felipe te invita al repo (por correo)
 
-1. Felipe entra a `https://github.com/Diper678/Landing-Page` → **Settings → Collaborators → Add people** → escribe tu nombre de usuario de GitHub y te invita.
-2. A ti te llega un correo de GitHub con la invitación: ábrelo y aprieta **Accept invitation**. (También aparece entrando a `https://github.com/Diper678/Landing-Page/invitations`.)
+Felipe te invita **por tu correo, no por usuario**. Así funciona tengas o no cuenta ya creada: si la tienes con ese mail, la invitación se conecta sola; si no, GitHub te manda un correo para crearla. Por eso no importa si todavía no tienes cuenta cuando Felipe te invita.
+
+**Lo que hace Felipe:**
+
+1. Entra a `https://github.com/Diper678/Landing-Page` logueado como dueño → **Settings → Collaborators**. GitHub puede pedirle la contraseña de nuevo (es normal, por seguridad).
+2. **Add people** → escribe **el correo de Cristián** (no un usuario) → selecciona la opción que aparece con ese email → **Add to this repository**. Deja el acceso en **Write** (el que sale por defecto): alcanza para crear ramas y abrir PRs. No le des Admin.
+
+**Lo que haces tú (Cristián):**
+
+3. Te llega un correo de GitHub: *"Felipe invited you to collaborate on Diper678/Landing-Page"* con un botón **Accept invitation**. (También aparece entrando a `https://github.com/Diper678/Landing-Page/invitations`.)
+4. **Ojo:** si todavía no tenías cuenta, ese botón te manda a crearla — créala **con el mismo correo al que te invitó Felipe** (§1.1). Si usas otro, la invitación no se conecta sola.
+5. Aprieta **Accept invitation**. La invitación expira en 7 días; si se te pasa, pídele a Felipe que la reenvíe desde la misma pantalla de Collaborators.
 
 Desde acá ya tienes acceso al repo. Falta conectar tu cuenta a tu Claude para trabajar sin fricción.
 
