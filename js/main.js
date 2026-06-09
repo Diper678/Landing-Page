@@ -394,53 +394,28 @@ function initHeroAnimations() {
 function initFeaturesAnimations() {
   if (typeof ScrollTrigger === 'undefined') return;
 
-  // Section title reveal
-  ScrollTrigger.create({
-    trigger: '.features-title',
-    start: 'top 80%',
-    onEnter: () => {
-      gsap.fromTo(
-        '.features-title',
-        { y: 40, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.8, stagger: 0.1, ease: 'power3.out' }
-      );
-    },
-    once: true,
+  // Section title reveal — scrollTrigger ligado directo al tween (GSAP gestiona el ciclo de vida)
+  gsap.from('.features-title', {
+    y: 40, opacity: 0, duration: 0.8, stagger: 0.1, ease: 'power3.out',
+    clearProps: 'opacity,transform',
+    scrollTrigger: { trigger: '.features-title', start: 'top 80%', once: true }
   });
 
-  // Feature cards stagger
-  ScrollTrigger.create({
-    trigger: '.features-grid',
-    start: 'top 80%',
-    onEnter: () => {
-      gsap.fromTo(
-        '.feature-card',
-        { y: 60, opacity: 0, scale: 0.95 },
-        {
-          y: 0,
-          opacity: 1,
-          scale: 1,
-          duration: 0.7,
-          stagger: 0.15,
-          ease: 'power3.out'
-        }
-      );
-    },
-    once: true,
+  // Feature cards stagger — antes el reveal se creaba dentro de onEnter y la última
+  // card podía quedar varada en opacity:0 al entrar la sección parcialmente. Ahora el
+  // scrollTrigger es dueño del tween y clearProps limpia el estilo inline al terminar,
+  // así ninguna card queda invisible.
+  gsap.from('.feature-card', {
+    y: 60, opacity: 0, scale: 0.95, duration: 0.7, stagger: 0.15, ease: 'power3.out',
+    clearProps: 'opacity,transform',
+    scrollTrigger: { trigger: '.features-grid', start: 'top 80%', once: true }
   });
 
   // Additional features
-  ScrollTrigger.create({
-    trigger: '.additional-features',
-    start: 'top 85%',
-    onEnter: () => {
-      gsap.fromTo(
-        '.additional-feature',
-        { x: -30, opacity: 0 },
-        { x: 0, opacity: 1, duration: 0.6, stagger: 0.1, ease: 'power3.out' }
-      );
-    },
-    once: true,
+  gsap.from('.additional-feature', {
+    x: -30, opacity: 0, duration: 0.6, stagger: 0.1, ease: 'power3.out',
+    clearProps: 'opacity,transform',
+    scrollTrigger: { trigger: '.additional-features', start: 'top 85%', once: true }
   });
 }
 
