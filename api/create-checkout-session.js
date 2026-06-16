@@ -2,26 +2,48 @@
 // Crea una sesión de pago dLocal Go y retorna la URL de checkout
 // Deploy: Vercel Serverless Function
 // Docs: https://docs.dlocalgo.com/integration-api
+//
+// TODO Felipe: post-2026-05-24 Flow.cl es la pasarela principal para clientes Chile.
+//   dLocal Go queda como fallback LATAM (Colombia, Perú, Argentina).
+//   - Crear `api/create-flow-checkout.js` para el flujo Chile (Flow.cl Webpay/transferencia)
+//   - Mantener este archivo solo para flujo LATAM en USD
+//   - O agregar branch `country === 'CL'` que redirige a Flow.cl
+//   Aquí solo se actualizó pricing y comentarios; el cambio de proveedor lo manejas tú.
 
 const DLOCALGO_BASE_URL = process.env.DLOCALGO_BASE_URL || 'https://api.dlocalgo.com/v1';
 
 // ── Plan key → env var mapping ──────────────────────────────────────
-// Frontend sends planKey (e.g. "junior_monthly"), we resolve to the actual
+// Frontend sends planKey (e.g. "base_monthly"), we resolve to the actual
 // dLocal Go plan ID stored in environment variables.
 //
-// Pricing autoritativo: docs/research/2026-04-23-pricing-final-formalizado.md
-// Junior:  20 UF/mes (~USD 770) — trimestral 60 UF (~USD 2,310)
-// Senior:  50 UF/mes (~USD 1,925) — trimestral 150 UF (~USD 5,775)
-// Manager: ~100 UF/mes ("Hablemos") — trimestral 300 UF (~USD 11,550)
+// PRECIO PÚBLICO DE LYD (2026-06-15): Plan Fundadores = USD 500/mes.
+//   Es el sistema de leads autoservicio para los primeros clientes y el ancla de entrada
+//   que muestra la web (precios.html, soluciones.html, llms.txt, mirrors/precios.md).
+//   Alcances mayores → planes a medida (no precio público fijo).
+//   NOTA (NO hardcodear): se está conversando subir a ~USD 700/mes tras la primera llamada.
+//   Eso queda SOLO documentado en docs/handoffs/2026-06-15-pricing-lyd-fundadores.md,
+//   NO en precio público ni en este checkout, hasta que Felipe lo confirme.
 //
-// Sisteco no ofrece cobro mensual operativo (compromiso mínimo 1 trimestre).
-// Las claves _monthly se mantienen por compatibilidad con dLocal (recurring monthly engine).
+// Tiers internos "a medida" (operado, NO son el precio público de entrada de LYD):
+//   Base 20 UF/mes (~USD 770) · Crecimiento CLP 1.200.000/mes (~USD 1.290) · Hablemos (a medida)
+// Aliases legacy (junior_*, senior_*, manager_*) se mantienen como compat hasta migrar
+// clientes activos. TODO Felipe: remover aliases tras migrar todas las suscripciones.
 const PLAN_KEY_TO_ENV = {
-  junior_monthly:  'DLOCALGO_PLAN_JUNIOR_MONTHLY',
-  junior_annual:   'DLOCALGO_PLAN_JUNIOR_ANNUAL',
-  senior_monthly:  'DLOCALGO_PLAN_SENIOR_MONTHLY',
-  senior_annual:   'DLOCALGO_PLAN_SENIOR_ANNUAL',
-  manager_monthly: 'DLOCALGO_PLAN_MANAGER_MONTHLY',
+  // Precio público de entrada de LYD
+  lyd_fundadores:      'DLOCALGO_PLAN_LYD_FUNDADORES',
+  // Keys nuevas (post-rename 2026-05-24)
+  base_monthly:        'DLOCALGO_PLAN_BASE_MONTHLY',
+  base_annual:         'DLOCALGO_PLAN_BASE_ANNUAL',
+  crecimiento_monthly: 'DLOCALGO_PLAN_CRECIMIENTO_MONTHLY',
+  crecimiento_annual:  'DLOCALGO_PLAN_CRECIMIENTO_ANNUAL',
+  hablemos_monthly:    'DLOCALGO_PLAN_HABLEMOS_MONTHLY',
+  // Aliases legacy (compat con env vars existentes en Vercel — apuntan a los mismos plan IDs)
+  // TODO Felipe: crear env vars nuevas con nombres post-rename y eliminar estas líneas
+  junior_monthly:      'DLOCALGO_PLAN_JUNIOR_MONTHLY',
+  junior_annual:       'DLOCALGO_PLAN_JUNIOR_ANNUAL',
+  senior_monthly:      'DLOCALGO_PLAN_SENIOR_MONTHLY',
+  senior_annual:       'DLOCALGO_PLAN_SENIOR_ANNUAL',
+  manager_monthly:     'DLOCALGO_PLAN_MANAGER_MONTHLY',
 };
 
 function resolvePlanId(planKey) {
@@ -30,24 +52,46 @@ function resolvePlanId(planKey) {
 }
 
 // Plan IDs válidos (del Dashboard dLocal Go → Subscriptions)
+// TODO Felipe: si renombrás env vars en Vercel (DLOCALGO_PLAN_BASE_*, _CRECIMIENTO_*, _HABLEMOS_*),
+// actualizar este set también. Por ahora apunta a los env vars legacy (Junior/Senior/Manager) ya configurados.
 const ALLOWED_PLANS = new Set([
+  process.env.DLOCALGO_PLAN_LYD_FUNDADORES,
   process.env.DLOCALGO_PLAN_JUNIOR_MONTHLY,
   process.env.DLOCALGO_PLAN_JUNIOR_ANNUAL,
   process.env.DLOCALGO_PLAN_SENIOR_MONTHLY,
   process.env.DLOCALGO_PLAN_SENIOR_ANNUAL,
   process.env.DLOCALGO_PLAN_MANAGER_MONTHLY,
+  process.env.DLOCALGO_PLAN_BASE_MONTHLY,
+  process.env.DLOCALGO_PLAN_BASE_ANNUAL,
+  process.env.DLOCALGO_PLAN_CRECIMIENTO_MONTHLY,
+  process.env.DLOCALGO_PLAN_CRECIMIENTO_ANNUAL,
+  process.env.DLOCALGO_PLAN_HABLEMOS_MONTHLY,
 ]);
 
 // Precios de los planes (para cobro único inicial o cuando la API
 // de suscripciones usa amount directo en vez de plan_id).
 // USD aprox del día — el cobro real se ajusta con la UF del día en pasarela CLP.
-// IVA 19% incluido. Junior 20 UF × 1.19 ≈ USD 916; Senior 50 UF × 1.19 ≈ USD 2,290; Manager ≈ USD 4,581.
+// IVA 19% adicional. Cálculo:
+//   Base 20 UF/mes × USD 38,5 = USD 770 net → × 1.19 IVA ≈ USD 916
+//   Crecimiento CLP 1.200.000 neto → × 1.19 IVA = CLP 1.428.000 ≈ USD 1.534 (al USD-CLP ~931)
+//   Hablemos: cotización a medida — el amount aquí es referencial.
 const PLAN_AMOUNTS = {
-  junior_monthly:  { amount: 916.30,   currency: 'USD', label: 'Sisteco Junior - Mensual (IVA incl.)' },
-  junior_annual:   { amount: 9897.00,  currency: 'USD', label: 'Sisteco Junior - Anual con 10% desc (IVA incl.)' },
-  senior_monthly:  { amount: 2290.75,  currency: 'USD', label: 'Sisteco Senior - Mensual (IVA incl.)' },
-  senior_annual:   { amount: 24740.10, currency: 'USD', label: 'Sisteco Senior - Anual con 10% desc (IVA incl.)' },
-  manager_monthly: { amount: 4581.50,  currency: 'USD', label: 'Sisteco Manager - Mensual (IVA incl.)' },
+  // Precio público de entrada de LYD (2026-06-15) — Plan Fundadores USD 500/mes.
+  // En Chile se factura en CLP al equivalente del día, con IVA y DTE válido ante el SII.
+  lyd_fundadores:      { amount: 500.00,   currency: 'USD', label: 'LYD Plan Fundadores - Mensual (USD 500)' },
+  // Keys nuevas (post-rename 2026-05-24)
+  base_monthly:        { amount: 916.30,   currency: 'USD', label: 'Sisteco Base - Mensual (IVA incl.)' },
+  base_annual:         { amount: 9897.00,  currency: 'USD', label: 'Sisteco Base - Anual con 10% desc (IVA incl.)' },
+  crecimiento_monthly: { amount: 1534.00,  currency: 'USD', label: 'Sisteco Crecimiento - Mensual (IVA incl.)' },
+  crecimiento_annual:  { amount: 16567.20, currency: 'USD', label: 'Sisteco Crecimiento - Anual con 10% desc (IVA incl.)' },
+  hablemos_monthly:    { amount: 4581.50,  currency: 'USD', label: 'Sisteco Hablemos - Mensual (cotización referencial, IVA incl.)' },
+  // Aliases legacy — apuntan al pricing nuevo de Crecimiento (no al viejo USD 1.925 de Senior 50 UF)
+  // TODO Felipe: clientes activos en planes _senior_* deben migrar a CLP 1.200.000 (no a USD 1.925)
+  junior_monthly:      { amount: 916.30,   currency: 'USD', label: 'Sisteco Base - Mensual (IVA incl.)' },
+  junior_annual:       { amount: 9897.00,  currency: 'USD', label: 'Sisteco Base - Anual con 10% desc (IVA incl.)' },
+  senior_monthly:      { amount: 1534.00,  currency: 'USD', label: 'Sisteco Crecimiento - Mensual (IVA incl.)' },
+  senior_annual:       { amount: 16567.20, currency: 'USD', label: 'Sisteco Crecimiento - Anual con 10% desc (IVA incl.)' },
+  manager_monthly:     { amount: 4581.50,  currency: 'USD', label: 'Sisteco Hablemos - Mensual (cotización referencial, IVA incl.)' },
 };
 
 const CHECKOUT_ALLOWED_ORIGINS = ['https://sisteco.com', 'https://sisteco-landing.vercel.app', 'https://landing-page-felipe-s-projects-cf2ac967.vercel.app', 'http://localhost:3000'];

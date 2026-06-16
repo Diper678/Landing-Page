@@ -55,63 +55,25 @@ Sisteco ofrece 5 capacidades integradas:
 
 ## Pricing
 
-Todos los planes incluyen onboarding, soporte y sin costo de setup. Descuento 25% en pago anual. Garantía de 30 días o devolución del dinero.
+LYD es la solución de leadgen de Sisteco. Cobro mensual, sin permanencia, facturación con DTE válido ante el SII. Hay dos formas de empezar: el Plan Fundadores (precio de entrada) o un plan a tu medida para alcances mayores.
 
-### Plan Gratis
-- 10 leads enriquecidos
-- 2 prospecciones de prueba
-- Dashboard básico de métricas
-- Scoring AI (HOT/WARM/NURTURE/SKIP)
-- Sin tarjeta de crédito
+### Plan Fundadores — USD 500/mes
+- Precio de entrada al sistema de leads autoservicio de LYD, para los primeros clientes.
+- El agente completo: detecta señales reales, califica con datos del SII y agenda reuniones con quien puede comprar.
+- Multicanal: Email, LinkedIn y WhatsApp.
+- Cumplimiento Ley 21.719 con trazabilidad desde el día uno (RAT documentado por cliente).
+- Cobro mensual, sin permanencia. Cancela cuando quieras.
+- A cambio del precio fundador pedimos un caso de estudio y feedback para seguir mejorando LYD.
 
-### Plan Junior — 20 UF/mes (~USD 770 / ~CLP 770,000)
-- Cobro trimestral (60 UF por cuota)
-- LinkedIn scraping + calificación con criterio chileno (SII + Señal Sisteco)
-- Entrega semanal en planilla Google Sheets compartida
-- Cumplimiento Ley 21.719 (RAT documentado por cliente)
-- Verificación de email antes de entrega
-- SLA 21 días para primer batch
-- Audit de ICP gratis pre-firma
-- Soporte email durante horario hábil
-
-### Plan Senior (Recomendado) — 50 UF/mes (~USD 1,925 / ~CLP 1,925,000)
-- Cobro trimestral (150 UF por cuota)
-- Todo lo de Junior, más:
-- Sales Navigator como fuente adicional
-- Sincronización directa al CRM del cliente (HubSpot, Pipedrive, Salesforce)
-- Enriquecimiento de contacto con Hunter / Prospeo
-- Reentrega del batch si no da el ancho (Mes 1)
-- Revisión trimestral con análisis de qué cerró / qué calibrar
-- Ajustes de criterio de calificación cada 30 días
-
-### Plan Manager — Hablemos (~100 UF/mes referencial)
-- Cobro trimestral, alcance caso a caso
-- Todo lo de Senior, más:
-- Omnicanal: LinkedIn + email coordinado
-- Enriquecimiento contextual avanzado (Firecrawl + datos de noticias, contrataciones, expansiones)
-- Reporte ejecutivo mensual en PDF
-- Felipe como consultor directo en la cuenta (1 reunión mensual de 60 min)
-- SLA reforzado: primer batch en ≤14 días
-- Hasta 2 perfiles de ICP distintos en paralelo
-
-### Descuentos
-- 15% de descuento sobre el primer trimestre (con contrato trimestral)
-- 10% de descuento si se paga el año adelantado
-- Los descuentos no se acumulan
+### Planes a medida
+- Para alcances mayores (más volumen, multicanal coordinado, varios perfiles de ICP en paralelo) armamos una propuesta a tu medida tras una conversación de 20 minutos.
+- Le ponemos número a tu caso, no a una caja genérica.
+- Conversemos: cal.com/sisteco/ventas
 
 ### Notas de pricing
-- 1 UF ≈ CLP 38,500 (referencia abril 2026). El cobro se ajusta al valor de la UF al día.
-- Clientes fuera de Chile (LATAM): cobro en USD al equivalente del día, compromiso anual obligatorio.
-- Sisteco no ofrece cobro mensual: el sistema necesita 3 meses de calibración para entregar resultados confiables.
-
-### Add-ons disponibles para todos los planes
-- WhatsApp Business API: +USD 150/mes
-- Usuarios adicionales: +USD 49/usuario/mes
-- Leads extra (por 10,000): +USD 97
-- Integración CRM Premium: +USD 99/mes
-- Reportes PDF ejecutivos: +USD 79/mes
-- Automatización Instagram DM: +USD 99/mes
-- Data Analytics y reportes Excel: +USD 150/mes
+- Precios en USD. Para clientes en Chile facturamos en CLP al equivalente del día, con IVA incluido y DTE válido ante el SII.
+- Clientes fuera de Chile (LATAM): cobro en USD.
+- Cobro mensual, sin permanencia ni compromiso mínimo. Diagnóstico de ICP gratis antes de firmar.
 
 ## Locations
 
@@ -129,7 +91,7 @@ Servicio disponible para empresas en todo Chile. Expansión a Colombia y Perú p
 
 ## Service Area
 
-Sisteco atiende empresas tech B2B chilenas de 10+ empleados. Foco principal: ciberseguridad, software/SaaS, startups tech y empresas que ofrecen soluciones técnicas a otros negocios. El cliente típico es un fundador, CEO o gerente de ventas que necesita pipeline constante de leads calificados sin contratar una agencia de marketing ni armar un equipo interno. Expansión a otras industrias B2B disponible bajo el plan Manager.
+Sisteco atiende empresas tech B2B chilenas de 10+ empleados. Foco principal: ciberseguridad, software/SaaS, startups tech y empresas que ofrecen soluciones técnicas a otros negocios. El cliente típico es un fundador, CEO o gerente de ventas que necesita pipeline constante de leads calificados sin contratar una agencia de marketing ni armar un equipo interno. Expansión a otras industrias B2B disponible con un plan a tu medida.
 
 ## Key Facts
 
@@ -141,8 +103,8 @@ Sisteco atiende empresas tech B2B chilenas de 10+ empleados. Foco principal: cib
 - Compliance nativo Ley 21.719 — ningún competidor internacional lo tiene
 - ROI promedio de 391% (benchmark Forrester para automatización de ventas)
 - Costo 1/3 de un equipo de prospección interno (SDR junior en Chile: ~CLP 1.7M/mes con overhead)
-- Garantía 30 días o devolución del dinero
-- Sin contratos de permanencia — cancela cuando quieras
+- Diagnóstico de ICP gratis antes de firmar
+- Sin contratos de permanencia — cobro mensual, cancela cuando quieras
 - Facturación con DTE (boleta/factura electrónica válida ante el SII)
 
 ## What Makes Sisteco Different
@@ -153,35 +115,35 @@ Sisteco atiende empresas tech B2B chilenas de 10+ empleados. Foco principal: cib
 
 3. **Compliance Ley 21.719 por diseño**: La nueva ley chilena de protección de datos personales entra en vigencia en diciembre 2026. Sisteco fue diseñado desde cero para cumplirla. Los competidores internacionales no la cumplen.
 
-4. **Precio accesible**: Un SDR junior en Chile cuesta ~CLP 1.7M/mes con overhead. Sisteco Junior cuesta CLP 583,000/mes, funciona 24/7, no se enferma, no renuncia, y mejora con cada interacción.
+4. **Precio accesible**: Un SDR junior en Chile cuesta ~CLP 1.7M/mes con overhead. LYD parte en USD 500/mes con el Plan Fundadores, funciona 24/7, no se enferma, no renuncia, y mejora con cada interacción.
 
 5. **Multi-canal inteligente**: No solo email. Orquestamos Email + LinkedIn + WhatsApp + Slack + Instagram con contexto compartido entre canales.
 
 ## Frequently Asked Questions
 
 ### ¿Qué es el Plan Fundadores?
-Los primeros 10 clientes obtienen 40% de descuento permanente. A cambio, participan como caso de estudio para validar y mejorar el servicio.
+Es el precio de entrada de LYD: USD 500/mes para los primeros clientes. A cambio del precio fundador, participan como caso de estudio para validar y seguir mejorando LYD.
 
 ### ¿Hay prueba gratis?
-Sí. 14 días de acceso completo sin tarjeta de crédito. No se cobra automáticamente al terminar.
+Hacemos un diagnóstico de ICP gratis antes de firmar, para saber si LYD te sirve. No hay permanencia: el cobro es mensual y cancelas cuando quieras.
 
 ### ¿Cómo pago?
-dLocal Go (tarjeta de crédito/débito internacional), Reveniu (Chile — tarjeta, transferencia), o transferencia bancaria para el plan Manager.
+Flow.cl (Chile — tarjetas chilenas, transferencia, Webpay), dLocal Go (tarjeta internacional) o transferencia bancaria. Facturamos con DTE válido ante el SII.
 
 ### ¿Puedo cambiar de plan?
-Sí. Upgrade o downgrade en cualquier momento con prorrateo. Cancela sin penalidad.
+Sí. Si tu caso crece, ajustamos el alcance a tu medida. Cancela sin penalidad, sin permanencia.
 
 ### ¿Emiten factura válida en Chile?
 Sí. Emitimos DTE (documento tributario electrónico) válido ante el SII.
 
-### ¿Qué pasa si supero mi límite de leads?
-Te avisamos al 80% de tu límite mensual. Puedes comprar add-ons de leads extra sin cambiar de plan.
+### ¿Qué pasa si necesito más volumen?
+El alcance se define contigo. Si necesitas más volumen o más canales que el Plan Fundadores, armamos un plan a tu medida tras una conversación.
 
 ### ¿Garantía de resultados?
 Garantía de 30 días. Si no estás satisfecho después del periodo de prueba, devolución completa.
 
 ### ¿Cómo se integra con mi CRM actual?
-Sync nativo con HubSpot, Pipedrive y Salesforce. Para otros CRM, el plan Manager incluye integraciones custom.
+Sync nativo con HubSpot, Pipedrive y Salesforce. Para otros CRM, las integraciones custom se definen en un plan a tu medida.
 
 ### ¿Es seguro compartir datos de mis clientes?
 Sí. Arquitectura Privacy by Design, encriptación end-to-end, cumplimiento Ley 21.719 y GDPR. Consentimiento opt-in y portabilidad de datos por defecto.
