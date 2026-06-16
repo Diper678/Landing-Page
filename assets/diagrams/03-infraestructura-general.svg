@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="Diagrama de infraestructura general de Sisteco">
+  <title>Cómo funciona Sisteco — vista general</title>
+  <desc>De señal a reunión: cómo Sisteco automatiza tu proceso de venta saliente.</desc>
+
+  <defs>
+    <style><![CDATA[
+      .bg { fill: #F8F7F5; }
+      .lane { fill: #FFFFFF; stroke: #e5e5e5; stroke-width: 1.5; }
+      .card { fill: #FFFFFF; stroke: #e5e5e5; stroke-width: 1.5; }
+      .card-accent { fill: #c5ed36; stroke: #111111; stroke-width: 1.5; }
+      .card-dark { fill: #111111; stroke: #111111; stroke-width: 1.5; }
+      .h-title { font-family: 'Sharp Grotesk','Space Grotesk',system-ui,sans-serif; font-weight: 600; fill: #111111; }
+      .h-eyebrow { font-family: 'Hanken Grotesk',system-ui,sans-serif; font-weight: 500; fill: #64748b; letter-spacing: 0.12em; text-transform: uppercase; }
+      .h-lane { font-family: 'Sharp Grotesk','Space Grotesk',system-ui,sans-serif; font-weight: 600; fill: #111111; }
+      .h-step { font-family: 'Sharp Grotesk','Space Grotesk',system-ui,sans-serif; font-weight: 600; fill: #111111; }
+      .h-step-light { font-family: 'Sharp Grotesk','Space Grotesk',system-ui,sans-serif; font-weight: 600; fill: #FFFFFF; }
+      .t-body { font-family: 'Hanken Grotesk',system-ui,sans-serif; font-weight: 400; fill: #111111; }
+      .t-sub { font-family: 'Hanken Grotesk',system-ui,sans-serif; font-weight: 400; fill: #64748b; }
+      .t-sub-light { font-family: 'Hanken Grotesk',system-ui,sans-serif; font-weight: 400; fill: #FFFFFF; opacity: 0.78; }
+      .arrow { stroke: #111111; stroke-width: 2; fill: none; }
+      .arrow-thin { stroke: #64748b; stroke-width: 1.5; fill: none; }
+    ]]></style>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#111111"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1200" height="720"/>
+
+  <text class="h-eyebrow" x="60" y="62" font-size="13">Vista general</text>
+  <text class="h-title" x="60" y="102" font-size="38">Cómo funciona Sisteco</text>
+  <text class="t-sub" x="60" y="132" font-size="16">Una sola plataforma reemplaza el trabajo repetitivo de prospección, cualificación y seguimiento.</text>
+
+  <!-- Three lanes structure -->
+  <!-- Lane 1: Input / Señales -->
+  <g transform="translate(60, 200)">
+    <rect class="lane" width="280" height="380" rx="20"/>
+    <text class="h-eyebrow" x="24" y="38" font-size="11">Entrada</text>
+    <text class="h-lane" x="24" y="74" font-size="22">Señales</text>
+    <text class="t-sub" x="24" y="98" font-size="13">Lo que escucha Sisteco</text>
+
+    <g transform="translate(24, 130)">
+      <rect class="card" width="232" height="52" rx="12"/>
+      <text class="h-step" x="16" y="22" font-size="14">LinkedIn público</text>
+      <text class="t-sub" x="16" y="40" font-size="12">Cambios de cargo · interacciones</text>
+    </g>
+
+    <g transform="translate(24, 196)">
+      <rect class="card" width="232" height="52" rx="12"/>
+      <text class="h-step" x="16" y="22" font-size="14">SII y ChileCompra</text>
+      <text class="t-sub" x="16" y="40" font-size="12">Empresas Chile · proveedores Estado</text>
+    </g>
+
+    <g transform="translate(24, 262)">
+      <rect class="card" width="232" height="52" rx="12"/>
+      <text class="h-step" x="16" y="22" font-size="14">Webs corporativas</text>
+      <text class="t-sub" x="16" y="40" font-size="12">Productos · vacantes · prensa</text>
+    </g>
+
+    <g transform="translate(24, 328)">
+      <rect class="card" width="232" height="32" rx="10"/>
+      <text class="t-sub" x="16" y="22" font-size="12">+ tus listas, CRM, eventos</text>
+    </g>
+  </g>
+
+  <!-- Arrow between lane 1 and lane 2 -->
+  <path class="arrow" d="M 350 390 L 390 390" marker-end="url(#ah)"/>
+
+  <!-- Lane 2: Procesamiento -->
+  <g transform="translate(400, 200)">
+    <rect class="lane" width="400" height="380" rx="20"/>
+    <text class="h-eyebrow" x="24" y="38" font-size="11">Procesamiento</text>
+    <text class="h-lane" x="24" y="74" font-size="22">El cerebro de Sisteco</text>
+    <text class="t-sub" x="24" y="98" font-size="13">Cinco pasos automáticos, sin tu equipo tocando nada</text>
+
+    <!-- Mini 5 step row -->
+    <g transform="translate(24, 130)">
+      <rect class="card" x="0" y="0" width="68" height="68" rx="14"/>
+      <text class="h-step" x="16" y="30" font-size="14">01</text>
+      <text class="t-sub" x="16" y="52" font-size="11">Detectar</text>
+
+      <rect class="card" x="76" y="0" width="68" height="68" rx="14"/>
+      <text class="h-step" x="92" y="30" font-size="14">02</text>
+      <text class="t-sub" x="92" y="52" font-size="11">Enriquecer</text>
+
+      <rect class="card-accent" x="152" y="0" width="68" height="68" rx="14"/>
+      <text class="h-step" x="168" y="30" font-size="14">03</text>
+      <text class="t-sub" x="168" y="52" font-size="11">Calificar</text>
+
+      <rect class="card" x="228" y="0" width="68" height="68" rx="14"/>
+      <text class="h-step" x="244" y="30" font-size="14">04</text>
+      <text class="t-sub" x="244" y="52" font-size="11">Personalizar</text>
+
+      <rect class="card-dark" x="304" y="0" width="68" height="68" rx="14"/>
+      <text class="h-step-light" x="320" y="30" font-size="14" fill="#c5ed36">05</text>
+      <text class="t-sub-light" x="320" y="52" font-size="11">Contactar</text>
+    </g>
+
+    <!-- IA descripción debajo -->
+    <g transform="translate(24, 226)">
+      <rect class="card" width="352" height="68" rx="14"/>
+      <text class="h-step" x="16" y="26" font-size="14">IA que entiende tu negocio</text>
+      <text class="t-sub" x="16" y="46" font-size="12">Define tu cliente ideal una vez. Sisteco</text>
+      <text class="t-sub" x="16" y="60" font-size="12">aprende y mejora con cada respuesta.</text>
+    </g>
+
+    <g transform="translate(24, 308)">
+      <rect class="card" width="352" height="56" rx="14"/>
+      <text class="h-step" x="16" y="24" font-size="14">Compliance Ley 21.719</text>
+      <text class="t-sub" x="16" y="44" font-size="12">Datos en Chile, opt-out automático.</text>
+    </g>
+  </g>
+
+  <path class="arrow" d="M 810 390 L 850 390" marker-end="url(#ah)"/>
+
+  <!-- Lane 3: Salida -->
+  <g transform="translate(860, 200)">
+    <rect class="lane" width="280" height="380" rx="20"/>
+    <text class="h-eyebrow" x="24" y="38" font-size="11">Salida</text>
+    <text class="h-lane" x="24" y="74" font-size="22">Lo que recibes</text>
+    <text class="t-sub" x="24" y="98" font-size="13">Resultados en tus herramientas</text>
+
+    <g transform="translate(24, 130)">
+      <rect class="card-accent" width="232" height="68" rx="14"/>
+      <text class="h-step" x="16" y="28" font-size="16">Reuniones agendadas</text>
+      <text class="t-sub" x="16" y="50" font-size="12">Directo en tu calendario</text>
+    </g>
+
+    <g transform="translate(24, 214)">
+      <rect class="card" width="232" height="52" rx="12"/>
+      <text class="h-step" x="16" y="22" font-size="14">Respuestas calientes</text>
+      <text class="t-sub" x="16" y="40" font-size="12">Ruteo a tu equipo en minutos</text>
+    </g>
+
+    <g transform="translate(24, 280)">
+      <rect class="card" width="232" height="52" rx="12"/>
+      <text class="h-step" x="16" y="22" font-size="14">Dashboard de pipeline</text>
+      <text class="t-sub" x="16" y="40" font-size="12">Métricas en tiempo real</text>
+    </g>
+
+    <g transform="translate(24, 346)">
+      <rect class="card" width="232" height="14" rx="7" fill="#F8F7F5" stroke="#e5e5e5"/>
+    </g>
+    <g transform="translate(24, 346)">
+      <text class="t-sub" x="0" y="14" font-size="12">+ sincronización con tu CRM</text>
+    </g>
+  </g>
+
+  <!-- Bottom row: footer with benefits -->
+  <g transform="translate(60, 610)">
+    <rect class="card-dark" width="1080" height="70" rx="20"/>
+    <text class="h-step-light" x="32" y="32" font-size="16">Lo que cambia para tu equipo</text>
+    <text class="t-sub-light" x="32" y="56" font-size="13">Dejan de buscar leads. Pasan el día respondiendo a quienes ya levantaron la mano. Cierran más, en menos tiempo.</text>
+  </g>
+
+  <text class="t-sub" x="60" y="705" font-size="12">Sisteco · Menos leads, más cierres</text>
+  <text class="t-sub" x="1140" y="705" font-size="12" text-anchor="end">sisteco.cl</text>
+</svg>

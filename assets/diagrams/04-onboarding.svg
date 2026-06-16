@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="Diagrama del proceso de onboarding de clientes nuevos en Sisteco">
+  <title>Onboarding Sisteco — 2 jornadas</title>
+  <desc>De firma a primer email enviado en dos días laborales, sin fricción para el cliente.</desc>
+
+  <defs>
+    <style><![CDATA[
+      .bg { fill: #F8F7F5; }
+      .card { fill: #FFFFFF; stroke: #e5e5e5; stroke-width: 1.5; }
+      .card-accent { fill: #c5ed36; stroke: #111111; stroke-width: 1.5; }
+      .card-dark { fill: #111111; stroke: #111111; stroke-width: 1.5; }
+      .card-soft { fill: #FFFFFF; stroke: #e5e5e5; stroke-width: 1; }
+      .h-title { font-family: 'Sharp Grotesk','Space Grotesk',system-ui,sans-serif; font-weight: 600; fill: #111111; }
+      .h-eyebrow { font-family: 'Hanken Grotesk',system-ui,sans-serif; font-weight: 500; fill: #64748b; letter-spacing: 0.12em; text-transform: uppercase; }
+      .h-step { font-family: 'Sharp Grotesk','Space Grotesk',system-ui,sans-serif; font-weight: 600; fill: #111111; }
+      .h-step-light { font-family: 'Sharp Grotesk','Space Grotesk',system-ui,sans-serif; font-weight: 600; fill: #FFFFFF; }
+      .h-day { font-family: 'Sharp Grotesk','Space Grotesk',system-ui,sans-serif; font-weight: 700; fill: #111111; }
+      .h-day-light { font-family: 'Sharp Grotesk','Space Grotesk',system-ui,sans-serif; font-weight: 700; fill: #c5ed36; }
+      .t-body { font-family: 'Hanken Grotesk',system-ui,sans-serif; font-weight: 400; fill: #111111; }
+      .t-sub { font-family: 'Hanken Grotesk',system-ui,sans-serif; font-weight: 400; fill: #64748b; }
+      .t-sub-light { font-family: 'Hanken Grotesk',system-ui,sans-serif; font-weight: 400; fill: #FFFFFF; opacity: 0.78; }
+      .arrow { stroke: #111111; stroke-width: 2; fill: none; }
+      .tl-line { stroke: #111111; stroke-width: 2; fill: none; }
+    ]]></style>
+    <marker id="ah4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#111111"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1200" height="720"/>
+
+  <text class="h-eyebrow" x="60" y="62" font-size="13">Cómo empezar</text>
+  <text class="h-title" x="60" y="102" font-size="38">De firma a primer lead en 2 días</text>
+  <text class="t-sub" x="60" y="132" font-size="16">Tu equipo no instala nada. Nosotros hacemos el setup completo y tú apruebas los mensajes antes de enviar.</text>
+
+  <!-- Timeline horizontal line -->
+  <line class="tl-line" x1="100" y1="240" x2="1140" y2="240"/>
+
+  <!-- Day 0: Firma -->
+  <g transform="translate(100, 240)">
+    <circle cx="0" cy="0" r="12" fill="#111111"/>
+    <text class="h-day" x="-18" y="-30" font-size="13">DÍA 0</text>
+    <text class="h-step" x="-18" y="40" font-size="14">Firma</text>
+    <text class="t-sub" x="-18" y="58" font-size="12">Contrato y kick-off.</text>
+  </g>
+
+  <!-- Day 1: Setup + Preparación -->
+  <g transform="translate(420, 240)">
+    <circle cx="0" cy="0" r="14" fill="#c5ed36" stroke="#111111" stroke-width="2"/>
+    <text class="h-day" x="-20" y="-30" font-size="13">DÍA 1</text>
+  </g>
+
+  <!-- Day 2: Lanzamiento -->
+  <g transform="translate(900, 240)">
+    <circle cx="0" cy="0" r="14" fill="#c5ed36" stroke="#111111" stroke-width="2"/>
+    <text class="h-day" x="-20" y="-30" font-size="13">DÍA 2</text>
+  </g>
+
+  <!-- Día 1 — Setup card -->
+  <g transform="translate(280, 290)">
+    <rect class="card" width="280" height="320" rx="20"/>
+    <text class="h-eyebrow" x="24" y="38" font-size="11">Setup y preparación</text>
+    <text class="h-step" x="24" y="72" font-size="22">Lo hacemos nosotros</text>
+
+    <g transform="translate(24, 100)">
+      <rect class="card-accent" x="0" y="0" width="26" height="26" rx="13"/>
+      <text class="h-step" x="9" y="19" font-size="14">1</text>
+      <text class="t-body" x="38" y="11" font-size="13">Conectamos tu correo</text>
+      <text class="t-sub" x="38" y="28" font-size="12">Google · Microsoft · cPanel</text>
+    </g>
+
+    <g transform="translate(24, 156)">
+      <rect class="card-accent" x="0" y="0" width="26" height="26" rx="13"/>
+      <text class="h-step" x="9" y="19" font-size="14">2</text>
+      <text class="t-body" x="38" y="11" font-size="13">Definimos tu cliente ideal</text>
+      <text class="t-sub" x="38" y="28" font-size="12">Industria, tamaño, cargos</text>
+    </g>
+
+    <g transform="translate(24, 212)">
+      <rect class="card-accent" x="0" y="0" width="26" height="26" rx="13"/>
+      <text class="h-step" x="9" y="19" font-size="14">3</text>
+      <text class="t-body" x="38" y="11" font-size="13">Lanzamos la primera</text>
+      <text class="t-body" x="38" y="28" font-size="13">búsqueda</text>
+    </g>
+
+    <g transform="translate(24, 264)">
+      <rect class="card-accent" x="0" y="0" width="26" height="26" rx="13"/>
+      <text class="h-step" x="9" y="19" font-size="14">4</text>
+      <text class="t-body" x="38" y="11" font-size="13">Te enseñamos los emails</text>
+      <text class="t-body" x="38" y="28" font-size="13">listos para aprobar</text>
+    </g>
+  </g>
+
+  <!-- Día 2 — Lanzamiento card -->
+  <g transform="translate(760, 290)">
+    <rect class="card-dark" width="280" height="320" rx="20"/>
+    <text class="h-eyebrow" x="24" y="38" font-size="11" fill="#c5ed36">Lanzamiento</text>
+    <text class="h-step-light" x="24" y="72" font-size="22">Tu equipo aprueba</text>
+
+    <g transform="translate(24, 100)">
+      <rect class="card-accent" x="0" y="0" width="26" height="26" rx="13"/>
+      <text class="h-step" x="9" y="19" font-size="14">1</text>
+      <text class="h-step-light" x="38" y="11" font-size="13">Revisas y firmas</text>
+      <text class="t-sub-light" x="38" y="28" font-size="12">los mensajes propuestos</text>
+    </g>
+
+    <g transform="translate(24, 156)">
+      <rect class="card-accent" x="0" y="0" width="26" height="26" rx="13"/>
+      <text class="h-step" x="9" y="19" font-size="14">2</text>
+      <text class="h-step-light" x="38" y="11" font-size="13">Activamos la</text>
+      <text class="h-step-light" x="38" y="28" font-size="13">secuencia de outreach</text>
+    </g>
+
+    <g transform="translate(24, 212)">
+      <rect class="card-accent" x="0" y="0" width="26" height="26" rx="13"/>
+      <text class="h-step" x="9" y="19" font-size="14">3</text>
+      <text class="h-step-light" x="38" y="11" font-size="13">Configuramos avisos</text>
+      <text class="t-sub-light" x="38" y="28" font-size="12">a tu equipo de ventas</text>
+    </g>
+
+    <g transform="translate(24, 264)">
+      <rect class="card-accent" x="0" y="0" width="26" height="26" rx="13"/>
+      <text class="h-step" x="9" y="19" font-size="14">4</text>
+      <text class="h-step-light" x="38" y="11" font-size="13">Entregamos el</text>
+      <text class="h-step-light" x="38" y="28" font-size="13">dashboard del pipeline</text>
+    </g>
+  </g>
+
+  <!-- Curly bracket / connector to result -->
+  <path class="arrow" d="M 1040 470 L 1100 470 L 1100 470" marker-end="url(#ah4)"/>
+
+  <!-- Result on right side -->
+  <g transform="translate(60, 632)">
+    <rect class="card-accent" width="1080" height="62" rx="20"/>
+    <text class="h-step" x="32" y="28" font-size="14">RESULTADO</text>
+    <text class="h-step" x="32" y="52" font-size="20">Tu primer email sale al día 3 — sin que tu equipo haya tocado una sola herramienta nueva.</text>
+  </g>
+
+  <!-- Hand-off badge between days -->
+  <g transform="translate(530, 380)">
+    <rect class="card" width="220" height="84" rx="16"/>
+    <text class="h-eyebrow" x="20" y="26" font-size="10">Punto de control</text>
+    <text class="h-step" x="20" y="50" font-size="14">Aprobación escrita</text>
+    <text class="t-sub" x="20" y="68" font-size="12">Nada se envía sin tu visto bueno.</text>
+  </g>
+
+  <text class="t-sub" x="60" y="710" font-size="12">Sisteco · Menos leads, más cierres</text>
+  <text class="t-sub" x="1140" y="710" font-size="12" text-anchor="end">sisteco.cl</text>
+</svg>

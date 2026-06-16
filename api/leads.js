@@ -139,17 +139,22 @@ async function sendWelcomeAndScheduleDrip(email, leadId) {
     console.log('Welcome email sent:', emailResult?.id);
   }
 
-  // 2. Programar secuencia drip en Convex
-  const now = Date.now();
-  const day3 = now + 3 * 24 * 60 * 60 * 1000;
-  const day7 = now + 7 * 24 * 60 * 60 * 1000;
-
-  await convex.mutation(api.emailSequence.scheduleDrip, {
-    leadId,
-    email,
-    items: [
-      { templateKey: 'case_study', scheduledAt: day3 },
-      { templateKey: 'quick_win', scheduledAt: day7 },
-    ],
-  });
+  // 2. Drip case_study (Day 3) + quick_win (Day 7) DESACTIVADO 2026-05-15.
+  //    Motivo: caseStudyEmail contiene metricas inventadas (+300%, 85%, 4.2x ROI)
+  //    que violan .claude/rules/compliance.md (Ley 21.719 prohibe inducir a error).
+  //    Sera reemplazado por inboundFollowup centralizado en The Agentic Company.
+  //    Ver: docs/superpowers/specs/2026-05-14-inbound-followup-design.md
+  //
+  // const now = Date.now();
+  // const day3 = now + 3 * 24 * 60 * 60 * 1000;
+  // const day7 = now + 7 * 24 * 60 * 60 * 1000;
+  //
+  // await convex.mutation(api.emailSequence.scheduleDrip, {
+  //   leadId,
+  //   email,
+  //   items: [
+  //     { templateKey: 'case_study', scheduledAt: day3 },
+  //     { templateKey: 'quick_win', scheduledAt: day7 },
+  //   ],
+  // });
 }

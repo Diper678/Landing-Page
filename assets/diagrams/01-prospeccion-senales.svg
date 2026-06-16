@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="Diagrama de prospección por señales de Sisteco">
+  <title>Prospección por señales — Sisteco</title>
+  <desc>Pipeline de 5 etapas que convierte señales de empresas chilenas en reuniones agendadas.</desc>
+
+  <defs>
+    <style><![CDATA[
+      .bg { fill: #F8F7F5; }
+      .card { fill: #FFFFFF; stroke: #e5e5e5; stroke-width: 1.5; }
+      .card-accent { fill: #c5ed36; stroke: #111111; stroke-width: 1.5; }
+      .card-dark { fill: #111111; stroke: #111111; stroke-width: 1.5; }
+      .h-title { font-family: 'Sharp Grotesk','Space Grotesk',system-ui,sans-serif; font-weight: 600; fill: #111111; }
+      .h-eyebrow { font-family: 'Hanken Grotesk',system-ui,sans-serif; font-weight: 500; fill: #64748b; letter-spacing: 0.12em; text-transform: uppercase; }
+      .h-step-num { font-family: 'Sharp Grotesk','Space Grotesk',system-ui,sans-serif; font-weight: 700; fill: #111111; }
+      .h-step-num-light { font-family: 'Sharp Grotesk','Space Grotesk',system-ui,sans-serif; font-weight: 700; fill: #c5ed36; }
+      .h-step { font-family: 'Sharp Grotesk','Space Grotesk',system-ui,sans-serif; font-weight: 600; fill: #111111; }
+      .h-step-light { font-family: 'Sharp Grotesk','Space Grotesk',system-ui,sans-serif; font-weight: 600; fill: #FFFFFF; }
+      .t-body { font-family: 'Hanken Grotesk',system-ui,sans-serif; font-weight: 400; fill: #111111; }
+      .t-sub { font-family: 'Hanken Grotesk',system-ui,sans-serif; font-weight: 400; fill: #64748b; }
+      .t-sub-light { font-family: 'Hanken Grotesk',system-ui,sans-serif; font-weight: 400; fill: #FFFFFF; opacity: 0.75; }
+      .t-mono { font-family: 'JetBrains Mono',ui-monospace,monospace; font-weight: 500; fill: #111111; }
+      .arrow { stroke: #111111; stroke-width: 2; fill: none; }
+      .arrow-dashed { stroke: #64748b; stroke-width: 1.5; fill: none; stroke-dasharray: 4 4; }
+    ]]></style>
+    <marker id="arrowhead" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#111111"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1200" height="720"/>
+
+  <!-- Header -->
+  <text class="h-eyebrow" x="60" y="62" font-size="13">Pipeline de Prospección</text>
+  <text class="h-title" x="60" y="102" font-size="38">Prospección por señales</text>
+  <text class="t-sub" x="60" y="132" font-size="16">Detectamos cuándo una empresa chilena está lista para comprar y llegamos antes que la competencia.</text>
+
+  <!-- Sources row (left side feeder) -->
+  <g transform="translate(60, 200)">
+    <text class="h-eyebrow" x="0" y="0" font-size="11">Fuentes de señal</text>
+
+    <g transform="translate(0, 18)">
+      <rect class="card" x="0" y="0" width="180" height="56" rx="12"/>
+      <text class="h-step" x="16" y="24" font-size="14">LinkedIn</text>
+      <text class="t-sub" x="16" y="42" font-size="12">Contrataciones · cambios</text>
+    </g>
+
+    <g transform="translate(0, 86)">
+      <rect class="card" x="0" y="0" width="180" height="56" rx="12"/>
+      <text class="h-step" x="16" y="24" font-size="14">SII Chile</text>
+      <text class="t-sub" x="16" y="42" font-size="12">1.2M empresas · tramos</text>
+    </g>
+
+    <g transform="translate(0, 154)">
+      <rect class="card" x="0" y="0" width="180" height="56" rx="12"/>
+      <text class="h-step" x="16" y="24" font-size="14">Webs y noticias</text>
+      <text class="t-sub" x="16" y="42" font-size="12">Productos · rondas · prensa</text>
+    </g>
+
+    <g transform="translate(0, 222)">
+      <rect class="card" x="0" y="0" width="180" height="56" rx="12"/>
+      <text class="h-step" x="16" y="24" font-size="14">ChileCompra</text>
+      <text class="t-sub" x="16" y="42" font-size="12">118K+ proveedores Estado</text>
+    </g>
+  </g>
+
+  <!-- Funnel arrow from sources to step 1 -->
+  <path class="arrow" d="M 244 244 L 304 244" marker-end="url(#arrowhead)"/>
+  <path class="arrow-dashed" d="M 180 228 L 304 244"/>
+  <path class="arrow-dashed" d="M 180 312 L 304 244"/>
+  <path class="arrow-dashed" d="M 180 380 L 304 244"/>
+  <path class="arrow-dashed" d="M 180 448 L 304 244"/>
+
+  <!-- 5 STEP CARDS -->
+  <!-- Card geometry: width 160, height 200, gap 22 between cards -->
+  <!-- Steps row at y=200 -->
+
+  <g transform="translate(304, 200)">
+    <rect class="card" width="160" height="220" rx="20"/>
+    <text class="h-step-num" x="20" y="46" font-size="32">01</text>
+    <line x1="20" y1="60" x2="60" y2="60" stroke="#c5ed36" stroke-width="3"/>
+    <text class="h-step" x="20" y="98" font-size="18">Detectar</text>
+    <text class="t-body" x="20" y="126" font-size="13">Capturamos</text>
+    <text class="t-body" x="20" y="143" font-size="13">señales públicas</text>
+    <text class="t-body" x="20" y="160" font-size="13">de compra en</text>
+    <text class="t-body" x="20" y="177" font-size="13">empresas que</text>
+    <text class="t-body" x="20" y="194" font-size="13">calzan con tu ICP.</text>
+  </g>
+
+  <path class="arrow" d="M 466 310 L 506 310" marker-end="url(#arrowhead)"/>
+
+  <g transform="translate(506, 200)">
+    <rect class="card" width="160" height="220" rx="20"/>
+    <text class="h-step-num" x="20" y="46" font-size="32">02</text>
+    <line x1="20" y1="60" x2="60" y2="60" stroke="#c5ed36" stroke-width="3"/>
+    <text class="h-step" x="20" y="98" font-size="18">Enriquecer</text>
+    <text class="t-body" x="20" y="126" font-size="13">Encontramos al</text>
+    <text class="t-body" x="20" y="143" font-size="13">decisor real, su</text>
+    <text class="t-body" x="20" y="160" font-size="13">email verificado</text>
+    <text class="t-body" x="20" y="177" font-size="13">y contexto de</text>
+    <text class="t-body" x="20" y="194" font-size="13">la empresa.</text>
+  </g>
+
+  <path class="arrow" d="M 668 310 L 708 310" marker-end="url(#arrowhead)"/>
+
+  <g transform="translate(708, 200)">
+    <rect class="card-accent" width="160" height="220" rx="20"/>
+    <text class="h-step-num" x="20" y="46" font-size="32">03</text>
+    <line x1="20" y1="60" x2="60" y2="60" stroke="#111111" stroke-width="3"/>
+    <text class="h-step" x="20" y="98" font-size="18">Calificar</text>
+    <text class="t-body" x="20" y="126" font-size="13">IA puntúa cada</text>
+    <text class="t-body" x="20" y="143" font-size="13">lead: HOT, WARM</text>
+    <text class="t-body" x="20" y="160" font-size="13">o NURTURE según</text>
+    <text class="t-body" x="20" y="177" font-size="13">probabilidad de</text>
+    <text class="t-body" x="20" y="194" font-size="13">cierre.</text>
+  </g>
+
+  <path class="arrow" d="M 870 310 L 910 310" marker-end="url(#arrowhead)"/>
+
+  <g transform="translate(910, 200)">
+    <rect class="card" width="160" height="220" rx="20"/>
+    <text class="h-step-num" x="20" y="46" font-size="32">04</text>
+    <line x1="20" y1="60" x2="60" y2="60" stroke="#c5ed36" stroke-width="3"/>
+    <text class="h-step" x="20" y="98" font-size="18">Personalizar</text>
+    <text class="t-body" x="20" y="126" font-size="13">Cada mensaje se</text>
+    <text class="t-body" x="20" y="143" font-size="13">escribe en base a</text>
+    <text class="t-body" x="20" y="160" font-size="13">la señal real que</text>
+    <text class="t-body" x="20" y="177" font-size="13">disparó el lead.</text>
+    <text class="t-body" x="20" y="194" font-size="13">No es plantilla.</text>
+  </g>
+
+  <!-- Wrap to step 5 below -->
+  <path class="arrow" d="M 1072 310 L 1130 310 L 1130 540 L 1070 540" marker-end="url(#arrowhead)"/>
+
+  <g transform="translate(910, 460)">
+    <rect class="card-dark" width="160" height="160" rx="20"/>
+    <text class="h-step-num-light" x="20" y="46" font-size="32">05</text>
+    <line x1="20" y1="60" x2="60" y2="60" stroke="#c5ed36" stroke-width="3"/>
+    <text class="h-step-light" x="20" y="98" font-size="18">Contactar</text>
+    <text class="t-sub-light" x="20" y="126" font-size="13">Secuencia de</text>
+    <text class="t-sub-light" x="20" y="143" font-size="13">5 toques · email +</text>
+    <text class="t-sub-light" x="20" y="160" font-size="13">LinkedIn.</text>
+  </g>
+
+  <!-- Output: reunión agendada -->
+  <g transform="translate(304, 460)">
+    <rect class="card" width="566" height="160" rx="20"/>
+    <text class="h-eyebrow" x="32" y="36" font-size="11">Resultado</text>
+    <text class="h-step" x="32" y="78" font-size="26">Reunión agendada con un decisor</text>
+    <text class="t-sub" x="32" y="108" font-size="14">Las respuestas calientes llegan directo a tu calendario.</text>
+    <text class="t-sub" x="32" y="130" font-size="14">Tu equipo dedica el tiempo a cerrar, no a prospectar.</text>
+
+    <!-- Metric tag -->
+    <rect class="card-accent" x="380" y="100" width="158" height="44" rx="22"/>
+    <text class="h-step" x="394" y="128" font-size="14">21× más rápido</text>
+  </g>
+
+  <!-- Footer caption -->
+  <text class="t-sub" x="60" y="685" font-size="12">Sisteco · Menos leads, más cierres</text>
+  <text class="t-sub" x="1140" y="685" font-size="12" text-anchor="end">sisteco.cl</text>
+</svg>

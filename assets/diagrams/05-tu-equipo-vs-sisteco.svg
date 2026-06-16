@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="Comparación de tareas entre tu equipo y Sisteco">
+  <title>Qué hace tu equipo vs qué hace Sisteco</title>
+  <desc>Reparto de responsabilidades en el proceso de venta saliente.</desc>
+
+  <defs>
+    <style><![CDATA[
+      .bg { fill: #F8F7F5; }
+      .card { fill: #FFFFFF; stroke: #e5e5e5; stroke-width: 1.5; }
+      .card-accent { fill: #c5ed36; stroke: #111111; stroke-width: 1.5; }
+      .card-dark { fill: #111111; stroke: #111111; stroke-width: 1.5; }
+      .h-title { font-family: 'Sharp Grotesk','Space Grotesk',system-ui,sans-serif; font-weight: 600; fill: #111111; }
+      .h-eyebrow { font-family: 'Hanken Grotesk',system-ui,sans-serif; font-weight: 500; fill: #64748b; letter-spacing: 0.12em; text-transform: uppercase; }
+      .h-col { font-family: 'Sharp Grotesk','Space Grotesk',system-ui,sans-serif; font-weight: 600; fill: #111111; }
+      .h-col-light { font-family: 'Sharp Grotesk','Space Grotesk',system-ui,sans-serif; font-weight: 600; fill: #FFFFFF; }
+      .h-step { font-family: 'Sharp Grotesk','Space Grotesk',system-ui,sans-serif; font-weight: 600; fill: #111111; }
+      .h-step-light { font-family: 'Sharp Grotesk','Space Grotesk',system-ui,sans-serif; font-weight: 600; fill: #FFFFFF; }
+      .t-body { font-family: 'Hanken Grotesk',system-ui,sans-serif; font-weight: 400; fill: #111111; }
+      .t-sub { font-family: 'Hanken Grotesk',system-ui,sans-serif; font-weight: 400; fill: #64748b; }
+      .t-sub-light { font-family: 'Hanken Grotesk',system-ui,sans-serif; font-weight: 400; fill: #FFFFFF; opacity: 0.78; }
+    ]]></style>
+  </defs>
+
+  <rect class="bg" width="1200" height="720"/>
+
+  <text class="h-eyebrow" x="60" y="62" font-size="13">Reparto del trabajo</text>
+  <text class="h-title" x="60" y="102" font-size="38">Tu equipo decide. Sisteco ejecuta.</text>
+  <text class="t-sub" x="60" y="132" font-size="16">Tú mantienes el control de la estrategia y los mensajes. Nosotros nos llevamos el trabajo repetitivo.</text>
+
+  <!-- LEFT COLUMN: TU EQUIPO -->
+  <g transform="translate(60, 200)">
+    <rect class="card" width="540" height="440" rx="24"/>
+    <text class="h-eyebrow" x="32" y="42" font-size="11">Tu equipo</text>
+    <text class="h-col" x="32" y="80" font-size="26">Decide</text>
+
+    <g transform="translate(32, 110)">
+      <rect class="card-accent" width="32" height="32" rx="16"/>
+      <text class="h-step" x="11" y="22" font-size="14">✓</text>
+      <text class="h-step" x="50" y="14" font-size="16">Define el cliente ideal</text>
+      <text class="t-sub" x="50" y="34" font-size="13">Industria, tamaño, geografía, cargos.</text>
+    </g>
+
+    <g transform="translate(32, 178)">
+      <rect class="card-accent" width="32" height="32" rx="16"/>
+      <text class="h-step" x="11" y="22" font-size="14">✓</text>
+      <text class="h-step" x="50" y="14" font-size="16">Aprueba los mensajes</text>
+      <text class="t-sub" x="50" y="34" font-size="13">Nada sale sin tu visto bueno.</text>
+    </g>
+
+    <g transform="translate(32, 246)">
+      <rect class="card-accent" width="32" height="32" rx="16"/>
+      <text class="h-step" x="11" y="22" font-size="14">✓</text>
+      <text class="h-step" x="50" y="14" font-size="16">Responde a leads tibios</text>
+      <text class="t-sub" x="50" y="34" font-size="13">Los que ya levantaron la mano.</text>
+    </g>
+
+    <g transform="translate(32, 314)">
+      <rect class="card-accent" width="32" height="32" rx="16"/>
+      <text class="h-step" x="11" y="22" font-size="14">✓</text>
+      <text class="h-step" x="50" y="14" font-size="16">Cierra ventas</text>
+      <text class="t-sub" x="50" y="34" font-size="13">Lo que hacen mejor.</text>
+    </g>
+
+    <g transform="translate(32, 386)">
+      <rect class="card" width="476" height="38" rx="12" fill="#F8F7F5"/>
+      <text class="t-sub" x="20" y="24" font-size="13">Tiempo estimado: 30 min al día.</text>
+    </g>
+  </g>
+
+  <!-- RIGHT COLUMN: SISTECO -->
+  <g transform="translate(620, 200)">
+    <rect class="card-dark" width="520" height="440" rx="24"/>
+    <text class="h-eyebrow" x="32" y="42" font-size="11" fill="#c5ed36">Sisteco</text>
+    <text class="h-col-light" x="32" y="80" font-size="26">Ejecuta</text>
+
+    <g transform="translate(32, 110)">
+      <rect class="card-accent" width="32" height="32" rx="16"/>
+      <text class="h-step" x="11" y="22" font-size="14">→</text>
+      <text class="h-step-light" x="50" y="14" font-size="16">Encuentra los prospectos</text>
+      <text class="t-sub-light" x="50" y="34" font-size="13">LinkedIn, SII, ChileCompra, webs.</text>
+    </g>
+
+    <g transform="translate(32, 178)">
+      <rect class="card-accent" width="32" height="32" rx="16"/>
+      <text class="h-step" x="11" y="22" font-size="14">→</text>
+      <text class="h-step-light" x="50" y="14" font-size="16">Consigue los emails</text>
+      <text class="t-sub-light" x="50" y="34" font-size="13">Verificados, listos para enviar.</text>
+    </g>
+
+    <g transform="translate(32, 246)">
+      <rect class="card-accent" width="32" height="32" rx="16"/>
+      <text class="h-step" x="11" y="22" font-size="14">→</text>
+      <text class="h-step-light" x="50" y="14" font-size="16">Califica y prioriza</text>
+      <text class="t-sub-light" x="50" y="34" font-size="13">HOT, WARM o nutrir.</text>
+    </g>
+
+    <g transform="translate(32, 314)">
+      <rect class="card-accent" width="32" height="32" rx="16"/>
+      <text class="h-step" x="11" y="22" font-size="14">→</text>
+      <text class="h-step-light" x="50" y="14" font-size="16">Escribe y envía secuencias</text>
+      <text class="t-sub-light" x="50" y="34" font-size="13">Multi-canal, personalizadas.</text>
+    </g>
+
+    <g transform="translate(32, 386)">
+      <rect class="card" width="456" height="38" rx="12" fill="#111111" stroke="#c5ed36"/>
+      <text class="t-sub-light" x="20" y="24" font-size="13">Tiempo de tu equipo: cero.</text>
+    </g>
+  </g>
+
+  <text class="t-sub" x="60" y="685" font-size="12">Sisteco · Menos leads, más cierres</text>
+  <text class="t-sub" x="1140" y="685" font-size="12" text-anchor="end">sisteco.cl</text>
+</svg>

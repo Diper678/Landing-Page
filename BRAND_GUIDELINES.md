@@ -48,7 +48,7 @@ Significado: rechazamos la lógica de volumen ciego. Entregamos menos prospectos
 ```
 ✅ "Operamos tu prospección. Tu equipo recibe prospectos con SII y scoring."
 ✅ "Cumplimos Ley 21.719 de fábrica. RAT documentado por cliente."
-✅ "Cobro trimestral. UF. Sin sorpresas."
+✅ "Cobro mensual. Sin permanencia. Sin sorpresas."
 ✅ "Primer batch en 21 días o el mes siguiente sin cargo."
 
 ❌ "Solución innovadora de vanguardia para el crecimiento empresarial."
@@ -73,20 +73,17 @@ Significado: rechazamos la lógica de volumen ciego. Entregamos menos prospectos
 
 | Plan | Precio | Cobro | Cómo se publica |
 |---|---|---|---|
-| **Gratis** | 0 UF | — | "Probar antes de comprometerte" |
-| **Junior** | 20 UF/mes | Trimestral (60 UF) | Precio visible en landing |
-| **Senior** ⭐ | 50 UF/mes | Trimestral (150 UF) | Precio visible + "Recomendado" |
-| **Manager** | ~100 UF/mes referencial | Trimestral, alcance caso a caso | "Hablemos" (no precio explícito) |
-
-**Descuentos (combinables solo entre sí, NO con otros):**
-- 15% de descuento sobre el primer trimestre (con contrato trimestral firmado).
-- 10% de descuento si paga el año adelantado.
+| **Gratis** | USD 0 | — | "Probar antes de comprometerte" |
+| **Junior** | 20 UF/mes (~USD 770) | Mensual | Precio visible en landing |
+| **Senior** ⭐ | 50 UF/mes (~USD 1.925) | Mensual | Precio visible + "Recomendado" |
+| **Manager** | ~100 UF/mes | Mensual, caso a caso | "Hablemos" (no precio explícito) |
 
 **Reglas de comunicación de precio:**
-- UF siempre como precio primario. USD/CLP solo como referencia.
-- "Cobro trimestral" siempre presente — no se ofrece mensual.
-- "1 UF ≈ CLP 38.500 (referencia abril 2026)" como nota al pie cuando aplique.
+- USD siempre como precio primario. CLP solo como referencia para clientes en Chile.
+- "Cobro mensual" siempre presente — sin permanencia ni compromiso mínimo.
+- "15% descuento los primeros 3 meses" como refuerzo en copy de planes.
 - Nunca mencionar planes deprecados (Base/Crecimiento/Enterprise) en copy nuevo.
+- Descuentos: 15% primeros 3 meses, 10% anual. No se acumulan.
 
 Detalle completo: `The Agentic Company/docs/research/2026-04-23-pricing-final-formalizado.md`.
 

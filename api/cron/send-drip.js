@@ -21,10 +21,24 @@ export default async function handler(req, res) {
       return res.status(200).json({ message: 'No pending emails', sent: 0 });
     }
 
+    // Templates desactivados 2026-05-15 por contener metricas inventadas
+    // (viola .claude/rules/compliance.md / Ley 21.719). Se cancelan in-place
+    // como defensa en profundidad: aunque scheduleDrip ya esta comentado,
+    // este guard previene reenvio si quedaron items huerfanos en cola.
+    const DISABLED_TEMPLATES = new Set(['case_study', 'quick_win']);
+
     let sent = 0;
     let failed = 0;
+    let cancelled = 0;
 
     for (const item of pendingEmails) {
+      if (DISABLED_TEMPLATES.has(item.templateKey)) {
+        await convex.mutation(api.emailSequence.markFailed, { id: item._id });
+        cancelled++;
+        console.log(`Cancelled disabled template ${item.templateKey} for ${item.email}`);
+        continue;
+      }
+
       const templateFn = TEMPLATES[item.templateKey];
       if (!templateFn) {
         console.error(`Unknown template: ${item.templateKey}`);
@@ -60,6 +74,7 @@ export default async function handler(req, res) {
       message: `Drip emails processed`,
       sent,
       failed,
+      cancelled,
       total: pendingEmails.length
     });
 

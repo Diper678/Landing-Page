@@ -62,3 +62,44 @@ export const markFailed = mutation({
     await ctx.db.patch(args.id, { status: "failed" });
   },
 });
+
+// Cancela todos los emails pendientes de templates desactivados.
+// Uso operativo: limpieza one-shot tras desactivar un templateKey por compliance.
+// Idempotente: solo afecta items con status="pending".
+// Ver decisión 2026-05-15: case_study + quick_win desactivados por métricas inventadas.
+export const cancelPendingByTemplates = mutation({
+  args: { templateKeys: v.array(v.string()) },
+  handler: async (ctx, args) => {
+    const targets = new Set(args.templateKeys);
+    const pending = await ctx.db
+      .query("emailSequence")
+      .withIndex("by_status_scheduled", (q) => q.eq("status", "pending"))
+      .collect();
+
+    let cancelled = 0;
+    for (const item of pending) {
+      if (targets.has(item.templateKey)) {
+        await ctx.db.patch(item._id, { status: "cancelled" });
+        cancelled++;
+      }
+    }
+    return { cancelled, scanned: pending.length };
+  },
+});
+
+// Cuenta pendientes por template (para auditoria sin escribir).
+export const countPendingByTemplate = query({
+  args: {},
+  handler: async (ctx) => {
+    const pending = await ctx.db
+      .query("emailSequence")
+      .withIndex("by_status_scheduled", (q) => q.eq("status", "pending"))
+      .collect();
+
+    const counts: Record<string, number> = {};
+    for (const item of pending) {
+      counts[item.templateKey] = (counts[item.templateKey] || 0) + 1;
+    }
+    return { total: pending.length, byTemplate: counts };
+  },
+});

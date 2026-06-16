@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-label="Diagrama de prospección por interacciones de LinkedIn de Sisteco">
+  <title>Prospección por interacciones de LinkedIn — Sisteco</title>
+  <desc>Pipeline que detecta perfiles que dan like, comentan o interactúan con cuentas objetivo y los convierte en leads cualificados.</desc>
+
+  <defs>
+    <style><![CDATA[
+      .bg { fill: #F8F7F5; }
+      .card { fill: #FFFFFF; stroke: #e5e5e5; stroke-width: 1.5; }
+      .card-accent { fill: #c5ed36; stroke: #111111; stroke-width: 1.5; }
+      .card-dark { fill: #111111; stroke: #111111; stroke-width: 1.5; }
+      .card-muted { fill: #FFFFFF; stroke: #e5e5e5; stroke-width: 1; }
+      .h-title { font-family: 'Sharp Grotesk','Space Grotesk',system-ui,sans-serif; font-weight: 600; fill: #111111; }
+      .h-eyebrow { font-family: 'Hanken Grotesk',system-ui,sans-serif; font-weight: 500; fill: #64748b; letter-spacing: 0.12em; text-transform: uppercase; }
+      .h-step-num { font-family: 'Sharp Grotesk','Space Grotesk',system-ui,sans-serif; font-weight: 700; fill: #111111; }
+      .h-step-num-light { font-family: 'Sharp Grotesk','Space Grotesk',system-ui,sans-serif; font-weight: 700; fill: #c5ed36; }
+      .h-step { font-family: 'Sharp Grotesk','Space Grotesk',system-ui,sans-serif; font-weight: 600; fill: #111111; }
+      .h-step-light { font-family: 'Sharp Grotesk','Space Grotesk',system-ui,sans-serif; font-weight: 600; fill: #FFFFFF; }
+      .t-body { font-family: 'Hanken Grotesk',system-ui,sans-serif; font-weight: 400; fill: #111111; }
+      .t-sub { font-family: 'Hanken Grotesk',system-ui,sans-serif; font-weight: 400; fill: #64748b; }
+      .t-sub-light { font-family: 'Hanken Grotesk',system-ui,sans-serif; font-weight: 400; fill: #FFFFFF; opacity: 0.78; }
+      .arrow { stroke: #111111; stroke-width: 2; fill: none; }
+      .arrow-dashed { stroke: #64748b; stroke-width: 1.4; fill: none; stroke-dasharray: 4 4; }
+      .badge-text { font-family: 'JetBrains Mono',ui-monospace,monospace; font-size: 11px; fill: #111111; font-weight: 600; }
+    ]]></style>
+    <marker id="arrowhead2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#111111"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1200" height="760"/>
+
+  <!-- Header -->
+  <text class="h-eyebrow" x="60" y="62" font-size="13">Pipeline de Prospección</text>
+  <text class="h-title" x="60" y="102" font-size="38">Prospección por interacciones de LinkedIn</text>
+  <text class="t-sub" x="60" y="132" font-size="16">Identificamos a las personas que ya están interesadas en tu mercado — porque interactúan con cuentas que les hablan de tu producto.</text>
+
+  <!-- LEFT BLOCK: Cuentas objetivo monitoreadas -->
+  <g transform="translate(60, 200)">
+    <text class="h-eyebrow" x="0" y="0" font-size="11">Cuentas objetivo que monitoreamos</text>
+
+    <rect class="card" x="0" y="18" width="240" height="280" rx="20"/>
+
+    <!-- Account 1 -->
+    <g transform="translate(20, 44)">
+      <circle cx="18" cy="18" r="18" fill="#c5ed36" stroke="#111111" stroke-width="1.5"/>
+      <text class="h-step" x="14" y="23" font-size="14">C</text>
+      <text class="h-step" x="48" y="16" font-size="14">Competencia</text>
+      <text class="t-sub" x="48" y="32" font-size="12">Quién habla con su público</text>
+    </g>
+
+    <!-- Account 2 -->
+    <g transform="translate(20, 110)">
+      <circle cx="18" cy="18" r="18" fill="#FFFFFF" stroke="#111111" stroke-width="1.5"/>
+      <text class="h-step" x="13" y="23" font-size="14">L</text>
+      <text class="h-step" x="48" y="16" font-size="14">Líderes de industria</text>
+      <text class="t-sub" x="48" y="32" font-size="12">Voces que reúnen tu nicho</text>
+    </g>
+
+    <!-- Account 3 -->
+    <g transform="translate(20, 176)">
+      <circle cx="18" cy="18" r="18" fill="#FFFFFF" stroke="#111111" stroke-width="1.5"/>
+      <text class="h-step" x="13" y="23" font-size="14">M</text>
+      <text class="h-step" x="48" y="16" font-size="14">Medios y eventos</text>
+      <text class="t-sub" x="48" y="32" font-size="12">Contenido sectorial</text>
+    </g>
+
+    <!-- Account 4 -->
+    <g transform="translate(20, 242)">
+      <circle cx="18" cy="18" r="18" fill="#FFFFFF" stroke="#111111" stroke-width="1.5"/>
+      <text class="h-step" x="13" y="23" font-size="14">P</text>
+      <text class="h-step" x="48" y="16" font-size="14">Partners y aliados</text>
+      <text class="t-sub" x="48" y="32" font-size="12">Audiencias adyacentes</text>
+    </g>
+  </g>
+
+  <!-- Interaction signals badges between accounts and step 1 -->
+  <g transform="translate(330, 240)">
+    <rect class="card-accent" x="0" y="0" width="86" height="28" rx="14"/>
+    <text class="badge-text" x="14" y="18">LIKE</text>
+
+    <rect class="card" x="0" y="38" width="86" height="28" rx="14"/>
+    <text class="badge-text" x="14" y="56">COMMENT</text>
+
+    <rect class="card" x="0" y="76" width="86" height="28" rx="14"/>
+    <text class="badge-text" x="14" y="94">SHARE</text>
+
+    <rect class="card" x="0" y="114" width="86" height="28" rx="14"/>
+    <text class="badge-text" x="14" y="132">FOLLOW</text>
+  </g>
+
+  <!-- Arrows from accounts to interaction badges -->
+  <path class="arrow-dashed" d="M 300 280 L 330 254"/>
+  <path class="arrow-dashed" d="M 300 348 L 330 292"/>
+
+  <!-- Arrow from interaction badges to step 1 -->
+  <path class="arrow" d="M 420 300 L 460 300" marker-end="url(#arrowhead2)"/>
+
+  <!-- 5 STEPS -->
+  <g transform="translate(460, 200)">
+    <rect class="card" width="160" height="220" rx="20"/>
+    <text class="h-step-num" x="20" y="46" font-size="32">01</text>
+    <line x1="20" y1="60" x2="60" y2="60" stroke="#c5ed36" stroke-width="3"/>
+    <text class="h-step" x="20" y="98" font-size="18">Detectar</text>
+    <text class="t-body" x="20" y="126" font-size="13">Vemos cada like,</text>
+    <text class="t-body" x="20" y="143" font-size="13">comentario o</text>
+    <text class="t-body" x="20" y="160" font-size="13">interacción en las</text>
+    <text class="t-body" x="20" y="177" font-size="13">cuentas que</text>
+    <text class="t-body" x="20" y="194" font-size="13">monitoreamos.</text>
+  </g>
+
+  <path class="arrow" d="M 620 310 L 660 310" marker-end="url(#arrowhead2)"/>
+
+  <g transform="translate(660, 200)">
+    <rect class="card" width="160" height="220" rx="20"/>
+    <text class="h-step-num" x="20" y="46" font-size="32">02</text>
+    <line x1="20" y1="60" x2="60" y2="60" stroke="#c5ed36" stroke-width="3"/>
+    <text class="h-step" x="20" y="98" font-size="18">Filtrar</text>
+    <text class="t-body" x="20" y="126" font-size="13">Solo guardamos</text>
+    <text class="t-body" x="20" y="143" font-size="13">perfiles que</text>
+    <text class="t-body" x="20" y="160" font-size="13">calzan con tu ICP:</text>
+    <text class="t-body" x="20" y="177" font-size="13">cargo, industria</text>
+    <text class="t-body" x="20" y="194" font-size="13">y tamaño.</text>
+  </g>
+
+  <path class="arrow" d="M 820 310 L 860 310" marker-end="url(#arrowhead2)"/>
+
+  <g transform="translate(860, 200)">
+    <rect class="card-accent" width="160" height="220" rx="20"/>
+    <text class="h-step-num" x="20" y="46" font-size="32">03</text>
+    <line x1="20" y1="60" x2="60" y2="60" stroke="#111111" stroke-width="3"/>
+    <text class="h-step" x="20" y="98" font-size="18">Enriquecer</text>
+    <text class="t-body" x="20" y="126" font-size="13">Email verificado,</text>
+    <text class="t-body" x="20" y="143" font-size="13">empresa, contexto</text>
+    <text class="t-body" x="20" y="160" font-size="13">y qué post</text>
+    <text class="t-body" x="20" y="177" font-size="13">específico</text>
+    <text class="t-body" x="20" y="194" font-size="13">interactuó.</text>
+  </g>
+
+  <path class="arrow" d="M 1020 310 L 1060 310" marker-end="url(#arrowhead2)"/>
+
+  <g transform="translate(1020, 200)">
+    <rect class="card" width="160" height="220" rx="20"/>
+    <text class="h-step-num" x="20" y="46" font-size="32">04</text>
+    <line x1="20" y1="60" x2="60" y2="60" stroke="#c5ed36" stroke-width="3"/>
+    <text class="h-step" x="20" y="98" font-size="18">Calificar</text>
+    <text class="t-body" x="20" y="126" font-size="13">IA puntúa según</text>
+    <text class="t-body" x="20" y="143" font-size="13">la fuerza de la</text>
+    <text class="t-body" x="20" y="160" font-size="13">señal y el calce</text>
+    <text class="t-body" x="20" y="177" font-size="13">con tu producto.</text>
+  </g>
+
+  <!-- Wrap arrow -->
+  <path class="arrow" d="M 1100 420 L 1100 470 L 720 470 L 720 510" marker-end="url(#arrowhead2)"/>
+
+  <!-- Step 5 + 6 horizontal -->
+  <g transform="translate(460, 510)">
+    <rect class="card" width="160" height="180" rx="20"/>
+    <text class="h-step-num" x="20" y="46" font-size="32">05</text>
+    <line x1="20" y1="60" x2="60" y2="60" stroke="#c5ed36" stroke-width="3"/>
+    <text class="h-step" x="20" y="98" font-size="18">Personalizar</text>
+    <text class="t-body" x="20" y="126" font-size="13">Mensaje hecho a</text>
+    <text class="t-body" x="20" y="143" font-size="13">la medida del</text>
+    <text class="t-body" x="20" y="160" font-size="13">contenido que</text>
+    <text class="t-body" x="20" y="177" font-size="13">interactuó.</text>
+  </g>
+
+  <path class="arrow" d="M 620 600 L 660 600" marker-end="url(#arrowhead2)" transform="translate(0,0)"/>
+
+  <g transform="translate(660, 510)">
+    <rect class="card-dark" width="160" height="180" rx="20"/>
+    <text class="h-step-num-light" x="20" y="46" font-size="32">06</text>
+    <line x1="20" y1="60" x2="60" y2="60" stroke="#c5ed36" stroke-width="3"/>
+    <text class="h-step-light" x="20" y="98" font-size="18">Contactar</text>
+    <text class="t-sub-light" x="20" y="126" font-size="13">Secuencia multi-</text>
+    <text class="t-sub-light" x="20" y="143" font-size="13">canal: LinkedIn</text>
+    <text class="t-sub-light" x="20" y="160" font-size="13">+ email.</text>
+  </g>
+
+  <!-- Output card on right of step 6 -->
+  <g transform="translate(840, 510)">
+    <rect class="card" width="340" height="180" rx="20"/>
+    <text class="h-eyebrow" x="24" y="38" font-size="11">Resultado</text>
+    <text class="h-step" x="24" y="78" font-size="22">Leads tibios</text>
+    <text class="h-step" x="24" y="106" font-size="22">con contexto real</text>
+    <text class="t-sub" x="24" y="134" font-size="13">No están fríos: ya mostraron interés</text>
+    <text class="t-sub" x="24" y="152" font-size="13">en tu mercado. Sabes qué les importa</text>
+    <text class="t-sub" x="24" y="170" font-size="13">antes del primer mensaje.</text>
+  </g>
+
+  <!-- Arrow from interaction badges down to step 5 area -->
+  <path class="arrow" d="M 660 600 L 720 600" stroke="none"/>
+
+  <text class="t-sub" x="60" y="725" font-size="12">Sisteco · Menos leads, más cierres</text>
+  <text class="t-sub" x="1140" y="725" font-size="12" text-anchor="end">sisteco.cl</text>
+</svg>

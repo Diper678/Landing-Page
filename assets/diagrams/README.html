@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diagramas Sisteco — preview</title>
+  <link rel="stylesheet" href="../../style.css">
+  <style>
+    body { padding: 80px 24px; }
+    .container { max-width: 1280px; margin: 0 auto; }
+    .hero { margin-bottom: 64px; }
+    .eyebrow {
+      font-family: var(--font-body);
+      font-weight: 500;
+      color: var(--color-text-sub);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+    h1 { font-size: 56px; line-height: 1.05; margin-bottom: 16px; font-weight: 600; }
+    .lede { font-size: 20px; color: var(--color-text-sub); max-width: 720px; }
+    section { margin-bottom: 80px; }
+    .section-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 24px; }
+    h2 { font-size: 28px; font-weight: 600; }
+    .section-meta { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; color: var(--color-text-sub); }
+    .section-desc { color: var(--color-text-sub); margin-bottom: 28px; max-width: 760px; }
+    .diagram-frame {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: 24px;
+      padding: 32px;
+      overflow: hidden;
+    }
+    .diagram-frame svg, .diagram-frame img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .usage {
+      margin-top: 16px;
+      padding: 14px 18px;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      font-family: 'JetBrains Mono', ui-monospace, monospace;
+      font-size: 12px;
+      color: var(--color-text-main);
+      overflow-x: auto;
+    }
+    .toc {
+      background: #FFFFFF;
+      border: 1px solid var(--color-border);
+      border-radius: 20px;
+      padding: 28px 32px;
+      margin-bottom: 80px;
+    }
+    .toc h3 { font-size: 14px; font-weight: 600; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--color-text-sub); }
+    .toc ol { list-style: none; counter-reset: item; padding: 0; }
+    .toc li { counter-increment: item; padding: 10px 0; border-bottom: 1px solid var(--color-border); }
+    .toc li:last-child { border-bottom: none; }
+    .toc li::before { content: counter(item, decimal-leading-zero) " — "; font-family: 'JetBrains Mono', ui-monospace, monospace; color: var(--color-text-sub); margin-right: 8px; }
+    .toc a { color: var(--color-text-main); font-weight: 500; }
+    .toc a:hover { color: #6b8c1a; }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <header class="hero">
+    <div class="eyebrow">Diagramas · Landing Page Sisteco</div>
+    <h1>Cómo explicamos <span class="gradient-text">Sisteco</span> visualmente</h1>
+    <p class="lede">Set de 5 diagramas SVG listos para insertar en cualquier página de la landing. Identidad visual Sisteco (lime #c5ed36, fondo warm white, tipografías Sharp Grotesk + Hanken Grotesk).</p>
+  </header>
+
+  <nav class="toc">
+    <h3>Contenido</h3>
+    <ol>
+      <li><a href="#senales">Prospección por señales</a></li>
+      <li><a href="#linkedin">Prospección por interacciones de LinkedIn</a></li>
+      <li><a href="#infra">Infraestructura general — cómo funciona Sisteco</a></li>
+      <li><a href="#onboarding">Onboarding — de firma a primer lead en 2 días</a></li>
+      <li><a href="#equipo">Tu equipo vs Sisteco — reparto de trabajo</a></li>
+    </ol>
+  </nav>
+
+  <section id="senales">
+    <div class="section-head">
+      <h2>01 · Prospección por señales</h2>
+      <span class="section-meta">01-prospeccion-senales.svg</span>
+    </div>
+    <p class="section-desc">Pipeline de 5 etapas que detecta empresas chilenas con señales de compra y las convierte en reuniones agendadas. Recomendado para la página <strong>Cómo funciona</strong> y la sección hero de <strong>Soluciones → Automatización de prospección</strong>.</p>
+    <div class="diagram-frame">
+      <img src="01-prospeccion-senales.svg" alt="Pipeline de prospección por señales: Detectar, Enriquecer, Calificar, Personalizar, Contactar.">
+    </div>
+    <div class="usage">&lt;img src="assets/diagrams/01-prospeccion-senales.svg" alt="Pipeline de prospección por señales de Sisteco" loading="lazy"&gt;</div>
+  </section>
+
+  <section id="linkedin">
+    <div class="section-head">
+      <h2>02 · Prospección por interacciones de LinkedIn</h2>
+      <span class="section-meta">02-prospeccion-linkedin.svg</span>
+    </div>
+    <p class="section-desc">Pipeline complementario: detectamos perfiles que dan like, comentan o interactúan con cuentas objetivo (competencia, líderes de industria, medios) y los convertimos en leads tibios con contexto. Recomendado para la página <strong>Soluciones</strong> o un bloque dedicado en <strong>Cómo funciona</strong>.</p>
+    <div class="diagram-frame">
+      <img src="02-prospeccion-linkedin.svg" alt="Pipeline de prospección por interacciones de LinkedIn: Detectar, Filtrar, Enriquecer, Calificar, Personalizar, Contactar.">
+    </div>
+    <div class="usage">&lt;img src="assets/diagrams/02-prospeccion-linkedin.svg" alt="Pipeline de prospección por interacciones de LinkedIn" loading="lazy"&gt;</div>
+  </section>
+
+  <section id="infra">
+    <div class="section-head">
+      <h2>03 · Infraestructura general</h2>
+      <span class="section-meta">03-infraestructura-general.svg</span>
+    </div>
+    <p class="section-desc">Vista de tres carriles (Señales → Procesamiento → Salida) que explica Sisteco end-to-end sin tecnicismos. Pensado para el <strong>hero de Cómo funciona</strong> o un bloque temprano en la home.</p>
+    <div class="diagram-frame">
+      <img src="03-infraestructura-general.svg" alt="Vista general: entradas (señales), procesamiento (5 pasos), salidas (reuniones, respuestas, dashboard).">
+    </div>
+    <div class="usage">&lt;img src="assets/diagrams/03-infraestructura-general.svg" alt="Cómo funciona Sisteco — vista general" loading="lazy"&gt;</div>
+  </section>
+
+  <section id="onboarding">
+    <div class="section-head">
+      <h2>04 · Onboarding en 2 jornadas</h2>
+      <span class="section-meta">04-onboarding.svg</span>
+    </div>
+    <p class="section-desc">Timeline horizontal Día 0 → Día 1 → Día 2 que muestra qué hace Sisteco y qué tiene que aprobar el cliente. Diseñado para reducir la fricción del visitante mostrando que el setup no requiere trabajo técnico de su lado. Recomendado para la página <strong>Precios</strong> o <strong>Agendar demo</strong>.</p>
+    <div class="diagram-frame">
+      <img src="04-onboarding.svg" alt="Timeline de onboarding Sisteco: firma, setup día 1, lanzamiento día 2.">
+    </div>
+    <div class="usage">&lt;img src="assets/diagrams/04-onboarding.svg" alt="Onboarding Sisteco en 2 jornadas" loading="lazy"&gt;</div>
+  </section>
+
+  <section id="equipo">
+    <div class="section-head">
+      <h2>05 · Tu equipo vs Sisteco</h2>
+      <span class="section-meta">05-tu-equipo-vs-sisteco.svg</span>
+    </div>
+    <p class="section-desc">Comparación en dos columnas. Reduce la objeción "esto va a darle más trabajo a mi equipo" mostrando explícitamente que lo único que hacen es decidir y aprobar. Recomendado para la sección de cierre antes del CTA de demo.</p>
+    <div class="diagram-frame">
+      <img src="05-tu-equipo-vs-sisteco.svg" alt="Comparación dos columnas: tu equipo decide, Sisteco ejecuta.">
+    </div>
+    <div class="usage">&lt;img src="assets/diagrams/05-tu-equipo-vs-sisteco.svg" alt="Tu equipo vs Sisteco" loading="lazy"&gt;</div>
+  </section>
+
+</div>
+
+</body>
+</html>
