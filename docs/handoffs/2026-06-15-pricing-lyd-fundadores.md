@@ -19,8 +19,15 @@ El precio público de LYD (solución de leadgen de Sisteco) es el **Plan Fundado
 | `pages/soluciones.html` | Tarjeta LYD con badge "Desde USD 500/mes" |
 | `llms.txt` | Sección Pricing = Plan Fundadores USD 500/mes + Planes a medida; FAQ y diferenciadores alineados; eliminados Junior/Senior/Manager |
 | `mirrors/precios.md` | Plan Fundadores USD 500/mes + Planes a medida; eliminados Junior/Senior/Manager |
-| `api/create-checkout-session.js` | Plan key `lyd_fundadores` = USD 500; comentario autoritativo |
-| `.env.example` | `DLOCALGO_PLAN_LYD_FUNDADORES` (pendiente generar ID real) |
+| `api/create-checkout-session.js` | USD 500 documentado; **LYD NO se enruta por dLocal** |
+| `.env.example` | `LYD_PAYMENT_LINK` (link de pago nuevo, pendiente pegar) |
+
+## Pasarela de LYD — dLocal fuera (2026-06-15)
+
+Decisión: **LYD Plan Fundadores no se cobra por dLocal Go.** El cobro se hará con un
+**link de pago nuevo** (Flow.cl u otra pasarela) que Felipe debe generar y pegar en
+`LYD_PAYMENT_LINK`. dLocal queda solo para los tiers legacy/a-medida. Hasta que el link
+exista, el checkout de LYD queda pendiente — el precio público USD 500 se muestra igual.
 
 ## Eliminado (stale)
 
@@ -48,5 +55,5 @@ toca el flujo de compliance.
 
 ## Pendiente operativo (Felipe)
 
-- [ ] Generar plan/link de pago real (dLocal Go y/o Flow.cl) y pegar el ID en `DLOCALGO_PLAN_LYD_FUNDADORES`.
+- [ ] Generar el **link de pago nuevo** de LYD (Flow.cl u otra pasarela, NO dLocal) y pegarlo en `LYD_PAYMENT_LINK`.
 - [ ] Decidir el hilo ~USD 700 post-call.

@@ -28,9 +28,11 @@ const DLOCALGO_BASE_URL = process.env.DLOCALGO_BASE_URL || 'https://api.dlocalgo
 //   Base 20 UF/mes (~USD 770) · Crecimiento CLP 1.200.000/mes (~USD 1.290) · Hablemos (a medida)
 // Aliases legacy (junior_*, senior_*, manager_*) se mantienen como compat hasta migrar
 // clientes activos. TODO Felipe: remover aliases tras migrar todas las suscripciones.
+// LYD Plan Fundadores (USD 500/mes) NO se cobra por dLocal.
+// TODO Felipe: pegar el LINK DE PAGO NUEVO de LYD (Flow.cl u otra pasarela) en
+//   LYD_PAYMENT_LINK (.env). El checkout de LYD redirige a ese link, no a dLocal.
+//   dLocal queda solo para los tiers legacy/a-medida de abajo.
 const PLAN_KEY_TO_ENV = {
-  // Precio público de entrada de LYD
-  lyd_fundadores:      'DLOCALGO_PLAN_LYD_FUNDADORES',
   // Keys nuevas (post-rename 2026-05-24)
   base_monthly:        'DLOCALGO_PLAN_BASE_MONTHLY',
   base_annual:         'DLOCALGO_PLAN_BASE_ANNUAL',
@@ -55,7 +57,6 @@ function resolvePlanId(planKey) {
 // TODO Felipe: si renombrás env vars en Vercel (DLOCALGO_PLAN_BASE_*, _CRECIMIENTO_*, _HABLEMOS_*),
 // actualizar este set también. Por ahora apunta a los env vars legacy (Junior/Senior/Manager) ya configurados.
 const ALLOWED_PLANS = new Set([
-  process.env.DLOCALGO_PLAN_LYD_FUNDADORES,
   process.env.DLOCALGO_PLAN_JUNIOR_MONTHLY,
   process.env.DLOCALGO_PLAN_JUNIOR_ANNUAL,
   process.env.DLOCALGO_PLAN_SENIOR_MONTHLY,
@@ -76,9 +77,9 @@ const ALLOWED_PLANS = new Set([
 //   Crecimiento CLP 1.200.000 neto → × 1.19 IVA = CLP 1.428.000 ≈ USD 1.534 (al USD-CLP ~931)
 //   Hablemos: cotización a medida — el amount aquí es referencial.
 const PLAN_AMOUNTS = {
-  // Precio público de entrada de LYD (2026-06-15) — Plan Fundadores USD 500/mes.
-  // En Chile se factura en CLP al equivalente del día, con IVA y DTE válido ante el SII.
-  lyd_fundadores:      { amount: 500.00,   currency: 'USD', label: 'LYD Plan Fundadores - Mensual (USD 500)' },
+  // LYD Plan Fundadores = USD 500/mes (precio público). NO va por dLocal:
+  // el cobro se hace con un LINK DE PAGO NUEVO (LYD_PAYMENT_LINK) que Felipe debe pegar.
+  // Se deja el monto acá solo como referencia; este archivo no enruta LYD.
   // Keys nuevas (post-rename 2026-05-24)
   base_monthly:        { amount: 916.30,   currency: 'USD', label: 'Sisteco Base - Mensual (IVA incl.)' },
   base_annual:         { amount: 9897.00,  currency: 'USD', label: 'Sisteco Base - Anual con 10% desc (IVA incl.)' },
