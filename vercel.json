@@ -107,7 +107,7 @@
     },
     {
       "path": "/api/cron/behavior-alerts",
-      "schedule": "0 * * * *"
+      "schedule": "0 13 * * *"
     }
   ]
 }

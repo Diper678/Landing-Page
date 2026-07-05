@@ -109,7 +109,9 @@ o push a su repo si está conectado a GitHub.
 
 - Abrir el sitio → aparece el banner → *Aceptar* → en PostHog *Activity* / *Live events* llegan pageviews. *Solo esenciales* → cero eventos.
 - Enviar el formulario de contacto de Microsec → llega a Convex (`demoRequests` con `source: "microsec"`) y cae una alerta en Discord.
-- Invocar el cron manualmente (o esperar la hora): debe alertar visitas repetidas a `/precios` sin duplicar (dedupe en tabla `alertsSent`).
+- Invocar el cron manualmente (o esperar la corrida diaria de las 13:00 UTC / 09:00 Chile): debe alertar visitas repetidas a `/precios` sin duplicar (dedupe en tabla `alertsSent`).
+
+> **Nota de plan Vercel:** la cuenta es **Hobby**, que solo permite crons **diarios**. Por eso `behavior-alerts` corre 1×/día (`0 13 * * *`). Si quieres alertas más frecuentes (ej. cada hora), hay que subir a plan **Pro** y cambiar el schedule a `0 * * * *` en `vercel.json`.
 
 ---
 
