@@ -1,6 +1,7 @@
 import { convex } from './_lib/convex.js';
 import { api } from '../convex/_generated/api.js';
 import { resend, FROM_EMAIL } from './_lib/resend.js';
+import { notifyDiscord } from './_lib/notify.js';
 import { z } from 'zod';
 import { Ratelimit } from "@upstash/ratelimit";
 import { Redis } from "@upstash/redis";
@@ -15,13 +16,23 @@ const ratelimit = redis ? new Ratelimit({
   limiter: Ratelimit.slidingWindow(3, "1 m"),
 }) : null;
 
-const allowedOrigins = ['https://sisteco.com', 'https://sisteco-landing.vercel.app', 'http://localhost:3000'];
+const allowedOrigins = [
+  'https://sisteco.com',
+  'https://sisteco-landing.vercel.app',
+  'http://localhost:3000',
+  // Microsec comparte este backend (formulario de contacto de su landing)
+  'https://microsec-landing.vercel.app',
+  'https://microsec.cl',
+  'https://www.microsec.cl',
+  'http://localhost:3200',
+];
 
 const contactSchema = z.object({
   name: z.string().min(1).max(100),
   email: z.string().email().max(255),
   company: z.string().max(100).optional().nullable(),
   message: z.string().min(1).max(5000),
+  source: z.string().max(50).optional(),
 });
 
 export default async function handler(req, res) {
@@ -49,12 +60,12 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Datos invalidos', code: 'INVALID_DATA', details: parsed.error });
     }
 
-    const { name, email, company, message } = parsed.data;
+    const { name, email, company, message, source = 'contact_form' } = parsed.data;
 
     // Upsert lead
     const leadResult = await convex.mutation(api.leads.upsertLeadSoft, {
       email: email.toLowerCase().trim(),
-      source: 'contact_form',
+      source,
     });
 
     // Create demo request with the contact message
@@ -63,7 +74,14 @@ export default async function handler(req, res) {
       companyName: company || undefined,
       message: message || undefined,
       leadId: leadResult._id,
+      source,
     });
+
+    // Alerta Discord (fire-and-forget)
+    const siteTag = source === 'microsec' ? 'Microsec' : 'Sisteco';
+    notifyDiscord(
+      `\u{1F4E9} **Contacto [${siteTag}]** — ${name} <${email}>${company ? ` de **${company}**` : ''}: ${message.slice(0, 300)}`
+    ).catch(err => console.error('Discord notification error (non-blocking):', err));
 
     // Send notification email to Sisteco (fire-and-forget)
     resend.emails.send({

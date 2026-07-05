@@ -17,6 +17,7 @@ export const create = mutation({
     phone: v.optional(v.string()),
     message: v.optional(v.string()),
     leadId: v.optional(v.id("leads")),
+    source: v.optional(v.string()),
   },
   handler: async (ctx, args) => {
     const id = await ctx.db.insert("demoRequests", {
@@ -26,6 +27,7 @@ export const create = mutation({
       phone: args.phone,
       message: args.message,
       leadId: args.leadId,
+      source: args.source,
       status: "pending",
       updatedAt: Date.now(),
     });

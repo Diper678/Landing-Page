@@ -34,11 +34,21 @@ export default defineSchema({
     companySize: v.optional(v.string()),
     phone: v.optional(v.string()),
     message: v.optional(v.string()),
+    // Origen del formulario: 'contact_form' (Sisteco) | 'microsec'
+    source: v.optional(v.string()),
     status: v.string(),
     updatedAt: v.optional(v.number()),
   })
     .index("by_status", ["status"])
     .index("by_email", ["email"]),
+
+  // Alertas internas ya enviadas (dedupe de notificaciones Discord)
+  alertsSent: defineTable({
+    event: v.string(),
+    dedupKey: v.string(),
+    sentAt: v.number(),
+  })
+    .index("by_dedup", ["event", "dedupKey"]),
 
   // Secuencia de emails drip (Day 0, 3, 7)
   emailSequence: defineTable({

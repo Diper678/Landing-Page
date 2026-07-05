@@ -2,6 +2,7 @@ import { convex } from './_lib/convex.js';
 import { api } from '../convex/_generated/api.js';
 import { resend, FROM_EMAIL } from './_lib/resend.js';
 import { welcomeEmail } from './_lib/email-templates.js';
+import { notifyDiscord } from './_lib/notify.js';
 import { z } from 'zod';
 import { Ratelimit } from "@upstash/ratelimit";
 import { Redis } from "@upstash/redis";
@@ -99,6 +100,12 @@ export default async function handler(req, res) {
         isExisting: true
       });
     }
+
+    // Alerta Discord (fire-and-forget)
+    const utm = [utm_source, utm_medium, utm_campaign].filter(Boolean).join(' / ');
+    notifyDiscord(
+      `\u{1F7E2} **Lead nuevo** — ${email.toLowerCase().trim()} (${source})${utm ? ` · UTM: ${utm}` : ''}`
+    ).catch(err => console.error('Discord notification error (non-blocking):', err));
 
     // Enviar welcome email y programar secuencia drip (fire-and-forget)
     const normalizedEmail = email.toLowerCase().trim();

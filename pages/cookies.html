@@ -22,6 +22,8 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js" defer></script>
     <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <!-- PostHog Analytics + banner de consentimiento (EU Frankfurt — Ley 21.719) -->
+  <script src="/js/consent.js" defer></script>
 </head>
 <body>
     <div class="animated-bg"></div>
@@ -104,7 +106,7 @@
             <h2>3. Cookies de Terceros</h2>
             <p>Algunos de nuestros servicios de terceros pueden establecer sus propias cookies:</p>
             <ul>
-                <li><strong>Google Analytics:</strong> Utilizamos Google Analytics para analizar el uso del sitio web. Google puede transferir esta información a terceros cuando así lo exija la ley o cuando terceros procesen la información por cuenta de Google. Más información en la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">política de privacidad de Google</a>.</li>
+                <li><strong>PostHog:</strong> Usamos PostHog (servidores en Frankfurt, UE) para ver qué páginas visitas y cómo navegas. La grabación de sesiones no captura lo que escribes en los formularios. Solo se activa si aceptas en el banner, conforme a la Ley 21.719. No guardamos tu IP. Más información en la <a href="https://posthog.com/privacy" target="_blank" rel="noopener">política de privacidad de PostHog</a>.</li>
                 <li><strong>Clerk:</strong> Nuestro proveedor de autenticación utiliza cookies para la gestión segura de sesiones de usuario e inicio de sesión.</li>
                 <li><strong>Lucide:</strong> Biblioteca de iconos utilizada en nuestra interfaz. No establece cookies ni realiza seguimiento de usuarios.</li>
                 <li><strong>GSAP:</strong> Biblioteca de animaciones utilizada para las transiciones visuales. No establece cookies ni realiza seguimiento de usuarios.</li>

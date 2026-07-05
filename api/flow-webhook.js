@@ -22,6 +22,7 @@ import { ConvexHttpClient } from 'convex/browser';
 import { api } from '../convex/_generated/api.js';
 import { resend } from './_lib/resend.js';
 import { paymentConfirmationEmail } from './_lib/email-templates.js';
+import { notifyDiscord } from './_lib/notify.js';
 
 const convex = new ConvexHttpClient(process.env.CONVEX_URL);
 const FLOW_BASE_URL = process.env.FLOW_BASE_URL || 'https://www.flow.cl/api';
@@ -158,16 +159,8 @@ async function sendPaymentConfirmation(to, { name, plan, billingCycle, amount })
 }
 
 async function sendDiscordPaymentNotification(email, plan, amount) {
-  const webhookUrl = process.env.DISCORD_WEBHOOK_URL;
-  if (!webhookUrl) return;
   const planNames = { junior: 'Junior', senior: 'Senior', manager: 'Manager' };
   const displayPlan = planNames[plan] || plan || 'Desconocido';
   const displayAmount = amount ? ` (CLP ${amount})` : '';
-  await fetch(webhookUrl, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      content: `\u{1F4B0} **NUEVO PAGO Flow.cl** — ${email} suscrito a **${displayPlan}**${displayAmount}`,
-    }),
-  });
+  await notifyDiscord(`\u{1F4B0} **NUEVO PAGO Flow.cl** — ${email} suscrito a **${displayPlan}**${displayAmount}`);
 }
